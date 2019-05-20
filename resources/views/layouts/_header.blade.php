@@ -15,8 +15,7 @@
     <meta name="MobileOptimized" content="320">
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <!-- Generated: 2019-04-04 16:57:42 +0200 -->
-    <title>Empty page - tabler.github.io - a responsive, flat and full featured admin template</title>
+    <title> @yield('title') | Promentee</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

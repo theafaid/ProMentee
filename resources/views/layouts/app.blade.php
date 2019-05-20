@@ -7,6 +7,7 @@
             @yield('content')
         </div>
     </div>
+    @include('layouts._footer')
 </div>
 <script src="{{asset('js/app.js')}}"></script>
 @stack('js')
