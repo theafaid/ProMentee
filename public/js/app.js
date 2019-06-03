@@ -1348,7 +1348,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 // Headers whose duplicates are ignored by node
-// c.Utilities. https://nodejs.org/api/http.html#http_message_headers
+// c.f. https://nodejs.org/api/http.html#http_message_headers
 var ignoreDuplicateOf = [
   'age', 'authorization', 'content-length', 'content-type', 'etag',
   'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
@@ -1416,9 +1416,9 @@ module.exports = function parseHeaders(headers) {
  * Common use case would be to use `Function.prototype.apply`.
  *
  *  ```js
- *  function Utilities(x, y, z) {}
+ *  function f(x, y, z) {}
  *  var args = [1, 2, 3];
- *  Utilities.apply(null, args);
+ *  f.apply(null, args);
  *  ```
  *
  * With `spread` this example can be re-written.
@@ -1783,12 +1783,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "LoginForm",
   data: function data() {
     return {
       form: new Form({
-        email: '',
+        loginName: '',
         password: '',
         remember: ''
       })
@@ -1796,7 +1798,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isValidForm: function isValidForm() {
-      return !!(this.form.email && this.form.password);
+      return !!(this.form.loginName && this.form.password);
     }
   },
   methods: {
@@ -6884,7 +6886,7 @@ var i,
 	// Regular expressions
 
 	// http://www.w3.org/TR/css3-selectors/#whitespace
-	whitespace = "[\\x20\\t\\r\\n\\Utilities]",
+	whitespace = "[\\x20\\t\\r\\n\\f]",
 
 	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
@@ -6947,7 +6949,7 @@ var i,
 
 	// CSS escapes
 	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\([\\da-Utilities]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
+	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
 	funescape = function( _, escaped, escapedWhitespace ) {
 		var high = "0x" + escaped - 0x10000;
 		// NaN means non-codepoint
@@ -21007,32 +21009,39 @@ var render = function() {
         "div",
         { staticClass: "form-group" },
         [
-          _c("label", [_vm._v("Email")]),
+          _c("label", [_vm._v("Email or Username")]),
           _vm._v(" "),
           _c("input", {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.form.email,
-                expression: "form.email"
+                value: _vm.form.loginName,
+                expression: "form.loginName"
               }
             ],
             staticClass: "form-control",
-            class: { "is-invalid": _vm.form.errors.has("email") },
-            attrs: { type: "text", name: "email" },
-            domProps: { value: _vm.form.email },
+            class: {
+              "is-invalid":
+                _vm.form.errors.has("email") || _vm.form.errors.has("username")
+            },
+            attrs: { type: "text", name: "loginName" },
+            domProps: { value: _vm.form.loginName },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.form, "email", $event.target.value)
+                _vm.$set(_vm.form, "loginName", $event.target.value)
               }
             }
           }),
           _vm._v(" "),
-          _c("has-error", { attrs: { form: _vm.form, field: "email" } })
+          _c("has-error", { attrs: { form: _vm.form, field: "username" } }),
+          _vm._v(" "),
+          _c("has-error", { attrs: { form: _vm.form, field: "email" } }),
+          _vm._v(" "),
+          _c("has-error", { attrs: { form: _vm.form, field: "loginName" } })
         ],
         1
       ),

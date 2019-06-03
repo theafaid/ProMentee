@@ -1,10 +1,12 @@
 <template>
     <form @submit.prevent="submit" @keydown="form.onKeydown($event)">
         <div class="form-group">
-            <label>Email</label>
-            <input v-model="form.email" type="text" name="email"
-                   class="form-control" :class="{ 'is-invalid': form.errors.has('email') }">
+            <label>Email or Username</label>
+            <input v-model="form.loginName" type="text" name="loginName"
+                   class="form-control" :class="{ 'is-invalid': form.errors.has('email') || form.errors.has('username') }">
+            <has-error :form="form" field="username"></has-error>
             <has-error :form="form" field="email"></has-error>
+            <has-error :form="form" field="loginName"></has-error>
         </div>
 
         <div class="form-group">
@@ -25,7 +27,7 @@
         data(){
             return {
                 form: new Form({
-                    email: '',
+                    loginName: '',
                     password: '',
                     remember: ''
                 })
@@ -34,7 +36,7 @@
 
         computed: {
             isValidForm(){
-                return !! (this.form.email && this.form.password);
+                return !! (this.form.loginName && this.form.password);
             }
         },
 
