@@ -1785,6 +1785,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "LoginForm",
   data: function data() {
@@ -1792,7 +1801,7 @@ __webpack_require__.r(__webpack_exports__);
       form: new Form({
         loginName: '',
         password: '',
-        remember: ''
+        remember: false
       })
     };
   },
@@ -49912,13 +49921,72 @@ var render = function() {
         1
       ),
       _vm._v(" "),
+      _c("div", { staticClass: "form-group" }, [
+        _c("div", { staticClass: "custom-controls-stacked" }, [
+          _c(
+            "label",
+            {
+              staticClass:
+                "custom-control custom-checkbox custom-control-inline"
+            },
+            [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.remember,
+                    expression: "form.remember"
+                  }
+                ],
+                staticClass: "custom-control-input",
+                attrs: { type: "checkbox" },
+                domProps: {
+                  checked: Array.isArray(_vm.form.remember)
+                    ? _vm._i(_vm.form.remember, null) > -1
+                    : _vm.form.remember
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.form.remember,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 &&
+                          _vm.$set(_vm.form, "remember", $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          _vm.$set(
+                            _vm.form,
+                            "remember",
+                            $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                          )
+                      }
+                    } else {
+                      _vm.$set(_vm.form, "remember", $$c)
+                    }
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "custom-control-label" }, [
+                _vm._v(_vm._s(_vm.trans("remember")))
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
       _c(
         "button",
         {
           staticClass: "btn btn-primary",
           attrs: { disabled: !_vm.isValidForm, type: "submit" }
         },
-        [_vm._v("Log In")]
+        [_vm._v(_vm._s(_vm.trans("login")))]
       )
     ]
   )

@@ -1,7 +1,8 @@
 <?php
 
 return [
-  'email_or_username' => 'Email or Username',
-  'password'          => 'Password',
+    // login page
+    'signin_to_promentee' => 'Sign in to ProMentee',
+
 
 ];

@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
-                    Sign in to Promentee
+                    {{__('site.signin_to_promentee')}}
                 </div>
                 <div class="card-body">
                     <login-form></login-form>

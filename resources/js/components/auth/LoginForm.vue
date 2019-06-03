@@ -16,7 +16,16 @@
             <has-error :form="form" field="password"></has-error>
         </div>
 
-        <button :disabled="! isValidForm" type="submit" class="btn btn-primary">Log In</button>
+        <div class="form-group">
+            <div class="custom-controls-stacked">
+                <label class="custom-control custom-checkbox custom-control-inline">
+                    <input  type="checkbox" class="custom-control-input" v-model="form.remember">
+                    <span class="custom-control-label">{{trans('remember')}}</span>
+                </label>
+            </div>
+        </div>
+
+        <button :disabled="! isValidForm" type="submit" class="btn btn-primary">{{trans('login')}}</button>
     </form>
 </template>
 
@@ -29,7 +38,7 @@
                 form: new Form({
                     loginName: '',
                     password: '',
-                    remember: ''
+                    remember: false
                 })
             }
         },
