@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="submit" @keydown="form.onKeydown($event)">
         <div class="form-group">
-            <label>Email or Username</label>
+            <label>{{trans('site.email_or_username')}}</label>
             <input v-model="form.loginName" type="text" name="loginName"
                    class="form-control" :class="{ 'is-invalid': form.errors.has('email') || form.errors.has('username') }">
             <has-error :form="form" field="username"></has-error>
@@ -10,7 +10,7 @@
         </div>
 
         <div class="form-group">
-            <label>Password</label>
+            <label>{{trans('site.password')}}</label>
             <input v-model="form.password" type="password" name="password"
                    class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
             <has-error :form="form" field="password"></has-error>
@@ -32,6 +32,10 @@
                     remember: ''
                 })
             }
+        },
+
+        created(){
+            console.log(trans())
         },
 
         computed: {
