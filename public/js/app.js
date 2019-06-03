@@ -1815,6 +1815,7 @@ __webpack_require__.r(__webpack_exports__);
       this.isValidForm ? this.login() : '';
     },
     login: function login() {
+      Swal('here');
       this.form.post(route('login')).then(function (res) {
         window.location = "/home";
       });
