@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'username', 'email', 'password',
     ];
 
     /**
@@ -36,4 +36,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function setUsernameAttribute($value){
+        if($this->usernameExists($value)){
+            $value = $value . rand(0, 99999);
+        }
+
+        return $this->attributes['username'] = $value;
+    }
+
+    /**
+     * Check if the username is exists in database
+     * @param $username
+     * @return mixed
+     */
+    protected function usernameExists($username){
+        return static::whereUsername($username)->exists();
+    }
 }
