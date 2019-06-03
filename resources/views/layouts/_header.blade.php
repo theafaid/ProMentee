@@ -20,16 +20,16 @@
 
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 
-
-    <style>
-        *, body{
-            font-family: 'Kanit', sans-serif;
-        }
-    </style>
-
-
-
     <!-- Dashboard Core -->
-    <link href="{{asset('design')}}/assets/css/dashboard.css" rel="stylesheet" />
+    @if(app()->getLocale() == 'ar')
+        <link href="{{asset('design')}}/assets/css/dashboard.rtl.css" rel="stylesheet" />
+    @else
+        <link href="{{asset('design')}}/assets/css/dashboard.css" rel="stylesheet" />
+        <style>
+            *, body{
+                font-family: 'Kanit', sans-serif;
+            }
+        </style>
+    @endif
     <link rel="stylesheet" href="/css/app.css"/>
 </head>
