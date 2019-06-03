@@ -3634,7 +3634,7 @@
 				/* Length */
 				featureNode = _fnFeatureHtmlLength( oSettings );
 			}
-			else if ( cOption == 'f' && features.bFilter )
+			else if ( cOption == 'Utilities' && features.bFilter )
 			{
 				/* Filter */
 				featureNode = _fnFeatureHtmlFilter( oSettings );
@@ -4175,14 +4175,14 @@
 			str+input;
 	
 		var filter = $('<div/>', {
-				'id': ! features.f ? tableId+'_filter' : null,
+				'id': ! utilites ? tableId+'_filter' : null,
 				'class': classes.sFilter
 			} )
 			.append( $('<label/>' ).append( str ) );
 	
 		var searchFn = function() {
 			/* Update all other filter input elements for the new display */
-			var n = features.f;
+			var n = utilites;
 			var val = !this.value ? "" : this.value; // mental IE8 fix :-(
 	
 			/* Now do the filter */
@@ -11793,7 +11793,7 @@
 		 *     <li>The following options are allowed:
 		 *       <ul>
 		 *         <li>'l' - Length changing</li>
-		 *         <li>'f' - Filtering input</li>
+		 *         <li>'Utilities' - Filtering input</li>
 		 *         <li>'t' - The table!</li>
 		 *         <li>'i' - Information</li>
 		 *         <li>'p' - Pagination</li>
@@ -12926,7 +12926,7 @@
 			/**
 			 * Enable filtering on the table or not. Note that if this is disabled
 			 * then there is no filtering at all on the table, including fnFilter.
-			 * To just remove the filtering input use sDom and remove the 'f' option.
+			 * To just remove the filtering input use sDom and remove the 'Utilities' option.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
 			 *  @type boolean
@@ -13127,7 +13127,7 @@
 		 * parameters of this object match what is allowed by sDom - i.e.
 		 *   <ul>
 		 *     <li>'l' - Length changing</li>
-		 *     <li>'f' - Filtering input</li>
+		 *     <li>'Utilities' - Filtering input</li>
 		 *     <li>'t' - The table!</li>
 		 *     <li>'i' - Information</li>
 		 *     <li>'p' - Pagination</li>

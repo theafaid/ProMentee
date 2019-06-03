@@ -49,7 +49,7 @@ $.extend( true, DataTable.defaults, {
 		"<'ui stackable grid'"+
 			"<'row'"+
 				"<'eight wide column'l>"+
-				"<'right aligned eight wide column'f>"+
+				"<'right aligned eight wide column'Utilities>"+
 			">"+
 			"<'row dt-table'"+
 				"<'sixteen wide column'tr>"+

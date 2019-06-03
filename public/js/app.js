@@ -1348,7 +1348,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 // Headers whose duplicates are ignored by node
-// c.f. https://nodejs.org/api/http.html#http_message_headers
+// c.Utilities. https://nodejs.org/api/http.html#http_message_headers
 var ignoreDuplicateOf = [
   'age', 'authorization', 'content-length', 'content-type', 'etag',
   'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
@@ -1416,9 +1416,9 @@ module.exports = function parseHeaders(headers) {
  * Common use case would be to use `Function.prototype.apply`.
  *
  *  ```js
- *  function f(x, y, z) {}
+ *  function Utilities(x, y, z) {}
  *  var args = [1, 2, 3];
- *  f.apply(null, args);
+ *  Utilities.apply(null, args);
  *  ```
  *
  * With `spread` this example can be re-written.
@@ -6884,7 +6884,7 @@ var i,
 	// Regular expressions
 
 	// http://www.w3.org/TR/css3-selectors/#whitespace
-	whitespace = "[\\x20\\t\\r\\n\\f]",
+	whitespace = "[\\x20\\t\\r\\n\\Utilities]",
 
 	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
@@ -6947,7 +6947,7 @@ var i,
 
 	// CSS escapes
 	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
+	runescape = new RegExp( "\\\\([\\da-Utilities]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
 	funescape = function( _, escaped, escapedWhitespace ) {
 		var high = "0x" + escaped - 0x10000;
 		// NaN means non-codepoint

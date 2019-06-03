@@ -12,7 +12,7 @@ class RegistrationTest extends TestCase
 
     /** @test */
     function a_user_must_have_a_username(){
-        $user = factory('App\User')->create(['name' => 'john Doe']);
+        $user = create('App\User', ['name' => 'john Doe']);
 
         $this->assertEquals
         (
@@ -24,8 +24,8 @@ class RegistrationTest extends TestCase
     /** @test */
     function a_user_must_have_a_unique_username(){
 
-        factory('App\User')->create(['name' => 'John Doe']);
-        $user = factory('App\User')->create(['name' => 'John Doe']);
+        create('App\User', ['name' => 'John Doe']);
+        $user = create('App\User', ['name' => 'John Doe']);
 
         $this->assertEquals("JohnDoe{$user->id}", $user->username);
     }
