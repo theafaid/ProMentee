@@ -18,13 +18,15 @@
     <title> @yield('title') | Promentee</title>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+
     <style>
         *, body{
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Kanit', sans-serif;
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+
 
 
     <!-- Dashboard Core -->
