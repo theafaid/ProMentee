@@ -13,7 +13,15 @@ class User extends Authenticatable
         parent::boot();
 
         static::created(function($user){
+            // Update Username after register a new user
+            // because we want a new instance from the user to use his id
             $user->update(['username' => ucfirst(Str::camel($user->name))]);
+
+            // Create a profile for registered user
+            $user->profile()->create([
+                'age' => request('age') ?: '18', // 18 is default for unit testing
+                'gender' => request('gender') ?: 'male' // male is default for unit testing
+            ]);
         });
     }
 
@@ -63,5 +71,12 @@ class User extends Authenticatable
      */
     protected function usernameExists($username){
         return static::whereUsername($username)->exists();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function profile(){
+        return $this->hasOne('App\Profile');
     }
 }
