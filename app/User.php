@@ -5,9 +5,18 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
+    public static function boot(){
+        parent::boot();
+
+        static::created(function($user){
+            $user->update(['username' => ucfirst(Str::camel($user->name))]);
+        });
+    }
+
     use Notifiable;
 
     /**
@@ -39,14 +48,12 @@ class User extends Authenticatable
 
     /**
      * @param $value
-     * @return string
      */
     public function setUsernameAttribute($value){
-        if($this->usernameExists($value)){
-            $value = $value . rand(0, 99999);
-        }
 
-        return $this->attributes['username'] = $value;
+        $value = $this->usernameExists($value) ? "{$value}{$this->id}" : $value;
+
+        $this->attributes['username'] = $value;
     }
 
     /**
