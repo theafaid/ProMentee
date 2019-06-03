@@ -6,7 +6,7 @@ Route::any('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect']
 ], function(){
 
 

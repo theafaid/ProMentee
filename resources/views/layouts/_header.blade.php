@@ -33,11 +33,5 @@
     @endif
     <link rel="stylesheet" href="/css/app.css"/>
 
-    <script>
-        window.Promentee = {!! json_encode([
-            'csrfToken' => csrf_token(),
-            'baseUrl' => url('/'),
-            'routes' => collect(\Route::getRoutes())->mapWithKeys(function ($route) { return [$route->getName() => $route->uri()]; })
-        ]) !!};
-    </script>
+    @routes
 </head>
