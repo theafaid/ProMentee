@@ -37,6 +37,13 @@
 </div>
 <footer class="footer">
     <div class="container">
+        <div clsas="col-12">
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+            @endforeach
+        </div>
         <div class="row align-items-center flex-row-reverse">
             <div class="col-auto ml-lg-auto">
                 <div class="row align-items-center">
