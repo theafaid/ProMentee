@@ -49841,7 +49841,7 @@ var render = function() {
         "div",
         { staticClass: "form-group" },
         [
-          _c("label", [_vm._v(_vm._s(_vm.trans("site.email_or_username")))]),
+          _c("label", [_vm._v(_vm._s(_vm.trans("email_or_username")))]),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -49882,7 +49882,7 @@ var render = function() {
         "div",
         { staticClass: "form-group" },
         [
-          _c("label", [_vm._v(_vm._s(_vm.trans("site.password")))]),
+          _c("label", [_vm._v(_vm._s(_vm.trans("password")))]),
           _vm._v(" "),
           _c("input", {
             directives: [
