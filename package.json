@@ -26,6 +26,7 @@
         "lodash": "^4.17.11",
         "vee-validate": "^2.2.9",
         "vform": "^1.0.0",
+        "vue-progressbar": "^0.7.5",
         "vue-sweetalert2": "^2.0.5"
     }
 }
