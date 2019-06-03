@@ -9,6 +9,7 @@
     </div>
     @include('layouts._footer')
 </div>
+<script src="/js/lang.js"></script>
 <script src="{{asset('js/app.js')}}"></script>
 @stack('js')
 </body>

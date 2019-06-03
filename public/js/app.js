@@ -33371,14 +33371,14 @@ __webpack_require__.r(__webpack_exports__);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.trans = function (string) {
+  return _.get(window.i18n, string);
+}; // Translation variable
+
+
+
 window.Form = vform__WEBPACK_IMPORTED_MODULE_1__["Form"];
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/LoginForm.vue -> <example-component></example-component>
- */
+/** Global Components **/
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
