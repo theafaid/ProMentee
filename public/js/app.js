@@ -1796,9 +1796,6 @@ __webpack_require__.r(__webpack_exports__);
       })
     };
   },
-  created: function created() {
-    console.log(trans());
-  },
   computed: {
     isValidForm: function isValidForm() {
       return !!(this.form.loginName && this.form.password);

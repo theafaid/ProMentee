@@ -34,10 +34,6 @@
             }
         },
 
-        created(){
-            console.log(trans())
-        },
-
         computed: {
             isValidForm(){
                 return !! (this.form.loginName && this.form.password);
