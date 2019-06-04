@@ -160,7 +160,7 @@
             register(){
                 this.form.post(route('register'))
                     .then(res => {
-                        window.location = route('home');
+                        window.location = route('welcome');
                     });
             },
 

@@ -10,9 +10,7 @@ Route::group([
     // Js Localization
     Route::get('/js/lang.js', 'JavascriptLangsController@get')->name('assets.lang');
     // welcome page
-    Route::get('/', function () {
-        return auth()->user() ? view('home') : view('welcome');
-    });
+    Route::get('/', 'HomeController@welcome')->name('welcome');
     Auth::routes();
 });
 
