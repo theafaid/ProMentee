@@ -92,7 +92,7 @@ class LoginController extends Controller
 
         $localUser ? $this->loginUser($localUser) : $this->createUserThenLogin($userSocial, $provider);
 
-        return redirect()->route('home');
+        return redirect()->route('welcome');
     }
 
 
