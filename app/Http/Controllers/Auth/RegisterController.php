@@ -49,12 +49,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
+        $currentYear = date('Y');
+
+        $allowYearFrom = $currentYear - 6; // 6 years minimum
+        $allowYearTo   = $currentYear - 96; // 90 years maximum
+
         return Validator::make($data, [
             'name'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'gender'   => ['required', 'string', 'in:male,female'],
-            'age'      => ['required', 'string', 'max:2']
+            'yob'      => ['required', 'numeric', "min:{$allowYearTo}", "max:{$allowYearFrom}"]
         ]);
     }
 

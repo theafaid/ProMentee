@@ -37,7 +37,7 @@ class RegistrationTest extends TestCase
             'password' => 'test1234',
             'password_confirmation' => 'test1234',
             'gender' => 'male',
-            'age' => '18'
+            'yob' => 2010
         ]);
 
         $this->post(route('register'), $user->toArray());

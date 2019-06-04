@@ -38,3 +38,4 @@ Vue.component(HasError.name, HasError);
 Vue.component(AlertError.name, AlertError);
 
 Vue.component('login-form', require('./auth/LoginForm').default);
+Vue.component('registration-form', require('./auth/RegistrationForm').default);

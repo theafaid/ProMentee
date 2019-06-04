@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration
 
             $table->enum('gender', ['male', 'female']);
 
-            $table->string('age');
+            $table->integer('yob');
             $table->string('pic')->nullable();
             $table->string('motto')->nullable();
             $table->string('bio')->nullable();

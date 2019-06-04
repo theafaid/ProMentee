@@ -19,7 +19,7 @@ class User extends Authenticatable
 
             // Create a profile for registered user
             $user->profile()->create([
-                'age' => request('age') ?: '18', // 18 is default for unit testing
+                'yob'    => request('yob') ?: date('Y') - 10, // 10 years is default for unit testing
                 'gender' => request('gender') ?: 'male' // male is default for unit testing
             ]);
         });
@@ -42,7 +42,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token',
     ];
 
     /**
