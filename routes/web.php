@@ -11,10 +11,9 @@ Route::group([
     Route::get('/js/lang.js', 'JavascriptLangsController@get')->name('assets.lang');
     // welcome page
     Route::get('/', function () {
-        return view('welcome');
+        return auth()->user() ? view('home') : view('welcome');
     });
     Auth::routes();
-    Route::get('/home', 'HomeController@index')->name('home');
 });
 
 
