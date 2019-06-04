@@ -11,6 +11,7 @@ $factory->define(\App\Category::class, function (Faker $faker) {
     return [
         'name' => $name,
         'slug' => \Str::slug($name),
+        'type' => $faker->randomElement(['edu', 'entmt']),
         'parent_id' => function (){
             if(\App\Category::count()){
                 return \App\Category::all()->random()->id;
