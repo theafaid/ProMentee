@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+    {{__('site.join_to_site')}}
+@endsection
+
 @section('content')
 <div class="container text-center">
     <hr>
-    <h1>Join ProMentee</h1>
+    <h1>{{__('site.join_to_site')}}</h1>
     <p class="lead">The unique experience. Start join to your community, make friends, learn, have fun and much more .. :)</p>
     <hr>
     <div class="row justify-content-center">

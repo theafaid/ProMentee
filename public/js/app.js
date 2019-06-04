@@ -1913,7 +1913,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     login: function login() {
       this.form.post(route('login')).then(function (res) {
-        window.location = "/home";
+        window.location = "/";
       });
     }
   }

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    {{__('javascript.login')}}
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
