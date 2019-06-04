@@ -15,7 +15,7 @@
     <meta name="MobileOptimized" content="320">
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <title> @yield('title') | Promentee</title>
+    <title> @yield('title')</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    {{__('javascript.login')}}
+    {{__('site.site_name')}} - {{__('javascript.login')}}
 @endsection
 
 @section('content')

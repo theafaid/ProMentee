@@ -7,8 +7,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
+
+    use Notifiable;
+
     public static function boot(){
         parent::boot();
 
@@ -24,8 +27,6 @@ class User extends Authenticatable
             ]);
         });
     }
-
-    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

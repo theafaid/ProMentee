@@ -9,9 +9,12 @@ Route::group([
 ], function(){
     // Js Localization
     Route::get('/js/lang.js', 'JavascriptLangsController@get')->name('assets.lang');
-    // welcome page
-    Route::get('/', 'HomeController@welcome')->name('welcome');
-    Auth::routes();
+
+    Route::group(['middleware' => 'verified'], function(){
+        // welcome page
+        Route::get('/', 'HomeController@welcome')->name('welcome');
+    });
+    Auth::routes(['verify' => true]);
 });
 
 
