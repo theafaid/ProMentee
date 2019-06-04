@@ -3,22 +3,24 @@
 @section('title')  {{__('site.site_name')}}@endsection
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="row">
+        <div class="col-md-6">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            <select-categories inline-template>
+                <form-wizard title="Choose three areas you specialize in or want to join">
+                    <tab-content title="Select 3 Education Fields">
 
-                    You are logged in!
-                </div>
-            </div>
+                    </tab-content>
+                    <tab-content title="select entertainement categories">
+
+                    </tab-content>
+                    <tab-content title="Last step">
+
+                    </tab-content>
+                </form-wizard>
+            </select-categories>
         </div>
     </div>
 </div>
 @endsection
+
