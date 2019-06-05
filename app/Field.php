@@ -25,4 +25,12 @@ class Field extends Model
     public function children(){
         return $this->hasMany('App\Field', 'parent_id', 'id');
     }
+
+    /**
+     * Check if the field is main field or not
+     * @return bool
+     */
+    public function isParent(){
+        return $this->parent_id == null;
+    }
 }

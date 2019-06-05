@@ -27,4 +27,13 @@ class FieldTest extends TestCase
 
         $this->assertInstanceOf('App\Field', $mainField->children->random());
     }
+
+    /** @test */
+    function can_check_if_has_parent(){
+
+        $subfield = $this->createField($mainField = false);
+
+        $this->assertTrue($subfield->parent->isParent());
+        $this->assertFalse($subfield->isParent());
+    }
 }
