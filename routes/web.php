@@ -12,6 +12,11 @@ Route::group([
 
     // welcome page
     Route::get('/', 'HomeController@welcome')->name('welcome');
+    // Select fields
+    Route::get('select-fields', 'SelectFieldsController@index')->name('selectFields');
+    // User fields
+//    Route::resource('select-fields', 'UserFieldsController');
+
     Auth::routes(['verify' => true]);
 });
 

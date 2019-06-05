@@ -14,8 +14,8 @@ class CreateFieldsTable extends Migration
     public function up()
     {
         Schema::create('fields', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('parent_id')->unsigned()->nullable();
+            $table->smallIncrements('id');
+            $table->unsignedSmallInteger('parent_id')->nullable();
             $table->string('name');
             $table->string('slug');
             $table->enum('type', ['edu', 'entmt']);

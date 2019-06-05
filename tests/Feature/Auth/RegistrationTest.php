@@ -32,7 +32,7 @@ class RegistrationTest extends TestCase
     }
 
     /** @test */
-    function a_user_must_have_a_profile_after_registration_from_registration_route(){
+    function a_user_must_have_a_profile_after_registration(){
         $user = make('App\User', [
             'password' => 'test1234',
             'password_confirmation' => 'test1234',
@@ -43,6 +43,19 @@ class RegistrationTest extends TestCase
         $this->post(route('register'), $user->toArray());
 
         $this->assertNotNull(User::first()->fresh()->profile);
+    }
+
+    /** @test */
+    function a_user_must_be_redirect_to_select_fields_page_after_registration(){
+        $user = make('App\User', [
+            'password' => 'test1234',
+            'password_confirmation' => 'test1234',
+            'gender' => 'male',
+            'yob' => 2010
+        ]);
+
+        $this->post(route('register'), $user->toArray())
+            ->assertRedirect(route('selectFields'));
     }
 
     /** @test */

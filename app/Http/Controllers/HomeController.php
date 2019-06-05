@@ -11,6 +11,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function welcome(){
+
         return auth()->check() ? view('home') : view('welcome');
     }
 }

@@ -2083,7 +2083,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     register: function register() {
       this.form.post(route('register')).then(function (res) {
-        window.location = route('welcome');
+        window.location = route('selectFields');
       });
     },
     getYears: function getYears(start, stop) {
