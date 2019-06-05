@@ -85,10 +85,18 @@ class User extends Authenticatable implements MustVerifyEmail
      * Get All or Specific Selected fields according to its type for a specific user
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function fields($type = 'all'){
-        $relation = $this->belongsToMany('App\Field');
+    public function fields($type = null){
+        $relation = $this->belongsToMany('App\Field', 'field_user', 'user_id', 'field_id');
 
-        return $type == 'all' ? $relation : $relation->where('type', $type);
+        return ! $type ? $relation : $relation->where('type', $type);
+    }
+
+    /**
+     * Set field for a user
+     * @param $field
+     */
+    public function setField($field){
+         $this->fields()->attach(['field_id' => $field->id]);
     }
 
 }

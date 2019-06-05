@@ -24,4 +24,21 @@ class UserTest extends TestCase
 
         $this->assertInstanceOf(Collection::class, $user->fields);
     }
+
+    /** @test **/
+    function can_set_field(){
+        $user = create('App\User');
+
+        $this->assertEmpty($user->fields);
+
+        $eduField = $this->createField('edu');
+        $entmtField = $this->createField('entmt');
+
+        $user->setField($eduField);
+        $user->setField($entmtField);
+
+        $this->assertNotNull($user->fields);
+        $this->assertTrue($user->fresh()->fields->contains($entmtField));
+        $this->assertTrue($user->fresh()->fields->contains($eduField));
+    }
 }

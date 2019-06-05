@@ -19,9 +19,10 @@ class SelectFieldsTest extends TestCase
            ->assertStatus(200)
            ->assertViewIs('select_fields');
 
-       $edumainField = create('App\Field'); // parent is null
+       $this->createField('edu', 3, false);
+       $this->createField('entmt', 3, false);
 
-        create('App\Field', ['parent_id' => $edumainField], 3);
+
 
    }
 }

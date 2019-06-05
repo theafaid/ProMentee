@@ -22,7 +22,12 @@ class FieldUser extends Migration
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade');
+
+            $table->unique(['field_id', 'user_id']);
         });
+
+        Schema::enableForeignKeyConstraints();
+
     }
 
     /**
