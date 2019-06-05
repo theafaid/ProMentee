@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Field;
+
 class SelectFieldsController extends Controller
 {
     /**
@@ -11,6 +13,13 @@ class SelectFieldsController extends Controller
     public function index(){
         $user = auth()->user();
 
-        return $user && ! $user->hasSetFields() ? view('select_fields') : abort(404) ;
+        if(! $user->hasSetFields()){
+            return view('select_fields', [
+                'mainEduFields'   => Field::where('type', 'edu')->where('parent_id', null)->get(),
+                'mainEntmtFields' => Field::where('type', 'entmt')->where('parent_id', null)->get()
+            ]);
+        }
+
+        return abort(404);
     }
 }

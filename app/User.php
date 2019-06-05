@@ -100,6 +100,8 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     public function hasSetFields(){
+        if(! auth()->user()) return false;
+
         return !! $this->fields()->count();
     }
 
