@@ -15,7 +15,9 @@ Route::group([
     // Select fields
     Route::get('select-fields', 'SelectFieldsController@index')->name('selectFields');
     // User fields
-//    Route::resource('select-fields', 'UserFieldsController');
+    Route::resource('/user/fields', 'UserFieldsController', [
+        'as' => 'user'
+    ]);
 
     Auth::routes(['verify' => true]);
 });

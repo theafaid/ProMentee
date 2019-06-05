@@ -8,4 +8,8 @@ return [
 
     'welcome_title' => 'The unique experience',
     'join_to_site' => 'Join ProMentee',
+
+    // Set Fields
+    'invalid_field_inserted' => 'One of selected fields is invalid !',
+
 ];
