@@ -11,7 +11,7 @@ Route::group([
     Route::get('/js/lang.js', 'JavascriptLangsController@get')->name('assets.lang');
 
     // welcome page
-    Route::get('/', 'HomeController@welcome')->name('welcome');
+    Route::get('/', 'HomeController@home')->name('home');
     // Select fields
     Route::get('select-fields', 'SelectFieldsController@index')->name('selectFields');
     // User fields

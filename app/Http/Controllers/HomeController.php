@@ -10,7 +10,7 @@ class HomeController extends Controller
      * UnAuthenticated user will see a normal welcome page
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function welcome(){
+    public function home(){
 
         if($user = auth()->user()){
             return $user->hasSelectedFields() ? view('home') : redirect(route('selectFields'));

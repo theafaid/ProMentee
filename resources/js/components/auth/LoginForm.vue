@@ -57,7 +57,7 @@
             login(){
                 this.form.post(route('login'))
                     .then(res => {
-                        window.location = "/"
+                        window.location = route('home')
                     });
             }
         }
