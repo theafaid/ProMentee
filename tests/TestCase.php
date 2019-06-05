@@ -26,4 +26,23 @@ abstract class TestCase extends BaseTestCase
 
         return create('App\Field', ['type' => $type, 'parent_id' => $parent->id], $count);
     }
+
+    public function eeFields(){
+         return [
+            $this->createField(false, 1, 'edu'),
+            $this->createField(false, 1, 'entmt')
+         ];
+    }
+
+    public function setDefaultFieldsToUser($user = null){
+        $user  = $user ?: auth()->user();
+
+        $fields = $this->eeFields();
+
+        foreach($fields as $field){
+            $user->setField($field);
+        }
+
+        return $fields;
+    }
 }

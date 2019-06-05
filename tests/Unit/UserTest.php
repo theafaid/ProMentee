@@ -31,14 +31,10 @@ class UserTest extends TestCase
     function can_set_field(){
         $this->assertEmpty($this->user->fields);
 
-        $eduField = $this->createField($mainField = false, 1, 'edu');
-        $entmtField = $this->createField($mainField = false, 1, 'entmt');
-
-        $this->user->setField($eduField);
-        $this->user->setField($entmtField);
+        $fields = $this->setDefaultFieldsToUser($this->user);
 
         $this->assertNotNull($this->user->fields);
-        $this->assertTrue($this->user->fresh()->fields->contains($entmtField));
-        $this->assertTrue($this->user->fresh()->fields->contains($eduField));
+        $this->assertTrue($this->user->fresh()->fields->contains($fields[0]));
+        $this->assertTrue($this->user->fresh()->fields->contains($fields[1]));
     }
 }

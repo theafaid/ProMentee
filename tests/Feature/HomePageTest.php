@@ -31,11 +31,7 @@ class HomePageTest extends TestCase
     function authenticated_user_who_has_selected_his_fields_can_see_home_page(){
         $this->signIn();
 
-        $eduField   = $this->createField(false, 1, 'edu');
-        $entmtField =  $this->createField(false, 1, 'entmt');
-
-        auth()->user()->setField($eduField);
-        auth()->user()->setField($entmtField);
+        $this->setDefaultFieldsToUser();
 
         $this->get(route('welcome'))
             ->assertStatus(200)
