@@ -99,4 +99,11 @@ class User extends Authenticatable implements MustVerifyEmail
          $this->fields()->attach(['field_id' => $field->id]);
     }
 
+    public function hasSelectedFields(){
+        // must have at least 1 edu and max 3
+        // must have at least 1 entertainment
+
+        return !! $this->fields()->count();
+    }
+
 }

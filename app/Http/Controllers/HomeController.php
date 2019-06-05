@@ -12,6 +12,10 @@ class HomeController extends Controller
      */
     public function welcome(){
 
-        return auth()->check() ? view('home') : view('welcome');
+        if($user = auth()->user()){
+            return $user->hasSelectedFields() ? view('home') : redirect(route('selectFields'));
+        }
+
+        return view('welcome');
     }
 }

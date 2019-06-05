@@ -16,10 +16,33 @@ class HomePageTest extends TestCase
     }
 
     /** @test */
-    function authenticated_user_must_see_home_view_when_he_try_to_go_to_root_url(){
+    function authenticated_user_who_has_not_selected_his_fields_cannot_see_home_page(){
         $this->signIn();
 
         $this->get(route('welcome'))
+            ->assertRedirect(route('selectFields'));
+
+        $this->get(route('selectFields'))
+            ->assertStatus(200)
+            ->assertViewIs('select_fields');
+    }
+
+    /** @test */
+    function authenticated_user_who_has_selected_his_fields_can_see_home_page(){
+        $this->signIn();
+
+        $eduField   = $this->createField(false, 1, 'edu');
+        $entmtField =  $this->createField(false, 1, 'entmt');
+
+        auth()->user()->setField($eduField);
+        auth()->user()->setField($entmtField);
+
+        $this->get(route('welcome'))
+            ->assertStatus(200)
             ->assertViewIs('home');
+
+        $this->get(route('selectFields'))
+            ->assertStatus(404);
+
     }
 }
