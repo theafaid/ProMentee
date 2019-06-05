@@ -14,7 +14,7 @@ $factory->define(\App\Field::class, function (Faker $faker) {
         'type' => $faker->randomElement(['edu', 'entmt']),
         'parent_id' => function (){
             if(\App\Field::count()){
-                return \App\Field::all()->random()->id;
+                return \App\Field::where('parent_id', null)->get()->random()->id;
             }
             return null;
         }
