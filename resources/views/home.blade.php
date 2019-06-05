@@ -15,7 +15,7 @@
                  <form-wizard title="Choose three areas you specialize in or want to join">
                      <tab-content title="Select 3 Education Fields">
                          <div class="row">
-                             @foreach(\App\Category::where('parent_id', null)->where('type', 'edu')->get() as $key => $mainCategory)
+                             @foreach(\App\Field::where('parent_id', null)->where('type', 'edu')->get() as $key => $mainCategory)
                                  <div class="col-md-4 col-xs-6">
                                      <div id="accordion">
                                          <div class="card">

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class CreateFieldsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('fields', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id')->unsigned()->nullable();
             $table->string('name');
             $table->string('slug');
             $table->enum('type', ['edu', 'entmt']);
-            $table->foreign('parent_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('parent_id')->references('id')->on('fields')->onDelete('cascade');
             $table->timestamps();
         });
     }
