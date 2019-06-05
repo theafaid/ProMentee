@@ -12,17 +12,16 @@ class FieldTest extends TestCase
 
     /** @test */
     function field_might_has_parent(){
-        $mainField = create('App\Field'); // parent is null
-        $subField  = create('App\Field', ['parent_id' => $mainField]);
+        $subfield = $this->createField($mainField = false);
 
-        $this->assertInstanceOf('App\Field', $subField->parent);
+        $this->assertInstanceOf('App\Field', $subfield->parent);
     }
 
     /** @test */
     function field_might_has_subfields(){
-        $mainField = create('App\Field'); // parent is null
 
-        create('App\Field', ['parent_id' => $mainField], 3);
+        $subfields = $this->createField($mainField = false, 3);
+        $mainField = $subfields->random()->parent;
 
         $this->assertInstanceOf(Collection::class, $mainField->children);
 

@@ -19,10 +19,8 @@ class SelectFieldsTest extends TestCase
            ->assertStatus(200)
            ->assertViewIs('select_fields');
 
-       $this->createField('edu', 3, false);
-       $this->createField('entmt', 3, false);
-
-
+       $this->createField($mainField = false, 3);
+       $this->createField($mainField = false, 3);
 
    }
 }

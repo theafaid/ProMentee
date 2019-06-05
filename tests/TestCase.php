@@ -14,7 +14,7 @@ abstract class TestCase extends BaseTestCase
         return $this;
     }
 
-    public function createField($type = 'edu', $count = 1, $mainField = false){
+    public function createField($mainField = false,  $count = 1, $type = 'edu'){
 
         $count =  $count == 1 ? null : $count;
 
