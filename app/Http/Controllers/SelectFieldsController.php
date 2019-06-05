@@ -9,6 +9,6 @@ class SelectFieldsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
-        return view('select_fields');
+        return auth()->user() ? view('select_fields') : abort(404) ;
     }
 }

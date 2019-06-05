@@ -16,6 +16,7 @@ $factory->define(\App\Field::class, function (Faker $faker) {
             if(\App\Field::count()){
                 return \App\Field::all()->random()->id;
             }
+            return null;
         }
     ];
 });
