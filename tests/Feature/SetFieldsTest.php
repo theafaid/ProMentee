@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class SelectFieldsTest extends TestCase
+class SetFieldsTest extends TestCase
 {
    use RefreshDatabase;
 
@@ -13,7 +13,7 @@ class SelectFieldsTest extends TestCase
    function registered_user_can_set_his_education_and_entertainments_fields(){
         $this->signIn();
 
-       $this->assertFalse(auth()->user()->fresh()->hasSelectedFields());
+       $this->assertFalse(auth()->user()->fresh()->hasSetFields());
 
        $eduFields = $this->createField($mainField = false, 3, 'edu');
        $entmtFields = $this->createField($mainField = false, 3, 'entmt');
@@ -27,6 +27,6 @@ class SelectFieldsTest extends TestCase
 
        sleep(.25);
 
-       $this->assertTrue(auth()->user()->fresh()->hasSelectedFields());
+       $this->assertTrue(auth()->user()->fresh()->hasSetFields());
    }
 }

@@ -11,6 +11,6 @@ class SelectFieldsController extends Controller
     public function index(){
         $user = auth()->user();
 
-        return $user && ! $user->hasSelectedFields() ? view('select_fields') : abort(404) ;
+        return $user && ! $user->hasSetFields() ? view('select_fields') : abort(404) ;
     }
 }
