@@ -18,12 +18,11 @@ class SelectFieldsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
-        $user = auth()->user();
 
-        if(! $user->hasSetFields()){
+        if(! auth()->user()->hasSetFields()){
             return view('select_fields', [
-                'mainEduFields'   => json_decode((new CacheableFields(new EloquentFields))->mainEduFields()),
-                'mainEntmtFields' => json_decode((new CacheableFields(new EloquentFields))->mainEduFields())
+                'mainEduFields'   => resolve('Fields')->mainFields('edu'),
+                'mainEntmtFields' => resolve('Fields')->mainFields('entmt'),
             ]);
         }
 

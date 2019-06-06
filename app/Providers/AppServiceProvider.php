@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Cacheable\CacheableFields;
+use App\Eloquent\EloquentFields;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('Fields', function(){
+            return new CacheableFields(new EloquentFields);
+        });
     }
 
     /**

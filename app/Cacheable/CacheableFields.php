@@ -3,9 +3,10 @@
 
 namespace App\Cacheable;
 
-use Illuminate\Support\Facades\Redis;
+use App\Libs\Fields;
+use Illuminate\Support\Facades\Cache;
 
-class CacheableFields
+class CacheableFields implements Fields
 {
     protected $fields;
 
@@ -13,21 +14,9 @@ class CacheableFields
         $this->fields = $fields;
     }
 
-    public function mainEduFields(){
-        if($value = Redis::get('mainEduFields.all')){
-            return $value;
-        }
-
-        Redis::setex('mainEduFields.all', 60*60, $this->fields->mainEduFields()->toJson());
-
-        return $value;
-    }
-
-    public function mainEntmtFields(){
-        if($value = Redis::get('mainEntmtFields.all')){
-            return $value;
-        }
-
-        return Redis::setx('mainEntmtFields.all', 60*60, $this->fields->mainEntmtFields()->toJson());
+    public function mainFields($type){
+        return Cache::rememberForever('mainEduFields.all', function() use ($type){
+            return $this->fields->mainFields($type);
+        });
     }
 }

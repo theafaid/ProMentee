@@ -4,14 +4,11 @@
 namespace App\Eloquent;
 
 use App\Field;
+use App\Libs\Fields;
 
-class EloquentFields
+class EloquentFields implements Fields
 {
-    public function mainEduFields(){
-        return Field::where('parent_id', null)->where('type', 'edu')->get();
-    }
-
-    public function mainEntmtFields(){
-        return Field::where('parent_id', null)->where('type', 'entmt')->get();
+    public function mainFields($type){
+        return Field::where('parent_id', null)->where('type', $type)->get();
     }
 }
