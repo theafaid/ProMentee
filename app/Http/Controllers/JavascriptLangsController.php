@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class JavascriptLangsController extends Controller
 {
@@ -12,9 +12,13 @@ class JavascriptLangsController extends Controller
      */
     public function get(){
         if( app()->environment() == 'local'){
-            \Cache::forget('lang.js');
+            Cache::forget('lang.js');
         }
-        return response($this->getStrings(), 200, ['Content-Type' => 'text/javascript']);
+        return response
+        (
+            $this->getStrings(),
+            200, ['Content-Type' => 'text/javascript']
+        );
     }
 
     /**
@@ -23,14 +27,11 @@ class JavascriptLangsController extends Controller
      * @return string
      */
     private function getStrings(){
-        $strings = \Cache::rememberForever('lang.js', function () {
-            $lang = app()->getLocale();
+        $strings = Cache::rememberForever('lang.js', function () {
 
-            $files = glob(resource_path('lang/' . $lang . '/javascript.php'));
+            $files = glob(resource_path('lang/' . app()->getLocale() . '/javascript.php'));
 
-            $strings = require $files[0];
-
-            return $strings;
+            return require $files[0];
         });
 
         return "window.i18n = " . json_encode($strings);
