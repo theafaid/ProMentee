@@ -35,9 +35,7 @@ class UserFieldsController extends Controller
      */
     public function store(SetFieldsRequest $request)
     {
-        return $request->save() ?
-            response(['msg' => __('javascript.set_fields_done')], 200)
-            : response(['msg' => __('javascript.something_went_wrong')], 500);
+        return $request->save();
     }
 
     /**

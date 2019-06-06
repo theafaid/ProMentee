@@ -36,17 +36,17 @@ class SetFieldsRequest extends FormRequest
 
     public function save(){
 
-        try{
-            $fieldsIds = array_merge($this->eduFields, $this->entmtFields);
+        if(! $this->user()->hasSetFields()){
 
-            foreach($fieldsIds as $id){
-
+            // set selected fields to authenticated user
+            collect(array_merge($this->eduFields, $this->entmtFields))->map(function($id){
                 $this->user()->setField(Field::find($id));
-            }
-            return true;
-        }catch (\Exception $ex){
-            return false;
+            });
+
+            return response(['msg' => __('javascript.set_fields_done')], 200);
         }
 
+        // user has set his fields before
+        return response(['msg' => 'something_went_wrong'], 422);
     }
 }
