@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
+use App\User;
 
 class RegisterController extends Controller
 {
@@ -79,8 +78,15 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-
-    public function redirectTo(){
-        return route('selectFields');
+    /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function registered(Request $request, $user)
+    {
+        return response(['status' => true], 200);
     }
 }

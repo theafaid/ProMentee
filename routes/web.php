@@ -32,12 +32,16 @@ Route::any('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider')->name('auth.social');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('testo', function() {
+//Route::get('testo', function() {
+//
+////    \DB::table('field_user')->insert(['user_id' => auth()->id(), 'field_id' => 1]);
+//    return auth()->user()->fields()->attach([
+//        'field_id' => 4
+//    ]);
+//
+//    auth()->user()->setField($field);
+//});
 
-//    \DB::table('field_user')->insert(['user_id' => auth()->id(), 'field_id' => 1]);
-    return auth()->user()->fields()->attach([
-        'field_id' => 4
-    ]);
-
-    auth()->user()->setField($field);
+Route::get('testo', function(){
+    return Redis::incr('visits');
 });
