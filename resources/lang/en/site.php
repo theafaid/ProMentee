@@ -6,7 +6,7 @@ return [
     // login page
     'signin_to_promentee' => 'Sign in to ProMentee',
 
-    'welcome_title' => 'The unique experience',
+    'welcome_title' => 'The Community of Specialists people',
     'join_to_site' => 'Join ProMentee',
 
     // Set Fields
