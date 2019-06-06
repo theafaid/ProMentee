@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Field;
+use Illuminate\Support\Facades\Redis;
 
 class SelectFieldsController extends Controller
 {
@@ -19,8 +20,8 @@ class SelectFieldsController extends Controller
 
         if(! $user->hasSetFields()){
             return view('select_fields', [
-                'mainEduFields'   => Field::where('type', 'edu')->where('parent_id', null)->get(),
-                'mainEntmtFields' => Field::where('type', 'entmt')->where('parent_id', null)->get()
+                'mainEduFields'   => json_decode(Redis::get('eduFields.all')),
+                'mainEntmtFields' => json_decode(Redis::get('entmtFields.all'))
             ]);
         }
 
