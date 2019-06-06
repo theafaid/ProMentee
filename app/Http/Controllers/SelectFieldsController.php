@@ -6,6 +6,10 @@ use App\Field;
 
 class SelectFieldsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Show select fields page
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

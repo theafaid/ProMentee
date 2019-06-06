@@ -9,8 +9,17 @@ class HomePageTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->signIn();
+    }
+
     /** @test */
-    function un_authenticated_user_must_see_welcome_view_when_he_try_to_go_to_root_url(){
+    function unauthenticated_user_must_see_welcome_view_when_he_try_to_go_to_root_url(){
+        $this->logout();
+
         $this->get(route('home'))
             ->assertViewIs('welcome');
     }

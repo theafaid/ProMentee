@@ -9,9 +9,23 @@ class SetFieldsTest extends TestCase
 {
    use RefreshDatabase;
 
+   protected function setUp(): void
+   {
+       parent::setUp();
+
+       $this->signIn();
+   }
+
    /** @test */
+   function unauthenticated_user_cannot_see_set_fields_page(){
+       $this->logout();
+
+       $this->get(route('selectFields'))
+           ->assertStatus(302)
+           ->assertRedirect(route('login'));
+   }
+    /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
-        $this->signIn();
 
        $this->assertFalse(auth()->user()->fresh()->hasSetFields());
 
@@ -24,7 +38,6 @@ class SetFieldsTest extends TestCase
 
    /** @test */
    function user_cannot_set_his_fields_more_than_once(){
-       $this->signIn();
 
        $this->assertFalse(auth()->user()->fresh()->hasSetFields());
 
