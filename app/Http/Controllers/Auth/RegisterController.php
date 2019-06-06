@@ -61,6 +61,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'gender'   => ['required', 'string', 'in:male,female'],
             'yob'      => ['required', 'numeric', "min:{$allowYearTo}", "max:{$allowYearFrom}"]
+        ], [], [
+            'yob' => __('javascript.yob')
         ]);
     }
 
