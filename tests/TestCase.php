@@ -14,6 +14,10 @@ abstract class TestCase extends BaseTestCase
         return $this;
     }
 
+    public function logout(){
+        $this->get(route('logout'));
+    }
+
     public function createField($mainField = false,  $count = 1, $type = 'edu'){
 
         $count =  $count == 1 ? null : $count;

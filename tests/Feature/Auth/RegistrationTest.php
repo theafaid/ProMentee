@@ -44,7 +44,8 @@ class RegistrationTest extends TestCase
     /** @test */
     function a_user_must_be_redirect_to_select_fields_page_after_registration(){
         $this->post(route('register'), $this->makeUser()->toArray())
-            ->assertRedirect(route('selectFields'));
+            ->assertStatus(200)
+            ->assertJson(['status' => true]);
     }
 
     /** @test */

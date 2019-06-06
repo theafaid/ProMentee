@@ -37,4 +37,13 @@ class UserTest extends TestCase
         $this->assertTrue($this->user->fresh()->fields->contains($fields[0]));
         $this->assertTrue($this->user->fresh()->fields->contains($fields[1]));
     }
+
+    /** @test */
+    function can_check_if_has_set_fields(){
+        $this->assertFalse($this->user->hasSetFields());
+
+        $this->setDefaultFieldsToUser($this->user);
+
+        $this->assertTrue($this->user->fresh()->hasSetFields());
+    }
 }
