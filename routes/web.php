@@ -5,7 +5,7 @@
 */
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect']
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function(){
     // Js Localization
     Route::get('/js/lang.js', 'JavascriptLangsController@get')->name('assets.lang');
