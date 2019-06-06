@@ -103,8 +103,10 @@ class User extends Authenticatable implements MustVerifyEmail
      * Check if the user has set his fields or not
      * @return bool
      */
-    public function hasSetFields(){
-        return auth()->check() || app()->runningUnitTests() ? !! $this->fields()->count() : false;
+    public function hasSetFields($user = null){
+        $user = $user ?: auth()->user() ?: $this;
+
+        return auth()->check() || app()->runningUnitTests() ? !! $user->fields()->count() : false;
     }
 
 }
