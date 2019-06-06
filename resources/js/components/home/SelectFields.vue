@@ -26,9 +26,13 @@
                 axios.post(route('user.fields.store'), {
                     eduFields: this.eduFields,
                     entmtFields: this.entmtFields
+                }).then(res => {
+                    alert(res.data.msg);
+                }).catch(error => {
+                    alert(error.response.data.msg);
                 });
-
-                window.location = route('home');
+                return ;
+                // window.location = route('home');
             },
 
             onComplete: function() {

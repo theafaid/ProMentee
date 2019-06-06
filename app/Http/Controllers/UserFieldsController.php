@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Field;
 use App\Http\Requests\Fields\SetFieldsRequest;
-use App\Rules\ValidField;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class UserFieldsController extends Controller
 {
@@ -38,9 +35,9 @@ class UserFieldsController extends Controller
      */
     public function store(SetFieldsRequest $request)
     {
-        $request->save();
-
-        return response([], 200);
+        return $request->save() ?
+            response(['msg' => __('javascript.set_fields_done')], 200)
+            : response(['msg' => __('javascript.something_went_wrong')], 500);
     }
 
     /**

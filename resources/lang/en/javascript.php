@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // global
+    'something_went_wrong' => 'Sorry, Something went wrong!. please try again',
+
     // Login
     'email_or_username' => 'Email or Username',
     'password'          => 'Password',
@@ -16,4 +19,7 @@ return [
     'male'     => 'Male',
     'female' => 'Female',
     'register' => 'Register',
+
+    // set fields
+    'set_fields_done' => 'You have set your favourite fields successfully',
 ];

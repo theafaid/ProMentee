@@ -2135,8 +2135,12 @@ __webpack_require__.r(__webpack_exports__);
       axios.post(route('user.fields.store'), {
         eduFields: this.eduFields,
         entmtFields: this.entmtFields
+      }).then(function (res) {
+        alert(res.data.msg);
+      })["catch"](function (error) {
+        alert(error.response.data.msg);
       });
-      window.location = route('home');
+      return; // window.location = route('home');
     },
     onComplete: function onComplete() {
       alert('Yay. Done!');
@@ -6651,7 +6655,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.vue-form-wizard .wizard-progress-bar {*/\n/*    float: right;*/\n/*}*/\n\n/*.vue-form-wizard .wizard-card-footer .wizard-footer-left {*/\n/*    float: right;*/\n/*}*/\n\n/*.vue-form-wizard .wizard-card-footer .wizard-footer-right {*/\n/*    float: left;*/\n/*}*/\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.vue-form-wizard .wizard-progress-bar {*/\n/*    float: right;*/\n/*}*/\n\n/*.vue-form-wizard .wizard-card-footer .wizard-footer-left {*/\n/*    float: right;*/\n/*}*/\n\n/*.vue-form-wizard .wizard-card-footer .wizard-footer-right {*/\n/*    float: left;*/\n/*}*/\n", ""]);
 
 // exports
 

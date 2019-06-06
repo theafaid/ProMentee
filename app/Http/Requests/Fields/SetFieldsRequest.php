@@ -36,11 +36,16 @@ class SetFieldsRequest extends FormRequest
 
     public function save(){
 
-        $fieldsIds = array_merge($this->eduFields, $this->entmtFields);
+        try{
+            $fieldsIds = array_merge($this->eduFields, $this->entmtFields);
 
-        foreach($fieldsIds as $id){
+            foreach($fieldsIds as $id){
 
-            $this->user()->setField(Field::find($id));
+                $this->user()->setField(Field::find($id));
+            }
+            return true;
+        }catch (\Exception $ex){
+            return false;
         }
 
     }
