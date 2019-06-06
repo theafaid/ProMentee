@@ -23,6 +23,21 @@ class SetFieldsTest extends TestCase
    }
 
    /** @test */
+   function user_cannot_set_his_fields_more_than_once(){
+       $this->signIn();
+
+       $this->assertFalse(auth()->user()->fresh()->hasSetFields());
+
+       $this->store($mainFields = false, 3)->assertStatus(200);
+
+       $this->store($mainFields = false, 3)
+           ->assertJson(['msg' => __('javascript.something_went_wrong')])
+           ->assertStatus(422);
+
+
+   }
+
+   /** @test */
    function set_fields_requires_subfields_not_main(){
       $this->store($mainFields = true, 1)
           ->assertSessionHasErrors(['eduFields.*', 'entmtFields.*']);

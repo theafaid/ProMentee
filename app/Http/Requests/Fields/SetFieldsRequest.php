@@ -47,6 +47,6 @@ class SetFieldsRequest extends FormRequest
         }
 
         // user has set his fields before
-        return response(['msg' => 'something_went_wrong'], 422);
+        return response(['msg' => __('javascript.something_went_wrong')], 422);
     }
 }
