@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Cacheable\CacheableFields;
+use App\Eloquent\EloquentFields;
 use App\Field;
 use Illuminate\Support\Facades\Redis;
 
@@ -20,8 +22,8 @@ class SelectFieldsController extends Controller
 
         if(! $user->hasSetFields()){
             return view('select_fields', [
-                'mainEduFields'   => json_decode(Redis::get('eduFields.all')),
-                'mainEntmtFields' => json_decode(Redis::get('entmtFields.all'))
+                'mainEduFields'   => json_decode((new CacheableFields(new EloquentFields))->mainEduFields()),
+                'mainEntmtFields' => json_decode((new CacheableFields(new EloquentFields))->mainEduFields())
             ]);
         }
 
