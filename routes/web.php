@@ -18,6 +18,7 @@ Route::group([
     Route::resource('/user/fields', 'UserFieldsController', [
         'as' => 'user'
     ]);
+    Route::resource('posts', 'PostsController');
 
     Auth::routes(['verify' => true]);
 });
