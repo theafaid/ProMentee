@@ -2,7 +2,8 @@
     <div class="container">
         <div class="d-flex">
             <a class="header-brand" href="./index.html">
-                <img src="{{asset('design')}}/demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
+                <img src="{{asset('design/assets/images/site/logo.png')}}" class="header-brand-img" alt="tabler logo">
+                ProMentee
             </a>
             <div class="d-flex order-lg-2 ml-auto">
 

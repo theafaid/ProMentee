@@ -11,10 +11,12 @@
                                 type="text"
                                 name="name"
                                 class="form-control"
+                                v-validate="'required|alpha'"
                                 :class="{ 'is-invalid': form.errors.has('name')}"
                                 :placeholder="trans('full_name')"
                                 v-model="form.name">
                     </div>
+                    <span>{{ errors.first('name') }}</span>
                     <has-error :form="form" field="name"></has-error>
                 </div>
             </div>
@@ -123,8 +125,23 @@
 </template>
 
 <script>
+    import arabic from 'vee-validate/dist/locale/ar';
+
     export default {
         name: "RegistrationForm",
+
+        created(){
+            this.$validator.localize('ar', {
+                messages: arabic.messages,
+                attributes: {
+                    name: 'البريد الاليكتروني',
+                    phone: 'رقم الهاتف'
+                }
+            });
+
+            // start with english locale.
+            this.$validator.localize('ar');
+        },
 
         data(){
             return {

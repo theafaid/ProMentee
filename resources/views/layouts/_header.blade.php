@@ -13,7 +13,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="{{asset('design/assets/images/site/logo.png')}}" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <title> @yield('title')</title>
 
@@ -32,6 +32,12 @@
         </style>
     @endif
     <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="{{asset('design/assets/css/custom.css')}}"/>
 
+    <script>
+        window.Promentee = {!! json_encode([
+            'locale' => app()->getLocale()
+        ]) !!}
+    </script>
     @routes
 </head>
