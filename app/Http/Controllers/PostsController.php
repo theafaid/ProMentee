@@ -10,6 +10,7 @@ class PostsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('fieldsHasSet');
     }
 
     /**
@@ -19,12 +20,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->hasSetFields()){
-
-            return view('posts.index');
-        }
-
-        return redirect(route('setFields'));
+        return view('posts.index');
     }
 
     /**

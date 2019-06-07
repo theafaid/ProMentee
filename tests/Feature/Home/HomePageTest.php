@@ -21,6 +21,7 @@ class HomePageTest extends TestCase
         $this->logout();
 
         $this->get(route('home'))
+            ->assertStatus(200)
             ->assertViewIs('welcome');
     }
 
@@ -47,7 +48,7 @@ class HomePageTest extends TestCase
             ->assertViewIs('home');
 
         $this->get(route('setFields'))
-            ->assertStatus(404);
+            ->assertStatus(403);
 
     }
 }

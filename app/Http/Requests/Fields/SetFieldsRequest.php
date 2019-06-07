@@ -35,18 +35,11 @@ class SetFieldsRequest extends FormRequest
     }
 
     public function save(){
+        // set selected fields to authenticated user
+        collect(array_merge($this->eduFields, $this->entmtFields))->map(function($id){
+            $this->user()->setField(Field::find($id));
+        });
 
-        if(! $this->user()->hasSetFields()){
-
-            // set selected fields to authenticated user
-            collect(array_merge($this->eduFields, $this->entmtFields))->map(function($id){
-                $this->user()->setField(Field::find($id));
-            });
-
-            return response(['msg' => __('javascript.set_fields_done')], 200);
-        }
-
-        // user has set his fields before
-        return response(['msg' => __('javascript.something_went_wrong')], 422);
+        return response(['msg' => __('javascript.set_fields_done')], 200);
     }
 }

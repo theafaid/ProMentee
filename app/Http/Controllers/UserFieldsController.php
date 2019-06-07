@@ -9,6 +9,7 @@ class UserFieldsController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
+        $this->middleware('fieldsNotSet');
     }
     /**
      * Display a listing of the resource.
@@ -87,13 +88,9 @@ class UserFieldsController extends Controller
     }
 
     public function showSetFieldsPage(){
-        if(! auth()->user()->hasSetFields()){
-            return view('set_fields', [
-                'mainEduFields'   => resolve('Fields')->mainFields('edu'),
-                'mainEntmtFields' => resolve('Fields')->mainFields('entmt'),
-            ]);
-        }
-
-        return abort(404);
+        return view('set_fields', [
+            'mainEduFields'   => resolve('Fields')->mainFields('edu'),
+            'mainEntmtFields' => resolve('Fields')->mainFields('entmt'),
+        ]);
     }
 }

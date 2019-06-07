@@ -35,7 +35,7 @@ class SetFieldsTest extends TestCase
 
     /** @test */
     function user_whose_fields_have_been_set_cannot_see_set_fields_page(){
-       $this->endpoint(true, true)->assertStatus(404);
+       $this->endpoint(true, true)->assertStatus(403);
     }
 
     /** @test */
@@ -74,8 +74,7 @@ class SetFieldsTest extends TestCase
        $this->store($mainFields = false, 3)->assertStatus(200);
 
        $this->store($mainFields = false, 3)
-           ->assertJson(['msg' => __('javascript.something_went_wrong')])
-           ->assertStatus(422);
+           ->assertStatus(403);
    }
 
    /** @test */
