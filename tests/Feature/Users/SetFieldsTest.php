@@ -20,26 +20,23 @@ class SetFieldsTest extends TestCase
    function unauthenticated_user_cannot_see_set_fields_page(){
        $this->logout();
 
-       $this->get(route('setFields'))
+      $this->endpoint(false, false)
            ->assertStatus(302)
            ->assertRedirect(route('login'));
    }
 
     /** @test */
-    function user_whose_fields_have_been_set_can_see_set_fields_page(){
+    function user_whose_fields_have_not_been_set_can_see_set_fields_page(){
 
-        $this->get(route('setFields'))
+        $this->endpoint(true, false)
             ->assertStatus(200)
             ->assertViewIs('set_fields');
     }
 
     /** @test */
-    function user_whose_fields_have_not_been_set_cannot_see_set_fields_page(){
+    function user_whose_fields_have_been_set_cannot_see_set_fields_page(){
 
-        $this->setDefaultFieldsToUser();
-
-        $this->get(route('setFields'))
-            ->assertStatus(404);
+       $this->endpoint(true, true)->assertStatus(404);
     }
 
 
@@ -98,6 +95,14 @@ class SetFieldsTest extends TestCase
 
         $this->post(route('user.fields.store'), $data)
             ->assertSessionHasErrors(['eduFields.*', 'entmtFields']);
+    }
+
+    function endpoint($authenticated = false, $hasSetFields = false){
+        if(! $authenticated) $this->logout();
+
+        if($hasSetFields) $this->setDefaultFieldsToUser(auth()->user());
+
+        return $this->get(route('setFields'));
     }
 
     function store($main = false, $count){
