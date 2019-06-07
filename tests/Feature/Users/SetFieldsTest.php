@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Users;
 
+use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -27,7 +28,6 @@ class SetFieldsTest extends TestCase
 
     /** @test */
     function user_whose_fields_have_not_been_set_can_see_set_fields_page(){
-
         $this->endpoint(true, false)
             ->assertStatus(200)
             ->assertViewIs('set_fields');
@@ -35,10 +35,24 @@ class SetFieldsTest extends TestCase
 
     /** @test */
     function user_whose_fields_have_been_set_cannot_see_set_fields_page(){
-
        $this->endpoint(true, true)->assertStatus(404);
     }
 
+    /** @test */
+    function fields_are_loading_from_caching(){
+        $this->flushall();
+
+        $this->assertFalse(Cache::has('mainEduFields.all_testing'));
+        $this->assertFalse(Cache::has('mainEntmtFields.all_testing'));
+
+        $fields = $this->eeFields();
+
+        $this->endpoint(true, false)
+            ->assertSee($fields[array_rand($fields)]->name);
+
+        $this->assertTrue(Cache::has('mainEduFields.all_testing'));
+        $this->assertTrue(Cache::has('mainEntmtFields.all_testing'));
+    }
 
     /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
@@ -62,8 +76,6 @@ class SetFieldsTest extends TestCase
        $this->store($mainFields = false, 3)
            ->assertJson(['msg' => __('javascript.something_went_wrong')])
            ->assertStatus(422);
-
-
    }
 
    /** @test */

@@ -23,6 +23,8 @@ class CacheableFields implements Fields
 
         $key = "main" . ucfirst($type) . "Fields.all";
 
+        $key = app()->runningUnitTests() ? "{$key}_testing" : '';
+
         return Cache::rememberForever($key, function() use ($type){
             return $this->fields->mainFields($type);
         });

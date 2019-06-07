@@ -31,6 +31,10 @@ abstract class TestCase extends BaseTestCase
         return create('App\Field', ['type' => $type, 'parent_id' => $parent->id], $count);
     }
 
+    /**
+     * Create two main field & one sub fields for every single main field
+     * @return array
+     */
     public function eeFields(){
          return [
             $this->createField(false, 1, 'edu'),
@@ -48,5 +52,9 @@ abstract class TestCase extends BaseTestCase
         }
 
         return $fields;
+    }
+
+    public function flushall(){
+        \Cache::flush();
     }
 }
