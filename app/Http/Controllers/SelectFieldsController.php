@@ -2,11 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Cacheable\CacheableFields;
-use App\Eloquent\EloquentFields;
-use App\Field;
-use Illuminate\Support\Facades\Redis;
-
 class SelectFieldsController extends Controller
 {
     public function __construct(){

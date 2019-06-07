@@ -14,8 +14,16 @@ class CacheableFields implements Fields
         $this->fields = $fields;
     }
 
+    /**
+     * Fetch main fields from caching according to it's type
+     * @param $type
+     * @return mixed
+     */
     public function mainFields($type){
-        return Cache::rememberForever('mainEduFields.all', function() use ($type){
+
+        $key = "main" . ucfirst($type) . "Fields.all";
+
+        return Cache::rememberForever($key, function() use ($type){
             return $this->fields->mainFields($type);
         });
     }
