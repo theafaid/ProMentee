@@ -66,7 +66,7 @@
                                 <i class="dropdown-icon fe fe-help-circle"></i> Need help?
                             </a>
                             <a class="dropdown-item" href="{{route('logout')}}">
-                                <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                                <i class="dropdown-icon fa fa-power-off"></i> {{__('site.logout')}}
                             </a>
                         </div>
                     </div>
@@ -103,7 +103,10 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                        <a href="{{route('home')}}" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('posts.index')}}" class="nav-link"><i class="fa fa-sticky-note-o"></i> {{__('site.posts')}}</a>
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
