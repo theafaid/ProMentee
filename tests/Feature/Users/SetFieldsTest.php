@@ -24,6 +24,25 @@ class SetFieldsTest extends TestCase
            ->assertStatus(302)
            ->assertRedirect(route('login'));
    }
+
+    /** @test */
+    function user_whose_fields_have_been_set_can_see_set_fields_page(){
+
+        $this->get(route('selectFields'))
+            ->assertStatus(200)
+            ->assertViewIs('select_fields');
+    }
+
+    /** @test */
+    function user_whose_fields_have_not_been_set_cannot_see_set_fields_page(){
+
+        $this->setDefaultFieldsToUser();
+
+        $this->get(route('selectFields'))
+            ->assertStatus(404);
+    }
+
+
     /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
 
