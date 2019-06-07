@@ -7,6 +7,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Field extends Model
 {
+    public $translatable = ['name'];
     protected $fillable = ['name', 'slug', 'type', 'parent_id'];
     protected $with = ['children'];
 

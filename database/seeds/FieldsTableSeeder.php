@@ -13,66 +13,81 @@ class FieldsTableSeeder extends Seeder
      */
     public function run()
     {
-        Redis::flushall();
+        $supportedLocales = array_keys(
+            \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getSupportedLocales()
+        );
 
-        $engineering = Field::create([
-            'name' => 'Engineering',
-            'slug' => 'engineering',
-            'parent_id' => null,
-            'type' => 'edu'
-        ]);
+        $mainFields = [
+            'edu'   => ['Engineering', 'Science'],
+            'entmt' => ['Trips']
+        ];
 
-        $sicence = Field::create([
-            'name' => 'Science',
-            'slug' => 'science',
-            'parent_id' => null,
-            'type' => 'edu'
-        ]);
+        $subFields  = [
+            'edu' => ['Electrical Engineering', 'Physics'],
+            'entmt' => ['Safari trips']
+        ];
 
-         Field::create([
-            'name' => 'Electrical Engineering',
-            'slug' => 'electrical-engineering',
-            'parent_id' => $engineering->id,
-            'type' => 'edu'
-        ]);
 
-        Field::create([
-            'name' => 'Physics',
-            'slug' => 'physics',
-            'parent_id' => $sicence->id,
-            'type' => 'edu'
-        ]);
+        foreach ($mainFields['edu'] as $key => $mainEduField){
+            $mainField = new Field;
 
-        $trips = Field::create([
-            'name' => 'Trips',
-            'slug' => 'trips',
-            'parent_id' => null,
-            'type' => 'entmt'
-        ]);
+            foreach ($supportedLocales as $locale){
+                $value = "{$mainEduField}";
 
-         $sports = Field::create([
-            'name' => 'Sports',
-            'slug' => 'sports',
-            'parent_id' => null,
-            'type' => 'entmt'
-        ]);
+                $mainField->setTranslation('name', $locale, $value . "_" . $locale);
+            }
+            $mainField->slug = \Str::slug($mainEduField);
+            $mainField->slug = \Str::slug($mainEduField);
 
-         Field::create([
-            'name' => 'Safari Trips',
-            'slug' => 'safari-trips',
-            'parent_id' => $trips->id,
-            'type' => 'entmt'
-        ]);
+            $mainField->type = 'edu';
+            $mainField->save();
 
-        Field::create([
-            'name' => 'Football',
-            'slug' => 'football',
-            'parent_id' => $sports->id,
-            'type' => 'entmt'
-        ]);
+            foreach($subFields['edu'] as $subEduField){
+                $subfield = new Field;
 
-        Redis::set('eduFields.all', \App\Field::where('parent_id', null)->where('type', 'edu')->get()->toJson());
-        Redis::set('entmtFields.all', \App\Field::where('parent_id', null)->where('type', 'entmt')->get()->toJson());
+                foreach ($supportedLocales as $locale){
+                    $value = "{$subEduField}";
+
+                    $subfield->setTranslation('name', $locale, $value . "_" . $locale);
+                }
+                $subfield->slug = \Str::slug($subEduField);
+                $subfield->slug = \Str::slug($subEduField);
+                $subfield->parent_id = $mainField->id;
+                $subfield->type = 'edu';
+                $subfield->save();
+            }
+        }
+
+        foreach ($mainFields['entmt'] as $key => $mainEntmtField){
+            $mainField = new Field;
+
+            foreach ($supportedLocales as $locale){
+                $value = "{$mainEntmtField}";
+
+                $mainField->setTranslation('name', $locale, $value . "_" . $locale);
+            }
+            $mainField->slug = \Str::slug($mainEntmtField);
+            $mainField->slug = \Str::slug($mainEntmtField);
+
+            $mainField->type = 'entmt';
+            $mainField->save();
+
+            foreach($subFields['entmt'] as $subEduField){
+                $subfield = new Field;
+
+                foreach ($supportedLocales as $locale){
+                    $value = "{$subEduField}";
+
+                    $subfield->setTranslation('name', $locale, $value . "_" . $locale);
+                }
+                $subfield->slug = \Str::slug($subEduField);
+                $subfield->slug = \Str::slug($subEduField);
+                $subfield->parent_id = $mainField->id;
+                $subfield->type = 'entmt';
+                $subfield->save();
+            }
+        }
+
 
 //
 //        factory('App\Field', 5)->create(['parent_id' => null, 'type' => 'edu']);
