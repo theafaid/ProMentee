@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function home(){
 
         if($user = auth()->user()){
-            return $user->hasSetFields() ? view('home') : redirect(route('selectFields'));
+            return $user->hasSetFields() ? view('home') : redirect(route('setFields'));
         }
 
         return view('welcome');

@@ -20,7 +20,7 @@ class SetFieldsTest extends TestCase
    function unauthenticated_user_cannot_see_set_fields_page(){
        $this->logout();
 
-       $this->get(route('selectFields'))
+       $this->get(route('setFields'))
            ->assertStatus(302)
            ->assertRedirect(route('login'));
    }
@@ -28,9 +28,9 @@ class SetFieldsTest extends TestCase
     /** @test */
     function user_whose_fields_have_been_set_can_see_set_fields_page(){
 
-        $this->get(route('selectFields'))
+        $this->get(route('setFields'))
             ->assertStatus(200)
-            ->assertViewIs('select_fields');
+            ->assertViewIs('set_fields');
     }
 
     /** @test */
@@ -38,7 +38,7 @@ class SetFieldsTest extends TestCase
 
         $this->setDefaultFieldsToUser();
 
-        $this->get(route('selectFields'))
+        $this->get(route('setFields'))
             ->assertStatus(404);
     }
 

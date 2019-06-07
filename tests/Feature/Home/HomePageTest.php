@@ -29,11 +29,11 @@ class HomePageTest extends TestCase
         $this->signIn();
 
         $this->get(route('home'))
-            ->assertRedirect(route('selectFields'));
+            ->assertRedirect(route('setFields'));
 
-        $this->get(route('selectFields'))
+        $this->get(route('setFields'))
             ->assertStatus(200)
-            ->assertViewIs('select_fields');
+            ->assertViewIs('set_fields');
     }
 
     /** @test */
@@ -46,7 +46,7 @@ class HomePageTest extends TestCase
             ->assertStatus(200)
             ->assertViewIs('home');
 
-        $this->get(route('selectFields'))
+        $this->get(route('setFields'))
             ->assertStatus(404);
 
     }
