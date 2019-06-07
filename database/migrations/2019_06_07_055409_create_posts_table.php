@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->unsignedSmallInteger('field_id');
             $table->unsignedBigInteger('user_id');
             $table->string('title');
+            $table->string('slug');
             $table->text('body');
             $table->enum('type', ['advice', 'information', 'request', 'idea', 'other']);
 

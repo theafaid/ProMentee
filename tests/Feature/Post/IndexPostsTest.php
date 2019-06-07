@@ -14,4 +14,12 @@ class IndexPostsTest extends TestCase
         $this->get(route('posts.index'))
             ->assertRedirect(route('login'));
     }
+
+    /** @test */
+    function authenticated_user_can_see_index_posts_page(){
+        $this->signIn();
+        $this->get(route('posts.index'))
+            ->assertStatus(200)
+            ->assertViewIs('posts.index');
+    }
 }
