@@ -1,7 +1,7 @@
 <div class="header py-4">
     <div class="container">
         <div class="d-flex">
-            <a class="header-brand" href="./index.html">
+            <a class="header-brand" href="{{route('home')}}">
                 <img src="{{asset('design/assets/images/site/logo.png')}}" class="header-brand-img" alt="tabler logo">
                 ProMentee
             </a>
@@ -71,12 +71,12 @@
                         </div>
                     </div>
                 @else
-                    <div class="nav-item d-none d-md-flex">
+                    <div class="nav-item d-md-flex">
                         <a href="{{route('register')}}" class="btn btn-sm btn-outline-success">
-                            Register <i class="fe fe-align-right"></i>
+                            Register <i class="fa fa-user-plus"></i>
                         </a>
                     </div>
-                    <div class="nav-item d-none d-md-flex">
+                    <div class="nav-item d-md-flex">
                         <a href="{{route('login')}}" class="btn btn-sm btn-outline-primary">
                             Login <i class="fe fe-log-in"></i>
                         </a>

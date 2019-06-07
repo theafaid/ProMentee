@@ -1891,6 +1891,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "LoginForm",
   data: function data() {
@@ -50286,75 +50305,88 @@ var render = function() {
       }
     },
     [
-      _c(
-        "div",
-        { staticClass: "form-group" },
-        [
-          _c("label", [_vm._v(_vm._s(_vm.trans("email_or_username")))]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.loginName,
-                expression: "form.loginName"
-              }
-            ],
-            staticClass: "form-control",
-            class: {
-              "is-invalid":
-                _vm.form.errors.has("email") || _vm.form.errors.has("username")
-            },
-            attrs: { type: "text", name: "loginName" },
-            domProps: { value: _vm.form.loginName },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+      _c("div", { staticClass: "form-group" }, [
+        _c(
+          "div",
+          { staticClass: "input-icon" },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.loginName,
+                  expression: "form.loginName"
                 }
-                _vm.$set(_vm.form, "loginName", $event.target.value)
+              ],
+              staticClass: "form-control",
+              class: {
+                "is-invalid":
+                  _vm.form.errors.has("email") ||
+                  _vm.form.errors.has("username")
+              },
+              attrs: {
+                type: "text",
+                name: "loginName",
+                placeholder: _vm.trans("email_or_username")
+              },
+              domProps: { value: _vm.form.loginName },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "loginName", $event.target.value)
+                }
               }
-            }
-          }),
-          _vm._v(" "),
-          _c("has-error", { attrs: { form: _vm.form, field: "username" } }),
-          _vm._v(" "),
-          _c("has-error", { attrs: { form: _vm.form, field: "email" } }),
-          _vm._v(" "),
-          _c("has-error", { attrs: { form: _vm.form, field: "loginName" } })
-        ],
-        1
-      ),
+            }),
+            _vm._v(" "),
+            _c("has-error", { attrs: { form: _vm.form, field: "username" } }),
+            _vm._v(" "),
+            _c("has-error", { attrs: { form: _vm.form, field: "email" } }),
+            _vm._v(" "),
+            _c("has-error", { attrs: { form: _vm.form, field: "loginName" } })
+          ],
+          1
+        )
+      ]),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "form-group" },
         [
-          _c("label", [_vm._v(_vm._s(_vm.trans("password")))]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.password,
-                expression: "form.password"
-              }
-            ],
-            staticClass: "form-control",
-            class: { "is-invalid": _vm.form.errors.has("password") },
-            attrs: { type: "password", name: "password" },
-            domProps: { value: _vm.form.password },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+          _c("div", { staticClass: "input-icon" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.password,
+                  expression: "form.password"
                 }
-                _vm.$set(_vm.form, "password", $event.target.value)
+              ],
+              staticClass: "form-control",
+              class: { "is-invalid": _vm.form.errors.has("password") },
+              attrs: {
+                type: "password",
+                name: "password",
+                placeholder: _vm.trans("password")
+              },
+              domProps: { value: _vm.form.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "password", $event.target.value)
+                }
               }
-            }
-          }),
+            })
+          ]),
           _vm._v(" "),
           _c("has-error", { attrs: { form: _vm.form, field: "password" } })
         ],
@@ -50431,7 +50463,24 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-icon-addon" }, [
+      _c("i", { staticClass: "fe fe-user" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-icon-addon" }, [
+      _c("i", { staticClass: "fe fe-lock" })
+    ])
+  }
+]
 render._withStripped = true
 
 

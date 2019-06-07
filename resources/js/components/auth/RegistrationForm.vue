@@ -24,16 +24,16 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <div class="input-icon">
-                    <span class="input-icon-addon">
-                      <i class="fe fe-mail"></i>
-                    </span>
-                        <input
-                            type="text"
-                            name="email"
-                            class="form-control"
-                            :class="{ 'is-invalid': form.errors.has('email')}"
-                            :placeholder="trans('email')"
-                            v-model="form.email">
+                        <span class="input-icon-addon">
+                          <i class="fe fe-mail"></i>
+                        </span>
+                            <input
+                                type="text"
+                                name="email"
+                                class="form-control"
+                                :class="{ 'is-invalid': form.errors.has('email')}"
+                                :placeholder="trans('email')"
+                                v-model="form.email">
                     </div>
                     <has-error :form="form" field="email"></has-error>
                 </div>

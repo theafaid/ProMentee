@@ -1,18 +1,37 @@
 <template>
     <form @submit.prevent="submit" @keydown="form.onKeydown($event)">
         <div class="form-group">
-            <label>{{trans('email_or_username')}}</label>
-            <input v-model="form.loginName" type="text" name="loginName"
-                   class="form-control" :class="{ 'is-invalid': form.errors.has('email') || form.errors.has('username') }">
-            <has-error :form="form" field="username"></has-error>
-            <has-error :form="form" field="email"></has-error>
-            <has-error :form="form" field="loginName"></has-error>
+            <div class="input-icon">
+                        <span class="input-icon-addon">
+                          <i class="fe fe-user"></i>
+                        </span>
+                <input
+                    type="text"
+                    name="loginName"
+                    class="form-control"
+                    :placeholder="trans('email_or_username')"
+                    :class="{ 'is-invalid': form.errors.has('email') || form.errors.has('username') }"
+                    v-model="form.loginName">
+
+                <has-error :form="form" field="username"></has-error>
+                <has-error :form="form" field="email"></has-error>
+                <has-error :form="form" field="loginName"></has-error>
+            </div>
         </div>
 
         <div class="form-group">
-            <label>{{trans('password')}}</label>
-            <input v-model="form.password" type="password" name="password"
-                   class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
+            <div class="input-icon">
+                    <span class="input-icon-addon">
+                      <i class="fe fe-lock"></i>
+                    </span>
+                <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    :class="{ 'is-invalid': form.errors.has('password')}"
+                    :placeholder="trans('password')"
+                    v-model="form.password">
+            </div>
             <has-error :form="form" field="password"></has-error>
         </div>
 
