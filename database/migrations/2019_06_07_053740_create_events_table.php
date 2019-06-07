@@ -18,9 +18,9 @@ class CreateEventsTable extends Migration
             $table->unsignedSmallInteger('field_id');
             $table->foreign('field_id')->references('id')->on('fields')
                 ->onDelete('cascade');
-            $table->unsignedSmallInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onDelete('cascade');
+//            $table->unsignedSmallInteger('user_id');
+//            $table->foreign('user_id')->references('id')->on('users')
+//                ->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->boolean('premium')->default(false);
