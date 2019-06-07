@@ -16,8 +16,18 @@ class IndexPostsTest extends TestCase
     }
 
     /** @test */
-    function authenticated_user_can_see_index_posts_page(){
+    function user_whose_fields_have_not_been_set_cannot_see_posts_index_page(){
         $this->signIn();
+        $this->get(route('posts.index'))
+            ->assertRedirect(route('setFields'));
+    }
+
+    /** @test */
+    function user_whose_fields_have_been_set_can_see_posts_index_page(){
+        $this->signIn();
+
+        $this->setDefaultFieldsToUser();
+
         $this->get(route('posts.index'))
             ->assertStatus(200)
             ->assertViewIs('posts.index');
