@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->enum('type', ['advice', 'information', 'request', 'idea', 'other']);
-            $table->char('lang', 2);
+
             $table->foreign('field_id')->references('id')->on('fields')
                 ->onDelete('cascade');
 
