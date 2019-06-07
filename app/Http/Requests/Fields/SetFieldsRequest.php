@@ -41,7 +41,7 @@ class SetFieldsRequest extends FormRequest
             $this->user()->setField(Field::find($id));
         });
 
-        \Cache::forever("user.{$this->user()->id}.eduFields", $this->entmtFields);
+        \Cache::forever("user.{$this->user()->id}.eduFields", $this->eduFields);
         \Cache::forever("user.{$this->user()->id}.entmtFields", $this->entmtFields);
 
         return response(['msg' => __('javascript.set_fields_done')], 200);

@@ -13,7 +13,7 @@
             </h1>
         </div>
         <div class="row row-cards row-deck">
-            @foreach(\App\Post::whereIn('field_id', auth()->user()->fields()->get()->pluck('id'))->get() as $post)
+            @foreach($posts as $post)
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body d-flex flex-column">

@@ -20,7 +20,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $user = auth()->user();
+
+        $posts = \App\Post::whereIn('field_id', \Cache::get("user.{$user->id}.eduFields"))->get();
+
+        return view('posts.index')->withPosts($posts);
     }
 
     /**

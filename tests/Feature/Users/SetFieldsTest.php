@@ -56,6 +56,8 @@ class SetFieldsTest extends TestCase
 
     /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
+       $this->flushall();
+       
        $user = auth()->user();
 
        $this->assertFalse($user->fresh()->hasSetFields());
