@@ -56,14 +56,22 @@ class SetFieldsTest extends TestCase
 
     /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
+       $user = auth()->user();
 
-       $this->assertFalse(auth()->user()->fresh()->hasSetFields());
+       $this->assertFalse($user->fresh()->hasSetFields());
 
        $this->store($mainFields = false, 3)->assertStatus(200);
 
        sleep(.2);
 
-       $this->assertTrue(auth()->user()->fresh()->hasSetFields());
+       $this->assertTrue($user->fresh()->hasSetFields());
+
+       $types = ["eduFields", "entmtFields"];
+
+       foreach($types as $type){
+           $this->assertTrue(Cache::has("user.{$user->id}.{$type}"));
+           $this->assertCount(3, Cache::get("user.{$user->id}.{$type}"));
+       }
    }
 
    /** @test */

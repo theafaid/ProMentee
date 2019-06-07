@@ -4,6 +4,7 @@ namespace App\Http\Requests\Fields;
 
 use App\Field;
 use App\Rules\ValidField;
+use Illuminate\Filesystem\Cache;
 use Illuminate\Foundation\Http\FormRequest;
 
 class SetFieldsRequest extends FormRequest
@@ -39,6 +40,9 @@ class SetFieldsRequest extends FormRequest
         collect(array_merge($this->eduFields, $this->entmtFields))->map(function($id){
             $this->user()->setField(Field::find($id));
         });
+
+        \Cache::forever("user.{$this->user()->id}.eduFields", $this->entmtFields);
+        \Cache::forever("user.{$this->user()->id}.entmtFields", $this->entmtFields);
 
         return response(['msg' => __('javascript.set_fields_done')], 200);
     }
