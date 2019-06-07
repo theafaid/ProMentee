@@ -13,7 +13,7 @@
             </h1>
         </div>
         <div class="row row-cards row-deck">
-            @foreach($posts as $post)
+            @forelse($posts as $post)
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body d-flex flex-column">
@@ -32,7 +32,9 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+
+            @endforelse
         </div>
     </div>
 @endsection

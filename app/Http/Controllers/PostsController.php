@@ -22,7 +22,7 @@ class PostsController extends Controller
     {
         $user = auth()->user();
 
-        $posts = \App\Post::whereIn('field_id', \Cache::get("user.{$user->id}.eduFields"))->get();
+        $posts = \App\Post::whereIn('field_id', \Cache::get("user.{$user->id}.eduFields") ?: [0])->get();
 
         return view('posts.index')->withPosts($posts);
     }
