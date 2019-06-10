@@ -14,12 +14,15 @@ class CacheableUsersRelations
      * @return mixed
      */
     public function fieldsIds($type = null, $user =null){
-        $type = ! $type ? 'all' : $type;
-
         $user = $user ?: auth()->user();
 
-        $key = "user.{$user->id}.{$type}Fields";
-
-        return Cache::get($key);
+        if($type){
+            return Cache::get("user.{$user->id}.{$type}Fields");
+        }else{
+            return array_merge(
+                Cache::get("user.{$user->id}.eduFields"),
+                Cache::get("user.{$user->id}.entmtFields")
+            );
+        }
     }
 }

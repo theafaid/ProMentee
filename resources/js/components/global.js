@@ -40,3 +40,4 @@ Vue.component(AlertError.name, AlertError);
 Vue.component('login-form', require('./auth/LoginForm').default);
 Vue.component('registration-form', require('./auth/RegistrationForm').default);
 Vue.component('select-fields', require('./home/SelectFields').default);
+Vue.component('create-post', require('./posts/create').default);
