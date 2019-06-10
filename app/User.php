@@ -37,6 +37,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'username', 'email', 'password', 'provider', 'provider_id'
     ];
 
+    protected $with = ['profile'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -65,6 +66,16 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->attributes['username'] = $value;
     }
 
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function getNameAttribute($value){
+        $prefix =  $this->profile->gender == 'male' ? 'Mr' : 'Mrs';
+
+        return "{$prefix} {$value}";
+    }
     /**
      * Check if the username is exists in database
      * @param $username
