@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cacheable\CacheableUsersRelations;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -22,7 +23,7 @@ class PostsController extends Controller
     {
         $user = auth()->user();
 
-        $posts = \App\Post::whereIn('field_id', \Cache::get("user.{$user->id}.eduFields") ?: [0])->get();
+        $posts = \App\Post::whereIn('field_id', resolve('User')->fieldsIds('edu') ?: [0])->orderBy('id', 'desc')->get();
 
         return view('posts.index')->withPosts($posts);
     }

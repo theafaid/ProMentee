@@ -4,7 +4,7 @@
 namespace App\Eloquent;
 
 
-class EloquentUsers
+class EloquentUserRelations
 {
     /**
      * Fetch user fields according to it's type
@@ -12,9 +12,7 @@ class EloquentUsers
      * @param null $user
      * @return mixed
      */
-    public function fields($type = null, $user = null){
-        $user = $user ?: auth()->user();
-
-        return $user->fields($type)->get();
+    public function fieldsIds($type = null, $user){
+        return $user->fields($type)->get()->pluck('id');
     }
 }
