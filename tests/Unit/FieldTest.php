@@ -36,4 +36,26 @@ class FieldTest extends TestCase
         $this->assertTrue($subfield->parent->isParent());
         $this->assertFalse($subfield->isParent());
     }
+
+    /** @test */
+    function it_has_many_posts(){
+        $field = $this->createField(false);
+        $this->assertInstanceOf(Collection::class, $field->posts);
+    }
+
+    /** @test */
+    function can_create_post(){
+        $this->signIn();
+
+        $field = $this->createField(false);
+        $post = make('App\Post', ['id' => 1]);
+
+        $field->newPost($post->toArray());
+
+        $field = $field->fresh();
+
+        $this->assertEquals(1, $field->posts()->count());
+
+        $this->assertEquals($post->id, $field->posts()->first()->id);
+    }
 }

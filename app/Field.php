@@ -36,10 +36,17 @@ class Field extends Model
         return $this->parent_id == null;
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function posts(){
         return $this->hasMany('App\Post');
     }
 
+    /**
+     * Create a new post in this field
+     * @param $data
+     */
     public function newPost($data){
         $data['user_id'] = auth()->id();
         $data['slug']    = \Str::slug($data['title']);
