@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cacheable\CacheableUsersRelations;
+use App\Http\Requests\StorePostRequest;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -43,23 +44,9 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(StorePostRequest $request)
     {
-        $data = request()->validate([
-            'title' => 'required|string|max:45',
-            'body' => 'required|string|min:20|max:10000',
-            'type' => 'required|string|in:advice,information,request,idea,other',
-            'field_id' => 'required|numeric|exists:fields,id|in:'.implode(',', resolve('User')->fieldsIds())
-        ]);
-
-        \App\Post::create([
-            'user_id' => auth()->id(),
-            'title' => $data['title'],
-            'slug' => \Str::slug($data['title']),
-            'body' => $data['body'],
-            'type' => $data['type'],
-            'field_id' => $data['field_id']
-        ]);
+        $request->store();
 
         return response(['msg' => __('javascript.post_created')], 200);
     }

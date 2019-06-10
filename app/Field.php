@@ -35,4 +35,15 @@ class Field extends Model
     public function isParent(){
         return $this->parent_id == null;
     }
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
+
+    public function newPost($data){
+        $data['user_id'] = auth()->id();
+        $data['slug']    = \Str::slug($data['title']);
+
+        $this->posts()->create($data);
+    }
 }
