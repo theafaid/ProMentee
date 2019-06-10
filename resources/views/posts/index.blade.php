@@ -8,7 +8,7 @@
 
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">
+            <h1 class="page-title page-brief">
                 Blog components
             </h1>
         </div>
@@ -33,7 +33,9 @@
                     </div>
                 </div>
             @empty
-
+                <div class="alert alert-info">
+                    {!! __('site.empty_msg', ['name' => auth()->user()->name]) !!}
+                </div>
             @endforelse
         </div>
     </div>

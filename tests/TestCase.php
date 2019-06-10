@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\Cache;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -42,7 +43,8 @@ abstract class TestCase extends BaseTestCase
          ];
     }
 
-    public function setDefaultFieldsToUser($user = null){
+    public function setDefaultFieldsToUser($user = null, $storeInCache = false){
+
         $user  = $user ?: auth()->user();
 
         $fields = $this->eeFields();
@@ -51,10 +53,23 @@ abstract class TestCase extends BaseTestCase
             $user->setField($field);
         }
 
+        $storeInCache ? $this->storeUserFieldsInCache($user) : '';
+
         return $fields;
     }
 
     public function flushall(){
         \Cache::flush();
+    }
+
+    protected function storeUserFieldsInCache($user){
+        $types = ['edu', 'entmt'];
+
+        foreach($types as $type){
+            Cache::forever(
+                "user.{$user->id}.{$type}Fields",
+                [$user->fields($type)->first()->id]
+            );
+        }
     }
 }

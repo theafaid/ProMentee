@@ -20,7 +20,6 @@ class CacheableUsersRelations
 
         $key = "user.{$user->id}.{$type}Fields";
 
-        dd(Cache::get($key));
         return Cache::get($key);
     }
 }

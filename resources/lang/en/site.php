@@ -4,6 +4,8 @@ return [
     'site_name' => 'ProMentee',
     'site_motto' => 'The community of specialists people',
     'site_description' => 'The unique experience. Start join to your community, make friends, learn, have fun and much more .. :)',
+    'empty_msg' => 'It Seems like a desert ?!<br>We know :name but you know maybe your fields are rare, No one has created post till now, So what about making your first post, consider that some other friends may seeing this desert right now <i class="fa fa-smile-o"></i>',
+
     // login page
     'signin_to_promentee' => 'Sign in to ProMentee',
 
