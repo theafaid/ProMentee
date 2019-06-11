@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    {{__('site.site_name')}} - {{__('javascript.login')}}
+    ProMentee - {{__('javascript.login')}}
 @endsection
 
 @section('content')
@@ -13,6 +13,9 @@
                     {{__('site.signin_to_promentee')}}
                 </div>
                 <div class="card-body">
+                    <div class="page-brief text-center">
+                        <img src="{{asset('/design/assets/images/site/logo.png')}}">
+                    </div>
                     <login-form></login-form>
                 </div>
             </div>

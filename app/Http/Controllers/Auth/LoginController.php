@@ -30,7 +30,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
-    protected $username   = 'email';
+    protected $loginName   = 'email';
 
     /**
      * Create a new controller instance.
@@ -40,11 +40,11 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->username = $this->findLoginName();
+        $this->loginName = $this->findLoginName();
     }
 
     /**
-     * Get the login username to be used by the controller.
+     * Get the login name to be used by the controller.
      *
      * @return string
      */
@@ -66,7 +66,7 @@ class LoginController extends Controller
      */
     public function username()
     {
-        return $this->username;
+        return $this->loginName;
     }
 
     /**
@@ -147,6 +147,6 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        return response(['status' => true], 200);
+        return response(['redirectTo' => route('home')], 200);
     }
 }

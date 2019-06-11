@@ -9,15 +9,15 @@
                     type="text"
                     name="loginName"
                     class="form-control"
+                    :class="{ 'is-invalid': form.errors.has('username') || form.errors.has('email')}"
                     :placeholder="trans('email_or_username')"
-                    :class="{ 'is-invalid': form.errors.has('email') || form.errors.has('username') }"
                     v-model="form.loginName">
-
-                <has-error :form="form" field="username"></has-error>
-                <has-error :form="form" field="email"></has-error>
-                <has-error :form="form" field="loginName"></has-error>
             </div>
+            <has-error :form="form" field="email"></has-error>
+            <has-error :form="form" field="username"></has-error>
+            <span>{{ errors.first('loginName') }}</span>
         </div>
+
 
         <div class="form-group">
             <div class="input-icon">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <button :disabled="! isValidForm" type="submit" class="btn btn-primary">{{trans('login')}}</button>
+        <button :disabled="! isValidForm" type="submit" class="btn btn-outline-info btn-block">{{trans('login')}}</button>
     </form>
 </template>
 
@@ -75,8 +75,8 @@
 
             login(){
                 this.form.post(route('login'))
-                    .then(res => {
-                        window.location = route('home')
+                    .then(({data}) => {
+                        window.location = data.redirectTo;
                     });
             }
         }

@@ -14,20 +14,18 @@
         "bootstrap": "^4.1.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
-        "laravel-mix": "^4.0.7",
+        "laravel-mix": "^4.0.16",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.15.2",
+        "sass": "^1.21.0",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "lodash": "^4.17.11",
-        "vee-validate": "^2.2.9",
-        "vform": "^1.0.0",
-        "vue-form-wizard": "^0.8.4",
-        "vue-progressbar": "^0.7.5",
-        "vue-sweetalert2": "^2.0.5"
+        "vee-validate": "^2.2.10",
+        "vform": "^1.0.1",
+        "vue-form-wizard": "^0.8.4"
     }
 }

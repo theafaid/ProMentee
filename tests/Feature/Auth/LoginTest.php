@@ -19,12 +19,14 @@ class LoginTest extends TestCase
     /** @test */
     function un_authenticated_user_can_login_using_email(){
 
-        $this->login('email')->assertStatus(200)->assertJson(['status' => true]);
+        $this->login('email')->assertStatus(200)
+            ->assertJson(['redirectTo' => route('home')]);
     }
 
     /** @test */
     function un_authenticated_user_can_login_using_username(){
-        $this->login('username')->assertStatus(200)->assertJson(['status' => true]);
+        $this->login('username')->assertStatus(200)
+            ->assertJson(['redirectTo' => route('home')]);
     }
 
     function login($loginName = 'email'){
