@@ -16,7 +16,7 @@ class CreateFieldsTable extends Migration
         Schema::create('fields', function (Blueprint $table) {
             $table->smallIncrements('id');
             $table->unsignedSmallInteger('parent_id')->nullable();
-            $table->string('name');
+            $table->text('name');
             $table->string('slug');
             $table->enum('type', ['edu', 'entmt']);
             $table->foreign('parent_id')->references('id')->on('fields')->onDelete('cascade');

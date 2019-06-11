@@ -17,95 +17,216 @@ class FieldsTableSeeder extends Seeder
             \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getSupportedLocales()
         );
 
-        $mainFields = [
-            'edu'   => ['Engineering', 'Science'],
-            'entmt' => ['Trips']
+        $educationFields = [
+            'engineering' => [
+                'en' => 'Engineering',
+                'ar' => 'الهندسة',
+
+                'children' => [
+                    [
+
+                        'ar' => 'بيولوجي',
+                        'en' => 'Biological'
+                    ],
+
+                    [
+
+                        'ar' => 'الهندسة الزراعية',
+                        'en' => 'Agricultural Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'الهندسة الطبية الحيوية',
+                        'en' => 'Biomedical Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'هندسة كيميائية',
+                        'en' => 'Chemical Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'الهندسة المدنية والبيئية',
+                        'en' => 'Civil and Environmental Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'هندسة اتصالات',
+                        'en' => 'communication engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'هندسة القوى والآلات',
+                        'en' => 'power and machines engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'الهندسة الكهربائية والحاسوب',
+                        'en' => 'Electrical and Computer Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'علم و هندسة المواد',
+                        'en' => 'Materials Science and Engineering'
+                    ],
+
+                    [
+
+                        'ar' => 'هندسة ميكانيكية وفضائية',
+                        'en' => 'Mechanical and Aerospace Engineering'
+                    ],
+
+                ],
+            ],
+
+            'pharmacy' => [
+                'ar' => 'الصيدلية',
+                'en' => 'Pharmacy',
+
+                'children' => [
+                    [
+
+                        'ar' => 'الصيدلة والصيدلة الصناعية',
+                        'en' => 'Pharmaceutics & Industrial Pharmacy'
+                    ],
+                    [
+
+                        'ar' => 'العقاقير',
+                        'en' => 'Pharmacognosy'
+                    ],
+                    [
+
+                        'ar' => 'علم الأدوية والسموم',
+                        'en' => 'Pharmacology & Toxicology'
+                    ],
+                    [
+
+                        'ar' => 'علم الأحياء الدقيقة والمناعة',
+                        'en' => 'Microbiology & Immunology'
+                    ],
+                    [
+
+                        'ar' => 'الكيمياء العضوية الصيدلانية',
+                        'en' => 'Pharmaceutical Organic Chemistry'
+                    ],
+                    [
+
+                        'ar' => 'الكيمياء التحليلية',
+                        'en' => 'Analytical Chemistry'
+                    ],
+                    [
+
+                        'ar' => 'الكيمياء الحيوية',
+                        'en' => 'Biochemistry'
+                    ],
+                    [
+
+                        'ar' => 'الكيمياء الصيدلانية',
+                        'en' => 'Pharmaceutical Chemistry'
+                    ],
+                    [
+
+                        'ar' => 'عيادة صيدلية',
+                        'en' => 'Clinical Pharmacy'
+                    ],
+                ],
+            ],
+
+            [
+                'ar' => 'الطب',
+                'en' => 'Medicine',
+                'children' => [
+                    [
+                        'ar' => 'تشريح',
+                        'en' => 'anatomy'
+                    ],
+                    [
+
+                        'ar' => 'علم الانسجة',
+                        'en' => 'histology'
+                    ],
+                    [
+
+                        'ar' => 'الكيمياء الحيوية',
+                        'en' => 'biochemistry'
+                    ],
+                    [
+
+                        'ar' => 'وظائف الأعضاء',
+                        'en' => 'physiology'
+                    ],
+                ]
+            ]
         ];
 
-        $subFields  = [
-            'edu' => ['Electrical Engineering', 'Physics'],
-            'entmt' => ['Safari trips']
+        $entertainmentFields = [
+            'physical_sports' => [
+                'en' => 'Physical sports',
+                'ar' => 'الرياضة البدنية',
+                'children' => [
+                    [
+                        'en' => 'Football',
+                        'ar' => 'كرة القدم',
+                    ],
+                    [
+                        'en' => 'Glof',
+                        'ar' => 'الجولف',
+                    ]
+                ]
+            ]
         ];
 
+        foreach($educationFields as $mainField){
+            $field = new Field;
 
-        foreach ($mainFields['edu'] as $key => $mainEduField){
-            $mainField = new Field;
-
-            foreach ($supportedLocales as $locale){
-                $value = "{$mainEduField}";
-
-                $mainField->setTranslation('name', $locale, $value . "_" . $locale);
+            $field->type = 'edu';
+            foreach($supportedLocales as $locale){
+                if($mainField[$locale]) $field->setTranslation('name', $locale, $mainField[$locale]);
             }
-            $mainField->slug = \Str::slug($mainEduField);
-            $mainField->slug = \Str::slug($mainEduField);
+            $field->slug = \Str::slug($mainField['en']);
+            $field->save();
 
-            $mainField->type = 'edu';
-            $mainField->save();
+            foreach($mainField['children'] as $child){
+                $subField = new Field;
 
-            foreach($subFields['edu'] as $subEduField){
-                $subfield = new Field;
-
-                foreach ($supportedLocales as $locale){
-                    $value = "{$subEduField}";
-
-                    $subfield->setTranslation('name', $locale, $value . "_" . $locale);
+                $subField->type = $field->type; // edu
+                foreach($supportedLocales as $locale){
+                    if($child[$locale]) $subField->setTranslation('name', $locale, $child[$locale]);
                 }
-                $subfield->slug = \Str::slug($subEduField);
-                $subfield->slug = \Str::slug($subEduField);
-                $subfield->parent_id = $mainField->id;
-                $subfield->type = 'edu';
-                $subfield->save();
+                $subField->slug = \Str::slug($child['en']);
+                $subField->parent_id = $field->id;
+                $subField->save();
             }
         }
 
-        foreach ($mainFields['entmt'] as $key => $mainEntmtField){
-            $mainField = new Field;
+        foreach($entertainmentFields as $mainField){
+            $field = new Field;
 
-            foreach ($supportedLocales as $locale){
-                $value = "{$mainEntmtField}";
-
-                $mainField->setTranslation('name', $locale, $value . "_" . $locale);
+            $field->type = 'entmt';
+            foreach($supportedLocales as $locale){
+                if($mainField[$locale]) $field->setTranslation('name', $locale, $mainField[$locale]);
             }
-            $mainField->slug = \Str::slug($mainEntmtField);
-            $mainField->slug = \Str::slug($mainEntmtField);
+            $field->slug = \Str::slug($mainField['en']);
+            $field->save();
 
-            $mainField->type = 'entmt';
-            $mainField->save();
+            foreach($mainField['children'] as $child){
+                $subField = new Field;
 
-            foreach($subFields['entmt'] as $subEduField){
-                $subfield = new Field;
-
-                foreach ($supportedLocales as $locale){
-                    $value = "{$subEduField}";
-
-                    $subfield->setTranslation('name', $locale, $value . "_" . $locale);
+                $subField->type = $field->type; // entmt
+                foreach($supportedLocales as $locale){
+                    if($child[$locale]) $subField->setTranslation('name', $locale, $child[$locale]);
                 }
-                $subfield->slug = \Str::slug($subEduField);
-                $subfield->slug = \Str::slug($subEduField);
-                $subfield->parent_id = $mainField->id;
-                $subfield->type = 'entmt';
-                $subfield->save();
+                $subField->slug = \Str::slug($child['en']);
+                $subField->parent_id = $field->id;
+                $subField->save();
             }
         }
-
-
-//
-//        factory('App\Field', 5)->create(['parent_id' => null, 'type' => 'edu']);
-//
-//        $mainEduFields = Field::all();
-//
-//
-//        $mainEduFields->each(function($field){
-//            factory('App\Field', 5)->create(['parent_id' => $field->id, 'type' => 'edu']);
-//        });
-//
-//        factory('App\Field', 5)->create(['parent_id' => null, 'type' => 'entmt']);
-//
-//        $mainEntmtFields = Field::where('parent_id', null)->where('type', 'entmt')->get();
-//
-//        $mainEntmtFields->each(function($field){
-//            factory('App\Field', 5)->create(['parent_id' => $field->id, 'type' => 'entmt']);
-//        });
-
     }
 }
