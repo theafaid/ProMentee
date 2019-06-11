@@ -1997,6 +1997,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "LoginForm",
   data: function data() {
@@ -2010,7 +2013,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isValidForm: function isValidForm() {
-      return !!(this.form.loginName && this.form.password);
+      return !!(this.form.loginName && this.form.password.length == 8);
     }
   },
   methods: {
@@ -50660,7 +50663,10 @@ var render = function() {
           staticClass: "btn btn-outline-info btn-block",
           attrs: { disabled: !_vm.isValidForm, type: "submit" }
         },
-        [_vm._v(_vm._s(_vm.trans("login")))]
+        [
+          _vm._v("\n        " + _vm._s(_vm.trans("login")) + "\n        "),
+          _c("i", { staticClass: "fe fe-log-in" })
+        ]
       )
     ]
   )

@@ -44,7 +44,10 @@
             </div>
         </div>
 
-        <button :disabled="! isValidForm" type="submit" class="btn btn-outline-info btn-block">{{trans('login')}}</button>
+        <button :disabled="! isValidForm" type="submit" class="btn btn-outline-info btn-block">
+            {{trans('login')}}
+            <i class="fe fe-log-in"></i>
+        </button>
     </form>
 </template>
 
@@ -64,7 +67,7 @@
 
         computed: {
             isValidForm(){
-                return !! (this.form.loginName && this.form.password);
+                return !! (this.form.loginName && this.form.password.length == 8);
             }
         },
 
