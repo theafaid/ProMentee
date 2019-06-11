@@ -19,16 +19,23 @@ window.Form = Form;
 
 import VeeValidate from 'vee-validate';
 
-Vue.use(VeeValidate);
+Vue.use(VeeValidate, {
+    classes: true,
+    classNames: {
+        valid: 'is-valid',
+        invalid: 'is-invalid'
+    },
+    validity: true
+});
 
-import VueSweetalert2 from 'vue-sweetalert2';
+window.Swal = require('sweetalert2');
 
-const options = {
-    confirmButtonColor: '#41b882',
-    cancelButtonColor: '#ff7674'
-}
-
-Vue.use(VueSweetalert2, options)
+window.Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+});
 
 /** Global Components **/
 

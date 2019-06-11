@@ -86,93 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/sweetalert2/dist/sweetalert2.min.css":
-/*!************************************************************!*\
-  !*** ../node_modules/sweetalert2/dist/sweetalert2.min.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../promentee/node_modules/css-loader??ref--6-1!../../../promentee/node_modules/postcss-loader/src??ref--6-2!./sweetalert2.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../node_modules/sweetalert2/dist/sweetalert2.min.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../promentee/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../node_modules/sweetalert2/dist/sweetalert2.min.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/sweetalert2/dist/sweetalert2.min.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-!function(t,e){ true?module.exports=e():undefined}(this,function(){"use strict";function f(t){return(f="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function i(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function r(t,e,n){return e&&i(t.prototype,e),n&&i(t,n),t}function a(){return(a=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t}).apply(this,arguments)}function s(t){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function u(t,e){return(u=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function c(t,e,n){return(c=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(t){return!1}}()?Reflect.construct:function(t,e,n){var o=[null];o.push.apply(o,e);var i=new(Function.bind.apply(t,o));return n&&u(i,n.prototype),i}).apply(null,arguments)}function l(t,e){return!e||"object"!=typeof e&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function d(t,e,n){return(d="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var o=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=s(t)););return t}(t,e);if(o){var i=Object.getOwnPropertyDescriptor(o,e);return i.get?i.get.call(n):i.value}})(t,e,n||t)}function p(e){return Object.keys(e).map(function(t){return e[t]})}function m(t){return Array.prototype.slice.call(t)}function g(t){console.error("".concat(e," ").concat(t))}function h(t,e){!function(t){-1===n.indexOf(t)&&(n.push(t),y(t))}('"'.concat(t,'" is deprecated and will be removed in the next major release. Please use "').concat(e,'" instead.'))}function v(t){return t&&Promise.resolve(t)===t}function t(t){var e={};for(var n in t)e[t[n]]="swal2-"+t[n];return e}function b(e,t,n){m(e.classList).forEach(function(t){-1===p(k).indexOf(t)&&-1===p(B).indexOf(t)&&e.classList.remove(t)}),t&&t[n]&&nt(e,t[n])}var e="SweetAlert2:",y=function(t){console.warn("".concat(e," ").concat(t))},n=[],w=function(t){return"function"==typeof t?t():t},C=Object.freeze({cancel:"cancel",backdrop:"backdrop",close:"close",esc:"esc",timer:"timer"}),k=t(["container","shown","height-auto","iosfix","popup","modal","no-backdrop","toast","toast-shown","toast-column","fade","show","hide","noanimation","close","title","header","content","actions","confirm","cancel","footer","icon","image","input","file","range","select","radio","checkbox","label","textarea","inputerror","validation-message","progress-steps","active-progress-step","progress-step","progress-step-line","loading","styled","top","top-start","top-end","top-left","top-right","center","center-start","center-end","center-left","center-right","bottom","bottom-start","bottom-end","bottom-left","bottom-right","grow-row","grow-column","grow-fullscreen","rtl"]),B=t(["success","warning","info","question","error"]),x={previousBodyPadding:null},S=function(t,e){return t.classList.contains(e)};function P(t,e){if(!e)return null;switch(e){case"select":case"textarea":case"file":return it(t,k[e]);case"checkbox":return t.querySelector(".".concat(k.checkbox," input"));case"radio":return t.querySelector(".".concat(k.radio," input:checked"))||t.querySelector(".".concat(k.radio," input:first-child"));case"range":return t.querySelector(".".concat(k.range," input"));default:return it(t,k.input)}}function A(t){if(t.focus(),"file"!==t.type){var e=t.value;t.value="",t.value=e}}function L(t,e,n){t&&e&&("string"==typeof e&&(e=e.split(/\s+/).filter(Boolean)),e.forEach(function(e){t.forEach?t.forEach(function(t){n?t.classList.add(e):t.classList.remove(e)}):n?t.classList.add(e):t.classList.remove(e)}))}function E(t,e,n){n||0===parseInt(n)?t.style[e]="number"==typeof n?n+"px":n:t.style.removeProperty(e)}function T(t,e){var n=1<arguments.length&&void 0!==e?e:"flex";t.style.opacity="",t.style.display=n}function O(t){t.style.opacity="",t.style.display="none"}function M(t,e,n){e?T(t,n):O(t)}function V(t){return!(!t||!(t.offsetWidth||t.offsetHeight||t.getClientRects().length))}function j(t){var e=window.getComputedStyle(t),n=parseFloat(e.getPropertyValue("animation-duration")||"0"),o=parseFloat(e.getPropertyValue("transition-duration")||"0");return 0<n||0<o}function q(){return document.body.querySelector("."+k.container)}function H(t){var e=q();return e?e.querySelector(t):null}function I(t){return H("."+t)}function R(){var t=rt();return m(t.querySelectorAll("."+k.icon))}function N(){var t=R().filter(function(t){return V(t)});return t.length?t[0]:null}function D(){return I(k.title)}function U(){return I(k.content)}function _(){return I(k.image)}function z(){return I(k["progress-steps"])}function W(){return I(k["validation-message"])}function K(){return H("."+k.actions+" ."+k.confirm)}function F(){return H("."+k.actions+" ."+k.cancel)}function Z(){return I(k.actions)}function Q(){return I(k.header)}function Y(){return I(k.footer)}function $(){return I(k.close)}function J(){var t=m(rt().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')).sort(function(t,e){return t=parseInt(t.getAttribute("tabindex")),(e=parseInt(e.getAttribute("tabindex")))<t?1:t<e?-1:0}),e=m(rt().querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable], audio[controls], video[controls]')).filter(function(t){return"-1"!==t.getAttribute("tabindex")});return function(t){for(var e=[],n=0;n<t.length;n++)-1===e.indexOf(t[n])&&e.push(t[n]);return e}(t.concat(e)).filter(function(t){return V(t)})}function X(){return"undefined"==typeof window||"undefined"==typeof document}function G(t){ce.isVisible()&&et!==t.target.value&&ce.resetValidationMessage(),et=t.target.value}function tt(t,e){t instanceof HTMLElement?e.appendChild(t):"object"===f(t)?lt(e,t):t&&(e.innerHTML=t)}var et,nt=function(t,e){L(t,e,!0)},ot=function(t,e){L(t,e,!1)},it=function(t,e){for(var n=0;n<t.childNodes.length;n++)if(S(t.childNodes[n],e))return t.childNodes[n]},rt=function(){return I(k.popup)},at=function(){return!st()&&!document.body.classList.contains(k["no-backdrop"])},st=function(){return document.body.classList.contains(k["toast-shown"])},ut='\n <div aria-labelledby="'.concat(k.title,'" aria-describedby="').concat(k.content,'" class="').concat(k.popup,'" tabindex="-1">\n   <div class="').concat(k.header,'">\n     <ul class="').concat(k["progress-steps"],'"></ul>\n     <div class="').concat(k.icon," ").concat(B.error,'">\n       <span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span>\n     </div>\n     <div class="').concat(k.icon," ").concat(B.question,'"></div>\n     <div class="').concat(k.icon," ").concat(B.warning,'"></div>\n     <div class="').concat(k.icon," ").concat(B.info,'"></div>\n     <div class="').concat(k.icon," ").concat(B.success,'">\n       <div class="swal2-success-circular-line-left"></div>\n       <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>\n       <div class="swal2-success-ring"></div> <div class="swal2-success-fix"></div>\n       <div class="swal2-success-circular-line-right"></div>\n     </div>\n     <img class="').concat(k.image,'" />\n     <h2 class="').concat(k.title,'" id="').concat(k.title,'"></h2>\n     <button type="button" class="').concat(k.close,'">&times;</button>\n   </div>\n   <div class="').concat(k.content,'">\n     <div id="').concat(k.content,'"></div>\n     <input class="').concat(k.input,'" />\n     <input type="file" class="').concat(k.file,'" />\n     <div class="').concat(k.range,'">\n       <input type="range" />\n       <output></output>\n     </div>\n     <select class="').concat(k.select,'"></select>\n     <div class="').concat(k.radio,'"></div>\n     <label for="').concat(k.checkbox,'" class="').concat(k.checkbox,'">\n       <input type="checkbox" />\n       <span class="').concat(k.label,'"></span>\n     </label>\n     <textarea class="').concat(k.textarea,'"></textarea>\n     <div class="').concat(k["validation-message"],'" id="').concat(k["validation-message"],'"></div>\n   </div>\n   <div class="').concat(k.actions,'">\n     <button type="button" class="').concat(k.confirm,'">OK</button>\n     <button type="button" class="').concat(k.cancel,'">Cancel</button>\n   </div>\n   <div class="').concat(k.footer,'">\n   </div>\n </div>\n').replace(/(^|\n)\s*/g,""),ct=function(t){if(function(){var t=q();t&&(t.parentNode.removeChild(t),ot([document.documentElement,document.body],[k["no-backdrop"],k["toast-shown"],k["has-column"]]))}(),X())g("SweetAlert2 requires document to initialize");else{var e=document.createElement("div");e.className=k.container,e.innerHTML=ut;var n=function(t){return"string"==typeof t?document.querySelector(t):t}(t.target);n.appendChild(e),function(t){var e=rt();e.setAttribute("role",t.toast?"alert":"dialog"),e.setAttribute("aria-live",t.toast?"polite":"assertive"),t.toast||e.setAttribute("aria-modal","true")}(t),function(t){"rtl"===window.getComputedStyle(t).direction&&nt(q(),k.rtl)}(n),function(){var t=U(),e=it(t,k.input),n=it(t,k.file),o=t.querySelector(".".concat(k.range," input")),i=t.querySelector(".".concat(k.range," output")),r=it(t,k.select),a=t.querySelector(".".concat(k.checkbox," input")),s=it(t,k.textarea);e.oninput=G,n.onchange=G,r.onchange=G,a.onchange=G,s.oninput=G,o.oninput=function(t){G(t),i.value=o.value},o.onchange=function(t){G(t),o.nextSibling.value=o.value}}()}},lt=function(t,e){if(t.innerHTML="",0 in e)for(var n=0;n in e;n++)t.appendChild(e[n].cloneNode(!0));else t.appendChild(e.cloneNode(!0))},dt=function(){if(X())return!1;var t=document.createElement("div"),e={WebkitAnimation:"webkitAnimationEnd",OAnimation:"oAnimationEnd oanimationend",animation:"animationend"};for(var n in e)if(e.hasOwnProperty(n)&&void 0!==t.style[n])return e[n];return!1}();function pt(t,e,n){M(t,n["showC"+e.substring(1)+"Button"],"inline-block"),t.innerHTML=n[e+"ButtonText"],t.setAttribute("aria-label",n[e+"ButtonAriaLabel"]),t.className=k[e],b(t,n.customClass,e+"Button"),nt(t,n[e+"ButtonClass"])}function ft(t,e){var n=Z(),o=K(),i=F();e.showConfirmButton||e.showCancelButton?T(n):O(n),b(n,e.customClass,"actions"),pt(o,"confirm",e),pt(i,"cancel",e),e.buttonsStyling?function(t,e,n){nt([t,e],k.styled),n.confirmButtonColor&&(t.style.backgroundColor=n.confirmButtonColor),n.cancelButtonColor&&(e.style.backgroundColor=n.cancelButtonColor);var o=window.getComputedStyle(t).getPropertyValue("background-color");t.style.borderLeftColor=o,t.style.borderRightColor=o}(o,i,e):(ot([o,i],k.styled),o.style.backgroundColor=o.style.borderLeftColor=o.style.borderRightColor="",i.style.backgroundColor=i.style.borderLeftColor=i.style.borderRightColor="")}function mt(t,e){var n=q();n&&(function(t,e){"string"==typeof e?t.style.background=e:e||nt([document.documentElement,document.body],k["no-backdrop"])}(n,e.backdrop),!e.backdrop&&e.allowOutsideClick&&y('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`'),function(t,e){e in k?nt(t,k[e]):(y('The "position" parameter is not valid, defaulting to "center"'),nt(t,k.center))}(n,e.position),function(t,e){if(e&&"string"==typeof e){var n="grow-"+e;n in k&&nt(t,k[n])}}(n,e.grow),b(n,e.customClass,"container"),e.customContainerClass&&nt(n,e.customContainerClass))}function gt(t,e){t.placeholder&&!e.inputPlaceholder||(t.placeholder=e.inputPlaceholder)}var ht={promise:new WeakMap,innerParams:new WeakMap,domCache:new WeakMap},vt=function(t,e){var n=P(U(),t);if(n)for(var o in function(t){for(var e=0;e<t.attributes.length;e++){var n=t.attributes[e].name;-1===["type","value","style"].indexOf(n)&&t.removeAttribute(n)}}(n),e)"range"===t&&"placeholder"===o||n.setAttribute(o,e[o])},bt=function(t,e,n){t.className=e,n.inputClass&&nt(t,n.inputClass),n.customClass&&nt(t,n.customClass.input)},yt={};yt.text=yt.email=yt.password=yt.number=yt.tel=yt.url=function(t){var e=it(U(),k.input);return"string"==typeof t.inputValue||"number"==typeof t.inputValue?e.value=t.inputValue:v(t.inputValue)||y('Unexpected type of inputValue! Expected "string", "number" or "Promise", got "'.concat(f(t.inputValue),'"')),gt(e,t),e.type=t.input,e},yt.file=function(t){var e=it(U(),k.file);return gt(e,t),e.type=t.input,e},yt.range=function(t){var e=it(U(),k.range),n=e.querySelector("input"),o=e.querySelector("output");return n.value=t.inputValue,n.type=t.input,o.value=t.inputValue,e},yt.select=function(t){var e=it(U(),k.select);if(e.innerHTML="",t.inputPlaceholder){var n=document.createElement("option");n.innerHTML=t.inputPlaceholder,n.value="",n.disabled=!0,n.selected=!0,e.appendChild(n)}return e},yt.radio=function(){var t=it(U(),k.radio);return t.innerHTML="",t},yt.checkbox=function(t){var e=it(U(),k.checkbox),n=P(U(),"checkbox");return n.type="checkbox",n.value=1,n.id=k.checkbox,n.checked=Boolean(t.inputValue),e.querySelector("span").innerHTML=t.inputPlaceholder,e},yt.textarea=function(t){var e=it(U(),k.textarea);return e.value=t.inputValue,gt(e,t),e};function wt(t,e){var n=U().querySelector("#"+k.content);e.html?(tt(e.html,n),T(n,"block")):e.text?(n.textContent=e.text,T(n,"block")):O(n),function(t,e){for(var n=ht.innerParams.get(t),o=!n||e.input!==n.input,i=U(),r=["input","file","range","select","radio","checkbox","textarea"],a=0;a<r.length;a++){var s=k[r[a]],u=it(i,s);vt(r[a],e.inputAttributes),bt(u,s,e),o&&O(u)}if(e.input){if(!yt[e.input])return g('Unexpected type of input! Expected "text", "email", "password", "number", "tel", "select", "radio", "checkbox", "textarea", "file" or "url", got "'.concat(e.input,'"'));if(o){var c=yt[e.input](e);T(c)}}}(t,e),b(U(),e.customClass,"content")}function Ct(t,i){var r=z();if(!i.progressSteps||0===i.progressSteps.length)return O(r);T(r),r.innerHTML="";var a=parseInt(null===i.currentProgressStep?ce.getQueueStep():i.currentProgressStep);a>=i.progressSteps.length&&y("Invalid currentProgressStep parameter, it should be less than progressSteps.length (currentProgressStep like JS arrays starts from 0)"),i.progressSteps.forEach(function(t,e){var n=function(t){var e=document.createElement("li");return nt(e,k["progress-step"]),e.innerHTML=t,e}(t);if(r.appendChild(n),e===a&&nt(n,k["active-progress-step"]),e!==i.progressSteps.length-1){var o=function(t){var e=document.createElement("li");return nt(e,k["progress-step-line"]),t.progressStepsDistance&&(e.style.width=t.progressStepsDistance),e}(t);r.appendChild(o)}})}function kt(t,e){var n=Q();b(n,e.customClass,"header"),Ct(0,e),function(t,e){var n=ht.innerParams.get(t);if(n&&e.type===n.type&&N())b(N(),e.customClass,"icon");else if(xt(),e.type)if(St(),-1!==Object.keys(B).indexOf(e.type)){var o=H(".".concat(k.icon,".").concat(B[e.type]));T(o),b(o,e.customClass,"icon"),L(o,"swal2-animate-".concat(e.type,"-icon"),e.animation)}else g('Unknown type! Expected "success", "error", "warning", "info" or "question", got "'.concat(e.type,'"'))}(t,e),function(t,e){var n=_();if(!e.imageUrl)return O(n);T(n),n.setAttribute("src",e.imageUrl),n.setAttribute("alt",e.imageAlt),E(n,"width",e.imageWidth),E(n,"height",e.imageHeight),n.className=k.image,b(n,e.customClass,"image"),e.imageClass&&nt(n,e.imageClass)}(0,e),function(t,e){var n=D();M(n,e.title||e.titleText),e.title&&tt(e.title,n),e.titleText&&(n.innerText=e.titleText),b(n,e.customClass,"title")}(0,e),function(t,e){var n=$();b(n,e.customClass,"closeButton"),M(n,e.showCloseButton),n.setAttribute("aria-label",e.closeButtonAriaLabel)}(0,e)}function Bt(t,e){!function(t,e){var n=rt();E(n,"width",e.width),E(n,"padding",e.padding),e.background&&(n.style.background=e.background),n.className=k.popup,e.toast?(nt([document.documentElement,document.body],k["toast-shown"]),nt(n,k.toast)):nt(n,k.modal),b(n,e.customClass,"popup"),"string"==typeof e.customClass&&nt(n,e.customClass),L(n,k.noanimation,!e.animation)}(0,e),mt(0,e),kt(t,e),wt(t,e),ft(0,e),function(t,e){var n=Y();M(n,e.footer),e.footer&&tt(e.footer,n),b(n,e.customClass,"footer")}(0,e)}var xt=function(){for(var t=R(),e=0;e<t.length;e++)O(t[e])},St=function(){for(var t=rt(),e=window.getComputedStyle(t).getPropertyValue("background-color"),n=t.querySelectorAll("[class^=swal2-success-circular-line], .swal2-success-fix"),o=0;o<n.length;o++)n[o].style.backgroundColor=e};function Pt(){var t=rt();t||ce.fire(""),t=rt();var e=Z(),n=K(),o=F();T(e),T(n),nt([t,e],k.loading),n.disabled=!0,o.disabled=!0,t.setAttribute("data-loading",!0),t.setAttribute("aria-busy",!0),t.focus()}function At(t){return Mt.hasOwnProperty(t)}function Lt(t){return jt[t]}var Et=[],Tt={},Ot=function(){return new Promise(function(t){var e=window.scrollX,n=window.scrollY;Tt.restoreFocusTimeout=setTimeout(function(){Tt.previousActiveElement&&Tt.previousActiveElement.focus?(Tt.previousActiveElement.focus(),Tt.previousActiveElement=null):document.body&&document.body.focus(),t()},100),void 0!==e&&void 0!==n&&window.scrollTo(e,n)})},Mt={title:"",titleText:"",text:"",html:"",footer:"",type:null,toast:!1,customClass:"",customContainerClass:"",target:"body",backdrop:!0,animation:!0,heightAuto:!0,allowOutsideClick:!0,allowEscapeKey:!0,allowEnterKey:!0,stopKeydownPropagation:!0,keydownListenerCapture:!1,showConfirmButton:!0,showCancelButton:!1,preConfirm:null,confirmButtonText:"OK",confirmButtonAriaLabel:"",confirmButtonColor:null,confirmButtonClass:"",cancelButtonText:"Cancel",cancelButtonAriaLabel:"",cancelButtonColor:null,cancelButtonClass:"",buttonsStyling:!0,reverseButtons:!1,focusConfirm:!0,focusCancel:!1,showCloseButton:!1,closeButtonAriaLabel:"Close this dialog",showLoaderOnConfirm:!1,imageUrl:null,imageWidth:null,imageHeight:null,imageAlt:"",imageClass:"",timer:null,width:null,padding:null,background:null,input:null,inputPlaceholder:"",inputValue:"",inputOptions:{},inputAutoTrim:!0,inputClass:"",inputAttributes:{},inputValidator:null,validationMessage:null,grow:!1,position:"center",progressSteps:[],currentProgressStep:null,progressStepsDistance:null,onBeforeOpen:null,onAfterClose:null,onOpen:null,onClose:null,scrollbarPadding:!0},Vt=["title","titleText","text","html","type","customClass","showConfirmButton","showCancelButton","confirmButtonText","confirmButtonAriaLabel","confirmButtonColor","confirmButtonClass","cancelButtonText","cancelButtonAriaLabel","cancelButtonColor","cancelButtonClass","buttonsStyling","reverseButtons","imageUrl","imageWidth","imageHeigth","imageAlt","imageClass","progressSteps","currentProgressStep"],jt={customContainerClass:"customClass",confirmButtonClass:"customClass",cancelButtonClass:"customClass",imageClass:"customClass",inputClass:"customClass"},qt=["allowOutsideClick","allowEnterKey","backdrop","focusConfirm","focusCancel","heightAuto","keydownListenerCapture"],Ht=Object.freeze({isValidParameter:At,isUpdatableParameter:function(t){return-1!==Vt.indexOf(t)},isDeprecatedParameter:Lt,argsToParams:function(n){var o={};switch(f(n[0])){case"object":a(o,n[0]);break;default:["title","html","type"].forEach(function(t,e){switch(f(n[e])){case"string":o[t]=n[e];break;case"undefined":break;default:g("Unexpected type of ".concat(t,'! Expected "string", got ').concat(f(n[e])))}})}return o},isVisible:function(){return V(rt())},clickConfirm:function(){return K()&&K().click()},clickCancel:function(){return F()&&F().click()},getContainer:q,getPopup:rt,getTitle:D,getContent:U,getImage:_,getIcon:N,getIcons:R,getCloseButton:$,getActions:Z,getConfirmButton:K,getCancelButton:F,getHeader:Q,getFooter:Y,getFocusableElements:J,getValidationMessage:W,isLoading:function(){return rt().hasAttribute("data-loading")},fire:function(){for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];return c(this,e)},mixin:function(n){return function(t){function e(){return o(this,e),l(this,s(e).apply(this,arguments))}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&u(t,e)}(e,t),r(e,[{key:"_main",value:function(t){return d(s(e.prototype),"_main",this).call(this,a({},n,t))}}]),e}(this)},queue:function(t){var r=this;Et=t;function a(t,e){Et=[],document.body.removeAttribute("data-swal2-queue-step"),t(e)}var s=[];return new Promise(function(i){!function e(n,o){n<Et.length?(document.body.setAttribute("data-swal2-queue-step",n),r.fire(Et[n]).then(function(t){void 0!==t.value?(s.push(t.value),e(n+1,o)):a(i,{dismiss:t.dismiss})})):a(i,{value:s})}(0)})},getQueueStep:function(){return document.body.getAttribute("data-swal2-queue-step")},insertQueueStep:function(t,e){return e&&e<Et.length?Et.splice(e,0,t):Et.push(t)},deleteQueueStep:function(t){void 0!==Et[t]&&Et.splice(t,1)},showLoading:Pt,enableLoading:Pt,getTimerLeft:function(){return Tt.timeout&&Tt.timeout.getTimerLeft()},stopTimer:function(){return Tt.timeout&&Tt.timeout.stop()},resumeTimer:function(){return Tt.timeout&&Tt.timeout.start()},toggleTimer:function(){var t=Tt.timeout;return t&&(t.running?t.stop():t.start())},increaseTimer:function(t){return Tt.timeout&&Tt.timeout.increase(t)},isTimerRunning:function(){return Tt.timeout&&Tt.timeout.isRunning()}});function It(){var t=ht.innerParams.get(this),e=ht.domCache.get(this);t.showConfirmButton||(O(e.confirmButton),t.showCancelButton||O(e.actions)),ot([e.popup,e.actions],k.loading),e.popup.removeAttribute("aria-busy"),e.popup.removeAttribute("data-loading"),e.confirmButton.disabled=!1,e.cancelButton.disabled=!1}function Rt(){null===x.previousBodyPadding&&document.body.scrollHeight>window.innerHeight&&(x.previousBodyPadding=parseInt(window.getComputedStyle(document.body).getPropertyValue("padding-right")),document.body.style.paddingRight=x.previousBodyPadding+function(){if("ontouchstart"in window||navigator.msMaxTouchPoints)return 0;var t=document.createElement("div");t.style.width="50px",t.style.height="50px",t.style.overflow="scroll",document.body.appendChild(t);var e=t.offsetWidth-t.clientWidth;return document.body.removeChild(t),e}()+"px")}function Nt(){return!!window.MSInputMethodContext&&!!document.documentMode}function Dt(){var t=q(),e=rt();t.style.removeProperty("align-items"),e.offsetTop<0&&(t.style.alignItems="flex-start")}var Ut=function(){null!==x.previousBodyPadding&&(document.body.style.paddingRight=x.previousBodyPadding+"px",x.previousBodyPadding=null)},_t=function(){var e,n=q();n.ontouchstart=function(t){e=t.target===n||!function(t){return!!(t.scrollHeight>t.clientHeight)}(n)&&"INPUT"!==t.target.tagName},n.ontouchmove=function(t){e&&(t.preventDefault(),t.stopPropagation())}},zt=function(){if(S(document.body,k.iosfix)){var t=parseInt(document.body.style.top,10);ot(document.body,k.iosfix),document.body.style.top="",document.body.scrollTop=-1*t}},Wt=function(){"undefined"!=typeof window&&Nt()&&window.removeEventListener("resize",Dt)},Kt=function(){m(document.body.children).forEach(function(t){t.hasAttribute("data-previous-aria-hidden")?(t.setAttribute("aria-hidden",t.getAttribute("data-previous-aria-hidden")),t.removeAttribute("data-previous-aria-hidden")):t.removeAttribute("aria-hidden")})},Ft={swalPromiseResolve:new WeakMap};function Zt(t,e,n){e?$t(n):(Ot().then(function(){return $t(n)}),Tt.keydownTarget.removeEventListener("keydown",Tt.keydownHandler,{capture:Tt.keydownListenerCapture}),Tt.keydownHandlerAdded=!1),delete Tt.keydownHandler,delete Tt.keydownTarget,t.parentNode&&t.parentNode.removeChild(t),ot([document.documentElement,document.body],[k.shown,k["height-auto"],k["no-backdrop"],k["toast-shown"],k["toast-column"]]),at()&&(Ut(),zt(),Wt(),Kt())}function Qt(t){var e=q(),n=rt();if(n&&!S(n,k.hide)){var o=ht.innerParams.get(this),i=Ft.swalPromiseResolve.get(this),r=o.onClose,a=o.onAfterClose;ot(n,k.show),nt(n,k.hide),dt&&j(n)?n.addEventListener(dt,function(t){t.target===n&&function(t,e,n,o){S(t,k.hide)&&Zt(e,n,o),Yt(ht),Yt(Ft)}(n,e,st(),a)}):Zt(e,st(),a),null!==r&&"function"==typeof r&&r(n),i(t||{}),delete this.params}}var Yt=function(t){for(var e in t)t[e]=new WeakMap},$t=function(t){null!==t&&"function"==typeof t&&setTimeout(function(){t()})};function Jt(t,e,n){var o=ht.domCache.get(t);e.forEach(function(t){o[t].disabled=n})}function Xt(t,e){if(!t)return!1;if("radio"===t.type)for(var n=t.parentNode.parentNode.querySelectorAll("input"),o=0;o<n.length;o++)n[o].disabled=e;else t.disabled=e}var Gt=function(){function n(t,e){o(this,n),this.callback=t,this.remaining=e,this.running=!1,this.start()}return r(n,[{key:"start",value:function(){return this.running||(this.running=!0,this.started=new Date,this.id=setTimeout(this.callback,this.remaining)),this.remaining}},{key:"stop",value:function(){return this.running&&(this.running=!1,clearTimeout(this.id),this.remaining-=new Date-this.started),this.remaining}},{key:"increase",value:function(t){var e=this.running;return e&&this.stop(),this.remaining+=t,e&&this.start(),this.remaining}},{key:"getTimerLeft",value:function(){return this.running&&(this.stop(),this.start()),this.remaining}},{key:"isRunning",value:function(){return this.running}}]),n}(),te={email:function(t,e){return/^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(t)?Promise.resolve():Promise.resolve(e||"Invalid email address")},url:function(t,e){return/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,63}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)$/.test(t)?Promise.resolve():Promise.resolve(e||"Invalid URL")}};function ee(t,e){t.removeEventListener(dt,ee),e.style.overflowY="auto"}function ne(t){var e=q(),n=rt();null!==t.onBeforeOpen&&"function"==typeof t.onBeforeOpen&&t.onBeforeOpen(n),t.animation&&(nt(n,k.show),nt(e,k.fade)),T(n),dt&&j(n)?(e.style.overflowY="hidden",n.addEventListener(dt,ee.bind(null,n,e))):e.style.overflowY="auto",nt([document.documentElement,document.body,e],k.shown),t.heightAuto&&t.backdrop&&!t.toast&&nt([document.documentElement,document.body],k["height-auto"]),at()&&(t.scrollbarPadding&&Rt(),function(){if(/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&!S(document.body,k.iosfix)){var t=document.body.scrollTop;document.body.style.top=-1*t+"px",nt(document.body,k.iosfix),_t()}}(),"undefined"!=typeof window&&Nt()&&(Dt(),window.addEventListener("resize",Dt)),m(document.body.children).forEach(function(t){t===q()||function(t,e){if("function"==typeof t.contains)return t.contains(e)}(t,q())||(t.hasAttribute("aria-hidden")&&t.setAttribute("data-previous-aria-hidden",t.getAttribute("aria-hidden")),t.setAttribute("aria-hidden","true"))}),setTimeout(function(){e.scrollTop=0})),st()||Tt.previousActiveElement||(Tt.previousActiveElement=document.activeElement),null!==t.onOpen&&"function"==typeof t.onOpen&&setTimeout(function(){t.onOpen(n)})}var oe=void 0,ie={select:function(t,e,i){var r=it(t,k.select);e.forEach(function(t){var e=t[0],n=t[1],o=document.createElement("option");o.value=e,o.innerHTML=n,i.inputValue.toString()===e.toString()&&(o.selected=!0),r.appendChild(o)}),r.focus()},radio:function(t,e,a){var s=it(t,k.radio);e.forEach(function(t){var e=t[0],n=t[1],o=document.createElement("input"),i=document.createElement("label");o.type="radio",o.name=k.radio,o.value=e,a.inputValue.toString()===e.toString()&&(o.checked=!0);var r=document.createElement("span");r.innerHTML=n,r.className=k.label,i.appendChild(o),i.appendChild(r),s.appendChild(i)});var n=s.querySelectorAll("input");n.length&&n[0].focus()}},re=function(e){var n=[];return"undefined"!=typeof Map&&e instanceof Map?e.forEach(function(t,e){n.push([e,t])}):Object.keys(e).forEach(function(t){n.push([t,e[t]])}),n};var ae,se=Object.freeze({hideLoading:It,disableLoading:It,getInput:function(t){var e=ht.innerParams.get(t||this);return P(ht.domCache.get(t||this).content,e.input)},close:Qt,closePopup:Qt,closeModal:Qt,closeToast:Qt,enableButtons:function(){Jt(this,["confirmButton","cancelButton"],!1)},disableButtons:function(){Jt(this,["confirmButton","cancelButton"],!0)},enableConfirmButton:function(){h("Swal.disableConfirmButton()","Swal.getConfirmButton().removeAttribute('disabled')"),Jt(this,["confirmButton"],!1)},disableConfirmButton:function(){h("Swal.enableConfirmButton()","Swal.getConfirmButton().setAttribute('disabled', '')"),Jt(this,["confirmButton"],!0)},enableInput:function(){return Xt(this.getInput(),!1)},disableInput:function(){return Xt(this.getInput(),!0)},showValidationMessage:function(t){var e=ht.domCache.get(this);e.validationMessage.innerHTML=t;var n=window.getComputedStyle(e.popup);e.validationMessage.style.marginLeft="-".concat(n.getPropertyValue("padding-left")),e.validationMessage.style.marginRight="-".concat(n.getPropertyValue("padding-right")),T(e.validationMessage);var o=this.getInput();o&&(o.setAttribute("aria-invalid",!0),o.setAttribute("aria-describedBy",k["validation-message"]),A(o),nt(o,k.inputerror))},resetValidationMessage:function(){var t=ht.domCache.get(this);t.validationMessage&&O(t.validationMessage);var e=this.getInput();e&&(e.removeAttribute("aria-invalid"),e.removeAttribute("aria-describedBy"),ot(e,k.inputerror))},getProgressSteps:function(){return h("Swal.getProgressSteps()","const swalInstance = Swal.fire({progressSteps: ['1', '2', '3']}); const progressSteps = swalInstance.params.progressSteps"),ht.innerParams.get(this).progressSteps},setProgressSteps:function(t){h("Swal.setProgressSteps()","Swal.update()");var e=a({},ht.innerParams.get(this),{progressSteps:t});Ct(0,e),ht.innerParams.set(this,e)},showProgressSteps:function(){var t=ht.domCache.get(this);T(t.progressSteps)},hideProgressSteps:function(){var t=ht.domCache.get(this);O(t.progressSteps)},_main:function(t){var c=this;!function(t){for(var e in t)At(i=e)||y('Unknown parameter "'.concat(i,'"')),t.toast&&(o=e,-1!==qt.indexOf(o)&&y('The parameter "'.concat(o,'" is incompatible with toasts'))),Lt(n=void 0)&&h(n,Lt(n));var n,o,i}(t);var l=a({},Mt,t);!function(e){e.inputValidator||Object.keys(te).forEach(function(t){e.input===t&&(e.inputValidator=te[t])}),e.showLoaderOnConfirm&&!e.preConfirm&&y("showLoaderOnConfirm is set to true, but preConfirm is not defined.\nshowLoaderOnConfirm should be used together with preConfirm, see usage example:\nhttps://sweetalert2.github.io/#ajax-request"),e.animation=w(e.animation),e.target&&("string"!=typeof e.target||document.querySelector(e.target))&&("string"==typeof e.target||e.target.appendChild)||(y('Target parameter is not valid, defaulting to "body"'),e.target="body"),"string"==typeof e.title&&(e.title=e.title.split("\n").join("<br />"));var t=rt(),n="string"==typeof e.target?document.querySelector(e.target):e.target;(!t||t&&n&&t.parentNode!==n.parentNode)&&ct(e)}(l),Object.freeze(l),Tt.timeout&&(Tt.timeout.stop(),delete Tt.timeout),clearTimeout(Tt.restoreFocusTimeout);var d={popup:rt(),container:q(),content:U(),actions:Z(),confirmButton:K(),cancelButton:F(),closeButton:$(),validationMessage:W(),progressSteps:z()};ht.domCache.set(this,d),Bt(this,l),ht.innerParams.set(this,l);var p=this.constructor;return new Promise(function(t){function n(t){c.closePopup({value:t})}function s(t){c.closePopup({dismiss:t})}Ft.swalPromiseResolve.set(c,t),l.timer&&(Tt.timeout=new Gt(function(){s("timer"),delete Tt.timeout},l.timer));l.input&&setTimeout(function(){var t=c.getInput();t&&A(t)},0);for(var u=function(e){(l.showLoaderOnConfirm&&p.showLoading(),l.preConfirm)?(c.resetValidationMessage(),Promise.resolve().then(function(){return l.preConfirm(e,l.validationMessage)}).then(function(t){V(d.validationMessage)||!1===t?c.hideLoading():n(void 0===t?e:t)})):n(e)},e=function(t){var e=t.target,n=d.confirmButton,o=d.cancelButton,i=n&&(n===e||n.contains(e)),r=o&&(o===e||o.contains(e));switch(t.type){case"click":if(i)if(c.disableButtons(),l.input){var a=function(){var t=c.getInput();if(!t)return null;switch(l.input){case"checkbox":return t.checked?1:0;case"radio":return t.checked?t.value:null;case"file":return t.files.length?t.files[0]:null;default:return l.inputAutoTrim?t.value.trim():t.value}}();if(l.inputValidator)c.disableInput(),Promise.resolve().then(function(){return l.inputValidator(a,l.validationMessage)}).then(function(t){c.enableButtons(),c.enableInput(),t?c.showValidationMessage(t):u(a)});else c.getInput().checkValidity()?u(a):(c.enableButtons(),c.showValidationMessage(l.validationMessage))}else u(!0);else r&&(c.disableButtons(),s(p.DismissReason.cancel))}},o=d.popup.querySelectorAll("button"),i=0;i<o.length;i++)o[i].onclick=e,o[i].onmouseover=e,o[i].onmouseout=e,o[i].onmousedown=e;if(d.closeButton.onclick=function(){s(p.DismissReason.close)},l.toast)d.popup.onclick=function(){l.showConfirmButton||l.showCancelButton||l.showCloseButton||l.input||s(p.DismissReason.close)};else{var r=!1;d.popup.onmousedown=function(){d.container.onmouseup=function(t){d.container.onmouseup=void 0,t.target===d.container&&(r=!0)}},d.container.onmousedown=function(){d.popup.onmouseup=function(t){d.popup.onmouseup=void 0,t.target!==d.popup&&!d.popup.contains(t.target)||(r=!0)}},d.container.onclick=function(t){r?r=!1:t.target===d.container&&w(l.allowOutsideClick)&&s(p.DismissReason.backdrop)}}l.reverseButtons?d.confirmButton.parentNode.insertBefore(d.cancelButton,d.confirmButton):d.confirmButton.parentNode.insertBefore(d.confirmButton,d.cancelButton);function a(t,e){for(var n=J(l.focusCancel),o=0;o<n.length;o++)return(t+=e)===n.length?t=0:-1===t&&(t=n.length-1),n[t].focus();d.popup.focus()}Tt.keydownTarget&&Tt.keydownHandlerAdded&&(Tt.keydownTarget.removeEventListener("keydown",Tt.keydownHandler,{capture:Tt.keydownListenerCapture}),Tt.keydownHandlerAdded=!1),l.toast||(Tt.keydownHandler=function(t){return function(t,e){e.stopKeydownPropagation&&t.stopPropagation();if("Enter"!==t.key||t.isComposing)if("Tab"===t.key){for(var n=t.target,o=J(e.focusCancel),i=-1,r=0;r<o.length;r++)if(n===o[r]){i=r;break}t.shiftKey?a(i,-1):a(i,1),t.stopPropagation(),t.preventDefault()}else-1!==["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","Left","Right","Up","Down"].indexOf(t.key)?document.activeElement===d.confirmButton&&V(d.cancelButton)?d.cancelButton.focus():document.activeElement===d.cancelButton&&V(d.confirmButton)&&d.confirmButton.focus():"Escape"!==t.key&&"Esc"!==t.key||!0!==w(e.allowEscapeKey)||(t.preventDefault(),s(p.DismissReason.esc));else if(t.target&&c.getInput()&&t.target.outerHTML===c.getInput().outerHTML){if(-1!==["textarea","file"].indexOf(e.input))return;p.clickConfirm(),t.preventDefault()}}(t,l)},Tt.keydownTarget=l.keydownListenerCapture?window:d.popup,Tt.keydownListenerCapture=l.keydownListenerCapture,Tt.keydownTarget.addEventListener("keydown",Tt.keydownHandler,{capture:Tt.keydownListenerCapture}),Tt.keydownHandlerAdded=!0),c.enableButtons(),c.hideLoading(),c.resetValidationMessage(),l.toast&&(l.input||l.footer||l.showCloseButton)?nt(document.body,k["toast-column"]):ot(document.body,k["toast-column"]),"select"===l.input||"radio"===l.input?function(e,n){function o(t){return ie[n.input](i,re(t),n)}var i=U();v(n.inputOptions)?(Pt(),n.inputOptions.then(function(t){e.hideLoading(),o(t)})):"object"===f(n.inputOptions)?o(n.inputOptions):g("Unexpected type of inputOptions! Expected object, Map or Promise, got ".concat(f(n.inputOptions)))}(c,l):-1!==["text","email","number","tel","textarea"].indexOf(l.input)&&v(l.inputValue)&&function(e,n){var o=e.getInput();O(o),n.inputValue.then(function(t){o.value="number"===n.input?parseFloat(t)||0:t+"",T(o),o.focus(),e.hideLoading()}).catch(function(t){g("Error in inputValue promise: "+t),o.value="",T(o),o.focus(),oe.hideLoading()})}(c,l),ne(l),l.toast||(w(l.allowEnterKey)?l.focusCancel&&V(d.cancelButton)?d.cancelButton.focus():l.focusConfirm&&V(d.confirmButton)?d.confirmButton.focus():a(-1,1):document.activeElement&&"function"==typeof document.activeElement.blur&&document.activeElement.blur()),d.container.scrollTop=0})},update:function(e){var n={};Object.keys(e).forEach(function(t){ce.isUpdatableParameter(t)?n[t]=e[t]:y('Invalid parameter to update: "'.concat(t,'". Updatable params are listed here: https://github.com/sweetalert2/sweetalert2/blob/master/src/utils/params.js'))});var t=a({},ht.innerParams.get(this),n);Bt(this,t),ht.innerParams.set(this,t),Object.defineProperties(this,{params:{value:a({},this.params,e),writable:!1,enumerable:!0}})}});function ue(){if("undefined"!=typeof window){"undefined"==typeof Promise&&g("This package requires a Promise library, please include a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)"),ae=this;for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];var o=Object.freeze(this.constructor.argsToParams(e));Object.defineProperties(this,{params:{value:o,writable:!1,enumerable:!0,configurable:!0}});var i=this._main(this.params);ht.promise.set(this,i)}}ue.prototype.then=function(t){return ht.promise.get(this).then(t)},ue.prototype.finally=function(t){return ht.promise.get(this).finally(t)},a(ue.prototype,se),a(ue,Ht),Object.keys(se).forEach(function(e){ue[e]=function(){var t;if(ae)return(t=ae)[e].apply(t,arguments)}}),ue.DismissReason=C,ue.version="8.11.7";var ce=ue;return ce.default=ce}),"undefined"!=typeof window&&window.Sweetalert2&&(window.swal=window.sweetAlert=window.Swal=window.SweetAlert=window.Sweetalert2);
-
-/***/ }),
-
-/***/ "../node_modules/vue-sweetalert2/dist/index.js":
-/*!*****************************************************!*\
-  !*** ../node_modules/vue-sweetalert2/dist/index.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2/dist/sweetalert2.min.js */ "../node_modules/sweetalert2/dist/sweetalert2.min.js");
-/* harmony import */ var sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0__);
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-var VueSweetalert2 = (function () {
-    function VueSweetalert2() {
-    }
-    VueSweetalert2.install = function (Vue, options) {
-        options = __assign({
-            includeCss: true
-        }, options);
-        if (options.includeCss !== false) {
-            __webpack_require__(/*! sweetalert2/dist/sweetalert2.min.css */ "../node_modules/sweetalert2/dist/sweetalert2.min.css");
-        }
-        var _swal = options ? sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0___default.a.mixin(options).fire.bind(sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0___default.a) : sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0___default.a.fire.bind(sweetalert2_dist_sweetalert2_min_js__WEBPACK_IMPORTED_MODULE_0___default.a);
-        Vue['swal'] = _swal;
-        if (!Vue.prototype.hasOwnProperty('$swal')) {
-            Vue.prototype.$swal = _swal;
-        }
-    };
-    return VueSweetalert2;
-}());
-/* harmony default export */ __webpack_exports__["default"] = (VueSweetalert2);
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2040,8 +1953,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vee_validate_dist_locale_ar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vee-validate/dist/locale/ar */ "./node_modules/vee-validate/dist/locale/ar.js");
-/* harmony import */ var vee_validate_dist_locale_ar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_locale_ar__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/Alert */ "./resources/js/mixins/Alert.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2171,17 +2089,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RegistrationForm",
-  created: function created() {
-    this.$validator.localize('ar', {
-      messages: vee_validate_dist_locale_ar__WEBPACK_IMPORTED_MODULE_0___default.a.messages,
-      attributes: {
-        name: 'البريد الاليكتروني',
-        phone: 'رقم الهاتف'
-      }
-    }); // start with english locale.
-
-    this.$validator.localize('ar');
-  },
+  mixins: [_mixins_Alert__WEBPACK_IMPORTED_MODULE_0__["default"]],
   data: function data() {
     return {
       form: new Form({
@@ -2194,32 +2102,41 @@ __webpack_require__.r(__webpack_exports__);
       })
     };
   },
+  created: function created() {
+    this.$validator.localize(Promentee.locale, {
+      messages: __webpack_require__("./node_modules/vee-validate/dist/locale sync recursive ^\\.\\/.*$")("./".concat(window.Promentee.locale)).messages
+    });
+    this.$validator.localize(Promentee.locale);
+  },
   computed: {
     currentYear: function currentYear() {
       return new Date().getFullYear();
     },
     isValidForm: function isValidForm() {
-      var form = this.form;
-      return !!(form.name && this.validateEmail(form.email) && form.password.length >= 8 && form.password == form.password_confirmation && form.yob && (form.gender == 'male' || form.gender == 'female'));
+      return !!!this.errors.all().length;
     }
   },
   methods: {
     submit: function submit() {
-      this.isValidForm ? this.register() : '';
+      if (this.isValidForm) {
+        this.startLoading(this.trans('registering'), this.trans('registration_wait_msg'));
+        this.register();
+      }
     },
     register: function register() {
-      this.form.post(route('register')).then(function (res) {
-        window.location = route('selectFields');
+      var _this = this;
+
+      this.form.post(route('register')).then(function (_ref) {
+        var data = _ref.data;
+        window.location = data.redirectTo;
+      })["catch"](function (error) {
+        return _this.stopLoading();
       });
     },
     getYears: function getYears(start, stop) {
       return new Array(start - stop).fill(start).map(function (n, i) {
         return n - i;
       });
-    },
-    validateEmail: function validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
     }
   }
 });
@@ -2359,6 +2276,43 @@ __webpack_require__.r(__webpack_exports__);
       this.form.post(route('posts.store')).then(function (res) {
         alert(res.data.msg);
       });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/mixins/Alert.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/mixins/Alert.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Alert",
+  data: function data() {
+    return {
+      loading: false
+    };
+  },
+  methods: {
+    startLoading: function startLoading(title) {
+      var body = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      this.loading = true;
+      Swal.fire({
+        title: title,
+        html: body,
+        onBeforeOpen: function onBeforeOpen() {
+          Swal.showLoading();
+        }
+      });
+    },
+    stopLoading: function stopLoading() {
+      this.loading = false;
+      Swal.close();
     }
   }
 });
@@ -6806,25 +6760,6 @@ __webpack_require__.r(__webpack_exports__);
 
 }));
 //# sourceMappingURL=bootstrap.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../node_modules/sweetalert2/dist/sweetalert2.min.css":
-/*!********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!../node_modules/sweetalert2/dist/sweetalert2.min.css ***!
-  \********************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../promentee/node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@charset \"UTF-8\";@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-shown{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon::before{display:flex;align-items:center;font-size:2em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon::before{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 .0625em #fff,0 0 0 .125em rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-shown{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent}body.swal2-no-backdrop .swal2-shown>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-shown.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-top-left,body.swal2-no-backdrop .swal2-shown.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-top-end,body.swal2-no-backdrop .swal2-shown.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-shown.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-left,body.swal2-no-backdrop .swal2-shown.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-end,body.swal2-no-backdrop .swal2-shown.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,body.swal2-no-backdrop .swal2-shown.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swal2-shown.swal2-bottom-right{right:0;bottom:0}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;background-color:transparent;-webkit-overflow-scrolling:touch}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-container.swal2-fade{transition:background-color .1s}.swal2-container.swal2-shown{background-color:rgba(0,0,0,.4)}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{z-index:1;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-actions.swal2-loading .swal2-styled.swal2-confirm{box-sizing:border-box;width:2.5em;height:2.5em;margin:.46875em;padding:0;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{content:\"\";display:inline-block;width:15px;height:15px;margin-left:5px;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff}.swal2-styled{margin:.3125em;padding:.625em 2em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(50,100,150,.4)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;top:0;right:0;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:0;outline:initial;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:300;line-height:normal;word-wrap:break-word}#swal2-content{text-align:center}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-file::-webkit-input-placeholder,.swal2-input::-webkit-input-placeholder,.swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::-ms-input-placeholder,.swal2-input::-ms-input-placeholder,.swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:inherit}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:inherit;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:\"!\";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;zoom:normal;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;zoom:normal;border:.25em solid transparent;border-radius:50%;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon::before{display:flex;align-items:center;height:92%;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-warning::before{content:\"!\"}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-info::before{content:\"i\"}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-question::before{content:\"?\"}.swal2-icon.swal2-question.swal2-arabic-question-mark::before{content:\"\\61F\"}.swal2-icon.swal2-success{border-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.875em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-progress-steps{align-items:center;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#3085d6}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;width:2.5em;height:.4em;margin:0 -1px;background:#3085d6}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-show.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-hide.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-animate-success-icon .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-animate-error-icon{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-animate-error-icon .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}", ""]);
-
-// exports
 
 
 /***/ }),
@@ -38225,6 +38160,2807 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./node_modules/sweetalert2/dist/sweetalert2.all.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/sweetalert2/dist/sweetalert2.all.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+* sweetalert2 v8.12.1
+* Released under the MIT License.
+*/
+(function (global, factory) {
+	 true ? module.exports = factory() :
+	undefined;
+}(this, (function () { 'use strict';
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _construct(Parent, args, Class) {
+  if (isNativeReflectConstruct()) {
+    _construct = Reflect.construct;
+  } else {
+    _construct = function _construct(Parent, args, Class) {
+      var a = [null];
+      a.push.apply(a, args);
+      var Constructor = Function.bind.apply(Parent, a);
+      var instance = new Constructor();
+      if (Class) _setPrototypeOf(instance, Class.prototype);
+      return instance;
+    };
+  }
+
+  return _construct.apply(null, arguments);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _superPropBase(object, property) {
+  while (!Object.prototype.hasOwnProperty.call(object, property)) {
+    object = _getPrototypeOf(object);
+    if (object === null) break;
+  }
+
+  return object;
+}
+
+function _get(target, property, receiver) {
+  if (typeof Reflect !== "undefined" && Reflect.get) {
+    _get = Reflect.get;
+  } else {
+    _get = function _get(target, property, receiver) {
+      var base = _superPropBase(target, property);
+
+      if (!base) return;
+      var desc = Object.getOwnPropertyDescriptor(base, property);
+
+      if (desc.get) {
+        return desc.get.call(receiver);
+      }
+
+      return desc.value;
+    };
+  }
+
+  return _get(target, property, receiver || target);
+}
+
+var consolePrefix = 'SweetAlert2:';
+/**
+ * Filter the unique values into a new array
+ * @param arr
+ */
+
+var uniqueArray = function uniqueArray(arr) {
+  var result = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (result.indexOf(arr[i]) === -1) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+};
+/**
+ * Returns the array ob object values (Object.values isn't supported in IE11)
+ * @param obj
+ */
+
+var objectValues = function objectValues(obj) {
+  return Object.keys(obj).map(function (key) {
+    return obj[key];
+  });
+};
+/**
+ * Convert NodeList to Array
+ * @param nodeList
+ */
+
+var toArray = function toArray(nodeList) {
+  return Array.prototype.slice.call(nodeList);
+};
+/**
+ * Standardise console warnings
+ * @param message
+ */
+
+var warn = function warn(message) {
+  console.warn("".concat(consolePrefix, " ").concat(message));
+};
+/**
+ * Standardise console errors
+ * @param message
+ */
+
+var error = function error(message) {
+  console.error("".concat(consolePrefix, " ").concat(message));
+};
+/**
+ * Private global state for `warnOnce`
+ * @type {Array}
+ * @private
+ */
+
+var previousWarnOnceMessages = [];
+/**
+ * Show a console warning, but only if it hasn't already been shown
+ * @param message
+ */
+
+var warnOnce = function warnOnce(message) {
+  if (!(previousWarnOnceMessages.indexOf(message) !== -1)) {
+    previousWarnOnceMessages.push(message);
+    warn(message);
+  }
+};
+/**
+ * Show a one-time console warning about deprecated params/methods
+ */
+
+var warnAboutDepreation = function warnAboutDepreation(deprecatedParam, useInstead) {
+  warnOnce("\"".concat(deprecatedParam, "\" is deprecated and will be removed in the next major release. Please use \"").concat(useInstead, "\" instead."));
+};
+/**
+ * If `arg` is a function, call it (with no arguments or context) and return the result.
+ * Otherwise, just pass the value through
+ * @param arg
+ */
+
+var callIfFunction = function callIfFunction(arg) {
+  return typeof arg === 'function' ? arg() : arg;
+};
+var isPromise = function isPromise(arg) {
+  return arg && Promise.resolve(arg) === arg;
+};
+
+var DismissReason = Object.freeze({
+  cancel: 'cancel',
+  backdrop: 'backdrop',
+  close: 'close',
+  esc: 'esc',
+  timer: 'timer'
+});
+
+var argsToParams = function argsToParams(args) {
+  var params = {};
+
+  switch (_typeof(args[0])) {
+    case 'object':
+      _extends(params, args[0]);
+
+      break;
+
+    default:
+      ['title', 'html', 'type'].forEach(function (name, index) {
+        switch (_typeof(args[index])) {
+          case 'string':
+            params[name] = args[index];
+            break;
+
+          case 'undefined':
+            break;
+
+          default:
+            error("Unexpected type of ".concat(name, "! Expected \"string\", got ").concat(_typeof(args[index])));
+        }
+      });
+  }
+
+  return params;
+};
+
+var swalPrefix = 'swal2-';
+var prefix = function prefix(items) {
+  var result = {};
+
+  for (var i in items) {
+    result[items[i]] = swalPrefix + items[i];
+  }
+
+  return result;
+};
+var swalClasses = prefix(['container', 'shown', 'height-auto', 'iosfix', 'popup', 'modal', 'no-backdrop', 'toast', 'toast-shown', 'toast-column', 'fade', 'show', 'hide', 'noanimation', 'close', 'title', 'header', 'content', 'actions', 'confirm', 'cancel', 'footer', 'icon', 'image', 'input', 'file', 'range', 'select', 'radio', 'checkbox', 'label', 'textarea', 'inputerror', 'validation-message', 'progress-steps', 'active-progress-step', 'progress-step', 'progress-step-line', 'loading', 'styled', 'top', 'top-start', 'top-end', 'top-left', 'top-right', 'center', 'center-start', 'center-end', 'center-left', 'center-right', 'bottom', 'bottom-start', 'bottom-end', 'bottom-left', 'bottom-right', 'grow-row', 'grow-column', 'grow-fullscreen', 'rtl']);
+var iconTypes = prefix(['success', 'warning', 'info', 'question', 'error']);
+
+var states = {
+  previousBodyPadding: null
+};
+var hasClass = function hasClass(elem, className) {
+  return elem.classList.contains(className);
+};
+var applyCustomClass = function applyCustomClass(elem, customClass, className) {
+  // Clean up previous custom classes
+  toArray(elem.classList).forEach(function (className) {
+    if (!(objectValues(swalClasses).indexOf(className) !== -1) && !(objectValues(iconTypes).indexOf(className) !== -1)) {
+      elem.classList.remove(className);
+    }
+  });
+
+  if (customClass && customClass[className]) {
+    addClass(elem, customClass[className]);
+  }
+};
+function getInput(content, inputType) {
+  if (!inputType) {
+    return null;
+  }
+
+  switch (inputType) {
+    case 'select':
+    case 'textarea':
+    case 'file':
+      return getChildByClass(content, swalClasses[inputType]);
+
+    case 'checkbox':
+      return content.querySelector(".".concat(swalClasses.checkbox, " input"));
+
+    case 'radio':
+      return content.querySelector(".".concat(swalClasses.radio, " input:checked")) || content.querySelector(".".concat(swalClasses.radio, " input:first-child"));
+
+    case 'range':
+      return content.querySelector(".".concat(swalClasses.range, " input"));
+
+    default:
+      return getChildByClass(content, swalClasses.input);
+  }
+}
+var focusInput = function focusInput(input) {
+  input.focus(); // place cursor at end of text in text input
+
+  if (input.type !== 'file') {
+    // http://stackoverflow.com/a/2345915
+    var val = input.value;
+    input.value = '';
+    input.value = val;
+  }
+};
+var toggleClass = function toggleClass(target, classList, condition) {
+  if (!target || !classList) {
+    return;
+  }
+
+  if (typeof classList === 'string') {
+    classList = classList.split(/\s+/).filter(Boolean);
+  }
+
+  classList.forEach(function (className) {
+    if (target.forEach) {
+      target.forEach(function (elem) {
+        condition ? elem.classList.add(className) : elem.classList.remove(className);
+      });
+    } else {
+      condition ? target.classList.add(className) : target.classList.remove(className);
+    }
+  });
+};
+var addClass = function addClass(target, classList) {
+  toggleClass(target, classList, true);
+};
+var removeClass = function removeClass(target, classList) {
+  toggleClass(target, classList, false);
+};
+var getChildByClass = function getChildByClass(elem, className) {
+  for (var i = 0; i < elem.childNodes.length; i++) {
+    if (hasClass(elem.childNodes[i], className)) {
+      return elem.childNodes[i];
+    }
+  }
+};
+var applyNumericalStyle = function applyNumericalStyle(elem, property, value) {
+  if (value || parseInt(value) === 0) {
+    elem.style[property] = typeof value === 'number' ? value + 'px' : value;
+  } else {
+    elem.style.removeProperty(property);
+  }
+};
+var show = function show(elem) {
+  var display = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'flex';
+  elem.style.opacity = '';
+  elem.style.display = display;
+};
+var hide = function hide(elem) {
+  elem.style.opacity = '';
+  elem.style.display = 'none';
+};
+var toggle = function toggle(elem, condition, display) {
+  condition ? show(elem, display) : hide(elem);
+}; // borrowed from jquery $(elem).is(':visible') implementation
+
+var isVisible = function isVisible(elem) {
+  return !!(elem && (elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length));
+};
+var isScrollable = function isScrollable(elem) {
+  return !!(elem.scrollHeight > elem.clientHeight);
+}; // borrowed from https://stackoverflow.com/a/46352119
+
+var hasCssAnimation = function hasCssAnimation(elem) {
+  var style = window.getComputedStyle(elem);
+  var animDuration = parseFloat(style.getPropertyValue('animation-duration') || '0');
+  var transDuration = parseFloat(style.getPropertyValue('transition-duration') || '0');
+  return animDuration > 0 || transDuration > 0;
+};
+var contains = function contains(haystack, needle) {
+  if (typeof haystack.contains === 'function') {
+    return haystack.contains(needle);
+  }
+};
+
+var getContainer = function getContainer() {
+  return document.body.querySelector('.' + swalClasses.container);
+};
+var elementBySelector = function elementBySelector(selectorString) {
+  var container = getContainer();
+  return container ? container.querySelector(selectorString) : null;
+};
+
+var elementByClass = function elementByClass(className) {
+  return elementBySelector('.' + className);
+};
+
+var getPopup = function getPopup() {
+  return elementByClass(swalClasses.popup);
+};
+var getIcons = function getIcons() {
+  var popup = getPopup();
+  return toArray(popup.querySelectorAll('.' + swalClasses.icon));
+};
+var getIcon = function getIcon() {
+  var visibleIcon = getIcons().filter(function (icon) {
+    return isVisible(icon);
+  });
+  return visibleIcon.length ? visibleIcon[0] : null;
+};
+var getTitle = function getTitle() {
+  return elementByClass(swalClasses.title);
+};
+var getContent = function getContent() {
+  return elementByClass(swalClasses.content);
+};
+var getImage = function getImage() {
+  return elementByClass(swalClasses.image);
+};
+var getProgressSteps = function getProgressSteps() {
+  return elementByClass(swalClasses['progress-steps']);
+};
+var getValidationMessage = function getValidationMessage() {
+  return elementByClass(swalClasses['validation-message']);
+};
+var getConfirmButton = function getConfirmButton() {
+  return elementBySelector('.' + swalClasses.actions + ' .' + swalClasses.confirm);
+};
+var getCancelButton = function getCancelButton() {
+  return elementBySelector('.' + swalClasses.actions + ' .' + swalClasses.cancel);
+};
+var getActions = function getActions() {
+  return elementByClass(swalClasses.actions);
+};
+var getHeader = function getHeader() {
+  return elementByClass(swalClasses.header);
+};
+var getFooter = function getFooter() {
+  return elementByClass(swalClasses.footer);
+};
+var getCloseButton = function getCloseButton() {
+  return elementByClass(swalClasses.close);
+};
+var getFocusableElements = function getFocusableElements() {
+  var focusableElementsWithTabindex = toArray(getPopup().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')) // sort according to tabindex
+  .sort(function (a, b) {
+    a = parseInt(a.getAttribute('tabindex'));
+    b = parseInt(b.getAttribute('tabindex'));
+
+    if (a > b) {
+      return 1;
+    } else if (a < b) {
+      return -1;
+    }
+
+    return 0;
+  }); // https://github.com/jkup/focusable/blob/master/index.js
+
+  var otherFocusableElements = toArray(getPopup().querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable], audio[controls], video[controls]')).filter(function (el) {
+    return el.getAttribute('tabindex') !== '-1';
+  });
+  return uniqueArray(focusableElementsWithTabindex.concat(otherFocusableElements)).filter(function (el) {
+    return isVisible(el);
+  });
+};
+var isModal = function isModal() {
+  return !isToast() && !document.body.classList.contains(swalClasses['no-backdrop']);
+};
+var isToast = function isToast() {
+  return document.body.classList.contains(swalClasses['toast-shown']);
+};
+var isLoading = function isLoading() {
+  return getPopup().hasAttribute('data-loading');
+};
+
+// Detect Node env
+var isNodeEnv = function isNodeEnv() {
+  return typeof window === 'undefined' || typeof document === 'undefined';
+};
+
+var sweetHTML = "\n <div aria-labelledby=\"".concat(swalClasses.title, "\" aria-describedby=\"").concat(swalClasses.content, "\" class=\"").concat(swalClasses.popup, "\" tabindex=\"-1\">\n   <div class=\"").concat(swalClasses.header, "\">\n     <ul class=\"").concat(swalClasses['progress-steps'], "\"></ul>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.error, "\">\n       <span class=\"swal2-x-mark\"><span class=\"swal2-x-mark-line-left\"></span><span class=\"swal2-x-mark-line-right\"></span></span>\n     </div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.question, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.warning, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.info, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.success, "\">\n       <div class=\"swal2-success-circular-line-left\"></div>\n       <span class=\"swal2-success-line-tip\"></span> <span class=\"swal2-success-line-long\"></span>\n       <div class=\"swal2-success-ring\"></div> <div class=\"swal2-success-fix\"></div>\n       <div class=\"swal2-success-circular-line-right\"></div>\n     </div>\n     <img class=\"").concat(swalClasses.image, "\" />\n     <h2 class=\"").concat(swalClasses.title, "\" id=\"").concat(swalClasses.title, "\"></h2>\n     <button type=\"button\" class=\"").concat(swalClasses.close, "\">&times;</button>\n   </div>\n   <div class=\"").concat(swalClasses.content, "\">\n     <div id=\"").concat(swalClasses.content, "\"></div>\n     <input class=\"").concat(swalClasses.input, "\" />\n     <input type=\"file\" class=\"").concat(swalClasses.file, "\" />\n     <div class=\"").concat(swalClasses.range, "\">\n       <input type=\"range\" />\n       <output></output>\n     </div>\n     <select class=\"").concat(swalClasses.select, "\"></select>\n     <div class=\"").concat(swalClasses.radio, "\"></div>\n     <label for=\"").concat(swalClasses.checkbox, "\" class=\"").concat(swalClasses.checkbox, "\">\n       <input type=\"checkbox\" />\n       <span class=\"").concat(swalClasses.label, "\"></span>\n     </label>\n     <textarea class=\"").concat(swalClasses.textarea, "\"></textarea>\n     <div class=\"").concat(swalClasses['validation-message'], "\" id=\"").concat(swalClasses['validation-message'], "\"></div>\n   </div>\n   <div class=\"").concat(swalClasses.actions, "\">\n     <button type=\"button\" class=\"").concat(swalClasses.confirm, "\">OK</button>\n     <button type=\"button\" class=\"").concat(swalClasses.cancel, "\">Cancel</button>\n   </div>\n   <div class=\"").concat(swalClasses.footer, "\">\n   </div>\n </div>\n").replace(/(^|\n)\s*/g, '');
+
+var resetOldContainer = function resetOldContainer() {
+  var oldContainer = getContainer();
+
+  if (!oldContainer) {
+    return;
+  }
+
+  oldContainer.parentNode.removeChild(oldContainer);
+  removeClass([document.documentElement, document.body], [swalClasses['no-backdrop'], swalClasses['toast-shown'], swalClasses['has-column']]);
+};
+
+var oldInputVal; // IE11 workaround, see #1109 for details
+
+var resetValidationMessage = function resetValidationMessage(e) {
+  if (Swal.isVisible() && oldInputVal !== e.target.value) {
+    Swal.resetValidationMessage();
+  }
+
+  oldInputVal = e.target.value;
+};
+
+var addInputChangeListeners = function addInputChangeListeners() {
+  var content = getContent();
+  var input = getChildByClass(content, swalClasses.input);
+  var file = getChildByClass(content, swalClasses.file);
+  var range = content.querySelector(".".concat(swalClasses.range, " input"));
+  var rangeOutput = content.querySelector(".".concat(swalClasses.range, " output"));
+  var select = getChildByClass(content, swalClasses.select);
+  var checkbox = content.querySelector(".".concat(swalClasses.checkbox, " input"));
+  var textarea = getChildByClass(content, swalClasses.textarea);
+  input.oninput = resetValidationMessage;
+  file.onchange = resetValidationMessage;
+  select.onchange = resetValidationMessage;
+  checkbox.onchange = resetValidationMessage;
+  textarea.oninput = resetValidationMessage;
+
+  range.oninput = function (e) {
+    resetValidationMessage(e);
+    rangeOutput.value = range.value;
+  };
+
+  range.onchange = function (e) {
+    resetValidationMessage(e);
+    range.nextSibling.value = range.value;
+  };
+};
+
+var getTarget = function getTarget(target) {
+  return typeof target === 'string' ? document.querySelector(target) : target;
+};
+
+var setupAccessibility = function setupAccessibility(params) {
+  var popup = getPopup();
+  popup.setAttribute('role', params.toast ? 'alert' : 'dialog');
+  popup.setAttribute('aria-live', params.toast ? 'polite' : 'assertive');
+
+  if (!params.toast) {
+    popup.setAttribute('aria-modal', 'true');
+  }
+};
+
+var setupRTL = function setupRTL(targetElement) {
+  if (window.getComputedStyle(targetElement).direction === 'rtl') {
+    addClass(getContainer(), swalClasses.rtl);
+  }
+};
+/*
+ * Add modal + backdrop to DOM
+ */
+
+
+var init = function init(params) {
+  // Clean up the old popup container if it exists
+  resetOldContainer();
+  /* istanbul ignore if */
+
+  if (isNodeEnv()) {
+    error('SweetAlert2 requires document to initialize');
+    return;
+  }
+
+  var container = document.createElement('div');
+  container.className = swalClasses.container;
+  container.innerHTML = sweetHTML;
+  var targetElement = getTarget(params.target);
+  targetElement.appendChild(container);
+  setupAccessibility(params);
+  setupRTL(targetElement);
+  addInputChangeListeners();
+};
+
+var parseHtmlToContainer = function parseHtmlToContainer(param, target) {
+  // DOM element
+  if (param instanceof HTMLElement) {
+    target.appendChild(param); // JQuery element(s)
+  } else if (_typeof(param) === 'object') {
+    handleJqueryElem(target, param); // Plain string
+  } else if (param) {
+    target.innerHTML = param;
+  }
+};
+
+var handleJqueryElem = function handleJqueryElem(target, elem) {
+  target.innerHTML = '';
+
+  if (0 in elem) {
+    for (var i = 0; i in elem; i++) {
+      target.appendChild(elem[i].cloneNode(true));
+    }
+  } else {
+    target.appendChild(elem.cloneNode(true));
+  }
+};
+
+var animationEndEvent = function () {
+  // Prevent run in Node env
+
+  /* istanbul ignore if */
+  if (isNodeEnv()) {
+    return false;
+  }
+
+  var testEl = document.createElement('div');
+  var transEndEventNames = {
+    'WebkitAnimation': 'webkitAnimationEnd',
+    'OAnimation': 'oAnimationEnd oanimationend',
+    'animation': 'animationend'
+  };
+
+  for (var i in transEndEventNames) {
+    if (transEndEventNames.hasOwnProperty(i) && typeof testEl.style[i] !== 'undefined') {
+      return transEndEventNames[i];
+    }
+  }
+
+  return false;
+}();
+
+// Measure width of scrollbar
+// https://github.com/twbs/bootstrap/blob/master/js/modal.js#L279-L286
+var measureScrollbar = function measureScrollbar() {
+  var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+  if (supportsTouch) {
+    return 0;
+  }
+
+  var scrollDiv = document.createElement('div');
+  scrollDiv.style.width = '50px';
+  scrollDiv.style.height = '50px';
+  scrollDiv.style.overflow = 'scroll';
+  document.body.appendChild(scrollDiv);
+  var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  document.body.removeChild(scrollDiv);
+  return scrollbarWidth;
+};
+
+function handleButtonsStyling(confirmButton, cancelButton, params) {
+  addClass([confirmButton, cancelButton], swalClasses.styled); // Buttons background colors
+
+  if (params.confirmButtonColor) {
+    confirmButton.style.backgroundColor = params.confirmButtonColor;
+  }
+
+  if (params.cancelButtonColor) {
+    cancelButton.style.backgroundColor = params.cancelButtonColor;
+  } // Loading state
+
+
+  var confirmButtonBackgroundColor = window.getComputedStyle(confirmButton).getPropertyValue('background-color');
+  confirmButton.style.borderLeftColor = confirmButtonBackgroundColor;
+  confirmButton.style.borderRightColor = confirmButtonBackgroundColor;
+}
+
+function renderButton(button, buttonType, params) {
+  toggle(button, params['showC' + buttonType.substring(1) + 'Button'], 'inline-block');
+  button.innerHTML = params[buttonType + 'ButtonText']; // Set caption text
+
+  button.setAttribute('aria-label', params[buttonType + 'ButtonAriaLabel']); // ARIA label
+  // Add buttons custom classes
+
+  button.className = swalClasses[buttonType];
+  applyCustomClass(button, params.customClass, buttonType + 'Button');
+  addClass(button, params[buttonType + 'ButtonClass']);
+}
+
+var renderActions = function renderActions(instance, params) {
+  var actions = getActions();
+  var confirmButton = getConfirmButton();
+  var cancelButton = getCancelButton(); // Actions (buttons) wrapper
+
+  if (!params.showConfirmButton && !params.showCancelButton) {
+    hide(actions);
+  } else {
+    show(actions);
+  } // Custom class
+
+
+  applyCustomClass(actions, params.customClass, 'actions'); // Render confirm button
+
+  renderButton(confirmButton, 'confirm', params); // render Cancel Button
+
+  renderButton(cancelButton, 'cancel', params);
+
+  if (params.buttonsStyling) {
+    handleButtonsStyling(confirmButton, cancelButton, params);
+  } else {
+    removeClass([confirmButton, cancelButton], swalClasses.styled);
+    confirmButton.style.backgroundColor = confirmButton.style.borderLeftColor = confirmButton.style.borderRightColor = '';
+    cancelButton.style.backgroundColor = cancelButton.style.borderLeftColor = cancelButton.style.borderRightColor = '';
+  }
+};
+
+function handleBackdropParam(container, backdrop) {
+  if (typeof backdrop === 'string') {
+    container.style.background = backdrop;
+  } else if (!backdrop) {
+    addClass([document.documentElement, document.body], swalClasses['no-backdrop']);
+  }
+}
+
+function handlePositionParam(container, position) {
+  if (position in swalClasses) {
+    addClass(container, swalClasses[position]);
+  } else {
+    warn('The "position" parameter is not valid, defaulting to "center"');
+    addClass(container, swalClasses.center);
+  }
+}
+
+function handleGrowParam(container, grow) {
+  if (grow && typeof grow === 'string') {
+    var growClass = 'grow-' + grow;
+
+    if (growClass in swalClasses) {
+      addClass(container, swalClasses[growClass]);
+    }
+  }
+}
+
+var renderContainer = function renderContainer(instance, params) {
+  var container = getContainer();
+
+  if (!container) {
+    return;
+  }
+
+  handleBackdropParam(container, params.backdrop);
+
+  if (!params.backdrop && params.allowOutsideClick) {
+    warn('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`');
+  }
+
+  handlePositionParam(container, params.position);
+  handleGrowParam(container, params.grow); // Custom class
+
+  applyCustomClass(container, params.customClass, 'container');
+
+  if (params.customContainerClass) {
+    // @deprecated
+    addClass(container, params.customContainerClass);
+  }
+};
+
+/**
+ * This module containts `WeakMap`s for each effectively-"private  property" that a `Swal` has.
+ * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
+ * This is the approach that Babel will probably take to implement private methods/fields
+ *   https://github.com/tc39/proposal-private-methods
+ *   https://github.com/babel/babel/pull/7555
+ * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
+ *   then we can use that language feature.
+ */
+var privateProps = {
+  promise: new WeakMap(),
+  innerParams: new WeakMap(),
+  domCache: new WeakMap()
+};
+
+var renderInput = function renderInput(instance, params) {
+  var innerParams = privateProps.innerParams.get(instance);
+  var rerender = !innerParams || params.input !== innerParams.input;
+  var content = getContent();
+  var inputTypes = ['input', 'file', 'range', 'select', 'radio', 'checkbox', 'textarea'];
+
+  for (var i = 0; i < inputTypes.length; i++) {
+    var inputClass = swalClasses[inputTypes[i]];
+    var inputContainer = getChildByClass(content, inputClass); // set attributes
+
+    setAttributes(inputTypes[i], params.inputAttributes); // set class
+
+    setClass(inputContainer, inputClass, params);
+    rerender && hide(inputContainer);
+  }
+
+  if (!params.input) {
+    return;
+  }
+
+  if (!renderInputType[params.input]) {
+    return error("Unexpected type of input! Expected \"text\", \"email\", \"password\", \"number\", \"tel\", \"select\", \"radio\", \"checkbox\", \"textarea\", \"file\" or \"url\", got \"".concat(params.input, "\""));
+  }
+
+  if (rerender) {
+    var input = renderInputType[params.input](params);
+    show(input);
+  }
+};
+
+var removeAttributes = function removeAttributes(input) {
+  for (var i = 0; i < input.attributes.length; i++) {
+    var attrName = input.attributes[i].name;
+
+    if (!(['type', 'value', 'style'].indexOf(attrName) !== -1)) {
+      input.removeAttribute(attrName);
+    }
+  }
+};
+
+var setAttributes = function setAttributes(inputType, inputAttributes) {
+  var input = getInput(getContent(), inputType);
+
+  if (!input) {
+    return;
+  }
+
+  removeAttributes(input);
+
+  for (var attr in inputAttributes) {
+    // Do not set a placeholder for <input type="range">
+    // it'll crash Edge, #1298
+    if (inputType === 'range' && attr === 'placeholder') {
+      continue;
+    }
+
+    input.setAttribute(attr, inputAttributes[attr]);
+  }
+};
+
+var setClass = function setClass(inputContainer, inputClass, params) {
+  inputContainer.className = inputClass;
+
+  if (params.inputClass) {
+    addClass(inputContainer, params.inputClass);
+  }
+
+  if (params.customClass) {
+    addClass(inputContainer, params.customClass.input);
+  }
+};
+
+var setInputPlaceholder = function setInputPlaceholder(input, params) {
+  if (!input.placeholder || params.inputPlaceholder) {
+    input.placeholder = params.inputPlaceholder;
+  }
+};
+
+var renderInputType = {};
+
+renderInputType.text = renderInputType.email = renderInputType.password = renderInputType.number = renderInputType.tel = renderInputType.url = function (params) {
+  var input = getChildByClass(getContent(), swalClasses.input);
+
+  if (typeof params.inputValue === 'string' || typeof params.inputValue === 'number') {
+    input.value = params.inputValue;
+  } else if (!isPromise(params.inputValue)) {
+    warn("Unexpected type of inputValue! Expected \"string\", \"number\" or \"Promise\", got \"".concat(_typeof(params.inputValue), "\""));
+  }
+
+  setInputPlaceholder(input, params);
+  input.type = params.input;
+  return input;
+};
+
+renderInputType.file = function (params) {
+  var input = getChildByClass(getContent(), swalClasses.file);
+  setInputPlaceholder(input, params);
+  input.type = params.input;
+  return input;
+};
+
+renderInputType.range = function (params) {
+  var range = getChildByClass(getContent(), swalClasses.range);
+  var rangeInput = range.querySelector('input');
+  var rangeOutput = range.querySelector('output');
+  rangeInput.value = params.inputValue;
+  rangeInput.type = params.input;
+  rangeOutput.value = params.inputValue;
+  return range;
+};
+
+renderInputType.select = function (params) {
+  var select = getChildByClass(getContent(), swalClasses.select);
+  select.innerHTML = '';
+
+  if (params.inputPlaceholder) {
+    var placeholder = document.createElement('option');
+    placeholder.innerHTML = params.inputPlaceholder;
+    placeholder.value = '';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    select.appendChild(placeholder);
+  }
+
+  return select;
+};
+
+renderInputType.radio = function () {
+  var radio = getChildByClass(getContent(), swalClasses.radio);
+  radio.innerHTML = '';
+  return radio;
+};
+
+renderInputType.checkbox = function (params) {
+  var checkbox = getChildByClass(getContent(), swalClasses.checkbox);
+  var checkboxInput = getInput(getContent(), 'checkbox');
+  checkboxInput.type = 'checkbox';
+  checkboxInput.value = 1;
+  checkboxInput.id = swalClasses.checkbox;
+  checkboxInput.checked = Boolean(params.inputValue);
+  var label = checkbox.querySelector('span');
+  label.innerHTML = params.inputPlaceholder;
+  return checkbox;
+};
+
+renderInputType.textarea = function (params) {
+  var textarea = getChildByClass(getContent(), swalClasses.textarea);
+  textarea.value = params.inputValue;
+  setInputPlaceholder(textarea, params);
+  return textarea;
+};
+
+var renderContent = function renderContent(instance, params) {
+  var content = getContent().querySelector('#' + swalClasses.content); // Content as HTML
+
+  if (params.html) {
+    parseHtmlToContainer(params.html, content);
+    show(content, 'block'); // Content as plain text
+  } else if (params.text) {
+    content.textContent = params.text;
+    show(content, 'block'); // No content
+  } else {
+    hide(content);
+  }
+
+  renderInput(instance, params); // Custom class
+
+  applyCustomClass(getContent(), params.customClass, 'content');
+};
+
+var renderFooter = function renderFooter(instance, params) {
+  var footer = getFooter();
+  toggle(footer, params.footer);
+
+  if (params.footer) {
+    parseHtmlToContainer(params.footer, footer);
+  } // Custom class
+
+
+  applyCustomClass(footer, params.customClass, 'footer');
+};
+
+var renderCloseButton = function renderCloseButton(instance, params) {
+  var closeButton = getCloseButton(); // Custom class
+
+  applyCustomClass(closeButton, params.customClass, 'closeButton');
+  toggle(closeButton, params.showCloseButton);
+  closeButton.setAttribute('aria-label', params.closeButtonAriaLabel);
+};
+
+var renderIcon = function renderIcon(instance, params) {
+  var innerParams = privateProps.innerParams.get(instance); // if the icon with the given type already rendered,
+  // apply the custom class without re-rendering the icon
+
+  if (innerParams && params.type === innerParams.type && getIcon()) {
+    applyCustomClass(getIcon(), params.customClass, 'icon');
+    return;
+  }
+
+  hideAllIcons();
+
+  if (!params.type) {
+    return;
+  }
+
+  adjustSuccessIconBackgoundColor();
+
+  if (Object.keys(iconTypes).indexOf(params.type) !== -1) {
+    var icon = elementBySelector(".".concat(swalClasses.icon, ".").concat(iconTypes[params.type]));
+    show(icon); // Custom class
+
+    applyCustomClass(icon, params.customClass, 'icon'); // Animate icon
+
+    toggleClass(icon, "swal2-animate-".concat(params.type, "-icon"), params.animation);
+  } else {
+    error("Unknown type! Expected \"success\", \"error\", \"warning\", \"info\" or \"question\", got \"".concat(params.type, "\""));
+  }
+};
+
+var hideAllIcons = function hideAllIcons() {
+  var icons = getIcons();
+
+  for (var i = 0; i < icons.length; i++) {
+    hide(icons[i]);
+  }
+}; // Adjust success icon background color to match the popup background color
+
+
+var adjustSuccessIconBackgoundColor = function adjustSuccessIconBackgoundColor() {
+  var popup = getPopup();
+  var popupBackgroundColor = window.getComputedStyle(popup).getPropertyValue('background-color');
+  var successIconParts = popup.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix');
+
+  for (var i = 0; i < successIconParts.length; i++) {
+    successIconParts[i].style.backgroundColor = popupBackgroundColor;
+  }
+};
+
+var renderImage = function renderImage(instance, params) {
+  var image = getImage();
+
+  if (!params.imageUrl) {
+    return hide(image);
+  }
+
+  show(image); // Src, alt
+
+  image.setAttribute('src', params.imageUrl);
+  image.setAttribute('alt', params.imageAlt); // Width, height
+
+  applyNumericalStyle(image, 'width', params.imageWidth);
+  applyNumericalStyle(image, 'height', params.imageHeight); // Class
+
+  image.className = swalClasses.image;
+  applyCustomClass(image, params.customClass, 'image');
+
+  if (params.imageClass) {
+    addClass(image, params.imageClass);
+  }
+};
+
+var createStepElement = function createStepElement(step) {
+  var stepEl = document.createElement('li');
+  addClass(stepEl, swalClasses['progress-step']);
+  stepEl.innerHTML = step;
+  return stepEl;
+};
+
+var createLineElement = function createLineElement(params) {
+  var lineEl = document.createElement('li');
+  addClass(lineEl, swalClasses['progress-step-line']);
+
+  if (params.progressStepsDistance) {
+    lineEl.style.width = params.progressStepsDistance;
+  }
+
+  return lineEl;
+};
+
+var renderProgressSteps = function renderProgressSteps(instance, params) {
+  var progressStepsContainer = getProgressSteps();
+
+  if (!params.progressSteps || params.progressSteps.length === 0) {
+    return hide(progressStepsContainer);
+  }
+
+  show(progressStepsContainer);
+  progressStepsContainer.innerHTML = '';
+  var currentProgressStep = parseInt(params.currentProgressStep === null ? Swal.getQueueStep() : params.currentProgressStep);
+
+  if (currentProgressStep >= params.progressSteps.length) {
+    warn('Invalid currentProgressStep parameter, it should be less than progressSteps.length ' + '(currentProgressStep like JS arrays starts from 0)');
+  }
+
+  params.progressSteps.forEach(function (step, index) {
+    var stepEl = createStepElement(step);
+    progressStepsContainer.appendChild(stepEl);
+
+    if (index === currentProgressStep) {
+      addClass(stepEl, swalClasses['active-progress-step']);
+    }
+
+    if (index !== params.progressSteps.length - 1) {
+      var lineEl = createLineElement(step);
+      progressStepsContainer.appendChild(lineEl);
+    }
+  });
+};
+
+var renderTitle = function renderTitle(instance, params) {
+  var title = getTitle();
+  toggle(title, params.title || params.titleText);
+
+  if (params.title) {
+    parseHtmlToContainer(params.title, title);
+  }
+
+  if (params.titleText) {
+    title.innerText = params.titleText;
+  } // Custom class
+
+
+  applyCustomClass(title, params.customClass, 'title');
+};
+
+var renderHeader = function renderHeader(instance, params) {
+  var header = getHeader(); // Custom class
+
+  applyCustomClass(header, params.customClass, 'header'); // Progress steps
+
+  renderProgressSteps(instance, params); // Icon
+
+  renderIcon(instance, params); // Image
+
+  renderImage(instance, params); // Title
+
+  renderTitle(instance, params); // Close button
+
+  renderCloseButton(instance, params);
+};
+
+var renderPopup = function renderPopup(instance, params) {
+  var popup = getPopup(); // Width
+
+  applyNumericalStyle(popup, 'width', params.width); // Padding
+
+  applyNumericalStyle(popup, 'padding', params.padding); // Background
+
+  if (params.background) {
+    popup.style.background = params.background;
+  } // Default Class
+
+
+  popup.className = swalClasses.popup;
+
+  if (params.toast) {
+    addClass([document.documentElement, document.body], swalClasses['toast-shown']);
+    addClass(popup, swalClasses.toast);
+  } else {
+    addClass(popup, swalClasses.modal);
+  } // Custom class
+
+
+  applyCustomClass(popup, params.customClass, 'popup');
+
+  if (typeof params.customClass === 'string') {
+    addClass(popup, params.customClass);
+  } // CSS animation
+
+
+  toggleClass(popup, swalClasses.noanimation, !params.animation);
+};
+
+var render = function render(instance, params) {
+  renderPopup(instance, params);
+  renderContainer(instance, params);
+  renderHeader(instance, params);
+  renderContent(instance, params);
+  renderActions(instance, params);
+  renderFooter(instance, params);
+};
+
+/*
+ * Global function to determine if SweetAlert2 popup is shown
+ */
+
+var isVisible$1 = function isVisible$$1() {
+  return isVisible(getPopup());
+};
+/*
+ * Global function to click 'Confirm' button
+ */
+
+var clickConfirm = function clickConfirm() {
+  return getConfirmButton() && getConfirmButton().click();
+};
+/*
+ * Global function to click 'Cancel' button
+ */
+
+var clickCancel = function clickCancel() {
+  return getCancelButton() && getCancelButton().click();
+};
+
+function fire() {
+  var Swal = this;
+
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return _construct(Swal, args);
+}
+
+/**
+ * Returns an extended version of `Swal` containing `params` as defaults.
+ * Useful for reusing Swal configuration.
+ *
+ * For example:
+ *
+ * Before:
+ * const textPromptOptions = { input: 'text', showCancelButton: true }
+ * const {value: firstName} = await Swal.fire({ ...textPromptOptions, title: 'What is your first name?' })
+ * const {value: lastName} = await Swal.fire({ ...textPromptOptions, title: 'What is your last name?' })
+ *
+ * After:
+ * const TextPrompt = Swal.mixin({ input: 'text', showCancelButton: true })
+ * const {value: firstName} = await TextPrompt('What is your first name?')
+ * const {value: lastName} = await TextPrompt('What is your last name?')
+ *
+ * @param mixinParams
+ */
+function mixin(mixinParams) {
+  var MixinSwal =
+  /*#__PURE__*/
+  function (_this) {
+    _inherits(MixinSwal, _this);
+
+    function MixinSwal() {
+      _classCallCheck(this, MixinSwal);
+
+      return _possibleConstructorReturn(this, _getPrototypeOf(MixinSwal).apply(this, arguments));
+    }
+
+    _createClass(MixinSwal, [{
+      key: "_main",
+      value: function _main(params) {
+        return _get(_getPrototypeOf(MixinSwal.prototype), "_main", this).call(this, _extends({}, mixinParams, params));
+      }
+    }]);
+
+    return MixinSwal;
+  }(this);
+
+  return MixinSwal;
+}
+
+// private global state for the queue feature
+var currentSteps = [];
+/*
+ * Global function for chaining sweetAlert popups
+ */
+
+var queue = function queue(steps) {
+  var Swal = this;
+  currentSteps = steps;
+
+  var resetAndResolve = function resetAndResolve(resolve, value) {
+    currentSteps = [];
+    document.body.removeAttribute('data-swal2-queue-step');
+    resolve(value);
+  };
+
+  var queueResult = [];
+  return new Promise(function (resolve) {
+    (function step(i, callback) {
+      if (i < currentSteps.length) {
+        document.body.setAttribute('data-swal2-queue-step', i);
+        Swal.fire(currentSteps[i]).then(function (result) {
+          if (typeof result.value !== 'undefined') {
+            queueResult.push(result.value);
+            step(i + 1, callback);
+          } else {
+            resetAndResolve(resolve, {
+              dismiss: result.dismiss
+            });
+          }
+        });
+      } else {
+        resetAndResolve(resolve, {
+          value: queueResult
+        });
+      }
+    })(0);
+  });
+};
+/*
+ * Global function for getting the index of current popup in queue
+ */
+
+var getQueueStep = function getQueueStep() {
+  return document.body.getAttribute('data-swal2-queue-step');
+};
+/*
+ * Global function for inserting a popup to the queue
+ */
+
+var insertQueueStep = function insertQueueStep(step, index) {
+  if (index && index < currentSteps.length) {
+    return currentSteps.splice(index, 0, step);
+  }
+
+  return currentSteps.push(step);
+};
+/*
+ * Global function for deleting a popup from the queue
+ */
+
+var deleteQueueStep = function deleteQueueStep(index) {
+  if (typeof currentSteps[index] !== 'undefined') {
+    currentSteps.splice(index, 1);
+  }
+};
+
+/**
+ * Show spinner instead of Confirm button and disable Cancel button
+ */
+
+var showLoading = function showLoading() {
+  var popup = getPopup();
+
+  if (!popup) {
+    Swal.fire('');
+  }
+
+  popup = getPopup();
+  var actions = getActions();
+  var confirmButton = getConfirmButton();
+  var cancelButton = getCancelButton();
+  show(actions);
+  show(confirmButton);
+  addClass([popup, actions], swalClasses.loading);
+  confirmButton.disabled = true;
+  cancelButton.disabled = true;
+  popup.setAttribute('data-loading', true);
+  popup.setAttribute('aria-busy', true);
+  popup.focus();
+};
+
+var RESTORE_FOCUS_TIMEOUT = 100;
+
+var globalState = {};
+var focusPreviousActiveElement = function focusPreviousActiveElement() {
+  if (globalState.previousActiveElement && globalState.previousActiveElement.focus) {
+    globalState.previousActiveElement.focus();
+    globalState.previousActiveElement = null;
+  } else if (document.body) {
+    document.body.focus();
+  }
+}; // Restore previous active (focused) element
+
+
+var restoreActiveElement = function restoreActiveElement() {
+  return new Promise(function (resolve) {
+    var x = window.scrollX;
+    var y = window.scrollY;
+    globalState.restoreFocusTimeout = setTimeout(function () {
+      focusPreviousActiveElement();
+      resolve();
+    }, RESTORE_FOCUS_TIMEOUT); // issues/900
+
+    if (typeof x !== 'undefined' && typeof y !== 'undefined') {
+      // IE doesn't have scrollX/scrollY support
+      window.scrollTo(x, y);
+    }
+  });
+};
+
+/**
+ * If `timer` parameter is set, returns number of milliseconds of timer remained.
+ * Otherwise, returns undefined.
+ */
+
+var getTimerLeft = function getTimerLeft() {
+  return globalState.timeout && globalState.timeout.getTimerLeft();
+};
+/**
+ * Stop timer. Returns number of milliseconds of timer remained.
+ * If `timer` parameter isn't set, returns undefined.
+ */
+
+var stopTimer = function stopTimer() {
+  return globalState.timeout && globalState.timeout.stop();
+};
+/**
+ * Resume timer. Returns number of milliseconds of timer remained.
+ * If `timer` parameter isn't set, returns undefined.
+ */
+
+var resumeTimer = function resumeTimer() {
+  return globalState.timeout && globalState.timeout.start();
+};
+/**
+ * Resume timer. Returns number of milliseconds of timer remained.
+ * If `timer` parameter isn't set, returns undefined.
+ */
+
+var toggleTimer = function toggleTimer() {
+  var timer = globalState.timeout;
+  return timer && (timer.running ? timer.stop() : timer.start());
+};
+/**
+ * Increase timer. Returns number of milliseconds of an updated timer.
+ * If `timer` parameter isn't set, returns undefined.
+ */
+
+var increaseTimer = function increaseTimer(n) {
+  return globalState.timeout && globalState.timeout.increase(n);
+};
+/**
+ * Check if timer is running. Returns true if timer is running
+ * or false if timer is paused or stopped.
+ * If `timer` parameter isn't set, returns undefined
+ */
+
+var isTimerRunning = function isTimerRunning() {
+  return globalState.timeout && globalState.timeout.isRunning();
+};
+
+var defaultParams = {
+  title: '',
+  titleText: '',
+  text: '',
+  html: '',
+  footer: '',
+  type: null,
+  toast: false,
+  customClass: '',
+  customContainerClass: '',
+  target: 'body',
+  backdrop: true,
+  animation: true,
+  heightAuto: true,
+  allowOutsideClick: true,
+  allowEscapeKey: true,
+  allowEnterKey: true,
+  stopKeydownPropagation: true,
+  keydownListenerCapture: false,
+  showConfirmButton: true,
+  showCancelButton: false,
+  preConfirm: null,
+  confirmButtonText: 'OK',
+  confirmButtonAriaLabel: '',
+  confirmButtonColor: null,
+  confirmButtonClass: '',
+  cancelButtonText: 'Cancel',
+  cancelButtonAriaLabel: '',
+  cancelButtonColor: null,
+  cancelButtonClass: '',
+  buttonsStyling: true,
+  reverseButtons: false,
+  focusConfirm: true,
+  focusCancel: false,
+  showCloseButton: false,
+  closeButtonAriaLabel: 'Close this dialog',
+  showLoaderOnConfirm: false,
+  imageUrl: null,
+  imageWidth: null,
+  imageHeight: null,
+  imageAlt: '',
+  imageClass: '',
+  timer: null,
+  width: null,
+  padding: null,
+  background: null,
+  input: null,
+  inputPlaceholder: '',
+  inputValue: '',
+  inputOptions: {},
+  inputAutoTrim: true,
+  inputClass: '',
+  inputAttributes: {},
+  inputValidator: null,
+  validationMessage: null,
+  grow: false,
+  position: 'center',
+  progressSteps: [],
+  currentProgressStep: null,
+  progressStepsDistance: null,
+  onBeforeOpen: null,
+  onAfterClose: null,
+  onOpen: null,
+  onClose: null,
+  scrollbarPadding: true
+};
+var updatableParams = ['title', 'titleText', 'text', 'html', 'type', 'customClass', 'showConfirmButton', 'showCancelButton', 'confirmButtonText', 'confirmButtonAriaLabel', 'confirmButtonColor', 'confirmButtonClass', 'cancelButtonText', 'cancelButtonAriaLabel', 'cancelButtonColor', 'cancelButtonClass', 'buttonsStyling', 'reverseButtons', 'imageUrl', 'imageWidth', 'imageHeigth', 'imageAlt', 'imageClass', 'progressSteps', 'currentProgressStep'];
+var deprecatedParams = {
+  customContainerClass: 'customClass',
+  confirmButtonClass: 'customClass',
+  cancelButtonClass: 'customClass',
+  imageClass: 'customClass',
+  inputClass: 'customClass'
+};
+var toastIncompatibleParams = ['allowOutsideClick', 'allowEnterKey', 'backdrop', 'focusConfirm', 'focusCancel', 'heightAuto', 'keydownListenerCapture'];
+/**
+ * Is valid parameter
+ * @param {String} paramName
+ */
+
+var isValidParameter = function isValidParameter(paramName) {
+  return defaultParams.hasOwnProperty(paramName);
+};
+/**
+ * Is valid parameter for Swal.update() method
+ * @param {String} paramName
+ */
+
+var isUpdatableParameter = function isUpdatableParameter(paramName) {
+  return updatableParams.indexOf(paramName) !== -1;
+};
+/**
+ * Is deprecated parameter
+ * @param {String} paramName
+ */
+
+var isDeprecatedParameter = function isDeprecatedParameter(paramName) {
+  return deprecatedParams[paramName];
+};
+
+var checkIfParamIsValid = function checkIfParamIsValid(param) {
+  if (!isValidParameter(param)) {
+    warn("Unknown parameter \"".concat(param, "\""));
+  }
+};
+
+var checkIfToastParamIsValid = function checkIfToastParamIsValid(param) {
+  if (toastIncompatibleParams.indexOf(param) !== -1) {
+    warn("The parameter \"".concat(param, "\" is incompatible with toasts"));
+  }
+};
+
+var checkIfParamIsDeprecated = function checkIfParamIsDeprecated(param) {
+  if (isDeprecatedParameter(param)) {
+    warnAboutDepreation(param, isDeprecatedParameter(param));
+  }
+};
+/**
+ * Show relevant warnings for given params
+ *
+ * @param params
+ */
+
+
+var showWarningsForParams = function showWarningsForParams(params) {
+  for (var param in params) {
+    checkIfParamIsValid(param);
+
+    if (params.toast) {
+      checkIfToastParamIsValid(param);
+    }
+
+    checkIfParamIsDeprecated();
+  }
+};
+
+
+
+var staticMethods = Object.freeze({
+	isValidParameter: isValidParameter,
+	isUpdatableParameter: isUpdatableParameter,
+	isDeprecatedParameter: isDeprecatedParameter,
+	argsToParams: argsToParams,
+	isVisible: isVisible$1,
+	clickConfirm: clickConfirm,
+	clickCancel: clickCancel,
+	getContainer: getContainer,
+	getPopup: getPopup,
+	getTitle: getTitle,
+	getContent: getContent,
+	getImage: getImage,
+	getIcon: getIcon,
+	getIcons: getIcons,
+	getCloseButton: getCloseButton,
+	getActions: getActions,
+	getConfirmButton: getConfirmButton,
+	getCancelButton: getCancelButton,
+	getHeader: getHeader,
+	getFooter: getFooter,
+	getFocusableElements: getFocusableElements,
+	getValidationMessage: getValidationMessage,
+	isLoading: isLoading,
+	fire: fire,
+	mixin: mixin,
+	queue: queue,
+	getQueueStep: getQueueStep,
+	insertQueueStep: insertQueueStep,
+	deleteQueueStep: deleteQueueStep,
+	showLoading: showLoading,
+	enableLoading: showLoading,
+	getTimerLeft: getTimerLeft,
+	stopTimer: stopTimer,
+	resumeTimer: resumeTimer,
+	toggleTimer: toggleTimer,
+	increaseTimer: increaseTimer,
+	isTimerRunning: isTimerRunning
+});
+
+/**
+ * Enables buttons and hide loader.
+ */
+
+function hideLoading() {
+  var innerParams = privateProps.innerParams.get(this);
+  var domCache = privateProps.domCache.get(this);
+
+  if (!innerParams.showConfirmButton) {
+    hide(domCache.confirmButton);
+
+    if (!innerParams.showCancelButton) {
+      hide(domCache.actions);
+    }
+  }
+
+  removeClass([domCache.popup, domCache.actions], swalClasses.loading);
+  domCache.popup.removeAttribute('aria-busy');
+  domCache.popup.removeAttribute('data-loading');
+  domCache.confirmButton.disabled = false;
+  domCache.cancelButton.disabled = false;
+}
+
+function getInput$1(instance) {
+  var innerParams = privateProps.innerParams.get(instance || this);
+  var domCache = privateProps.domCache.get(instance || this);
+  return getInput(domCache.content, innerParams.input);
+}
+
+var fixScrollbar = function fixScrollbar() {
+  // for queues, do not do this more than once
+  if (states.previousBodyPadding !== null) {
+    return;
+  } // if the body has overflow
+
+
+  if (document.body.scrollHeight > window.innerHeight) {
+    // add padding so the content doesn't shift after removal of scrollbar
+    states.previousBodyPadding = parseInt(window.getComputedStyle(document.body).getPropertyValue('padding-right'));
+    document.body.style.paddingRight = states.previousBodyPadding + measureScrollbar() + 'px';
+  }
+};
+var undoScrollbar = function undoScrollbar() {
+  if (states.previousBodyPadding !== null) {
+    document.body.style.paddingRight = states.previousBodyPadding + 'px';
+    states.previousBodyPadding = null;
+  }
+};
+
+/* istanbul ignore next */
+
+var iOSfix = function iOSfix() {
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if (iOS && !hasClass(document.body, swalClasses.iosfix)) {
+    var offset = document.body.scrollTop;
+    document.body.style.top = offset * -1 + 'px';
+    addClass(document.body, swalClasses.iosfix);
+    lockBodyScroll();
+  }
+};
+
+var lockBodyScroll = function lockBodyScroll() {
+  // #1246
+  var container = getContainer();
+  var preventTouchMove;
+
+  container.ontouchstart = function (e) {
+    preventTouchMove = e.target === container || !isScrollable(container) && e.target.tagName !== 'INPUT' // #1603
+    ;
+  };
+
+  container.ontouchmove = function (e) {
+    if (preventTouchMove) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+};
+/* istanbul ignore next */
+
+
+var undoIOSfix = function undoIOSfix() {
+  if (hasClass(document.body, swalClasses.iosfix)) {
+    var offset = parseInt(document.body.style.top, 10);
+    removeClass(document.body, swalClasses.iosfix);
+    document.body.style.top = '';
+    document.body.scrollTop = offset * -1;
+  }
+};
+
+var isIE11 = function isIE11() {
+  return !!window.MSInputMethodContext && !!document.documentMode;
+}; // Fix IE11 centering sweetalert2/issues/933
+
+/* istanbul ignore next */
+
+
+var fixVerticalPositionIE = function fixVerticalPositionIE() {
+  var container = getContainer();
+  var popup = getPopup();
+  container.style.removeProperty('align-items');
+
+  if (popup.offsetTop < 0) {
+    container.style.alignItems = 'flex-start';
+  }
+};
+/* istanbul ignore next */
+
+
+var IEfix = function IEfix() {
+  if (typeof window !== 'undefined' && isIE11()) {
+    fixVerticalPositionIE();
+    window.addEventListener('resize', fixVerticalPositionIE);
+  }
+};
+/* istanbul ignore next */
+
+var undoIEfix = function undoIEfix() {
+  if (typeof window !== 'undefined' && isIE11()) {
+    window.removeEventListener('resize', fixVerticalPositionIE);
+  }
+};
+
+// Adding aria-hidden="true" to elements outside of the active modal dialog ensures that
+// elements not within the active modal dialog will not be surfaced if a user opens a screen
+// reader’s list of elements (headings, form controls, landmarks, etc.) in the document.
+
+var setAriaHidden = function setAriaHidden() {
+  var bodyChildren = toArray(document.body.children);
+  bodyChildren.forEach(function (el) {
+    if (el === getContainer() || contains(el, getContainer())) {
+      return;
+    }
+
+    if (el.hasAttribute('aria-hidden')) {
+      el.setAttribute('data-previous-aria-hidden', el.getAttribute('aria-hidden'));
+    }
+
+    el.setAttribute('aria-hidden', 'true');
+  });
+};
+var unsetAriaHidden = function unsetAriaHidden() {
+  var bodyChildren = toArray(document.body.children);
+  bodyChildren.forEach(function (el) {
+    if (el.hasAttribute('data-previous-aria-hidden')) {
+      el.setAttribute('aria-hidden', el.getAttribute('data-previous-aria-hidden'));
+      el.removeAttribute('data-previous-aria-hidden');
+    } else {
+      el.removeAttribute('aria-hidden');
+    }
+  });
+};
+
+/**
+ * This module containts `WeakMap`s for each effectively-"private  property" that a `Swal` has.
+ * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
+ * This is the approach that Babel will probably take to implement private methods/fields
+ *   https://github.com/tc39/proposal-private-methods
+ *   https://github.com/babel/babel/pull/7555
+ * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
+ *   then we can use that language feature.
+ */
+var privateMethods = {
+  swalPromiseResolve: new WeakMap()
+};
+
+/*
+ * Instance method to close sweetAlert
+ */
+
+function removePopupAndResetState(container, isToast, onAfterClose) {
+  if (isToast) {
+    triggerOnAfterClose(onAfterClose);
+  } else {
+    restoreActiveElement().then(function () {
+      return triggerOnAfterClose(onAfterClose);
+    });
+    globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, {
+      capture: globalState.keydownListenerCapture
+    });
+    globalState.keydownHandlerAdded = false;
+  } // Unset globalState props so GC will dispose globalState (#1569)
+
+
+  delete globalState.keydownHandler;
+  delete globalState.keydownTarget;
+
+  if (container.parentNode) {
+    container.parentNode.removeChild(container);
+  }
+
+  removeBodyClasses();
+
+  if (isModal()) {
+    undoScrollbar();
+    undoIOSfix();
+    undoIEfix();
+    unsetAriaHidden();
+  }
+}
+
+function removeBodyClasses() {
+  removeClass([document.documentElement, document.body], [swalClasses.shown, swalClasses['height-auto'], swalClasses['no-backdrop'], swalClasses['toast-shown'], swalClasses['toast-column']]);
+}
+
+function swalCloseEventFinished(popup, container, isToast, onAfterClose) {
+  if (hasClass(popup, swalClasses.hide)) {
+    removePopupAndResetState(container, isToast, onAfterClose);
+  } // Unset WeakMaps so GC will be able to dispose them (#1569)
+
+
+  unsetWeakMaps(privateProps);
+  unsetWeakMaps(privateMethods);
+}
+
+function close(resolveValue) {
+  var container = getContainer();
+  var popup = getPopup();
+
+  if (!popup || hasClass(popup, swalClasses.hide)) {
+    return;
+  }
+
+  var innerParams = privateProps.innerParams.get(this);
+  var swalPromiseResolve = privateMethods.swalPromiseResolve.get(this);
+  var onClose = innerParams.onClose;
+  var onAfterClose = innerParams.onAfterClose;
+  removeClass(popup, swalClasses.show);
+  addClass(popup, swalClasses.hide); // If animation is supported, animate
+
+  if (animationEndEvent && hasCssAnimation(popup)) {
+    popup.addEventListener(animationEndEvent, function (e) {
+      if (e.target === popup) {
+        swalCloseEventFinished(popup, container, isToast(), onAfterClose);
+      }
+    });
+  } else {
+    // Otherwise, remove immediately
+    removePopupAndResetState(container, isToast(), onAfterClose);
+  }
+
+  if (onClose !== null && typeof onClose === 'function') {
+    onClose(popup);
+  } // Resolve Swal promise
+
+
+  swalPromiseResolve(resolveValue || {}); // Unset this.params so GC will dispose it (#1569)
+
+  delete this.params;
+}
+
+var unsetWeakMaps = function unsetWeakMaps(obj) {
+  for (var i in obj) {
+    obj[i] = new WeakMap();
+  }
+};
+
+var triggerOnAfterClose = function triggerOnAfterClose(onAfterClose) {
+  if (onAfterClose !== null && typeof onAfterClose === 'function') {
+    setTimeout(function () {
+      onAfterClose();
+    });
+  }
+};
+
+function setButtonsDisabled(instance, buttons, disabled) {
+  var domCache = privateProps.domCache.get(instance);
+  buttons.forEach(function (button) {
+    domCache[button].disabled = disabled;
+  });
+}
+
+function setInputDisabled(input, disabled) {
+  if (!input) {
+    return false;
+  }
+
+  if (input.type === 'radio') {
+    var radiosContainer = input.parentNode.parentNode;
+    var radios = radiosContainer.querySelectorAll('input');
+
+    for (var i = 0; i < radios.length; i++) {
+      radios[i].disabled = disabled;
+    }
+  } else {
+    input.disabled = disabled;
+  }
+}
+
+function enableButtons() {
+  setButtonsDisabled(this, ['confirmButton', 'cancelButton'], false);
+}
+function disableButtons() {
+  setButtonsDisabled(this, ['confirmButton', 'cancelButton'], true);
+} // @deprecated
+
+function enableConfirmButton() {
+  warnAboutDepreation('Swal.disableConfirmButton()', "Swal.getConfirmButton().removeAttribute('disabled')");
+  setButtonsDisabled(this, ['confirmButton'], false);
+} // @deprecated
+
+function disableConfirmButton() {
+  warnAboutDepreation('Swal.enableConfirmButton()', "Swal.getConfirmButton().setAttribute('disabled', '')");
+  setButtonsDisabled(this, ['confirmButton'], true);
+}
+function enableInput() {
+  return setInputDisabled(this.getInput(), false);
+}
+function disableInput() {
+  return setInputDisabled(this.getInput(), true);
+}
+
+function showValidationMessage(error) {
+  var domCache = privateProps.domCache.get(this);
+  domCache.validationMessage.innerHTML = error;
+  var popupComputedStyle = window.getComputedStyle(domCache.popup);
+  domCache.validationMessage.style.marginLeft = "-".concat(popupComputedStyle.getPropertyValue('padding-left'));
+  domCache.validationMessage.style.marginRight = "-".concat(popupComputedStyle.getPropertyValue('padding-right'));
+  show(domCache.validationMessage);
+  var input = this.getInput();
+
+  if (input) {
+    input.setAttribute('aria-invalid', true);
+    input.setAttribute('aria-describedBy', swalClasses['validation-message']);
+    focusInput(input);
+    addClass(input, swalClasses.inputerror);
+  }
+} // Hide block with validation message
+
+function resetValidationMessage$1() {
+  var domCache = privateProps.domCache.get(this);
+
+  if (domCache.validationMessage) {
+    hide(domCache.validationMessage);
+  }
+
+  var input = this.getInput();
+
+  if (input) {
+    input.removeAttribute('aria-invalid');
+    input.removeAttribute('aria-describedBy');
+    removeClass(input, swalClasses.inputerror);
+  }
+}
+
+function getProgressSteps$1() {
+  warnAboutDepreation('Swal.getProgressSteps()', "const swalInstance = Swal.fire({progressSteps: ['1', '2', '3']}); const progressSteps = swalInstance.params.progressSteps");
+  var innerParams = privateProps.innerParams.get(this);
+  return innerParams.progressSteps;
+}
+function setProgressSteps(progressSteps) {
+  warnAboutDepreation('Swal.setProgressSteps()', 'Swal.update()');
+  var innerParams = privateProps.innerParams.get(this);
+
+  var updatedParams = _extends({}, innerParams, {
+    progressSteps: progressSteps
+  });
+
+  renderProgressSteps(this, updatedParams);
+  privateProps.innerParams.set(this, updatedParams);
+}
+function showProgressSteps() {
+  var domCache = privateProps.domCache.get(this);
+  show(domCache.progressSteps);
+}
+function hideProgressSteps() {
+  var domCache = privateProps.domCache.get(this);
+  hide(domCache.progressSteps);
+}
+
+var Timer =
+/*#__PURE__*/
+function () {
+  function Timer(callback, delay) {
+    _classCallCheck(this, Timer);
+
+    this.callback = callback;
+    this.remaining = delay;
+    this.running = false;
+    this.start();
+  }
+
+  _createClass(Timer, [{
+    key: "start",
+    value: function start() {
+      if (!this.running) {
+        this.running = true;
+        this.started = new Date();
+        this.id = setTimeout(this.callback, this.remaining);
+      }
+
+      return this.remaining;
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      if (this.running) {
+        this.running = false;
+        clearTimeout(this.id);
+        this.remaining -= new Date() - this.started;
+      }
+
+      return this.remaining;
+    }
+  }, {
+    key: "increase",
+    value: function increase(n) {
+      var running = this.running;
+
+      if (running) {
+        this.stop();
+      }
+
+      this.remaining += n;
+
+      if (running) {
+        this.start();
+      }
+
+      return this.remaining;
+    }
+  }, {
+    key: "getTimerLeft",
+    value: function getTimerLeft() {
+      if (this.running) {
+        this.stop();
+        this.start();
+      }
+
+      return this.remaining;
+    }
+  }, {
+    key: "isRunning",
+    value: function isRunning() {
+      return this.running;
+    }
+  }]);
+
+  return Timer;
+}();
+
+var defaultInputValidators = {
+  email: function email(string, validationMessage) {
+    return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage ? validationMessage : 'Invalid email address');
+  },
+  url: function url(string, validationMessage) {
+    // taken from https://stackoverflow.com/a/3809435 with a small change from #1306
+    return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,63}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage ? validationMessage : 'Invalid URL');
+  }
+};
+
+/**
+ * Set type, text and actions on popup
+ *
+ * @param params
+ * @returns {boolean}
+ */
+
+function setParameters(params) {
+  // Use default `inputValidator` for supported input types if not provided
+  if (!params.inputValidator) {
+    Object.keys(defaultInputValidators).forEach(function (key) {
+      if (params.input === key) {
+        params.inputValidator = defaultInputValidators[key];
+      }
+    });
+  } // showLoaderOnConfirm && preConfirm
+
+
+  if (params.showLoaderOnConfirm && !params.preConfirm) {
+    warn('showLoaderOnConfirm is set to true, but preConfirm is not defined.\n' + 'showLoaderOnConfirm should be used together with preConfirm, see usage example:\n' + 'https://sweetalert2.github.io/#ajax-request');
+  } // params.animation will be actually used in renderPopup.js
+  // but in case when params.animation is a function, we need to call that function
+  // before popup (re)initialization, so it'll be possible to check Swal.isVisible()
+  // inside the params.animation function
+
+
+  params.animation = callIfFunction(params.animation); // Determine if the custom target element is valid
+
+  if (!params.target || typeof params.target === 'string' && !document.querySelector(params.target) || typeof params.target !== 'string' && !params.target.appendChild) {
+    warn('Target parameter is not valid, defaulting to "body"');
+    params.target = 'body';
+  } // Replace newlines with <br> in title
+
+
+  if (typeof params.title === 'string') {
+    params.title = params.title.split('\n').join('<br />');
+  }
+
+  var oldPopup = getPopup();
+  var targetElement = typeof params.target === 'string' ? document.querySelector(params.target) : params.target;
+
+  if (!oldPopup || // If the model target has changed, refresh the popup
+  oldPopup && targetElement && oldPopup.parentNode !== targetElement.parentNode) {
+    init(params);
+  }
+}
+
+function swalOpenAnimationFinished(popup, container) {
+  popup.removeEventListener(animationEndEvent, swalOpenAnimationFinished);
+  container.style.overflowY = 'auto';
+}
+/**
+ * Open popup, add necessary classes and styles, fix scrollbar
+ *
+ * @param {Array} params
+ */
+
+
+var openPopup = function openPopup(params) {
+  var container = getContainer();
+  var popup = getPopup();
+
+  if (params.onBeforeOpen !== null && typeof params.onBeforeOpen === 'function') {
+    params.onBeforeOpen(popup);
+  }
+
+  if (params.animation) {
+    addClass(popup, swalClasses.show);
+    addClass(container, swalClasses.fade);
+  }
+
+  show(popup); // scrolling is 'hidden' until animation is done, after that 'auto'
+
+  if (animationEndEvent && hasCssAnimation(popup)) {
+    container.style.overflowY = 'hidden';
+    popup.addEventListener(animationEndEvent, swalOpenAnimationFinished.bind(null, popup, container));
+  } else {
+    container.style.overflowY = 'auto';
+  }
+
+  addClass([document.documentElement, document.body, container], swalClasses.shown);
+
+  if (params.heightAuto && params.backdrop && !params.toast) {
+    addClass([document.documentElement, document.body], swalClasses['height-auto']);
+  }
+
+  if (isModal()) {
+    if (params.scrollbarPadding) {
+      fixScrollbar();
+    }
+
+    iOSfix();
+    IEfix();
+    setAriaHidden(); // sweetalert2/issues/1247
+
+    setTimeout(function () {
+      container.scrollTop = 0;
+    });
+  }
+
+  if (!isToast() && !globalState.previousActiveElement) {
+    globalState.previousActiveElement = document.activeElement;
+  }
+
+  if (params.onOpen !== null && typeof params.onOpen === 'function') {
+    setTimeout(function () {
+      params.onOpen(popup);
+    });
+  }
+};
+
+var _this = undefined;
+
+var handleInputOptions = function handleInputOptions(instance, params) {
+  var content = getContent();
+
+  var processInputOptions = function processInputOptions(inputOptions) {
+    return populateInputOptions[params.input](content, formatInputOptions(inputOptions), params);
+  };
+
+  if (isPromise(params.inputOptions)) {
+    showLoading();
+    params.inputOptions.then(function (inputOptions) {
+      instance.hideLoading();
+      processInputOptions(inputOptions);
+    });
+  } else if (_typeof(params.inputOptions) === 'object') {
+    processInputOptions(params.inputOptions);
+  } else {
+    error("Unexpected type of inputOptions! Expected object, Map or Promise, got ".concat(_typeof(params.inputOptions)));
+  }
+};
+var handleInputValue = function handleInputValue(instance, params) {
+  var input = instance.getInput();
+  hide(input);
+  params.inputValue.then(function (inputValue) {
+    input.value = params.input === 'number' ? parseFloat(inputValue) || 0 : inputValue + '';
+    show(input);
+    input.focus();
+    instance.hideLoading();
+  })["catch"](function (err) {
+    error('Error in inputValue promise: ' + err);
+    input.value = '';
+    show(input);
+    input.focus();
+
+    _this.hideLoading();
+  });
+};
+var populateInputOptions = {
+  select: function select(content, inputOptions, params) {
+    var select = getChildByClass(content, swalClasses.select);
+    inputOptions.forEach(function (inputOption) {
+      var optionValue = inputOption[0];
+      var optionLabel = inputOption[1];
+      var option = document.createElement('option');
+      option.value = optionValue;
+      option.innerHTML = optionLabel;
+
+      if (params.inputValue.toString() === optionValue.toString()) {
+        option.selected = true;
+      }
+
+      select.appendChild(option);
+    });
+    select.focus();
+  },
+  radio: function radio(content, inputOptions, params) {
+    var radio = getChildByClass(content, swalClasses.radio);
+    inputOptions.forEach(function (inputOption) {
+      var radioValue = inputOption[0];
+      var radioLabel = inputOption[1];
+      var radioInput = document.createElement('input');
+      var radioLabelElement = document.createElement('label');
+      radioInput.type = 'radio';
+      radioInput.name = swalClasses.radio;
+      radioInput.value = radioValue;
+
+      if (params.inputValue.toString() === radioValue.toString()) {
+        radioInput.checked = true;
+      }
+
+      var label = document.createElement('span');
+      label.innerHTML = radioLabel;
+      label.className = swalClasses.label;
+      radioLabelElement.appendChild(radioInput);
+      radioLabelElement.appendChild(label);
+      radio.appendChild(radioLabelElement);
+    });
+    var radios = radio.querySelectorAll('input');
+
+    if (radios.length) {
+      radios[0].focus();
+    }
+  }
+  /**
+   * Converts `inputOptions` into an array of `[value, label]`s
+   * @param inputOptions
+   */
+
+};
+
+var formatInputOptions = function formatInputOptions(inputOptions) {
+  var result = [];
+
+  if (typeof Map !== 'undefined' && inputOptions instanceof Map) {
+    inputOptions.forEach(function (value, key) {
+      result.push([key, value]);
+    });
+  } else {
+    Object.keys(inputOptions).forEach(function (key) {
+      result.push([key, inputOptions[key]]);
+    });
+  }
+
+  return result;
+};
+
+function _main(userParams) {
+  var _this = this;
+
+  showWarningsForParams(userParams);
+
+  var innerParams = _extends({}, defaultParams, userParams);
+
+  setParameters(innerParams);
+  Object.freeze(innerParams); // clear the previous timer
+
+  if (globalState.timeout) {
+    globalState.timeout.stop();
+    delete globalState.timeout;
+  } // clear the restore focus timeout
+
+
+  clearTimeout(globalState.restoreFocusTimeout);
+  var domCache = {
+    popup: getPopup(),
+    container: getContainer(),
+    content: getContent(),
+    actions: getActions(),
+    confirmButton: getConfirmButton(),
+    cancelButton: getCancelButton(),
+    closeButton: getCloseButton(),
+    validationMessage: getValidationMessage(),
+    progressSteps: getProgressSteps()
+  };
+  privateProps.domCache.set(this, domCache);
+  render(this, innerParams);
+  privateProps.innerParams.set(this, innerParams);
+  var constructor = this.constructor;
+  return new Promise(function (resolve) {
+    // functions to handle all closings/dismissals
+    var succeedWith = function succeedWith(value) {
+      _this.closePopup({
+        value: value
+      });
+    };
+
+    var dismissWith = function dismissWith(dismiss) {
+      _this.closePopup({
+        dismiss: dismiss
+      });
+    };
+
+    privateMethods.swalPromiseResolve.set(_this, resolve); // Close on timer
+
+    if (innerParams.timer) {
+      globalState.timeout = new Timer(function () {
+        dismissWith('timer');
+        delete globalState.timeout;
+      }, innerParams.timer);
+    } // Get the value of the popup input
+
+
+    var getInputValue = function getInputValue() {
+      var input = _this.getInput();
+
+      if (!input) {
+        return null;
+      }
+
+      switch (innerParams.input) {
+        case 'checkbox':
+          return input.checked ? 1 : 0;
+
+        case 'radio':
+          return input.checked ? input.value : null;
+
+        case 'file':
+          return input.files.length ? input.files[0] : null;
+
+        default:
+          return innerParams.inputAutoTrim ? input.value.trim() : input.value;
+      }
+    }; // input autofocus
+
+
+    if (innerParams.input) {
+      setTimeout(function () {
+        var input = _this.getInput();
+
+        if (input) {
+          focusInput(input);
+        }
+      }, 0);
+    }
+
+    var confirm = function confirm(value) {
+      if (innerParams.showLoaderOnConfirm) {
+        constructor.showLoading(); // TODO: make showLoading an *instance* method
+      }
+
+      if (innerParams.preConfirm) {
+        _this.resetValidationMessage();
+
+        var preConfirmPromise = Promise.resolve().then(function () {
+          return innerParams.preConfirm(value, innerParams.validationMessage);
+        });
+        preConfirmPromise.then(function (preConfirmValue) {
+          if (isVisible(domCache.validationMessage) || preConfirmValue === false) {
+            _this.hideLoading();
+          } else {
+            succeedWith(typeof preConfirmValue === 'undefined' ? value : preConfirmValue);
+          }
+        });
+      } else {
+        succeedWith(value);
+      }
+    }; // Mouse interactions
+
+
+    var onButtonEvent = function onButtonEvent(e) {
+      var target = e.target;
+      var confirmButton = domCache.confirmButton,
+          cancelButton = domCache.cancelButton;
+      var targetedConfirm = confirmButton && (confirmButton === target || confirmButton.contains(target));
+      var targetedCancel = cancelButton && (cancelButton === target || cancelButton.contains(target));
+
+      switch (e.type) {
+        case 'click':
+          // Clicked 'confirm'
+          if (targetedConfirm) {
+            _this.disableButtons();
+
+            if (innerParams.input) {
+              var inputValue = getInputValue();
+
+              if (innerParams.inputValidator) {
+                _this.disableInput();
+
+                var validationPromise = Promise.resolve().then(function () {
+                  return innerParams.inputValidator(inputValue, innerParams.validationMessage);
+                });
+                validationPromise.then(function (validationMessage) {
+                  _this.enableButtons();
+
+                  _this.enableInput();
+
+                  if (validationMessage) {
+                    _this.showValidationMessage(validationMessage);
+                  } else {
+                    confirm(inputValue);
+                  }
+                });
+              } else if (!_this.getInput().checkValidity()) {
+                _this.enableButtons();
+
+                _this.showValidationMessage(innerParams.validationMessage);
+              } else {
+                confirm(inputValue);
+              }
+            } else {
+              confirm(true);
+            } // Clicked 'cancel'
+
+          } else if (targetedCancel) {
+            _this.disableButtons();
+
+            dismissWith(constructor.DismissReason.cancel);
+          }
+
+          break;
+
+        default:
+      }
+    };
+
+    var buttons = domCache.popup.querySelectorAll('button');
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].onclick = onButtonEvent;
+      buttons[i].onmouseover = onButtonEvent;
+      buttons[i].onmouseout = onButtonEvent;
+      buttons[i].onmousedown = onButtonEvent;
+    } // Closing popup by close button
+
+
+    domCache.closeButton.onclick = function () {
+      dismissWith(constructor.DismissReason.close);
+    };
+
+    if (innerParams.toast) {
+      // Closing popup by internal click
+      domCache.popup.onclick = function () {
+        if (innerParams.showConfirmButton || innerParams.showCancelButton || innerParams.showCloseButton || innerParams.input) {
+          return;
+        }
+
+        dismissWith(constructor.DismissReason.close);
+      };
+    } else {
+      var ignoreOutsideClick = false; // Ignore click events that had mousedown on the popup but mouseup on the container
+      // This can happen when the user drags a slider
+
+      domCache.popup.onmousedown = function () {
+        domCache.container.onmouseup = function (e) {
+          domCache.container.onmouseup = undefined; // We only check if the mouseup target is the container because usually it doesn't
+          // have any other direct children aside of the popup
+
+          if (e.target === domCache.container) {
+            ignoreOutsideClick = true;
+          }
+        };
+      }; // Ignore click events that had mousedown on the container but mouseup on the popup
+
+
+      domCache.container.onmousedown = function () {
+        domCache.popup.onmouseup = function (e) {
+          domCache.popup.onmouseup = undefined; // We also need to check if the mouseup target is a child of the popup
+
+          if (e.target === domCache.popup || domCache.popup.contains(e.target)) {
+            ignoreOutsideClick = true;
+          }
+        };
+      };
+
+      domCache.container.onclick = function (e) {
+        if (ignoreOutsideClick) {
+          ignoreOutsideClick = false;
+          return;
+        }
+
+        if (e.target !== domCache.container) {
+          return;
+        }
+
+        if (callIfFunction(innerParams.allowOutsideClick)) {
+          dismissWith(constructor.DismissReason.backdrop);
+        }
+      };
+    } // Reverse buttons (Confirm on the right side)
+
+
+    if (innerParams.reverseButtons) {
+      domCache.confirmButton.parentNode.insertBefore(domCache.cancelButton, domCache.confirmButton);
+    } else {
+      domCache.confirmButton.parentNode.insertBefore(domCache.confirmButton, domCache.cancelButton);
+    } // Focus handling
+
+
+    var setFocus = function setFocus(index, increment) {
+      var focusableElements = getFocusableElements(innerParams.focusCancel); // search for visible elements and select the next possible match
+
+      for (var _i = 0; _i < focusableElements.length; _i++) {
+        index = index + increment; // rollover to first item
+
+        if (index === focusableElements.length) {
+          index = 0; // go to last item
+        } else if (index === -1) {
+          index = focusableElements.length - 1;
+        }
+
+        return focusableElements[index].focus();
+      } // no visible focusable elements, focus the popup
+
+
+      domCache.popup.focus();
+    };
+
+    var keydownHandler = function keydownHandler(e, innerParams) {
+      if (innerParams.stopKeydownPropagation) {
+        e.stopPropagation();
+      }
+
+      var arrowKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Left', 'Right', 'Up', 'Down' // IE11
+      ];
+
+      if (e.key === 'Enter' && !e.isComposing) {
+        if (e.target && _this.getInput() && e.target.outerHTML === _this.getInput().outerHTML) {
+          if (['textarea', 'file'].indexOf(innerParams.input) !== -1) {
+            return; // do not submit
+          }
+
+          constructor.clickConfirm();
+          e.preventDefault();
+        } // TAB
+
+      } else if (e.key === 'Tab') {
+        var targetElement = e.target;
+        var focusableElements = getFocusableElements(innerParams.focusCancel);
+        var btnIndex = -1;
+
+        for (var _i2 = 0; _i2 < focusableElements.length; _i2++) {
+          if (targetElement === focusableElements[_i2]) {
+            btnIndex = _i2;
+            break;
+          }
+        }
+
+        if (!e.shiftKey) {
+          // Cycle to the next button
+          setFocus(btnIndex, 1);
+        } else {
+          // Cycle to the prev button
+          setFocus(btnIndex, -1);
+        }
+
+        e.stopPropagation();
+        e.preventDefault(); // ARROWS - switch focus between buttons
+      } else if (arrowKeys.indexOf(e.key) !== -1) {
+        // focus Cancel button if Confirm button is currently focused
+        if (document.activeElement === domCache.confirmButton && isVisible(domCache.cancelButton)) {
+          domCache.cancelButton.focus(); // and vice versa
+        } else if (document.activeElement === domCache.cancelButton && isVisible(domCache.confirmButton)) {
+          domCache.confirmButton.focus();
+        } // ESC
+
+      } else if ((e.key === 'Escape' || e.key === 'Esc') && callIfFunction(innerParams.allowEscapeKey) === true) {
+        e.preventDefault();
+        dismissWith(constructor.DismissReason.esc);
+      }
+    };
+
+    if (globalState.keydownTarget && globalState.keydownHandlerAdded) {
+      globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, {
+        capture: globalState.keydownListenerCapture
+      });
+      globalState.keydownHandlerAdded = false;
+    }
+
+    if (!innerParams.toast) {
+      globalState.keydownHandler = function (e) {
+        return keydownHandler(e, innerParams);
+      };
+
+      globalState.keydownTarget = innerParams.keydownListenerCapture ? window : domCache.popup;
+      globalState.keydownListenerCapture = innerParams.keydownListenerCapture;
+      globalState.keydownTarget.addEventListener('keydown', globalState.keydownHandler, {
+        capture: globalState.keydownListenerCapture
+      });
+      globalState.keydownHandlerAdded = true;
+    }
+
+    _this.enableButtons();
+
+    _this.hideLoading();
+
+    _this.resetValidationMessage();
+
+    if (innerParams.toast && (innerParams.input || innerParams.footer || innerParams.showCloseButton)) {
+      addClass(document.body, swalClasses['toast-column']);
+    } else {
+      removeClass(document.body, swalClasses['toast-column']);
+    } // inputOptions, inputValue
+
+
+    if (innerParams.input === 'select' || innerParams.input === 'radio') {
+      handleInputOptions(_this, innerParams);
+    } else if (['text', 'email', 'number', 'tel', 'textarea'].indexOf(innerParams.input) !== -1 && isPromise(innerParams.inputValue)) {
+      handleInputValue(_this, innerParams);
+    }
+
+    openPopup(innerParams);
+
+    if (!innerParams.toast) {
+      if (!callIfFunction(innerParams.allowEnterKey)) {
+        if (document.activeElement && typeof document.activeElement.blur === 'function') {
+          document.activeElement.blur();
+        }
+      } else if (innerParams.focusCancel && isVisible(domCache.cancelButton)) {
+        domCache.cancelButton.focus();
+      } else if (innerParams.focusConfirm && isVisible(domCache.confirmButton)) {
+        domCache.confirmButton.focus();
+      } else {
+        setFocus(-1, 1);
+      }
+    } // fix scroll
+
+
+    domCache.container.scrollTop = 0;
+  });
+}
+
+/**
+ * Updates popup parameters.
+ */
+
+function update(params) {
+  var validUpdatableParams = {}; // assign valid params from `params` to `defaults`
+
+  Object.keys(params).forEach(function (param) {
+    if (Swal.isUpdatableParameter(param)) {
+      validUpdatableParams[param] = params[param];
+    } else {
+      warn("Invalid parameter to update: \"".concat(param, "\". Updatable params are listed here: https://github.com/sweetalert2/sweetalert2/blob/master/src/utils/params.js"));
+    }
+  });
+  var innerParams = privateProps.innerParams.get(this);
+
+  var updatedParams = _extends({}, innerParams, validUpdatableParams);
+
+  render(this, updatedParams);
+  privateProps.innerParams.set(this, updatedParams);
+  Object.defineProperties(this, {
+    params: {
+      value: _extends({}, this.params, params),
+      writable: false,
+      enumerable: true
+    }
+  });
+}
+
+
+
+var instanceMethods = Object.freeze({
+	hideLoading: hideLoading,
+	disableLoading: hideLoading,
+	getInput: getInput$1,
+	close: close,
+	closePopup: close,
+	closeModal: close,
+	closeToast: close,
+	enableButtons: enableButtons,
+	disableButtons: disableButtons,
+	enableConfirmButton: enableConfirmButton,
+	disableConfirmButton: disableConfirmButton,
+	enableInput: enableInput,
+	disableInput: disableInput,
+	showValidationMessage: showValidationMessage,
+	resetValidationMessage: resetValidationMessage$1,
+	getProgressSteps: getProgressSteps$1,
+	setProgressSteps: setProgressSteps,
+	showProgressSteps: showProgressSteps,
+	hideProgressSteps: hideProgressSteps,
+	_main: _main,
+	update: update
+});
+
+var currentInstance; // SweetAlert constructor
+
+function SweetAlert() {
+  // Prevent run in Node env
+
+  /* istanbul ignore if */
+  if (typeof window === 'undefined') {
+    return;
+  } // Check for the existence of Promise
+
+  /* istanbul ignore if */
+
+
+  if (typeof Promise === 'undefined') {
+    error('This package requires a Promise library, please include a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)');
+  }
+
+  currentInstance = this;
+
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  var outerParams = Object.freeze(this.constructor.argsToParams(args));
+  Object.defineProperties(this, {
+    params: {
+      value: outerParams,
+      writable: false,
+      enumerable: true,
+      configurable: true
+    }
+  });
+
+  var promise = this._main(this.params);
+
+  privateProps.promise.set(this, promise);
+} // `catch` cannot be the name of a module export, so we define our thenable methods here instead
+
+
+SweetAlert.prototype.then = function (onFulfilled) {
+  var promise = privateProps.promise.get(this);
+  return promise.then(onFulfilled);
+};
+
+SweetAlert.prototype["finally"] = function (onFinally) {
+  var promise = privateProps.promise.get(this);
+  return promise["finally"](onFinally);
+}; // Assign instance methods from src/instanceMethods/*.js to prototype
+
+
+_extends(SweetAlert.prototype, instanceMethods); // Assign static methods from src/staticMethods/*.js to constructor
+
+
+_extends(SweetAlert, staticMethods); // Proxy to instance methods to constructor, for now, for backwards compatibility
+
+
+Object.keys(instanceMethods).forEach(function (key) {
+  SweetAlert[key] = function () {
+    if (currentInstance) {
+      var _currentInstance;
+
+      return (_currentInstance = currentInstance)[key].apply(_currentInstance, arguments);
+    }
+  };
+});
+SweetAlert.DismissReason = DismissReason;
+SweetAlert.version = '8.12.1';
+
+var Swal = SweetAlert;
+Swal["default"] = Swal;
+
+return Swal;
+
+})));
+if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert2}
+
+"undefined"!=typeof document&&function(e,t){var n=e.createElement("style");if(e.getElementsByTagName("head")[0].appendChild(n),n.styleSheet)n.styleSheet.disabled||(n.styleSheet.cssText=t);else try{n.innerHTML=t}catch(e){n.innerText=t}}(document,"@charset \"UTF-8\";@-webkit-keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-shown{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon::before{display:flex;align-items:center;font-size:2em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon::before{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 .0625em #fff,0 0 0 .125em rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:2em 2em;transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;-webkit-transform-origin:0 1.5em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}@-webkit-keyframes swal2-toast-show{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg)}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg)}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg)}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg)}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg)}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg)}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-shown{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent}body.swal2-no-backdrop .swal2-shown>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-shown.swal2-top{top:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-top-left,body.swal2-no-backdrop .swal2-shown.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-top-end,body.swal2-no-backdrop .swal2-shown.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-shown.swal2-center{top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-left,body.swal2-no-backdrop .swal2-shown.swal2-center-start{top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-end,body.swal2-no-backdrop .swal2-shown.swal2-center-right{top:50%;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom{bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,body.swal2-no-backdrop .swal2-shown.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swal2-shown.swal2-bottom-right{right:0;bottom:0}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;background-color:transparent;-webkit-overflow-scrolling:touch}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-container.swal2-fade{transition:background-color .1s}.swal2-container.swal2-shown{background-color:rgba(0,0,0,.4)}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{z-index:1;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-actions.swal2-loading .swal2-styled.swal2-confirm{box-sizing:border-box;width:2.5em;height:2.5em;margin:.46875em;padding:0;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{content:\"\";display:inline-block;width:15px;height:15px;margin-left:5px;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff}.swal2-styled{margin:.3125em;padding:.625em 2em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(50,100,150,.4)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:0;outline:initial;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{-webkit-transform:none;transform:none;background:0 0;color:#f27474}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:300;line-height:normal;word-wrap:break-word}#swal2-content{text-align:center}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-file::-webkit-input-placeholder,.swal2-input::-webkit-input-placeholder,.swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::-ms-input-placeholder,.swal2-input::-ms-input-placeholder,.swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:inherit}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:inherit;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:\"!\";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;zoom:normal;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;zoom:normal;border:.25em solid transparent;border-radius:50%;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon::before{display:flex;align-items:center;height:92%;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-warning::before{content:\"!\"}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-info::before{content:\"i\"}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-question::before{content:\"?\"}.swal2-icon.swal2-question.swal2-arabic-question-mark::before{content:\"؟\"}.swal2-icon.swal2-success{border-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:3.75em 3.75em;transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 3.75em;transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.875em;width:1.5625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-progress-steps{align-items:center;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#3085d6}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;width:2.5em;height:.4em;margin:0 -1px;background:#3085d6}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-show.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-hide.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-animate-success-icon .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-animate-error-icon{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-animate-error-icon .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}@-webkit-keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}");
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -38300,6 +41036,136 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vee-validate/dist/locale sync recursive ^\\.\\/.*$":
+/*!*************************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale sync ^\.\/.*$ ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./ar": "./node_modules/vee-validate/dist/locale/ar.js",
+	"./ar.js": "./node_modules/vee-validate/dist/locale/ar.js",
+	"./az": "./node_modules/vee-validate/dist/locale/az.js",
+	"./az.js": "./node_modules/vee-validate/dist/locale/az.js",
+	"./bg": "./node_modules/vee-validate/dist/locale/bg.js",
+	"./bg.js": "./node_modules/vee-validate/dist/locale/bg.js",
+	"./ca": "./node_modules/vee-validate/dist/locale/ca.js",
+	"./ca.js": "./node_modules/vee-validate/dist/locale/ca.js",
+	"./cs": "./node_modules/vee-validate/dist/locale/cs.js",
+	"./cs.js": "./node_modules/vee-validate/dist/locale/cs.js",
+	"./da": "./node_modules/vee-validate/dist/locale/da.js",
+	"./da.js": "./node_modules/vee-validate/dist/locale/da.js",
+	"./de": "./node_modules/vee-validate/dist/locale/de.js",
+	"./de.js": "./node_modules/vee-validate/dist/locale/de.js",
+	"./el": "./node_modules/vee-validate/dist/locale/el.js",
+	"./el.js": "./node_modules/vee-validate/dist/locale/el.js",
+	"./en": "./node_modules/vee-validate/dist/locale/en.js",
+	"./en.js": "./node_modules/vee-validate/dist/locale/en.js",
+	"./es": "./node_modules/vee-validate/dist/locale/es.js",
+	"./es.js": "./node_modules/vee-validate/dist/locale/es.js",
+	"./et": "./node_modules/vee-validate/dist/locale/et.js",
+	"./et.js": "./node_modules/vee-validate/dist/locale/et.js",
+	"./eu": "./node_modules/vee-validate/dist/locale/eu.js",
+	"./eu.js": "./node_modules/vee-validate/dist/locale/eu.js",
+	"./fa": "./node_modules/vee-validate/dist/locale/fa.js",
+	"./fa.js": "./node_modules/vee-validate/dist/locale/fa.js",
+	"./fi": "./node_modules/vee-validate/dist/locale/fi.js",
+	"./fi.js": "./node_modules/vee-validate/dist/locale/fi.js",
+	"./fr": "./node_modules/vee-validate/dist/locale/fr.js",
+	"./fr.js": "./node_modules/vee-validate/dist/locale/fr.js",
+	"./he": "./node_modules/vee-validate/dist/locale/he.js",
+	"./he.js": "./node_modules/vee-validate/dist/locale/he.js",
+	"./hi": "./node_modules/vee-validate/dist/locale/hi.js",
+	"./hi.js": "./node_modules/vee-validate/dist/locale/hi.js",
+	"./hr": "./node_modules/vee-validate/dist/locale/hr.js",
+	"./hr.js": "./node_modules/vee-validate/dist/locale/hr.js",
+	"./hu": "./node_modules/vee-validate/dist/locale/hu.js",
+	"./hu.js": "./node_modules/vee-validate/dist/locale/hu.js",
+	"./id": "./node_modules/vee-validate/dist/locale/id.js",
+	"./id.js": "./node_modules/vee-validate/dist/locale/id.js",
+	"./it": "./node_modules/vee-validate/dist/locale/it.js",
+	"./it.js": "./node_modules/vee-validate/dist/locale/it.js",
+	"./ja": "./node_modules/vee-validate/dist/locale/ja.js",
+	"./ja.js": "./node_modules/vee-validate/dist/locale/ja.js",
+	"./ka": "./node_modules/vee-validate/dist/locale/ka.js",
+	"./ka.js": "./node_modules/vee-validate/dist/locale/ka.js",
+	"./ko": "./node_modules/vee-validate/dist/locale/ko.js",
+	"./ko.js": "./node_modules/vee-validate/dist/locale/ko.js",
+	"./lt": "./node_modules/vee-validate/dist/locale/lt.js",
+	"./lt.js": "./node_modules/vee-validate/dist/locale/lt.js",
+	"./lv": "./node_modules/vee-validate/dist/locale/lv.js",
+	"./lv.js": "./node_modules/vee-validate/dist/locale/lv.js",
+	"./mn": "./node_modules/vee-validate/dist/locale/mn.js",
+	"./mn.js": "./node_modules/vee-validate/dist/locale/mn.js",
+	"./ms_MY": "./node_modules/vee-validate/dist/locale/ms_MY.js",
+	"./ms_MY.js": "./node_modules/vee-validate/dist/locale/ms_MY.js",
+	"./nb_NO": "./node_modules/vee-validate/dist/locale/nb_NO.js",
+	"./nb_NO.js": "./node_modules/vee-validate/dist/locale/nb_NO.js",
+	"./ne": "./node_modules/vee-validate/dist/locale/ne.js",
+	"./ne.js": "./node_modules/vee-validate/dist/locale/ne.js",
+	"./nl": "./node_modules/vee-validate/dist/locale/nl.js",
+	"./nl.js": "./node_modules/vee-validate/dist/locale/nl.js",
+	"./nn_NO": "./node_modules/vee-validate/dist/locale/nn_NO.js",
+	"./nn_NO.js": "./node_modules/vee-validate/dist/locale/nn_NO.js",
+	"./pl": "./node_modules/vee-validate/dist/locale/pl.js",
+	"./pl.js": "./node_modules/vee-validate/dist/locale/pl.js",
+	"./pt_BR": "./node_modules/vee-validate/dist/locale/pt_BR.js",
+	"./pt_BR.js": "./node_modules/vee-validate/dist/locale/pt_BR.js",
+	"./pt_PT": "./node_modules/vee-validate/dist/locale/pt_PT.js",
+	"./pt_PT.js": "./node_modules/vee-validate/dist/locale/pt_PT.js",
+	"./ro": "./node_modules/vee-validate/dist/locale/ro.js",
+	"./ro.js": "./node_modules/vee-validate/dist/locale/ro.js",
+	"./ru": "./node_modules/vee-validate/dist/locale/ru.js",
+	"./ru.js": "./node_modules/vee-validate/dist/locale/ru.js",
+	"./sk": "./node_modules/vee-validate/dist/locale/sk.js",
+	"./sk.js": "./node_modules/vee-validate/dist/locale/sk.js",
+	"./sl": "./node_modules/vee-validate/dist/locale/sl.js",
+	"./sl.js": "./node_modules/vee-validate/dist/locale/sl.js",
+	"./sq": "./node_modules/vee-validate/dist/locale/sq.js",
+	"./sq.js": "./node_modules/vee-validate/dist/locale/sq.js",
+	"./sr": "./node_modules/vee-validate/dist/locale/sr.js",
+	"./sr.js": "./node_modules/vee-validate/dist/locale/sr.js",
+	"./sr_Latin": "./node_modules/vee-validate/dist/locale/sr_Latin.js",
+	"./sr_Latin.js": "./node_modules/vee-validate/dist/locale/sr_Latin.js",
+	"./sv": "./node_modules/vee-validate/dist/locale/sv.js",
+	"./sv.js": "./node_modules/vee-validate/dist/locale/sv.js",
+	"./th": "./node_modules/vee-validate/dist/locale/th.js",
+	"./th.js": "./node_modules/vee-validate/dist/locale/th.js",
+	"./tr": "./node_modules/vee-validate/dist/locale/tr.js",
+	"./tr.js": "./node_modules/vee-validate/dist/locale/tr.js",
+	"./uk": "./node_modules/vee-validate/dist/locale/uk.js",
+	"./uk.js": "./node_modules/vee-validate/dist/locale/uk.js",
+	"./vi": "./node_modules/vee-validate/dist/locale/vi.js",
+	"./vi.js": "./node_modules/vee-validate/dist/locale/vi.js",
+	"./zh_CN": "./node_modules/vee-validate/dist/locale/zh_CN.js",
+	"./zh_CN.js": "./node_modules/vee-validate/dist/locale/zh_CN.js",
+	"./zh_TW": "./node_modules/vee-validate/dist/locale/zh_TW.js",
+	"./zh_TW.js": "./node_modules/vee-validate/dist/locale/zh_TW.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/vee-validate/dist/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./node_modules/vee-validate/dist/locale/ar.js":
 /*!*****************************************************!*\
   !*** ./node_modules/vee-validate/dist/locale/ar.js ***!
@@ -38308,6 +41174,534 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";function r(n){var e={Byte:"بايت",KB:"كيلوبايت",GB:"جيجابايت",PB:"بيتابايت"};return function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n).replace(/(Byte|KB|GB|PB)/,function(n){return e[n]})}var n,e={name:"ar",messages:{_default:function(n){return"قيمة الحقل "+n+" غير صحيحة."},after:function(n,e){return n+" يجب ان يكون بعد "+e[0]+"."},alpha:function(n){return n+" يجب ان يحتوي على حروف فقط."},alpha_dash:function(n){return n+" قد يحتوي على حروف او الرموز - و _."},alpha_num:function(n){return n+" قد يحتوي فقط على حروف وارقام."},alpha_spaces:function(n){return n+" قد يحتوي فقط على حروف ومسافات."},before:function(n,e){return n+" يجب ان يكون قبل "+e[0]+"."},between:function(n,e){return"قيمة "+n+" يجب ان تكون ما بين "+e[0]+" و "+e[1]+"."},confirmed:function(n){return n+" لا يماثل التأكيد."},credit_card:function(n){return"الحقل "+n+" غير صحيح."},date_between:function(n,e){return n+" يجب ان يكون ما بين "+e[0]+" و "+e[1]+"."},date_format:function(n,e){return n+" يجب ان يكون على هيئة "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" يجب ان يكون قيمة رقمية وقد يحتوي على"+(t&&"*"!==t?" "+t:"")+" ارقام عشرية."},digits:function(n,e){return n+" يجب ان تحتوي فقط على ارقام والا يزيد عددها عن "+e[0]+" رقم."},dimensions:function(n,e){return n+" يجب ان تكون بمقاس "+e[0]+" بكسل في "+e[1]+" بكسل."},email:function(n){return n+" يجب ان يكون بريداً اليكتروناً صحيحاً."},excluded:function(n){return"الحقل "+n+" غير صحيح."},ext:function(n){return"نوع ملف "+n+" غير صحيح."},image:function(n){return n+" يجب ان تكون صورة."},included:function(n){return"الحقل "+n+" يجب ان يكون قيمة صحيحة."},integer:function(n){return"الحقل "+n+" يجب ان يكون عدداً صحيحاً"},ip:function(n){return n+" يجب ان يكون ip صحيح."},length:function(n,e){var t=e[0],r=e[1];return r?"طول الحقل "+n+" يجب ان يكون ما بين "+t+" و "+r+".":"طول الحقل "+n+" يجب ان يكون "+t+"."},max:function(n,e){return"الحقل "+n+" يجب ان يحتوي على "+e[0]+" حروف على الأكثر."},max_value:function(n,e){return"قيمة الحقل "+n+" يجب ان تكون اصغر من "+e[0]+" او تساويها."},mimes:function(n){return"نوع ملف "+n+" غير صحيح."},min:function(n,e){return"الحقل "+n+" يجب ان يحتوي على "+e[0]+" حروف على الأقل."},min_value:function(n,e){return"قيمة الحقل "+n+" يجب ان تكون اكبر من "+e[0]+" او تساويها."},numeric:function(n){return n+" يمكن ان يحتوي فقط على ارقام."},regex:function(n){return"الحقل "+n+" غير صحيح."},required:function(n){return n+" مطلوب."},size:function(n,e){var t=e[0];return n+" يجب ان يكون اقل من "+r(t)+"."},url:function(n){return"الحقل "+n+" يجب ان يكون رابطاً صحيحاً."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/az.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/az.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,r){ true?module.exports=r():undefined}(this,function(){"use strict";var n,r={name:"az",messages:{_default:function(n){return n+" göstəricisi yalnışdır."},after:function(n,r){var a=r[0];return n+" yalnız "+a+" tarixindən sonra"+(r[1]?", və ya "+a+" tarixində ":" ")+"ola bilər."},alpha:function(n){return n+" yalnız hərflərdən ibarət olmalıdır."},alpha_dash:function(n){return n+" yalnız hərflər, rəqəmlər və defisdən ibarət ola bilər."},alpha_num:function(n){return n+" yalnız rəqəmlərdən ibarət ola bilər"},alpha_spaces:function(n){return n+" yalnız rəqəmlərdən və ara simvolundan (space) ibarət ola bilər."},before:function(n,r){var a=r[0];return n+" yalnız "+a+" tarixindən öncə"+(r[1]?", və ya "+a+" tarixində ":" ")+"ola bilər."},between:function(n,r){return n+" yalnız "+r[0]+" və "+r[1]+" arası ola bilər."},confirmed:function(n){return n+" təsdiqləməsi yalnışdır."},credit_card:function(n){return n+" göstəriciləri düzgün daxil olunmayıb."},date_between:function(n,r){return n+" "+r[0]+" və "+r[1]+" arası olmalıdır."},date_format:function(n,r){return n+" "+r[0]+" formatında olmalıdır."},decimal:function(n,r){void 0===r&&(r=[]);var a=r[0];return void 0===a&&(a="*"),n+" yalnız rəqəmlərdən"+(a&&"*"!==a?" və nöqtədən sonra "+a+" onluq ədəddən":"")+" ibarət ola bilər."},digits:function(n,r){return n+" "+r[0]+" rəqəmdən ibarət olmalıdır."},dimensions:function(n,r){return n+" ölçüsü "+r[0]+"x"+r[1]+" piksel olmalıdır."},email:function(n){return n+" düzgün formatda daxil olunmalıdır."},excluded:function(n){return n+" göstəricisi yalnışdır."},ext:function(n){return n+" düzgün fayl formatında olmalıdır."},image:function(n){return n+" şəkil olmalıdır"},included:function(n){return n+" göstəricisi yalnışdır."},integer:function(n){return n+" göstəricisi tam ədəd olmalıdır."},ip:function(n){return n+" IP ünvanı düzgün formatda daxil olunmayıb."},length:function(n,r){var a=r[0],t=r[1];return t?n+" uzunluğu "+a+" və "+t+" arası olmalıdır.":n+" uzunluğu "+a+" olmalıdır."},max:function(n,r){return n+" uzunluğu ən çox "+r[0]+" simvoldan ibarət ola bilər."},max_value:function(n,r){return n+" göstəricisi ən çox "+r[0]+" və ya daha az olmalıdır."},mimes:function(n){return n+" formatı yalnışdır."},min:function(n,r){return n+" uzunluğu ən az "+r[0]+" simvoldan ibarət olmalıdır."},min_value:function(n,r){return n+" göstəricisi minimum "+r[0]+" və ya daha çox olmalıdır."},numeric:function(n){return n+" yalnız rəqəmlərdən ibarət olmalıdır."},regex:function(n){return n+" formatı yalnışdır."},required:function(n){return n+" əlavə etmək zəruridir."},size:function(n,r){return n+" həcmi "+function(n){var r=1024,a=0===(n=Number(n)*r)?0:Math.floor(Math.log(n)/Math.log(r));return 1*(n/Math.pow(r,a)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][a]}(r[0])+" və daha az olmalıdır."},url:function(n){return n+" düzgün URL formatında daxil olunmalıdır."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[r.name]=r,n)),r});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/bg.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/bg.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"bg",messages:{_default:function(n){return"Полето "+n+" е с невалидна стойност."},alpha:function(n){return"Полето "+n+" може да съдържа само азбучни знаци."},alpha_dash:function(n){return"Полето "+n+" може да съдържа буквено-цифрови знаци, както и тирета и долни черти."},alpha_num:function(n){return"Полето "+n+" може да съдържа само буквено-цифрови символи."},alpha_spaces:function(n){return"Полето "+n+" може да съдържа само азбучни знаци, както и интервали."},between:function(n,e){return"Полето "+n+" може да е между "+e[0]+" и "+e[1]+"."},confirmed:function(n){return"Потвърждението не съвпада за полето "+n+"."},credit_card:function(n){return"Полето "+n+" е навалидно."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"Полето "+n+" трябва да е числено "+(t&&"*"!==t?"и може да съдържа ${decimals} знака":"")},digits:function(n,e){return"Полето "+n+" трябва да е цифрово и да съдържа точно "+e[0]+" цифри."},dimensions:function(n,e){return"Полето "+n+" трябва да е "+e[0]+" пиксела по "+e[1]+" пиксела."},email:function(n){return"Полето "+n+" трябва да е коректен Email адрес."},excluded:function(n){return"Полето "+n+" трябва да е с валидна стойност."},ext:function(n){return"Полето "+n+" трябва да е валиден файл."},image:function(n){return"Полето "+n+" трябва да е снимка."},included:function(n){return"Полето "+n+" трябва да е валидна стойност."},integer:function(n){return"Полето "+n+" трябва да е цяло число."},ip:function(n){return"Полето "+n+" трябва да е валиден IP адрес."},length:function(n,e){var t=e[0],r=e[1];return r?"Полето "+n+" трябва да е с дължина между "+t+" и "+r+" знака.":"Полето "+n+" трябва да е с дължилна "+t+" знака."},max:function(n,e){return"Полето "+n+" не може да бъде по-голямо от "+e[0]+" знака."},max_value:function(n,e){return"Полето "+n+" трябва да бъде "+e[0]+" или по-малко."},mimes:function(n){return"Полето "+n+" трябва да е валиден тип файл."},min:function(n,e){return"Полето "+n+" трябва да съдържа минимум "+e[0]+" символа."},min_value:function(n,e){return"Полето "+n+" трябва да бъде минимум "+e[0]+" или повече."},numeric:function(n){return"Полето "+n+" може да съдържа само цифри."},regex:function(n){return"Полето "+n+" съдържа невалиден формат."},required:function(n){return"Полето "+n+" е задължително."},size:function(n,e){return"Размерът на файла за полето "+n+" трябва да е под "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return"Полето "+n+" не съдържа валиден URL адрес."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ca.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ca.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"ca",messages:{_default:function(e){return"El camp "+e+" no és vàlid."},after:function(e,n){return"El camp "+e+" ha de ser posterior a "+n[0]+"."},alpha:function(e){return"El camp "+e+" només ha de contenir lletres."},alpha_dash:function(e){return"El camp "+e+" només ha de contenir lletres, números i guions."},alpha_num:function(e){return"El camp "+e+" només ha de contenir lletres i números."},alpha_spaces:function(e){return"El camp "+e+" només ha de contenir lletres i espais."},before:function(e,n){return"El camp "+e+" ha de ser anterior a "+n[0]+"."},between:function(e,n){return"El camp "+e+" ha d'estar entre "+n[0]+" i "+n[1]+"."},confirmed:function(e,n){return"El camp "+e+" no coincideix amb el camp "+n[0]+"."},credit_card:function(e,n){n[0];return"El camp "+e+" és invàlid."},date_between:function(e,n){return"El camp "+e+" ha d'estar entre "+n[0]+" i "+n[1]+"."},date_format:function(e,n){return"El camp "+e+" ha de tenir el format "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var r=n[0];return void 0===r&&(r="*"),"El camp "+e+" ha de ser numèric i contenir"+(r&&"*"!==r?" "+r:"")+" punts decimals."},digits:function(e,n){return"El camp "+e+" ha de ser numèric i contenir exactament "+n[0]+" dígits."},dimensions:function(e,n){return"El camp "+e+" ha de ser de "+n[0]+" píxels per "+n[1]+" píxels."},email:function(e){return"El camp "+e+" ha de ser un correu electrònic vàlid."},excluded:function(e){return"El camp "+e+" ha de ser un valor vàlid."},ext:function(e){return"El camp "+e+" ha de ser un fitxer vàlid."},image:function(e){return"El camp "+e+" ha de ser una imatge."},included:function(e){return"El camp "+e+" ha de ser un valor vàlid."},ip:function(e){return"El camp "+e+" ha de ser una adreça ip vàlida."},max:function(e,n){return"El camp "+e+" no ha de ser major a "+n[0]+" caràcters."},max_value:function(e,n){return"El camp "+e+" ha de ser de "+n[0]+" o menys."},mimes:function(e){return"El camp "+e+" ha de ser un tipus de fitxer vàlid."},min:function(e,n){return"El camp "+e+" ha de tenir almenys "+n[0]+" caràcters."},min_value:function(e,n){return"El camp "+e+" ha de ser de "+n[0]+" o superior."},numeric:function(e){return"El camp "+e+" ha de contenir només caràcters numèrics."},regex:function(e){return"El format del camp "+e+" no és vàlid."},required:function(e){return"El camp "+e+" és obligatori."},size:function(e,n){return"El camp "+e+" ha de ser menor a "+function(e){var n=1024,r=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,r)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][r]}(n[0])+"."},url:function(e){return"El camp "+e+" no és un URL vàlid."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/cs.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/cs.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"cs",messages:{_default:function(e){return"Pole "+e+" není vyplněno správně."},after:function(e,n){var t=n[0];return e+" musí být později než "+(n[1]?"nebo se rovnat ":"")+t+"."},alpha:function(e){return"Pole "+e+" může obsahovat pouze písmena."},alpha_dash:function(e){return"Pole "+e+" může obsahovat pouze alfanumerické znaky, pomlčky nebo podtržítka."},alpha_num:function(e){return"Pole "+e+" může obsahovat pouze alfanumerické znaky."},alpha_spaces:function(e){return"Pole "+e+" může obsahovat pouze alfanumerické znaky a mezery."},before:function(e,n){var t=n[0];return e+" musí být dříve než "+(n[1]?"nebo se rovnat ":"")+t+"."},between:function(e,n){return"Pole "+e+" musí být mezi "+n[0]+" a "+n[1]+"."},confirmed:function(e){return"Kontrola pole "+e+" se neshoduje."},credit_card:function(e){return"Pole "+e+" není vyplněno správně."},date_between:function(e,n){return"Pole "+e+" musí být mezi "+n[0]+" a "+n[1]+"."},date_format:function(e,n){return"Pole "+e+" musí být ve formátu "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),"Pole "+e+" musí být číslo a může obsahovat"+(t&&"*"!==t?" "+t:"")+" desetinných míst."},digits:function(e,n){return"Pole "+e+" musí být číslo a musí obshovat přesně "+n[0]+" číslic."},dimensions:function(e,n){return e+" musí mít "+n[0]+" pixelů na "+n[1]+" pixelů."},email:function(e){return"Pole "+e+" musí být validní email."},excluded:function(e){return e+" musí být správná hodnota."},ext:function(e){return e+" musí být validní soubor."},image:function(e){return e+" musí být obrázek."},included:function(e){return e+" musí být správná hodnota."},ip:function(e){return e+" musí být ip addresa."},max:function(e,n){return e+" nesmí být delší než "+n[0]+" znaků."},max_value:function(e,n){return"Pole "+e+" musí být "+n[0]+", nebo mensí."},mimes:function(e){return"Pole "+e+" musí být správný typ souboru."},min:function(e,n){return"Pole "+e+" musí obsahovat alespoň "+n[0]+" znaků."},min_value:function(e,n){return"Pole "+e+" musí být "+n[0]+", nebo více."},numeric:function(e){return"Pole "+e+" může obsahovat pouze číslice."},regex:function(e){return"Pole "+e+" není vyplněno správně."},required:function(e){return"Pole "+e+" je povinné."},size:function(e,n){return e+" musí být menší než "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return e+" není platná URL adresa."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/da.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/da.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"da",messages:{_default:function(e){return e+" er ikke gyldig."},after:function(e,n){return e+" skal være efter "+n[0]+"."},alpha:function(e){return e+" må kun indeholde bogstaver."},alpha_dash:function(e){return e+" må kun indeholde tal, bogstaver, bindestreger og underscores."},alpha_num:function(e){return e+" må kun indeholde tal og bogstaver."},alpha_spaces:function(e){return e+" må kun indeholde bogstaver og mellemrum."},before:function(e,n){return e+" skal være før "+n[0]+"."},between:function(e,n){return e+" skal være mellem "+n[0]+" og "+n[1]+"."},confirmed:function(e,n){return e+" skal matche "+n[0]+"."},date_between:function(e,n){return e+" skal være mellem "+n[0]+" og "+n[1]+"."},date_format:function(e,n){return e+" skal være i formatet: "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var r=n[0];return void 0===r&&(r="*"),e+" skal være numerisk og må maksimalt indeholde"+(r&&"*"!==r?" "+r:"")+" decimaler."},digits:function(e,n){return e+" skal være et tal på "+n[0]+" cifre."},dimensions:function(e,n){return e+" skal være "+n[0]+" pixels gange "+n[1]+" pixels."},email:function(e){return e+" skal være en gyldig email."},excluded:function(e){return e+" skal være en gyldig værdi."},ext:function(e){return e+" skal være en gyldig filtype."},image:function(e){return e+" skal være et billede."},included:function(e){return e+" skal være en gyldig værdi."},ip:function(e){return e+" skal være en gyldig ip-adresse."},max:function(e,n){return e+" må maksimalt være "+n[0]+" karakterer."},mimes:function(e){return e+" skal være en gyldig filtype."},min:function(e,n){return e+" skal minimum være "+n[0]+" karakterer."},numeric:function(e){return e+" skal være numerisk."},regex:function(e){return e+" skal have et gyldigt format."},required:function(e){return e+" skal udfyldes."},size:function(e,n){return e+" må maksimalt have en størrelse på "+function(e){var n=1024,r=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,r)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][r]}(n[0])+"."},url:function(e){return e+" skal være en gyldig URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/de.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/de.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"de",messages:{_default:function(e){return e+" ist ungültig."},after:function(e,n){return e+" muss nach "+n[0]+" liegen."},alpha:function(e){return e+" darf nur alphabetische Zeichen enthalten."},alpha_dash:function(e){return e+" darf alphanumerische Zeichen sowie Striche und Unterstriche enthalten."},alpha_num:function(e){return e+" darf nur alphanumerische Zeichen enthalten."},alpha_spaces:function(e){return e+" darf nur alphanumerische Zeichen und Leerzeichen enthalten."},before:function(e,n){return e+" muss vor "+n[0]+" liegen."},between:function(e,n){return e+" muss zwischen "+n[0]+" und "+n[1]+" liegen."},confirmed:function(e){return"Die Bestätigung von "+e+" stimmt nicht überein"},credit_card:function(e){return e+" ist keine gültiger Wert für Kreditkarten."},date_between:function(e,n){return e+" muss zwischen "+n[0]+" und "+n[1]+" liegen."},date_format:function(e,n){return e+" muss das Format "+n[0]+" haben."},decimal:function(e,n){void 0===n&&(n=[]);var i=n[0];return void 0===i&&(i="*"),e+" muss numerisch sein und darf"+(i&&"*"!==i?" "+i:"")+" Dezimalpunkte enthalten."},digits:function(e,n){return e+" muss numerisch sein und exakt "+n[0]+" Ziffern enthalten."},dimensions:function(e,n){return e+" muss "+n[0]+" x "+n[1]+" Bildpunkte groß sein."},email:function(e){return e+" muss eine gültige E-Mail-Adresse sein."},excluded:function(e){return e+" muss ein gültiger Wert sein."},ext:function(e){return e+" muss eine gültige Datei sein."},image:function(e){return e+" muss eine Grafik sein."},included:function(e){return e+" muss ein gültiger Wert sein."},integer:function(e){return e+" muss eine ganze Zahl sein."},ip:function(e){return e+" muss eine gültige IP-Adresse sein."},length:function(e,n){var i=n[0],t=n[1];return t?"Die Länge von "+e+" muss zwischen "+i+" und "+t+" liegen.":"Die Länge von "+e+" muss "+i+" sein."},max:function(e,n){return e+" darf nicht länger als "+n[0]+" Zeichen sein."},max_value:function(e,n){return e+" darf maximal "+n[0]+" sein."},mimes:function(e){return e+" muss einen gültigen Dateityp haben."},min:function(e,n){return e+" muss mindestens "+n[0]+" Zeichen lang sein."},min_value:function(e,n){return e+" muss mindestens "+n[0]+" sein."},numeric:function(e){return e+" darf nur numerische Zeichen enthalten."},regex:function(e){return"Das Format von "+e+" ist ungültig."},required:function(e){return e+" ist ein Pflichtfeld."},required_if:function(e){return e+" ist ein Pflichtfeld."},size:function(e,n){return e+" muss kleiner als "+function(e){var n=1024,i=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,i)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][i]}(n[0])+" sein."},url:function(e){return e+" ist keine gültige URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/el.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/el.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"el",messages:{_default:function(n){return n+" πρέπει να είναι έγκυρη τιμή."},after:function(n,e){return n+" πρέπει να είναι μετά "+e[0]+"."},alpha:function(n){return n+" πρέπει να περιέχει μόνο αλφαβητικούς χαρακτήρες."},alpha_dash:function(n){return n+" μπορεί να περιέχει αλφαριθμητικούς χαρακτήρες, παύλες και κάτω παύλες."},alpha_num:function(n){return n+" πρέπει να περιέχει μόνο αλφαριθμητικούς χαρακτήρες."},alpha_spaces:function(n){return n+" μπορεί να περιέχει μόνο αλφαβητικούς χαρακτήρες και κενά."},before:function(n,e){return n+" πρέπει να είναι πρίν "+e[0]+"."},between:function(n,e){return n+" πρέπει να είναι μεταξύ "+e[0]+" καί "+e[1]+"."},confirmed:function(n,e){return n+" δεν ταιριάζει με "+e[0]+"."},credit_card:function(n){return n+" πρέπει να είναι έγκυρη πιστωτική κάρτα."},date_between:function(n,e){return n+" πρέπει να είναι μεταξύ "+e[0]+" καί "+e[1]+"."},date_format:function(n,e){return n+" πρέπει να είναι σε μορφή "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" πρέπει να είναι αριθμός και να περιέχει"+(t&&"*"!==t?" "+t:"")+" δεκαδικά ψηφία."},digits:function(n,e){return n+" πρέπει να είναι αριθμός και να περιέχει "+e[0]+" ψηφία."},dimensions:function(n,e){return n+" πρέπει να είναι "+e[0]+" pixels επί "+e[1]+" pixels."},email:function(n){return n+" πρέπει να είναι έγκυρο email."},excluded:function(n){return n+" πρέπει να είναι έγκυρη τιμή."},ext:function(n){return n+" πρέπει να είναι έγκυρο αρχείο."},image:function(n){return n+" πρέπει να είναι εικόνα."},included:function(n){return n+" πρέπει να είναι έγκυρη τιμή."},integer:function(n){return n+" πρέπει να είναι ακέραιος αριθμός."},ip:function(n){return n+" πρέπει να είναι έγκυρη διεύθυνση IP."},length:function(n,e){var t=e[0],r=e[1];return r?n+" πρέπει να είναι μεταξύ "+t+" και "+r+" χαρακτήρες.":n+" πρέπει να είναι "+t+" χαρακτήρες."},max:function(n,e){return n+" δεν πρέπει να υπερβαίνει τους "+e[0]+" χαρακτήρες."},max_value:function(n,e){return n+" πρέπει να είναι "+e[0]+" ή λιγότερο."},mimes:function(n){return n+" πρέπει να είναι έγκυρο αρχείο ΜΙΜΕ."},min:function(n,e){return n+" πρέπει να είναι τουλάχιστον "+e[0]+" χαρακτήρες."},min_value:function(n,e){return n+" πρέπει να είναι "+e[0]+" ή περισσότερο."},numeric:function(n){return n+" πρέπει να περιέχει μόνο αριθμούς."},regex:function(n){return n+" δεν είναι έγκυρο."},required:function(n){return n+" δεν έχει συμπληρωθεί."},size:function(n,e){return n+" πρέπει να μην υπερβαίνει τα "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return n+" πρέπει να είναι έγκυρη διεύθυνση URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/en.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/en.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"en",messages:{_default:function(e){return"The "+e+" value is not valid."},after:function(e,n){var t=n[0];return"The "+e+" must be after "+(n[1]?"or equal to ":"")+t+"."},alpha:function(e){return"The "+e+" field may only contain alphabetic characters."},alpha_dash:function(e){return"The "+e+" field may contain alpha-numeric characters as well as dashes and underscores."},alpha_num:function(e){return"The "+e+" field may only contain alpha-numeric characters."},alpha_spaces:function(e){return"The "+e+" field may only contain alphabetic characters as well as spaces."},before:function(e,n){var t=n[0];return"The "+e+" must be before "+(n[1]?"or equal to ":"")+t+"."},between:function(e,n){return"The "+e+" field must be between "+n[0]+" and "+n[1]+"."},confirmed:function(e){return"The "+e+" confirmation does not match."},credit_card:function(e){return"The "+e+" field is invalid."},date_between:function(e,n){return"The "+e+" must be between "+n[0]+" and "+n[1]+"."},date_format:function(e,n){return"The "+e+" must be in the format "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),"The "+e+" field must be numeric and may contain"+(t&&"*"!==t?t:"")+" decimal points."},digits:function(e,n){return"The "+e+" field must be numeric and contains exactly "+n[0]+" digits."},dimensions:function(e,n){return"The "+e+" field must be "+n[0]+" pixels by "+n[1]+" pixels."},email:function(e){return"The "+e+" field must be a valid email."},excluded:function(e){return"The "+e+" field must be a valid value."},ext:function(e){return"The "+e+" field must be a valid file."},image:function(e){return"The "+e+" field must be an image."},included:function(e){return"The "+e+" field must be a valid value."},integer:function(e){return"The "+e+" field must be an integer."},ip:function(e){return"The "+e+" field must be a valid ip address."},ip_or_fqdn:function(e){return"The "+e+" field must be a valid ip address or FQDN."},length:function(e,n){var t=n[0],i=n[1];return i?"The "+e+" length must be between "+t+" and "+i+".":"The "+e+" length must be "+t+"."},max:function(e,n){return"The "+e+" field may not be greater than "+n[0]+" characters."},max_value:function(e,n){return"The "+e+" field must be "+n[0]+" or less."},mimes:function(e){return"The "+e+" field must have a valid file type."},min:function(e,n){return"The "+e+" field must be at least "+n[0]+" characters."},min_value:function(e,n){return"The "+e+" field must be "+n[0]+" or more."},numeric:function(e){return"The "+e+" field may only contain numeric characters."},regex:function(e){return"The "+e+" field format is invalid."},required:function(e){return"The "+e+" field is required."},required_if:function(e,n){return"The "+e+" field is required when the "+n[0]+" field has this value."},size:function(e,n){return"The "+e+" size must be less than "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return"The "+e+" field is not a valid URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/es.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/es.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"es",messages:{_default:function(e){return"El campo "+e+" no es válido."},after:function(e,n){var o=n[0];return"El campo "+e+" debe ser posterior "+(n[1]?"o igual ":"")+"a "+o+"."},alpha:function(e){return"El campo "+e+" solo debe contener letras."},alpha_dash:function(e){return"El campo "+e+" solo debe contener letras, números y guiones."},alpha_num:function(e){return"El campo "+e+" solo debe contener letras y números."},alpha_spaces:function(e){return"El campo "+e+" solo debe contener letras y espacios."},before:function(e,n){var o=n[0];return"El campo "+e+" debe ser anterior "+(n[1]?"o igual ":"")+"a "+o+"."},between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},confirmed:function(e){return"El campo "+e+" no coincide."},credit_card:function(e){return"El campo "+e+" es inválido."},date_between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},date_format:function(e,n){return"El campo "+e+" debe tener un formato "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var o=n[0];return void 0===o&&(o="*"),"El campo "+e+" debe ser numérico y contener"+(o&&"*"!==o?" "+o:"")+" puntos decimales."},digits:function(e,n){return"El campo "+e+" debe ser numérico y contener exactamente "+n[0]+" dígitos."},dimensions:function(e,n){return"El campo "+e+" debe ser de "+n[0]+" píxeles por "+n[1]+" píxeles."},email:function(e){return"El campo "+e+" debe ser un correo electrónico válido."},excluded:function(e){return"El campo "+e+" debe ser un valor válido."},ext:function(e){return"El campo "+e+" debe ser un archivo válido."},image:function(e){return"El campo "+e+" debe ser una imagen."},included:function(e){return"El campo "+e+" debe ser un valor válido."},integer:function(e){return"El campo "+e+" debe ser un entero."},ip:function(e){return"El campo "+e+" debe ser una dirección ip válida."},length:function(e,n){var o=n[0],r=n[1];return r?"El largo del campo "+e+" debe estar entre "+o+" y "+r+".":"El largo del campo "+e+" debe ser "+o+"."},max:function(e,n){return"El campo "+e+" no debe ser mayor a "+n[0]+" caracteres."},max_value:function(e,n){return"El campo "+e+" debe de ser "+n[0]+" o menor."},mimes:function(e){return"El campo "+e+" debe ser un tipo de archivo válido."},min:function(e,n){return"El campo "+e+" debe tener al menos "+n[0]+" caracteres."},min_value:function(e,n){return"El campo "+e+" debe ser "+n[0]+" o superior."},numeric:function(e){return"El campo "+e+" debe contener solo caracteres numéricos."},regex:function(e){return"El formato del campo "+e+" no es válido."},required:function(e){return"El campo "+e+" es obligatorio."},size:function(e,n){return"El campo "+e+" debe ser menor a "+function(e){var n=1024,o=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,o)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][o]}(n[0])+"."},url:function(e){return"El campo "+e+" no es una URL válida."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/et.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/et.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,a){ true?module.exports=a():undefined}(this,function(){"use strict";var e;function n(e){return e.charAt(0).toUpperCase()+e.slice(1)}var a={name:"et",messages:{_default:function(e){return n(e)+" ei oma sobivat väärtust."},after:function(e,a){var t=a[0];return n(e)+" peab olema hiljem kui "+t+"."},alpha:function(e){return n(e)+" võib sisaldada ainult tähti."},alpha_dash:function(e){return n(e)+" võib sisaldada ainult tähti, numbreid, kriipse ja alakriipse."},alpha_num:function(e){return n(e)+" võib sisaldada ainult tähti ja numbreid."},alpha_spaces:function(e){return n(e)+" võib sisaldada ainult tähti ja tühikuid."},before:function(e,a){var t=a[0];return n(e)+" peab olema varem kui "+t+"."},between:function(e,a){var t=a[0],i=a[1];return n(e)+" peab jääma vahemikku "+t+" kuni "+i+"."},confirmed:function(e){return n(e)+" on kontrollist erinev."},credit_card:function(e){return n(e)+" ei oma sobivat väärtust."},date_between:function(e,a){var t=a[0],i=a[1];return n(e)+" peab olema vahemikus "+t+" kuni "+i+"."},date_format:function(e,a){var t=a[0];return n(e)+" peab olema kujul "+t+"."},decimal:function(e,a){void 0===a&&(a=[]);var t=a[0];return void 0===t&&(t="*"),n(e)+" peab olema number ja võib sisaldada "+("*"===t?"komakohta":t+" numbrit pärast koma")+"."},digits:function(e,a){var t=a[0];return n(e)+" peab koosnema täpselt "+t+"-st numbrist."},dimensions:function(e,a){var t=a[0],i=a[1];return n(e)+" peab olema "+t+" korda "+i+" pikslit suur."},email:function(e){return n(e)+" peab olema e-maili aadress."},excluded:function(e){return n(e)+" ei oma sobivat väärtust."},ext:function(e){return n(e)+" peab olema sobiv fail."},image:function(e){return n(e)+" peab olema pilt."},included:function(e){return n(e)+" ei oma sobivat väärtust."},ip:function(e){return n(e)+" peab olema IP-aadress."},max:function(e,a){var t=a[0];return n(e)+" ei tohi olla pikem kui "+t+" tähemärki."},max_value:function(e,a){var t=a[0];return n(e)+" peab olema "+t+" või väisem."},mimes:function(e){return n(e)+" peab olema sobivat tüüpi fail."},min:function(e,a){var t=a[0];return n(e)+" peab olema vähemalt "+t+" tähemärki pikk."},min_value:function(e,a){var t=a[0];return n(e)+" peab olema "+t+" või suurem."},numeric:function(e){return n(e)+" võib sisaldada ainult numbreid."},regex:function(e){return n(e)+" pole sobival kujul."},required:function(e){return n(e)+" on nõutud väli."},size:function(e,a){var t=a[0];return n(e)+" peab olema väiksem kui "+function(e){var a=1024,t=0===(e=Number(e)*a)?0:Math.floor(Math.log(e)/Math.log(a));return 1*(e/Math.pow(a,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(t)+"."},url:function(e){return n(e)+" peab olema URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[a.name]=a,e)),a});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/eu.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/eu.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,a){ true?module.exports=a():undefined}(this,function(){"use strict";var e,a={name:"eu",messages:{_default:function(e){return e+" baliogabea da."},after:function(e,a){var n=a[0];return e+"(e)k honen ondoren egon behar du "+(a[1]?"edo honen berdina izan ":"")+n+"."},alpha:function(e){return e+" eremuak soilik karaktere alfabetikoak eduki ditzake."},alpha_dash:function(e){return e+" eremuak karaktere alfanumerikoak, marrak eta azpimarrak eduki ditzake."},alpha_num:function(e){return e+" eremuak soilik karaktere alfanumerikoak eduki ditzake."},alpha_spaces:function(e){return e+" eremuak soilik karaktere alfanumerikoak eta zuriuneak eduki ditzake."},before:function(e,a){var n=a[0];return e+"(e)k honen aurretik egon behar du "+(a[1]?"edo honen berdina izan ":"")+n+"."},between:function(e,a){return e+" eremuak "+a[0]+" eta "+a[1]+" artean egon behar du."},confirmed:function(e){return e+" berrespenak ez datoz bat."},credit_card:function(e){return e+" eremua baliogabea da."},date_between:function(e,a){return e+"(e)k "+a[0]+" eta "+a[1]+" artean egon behar du."},date_format:function(e,a){return e+"(e)k "+a[0]+" formatuan egon behar du."},decimal:function(e,a){void 0===a&&(a=[]);var n=a[0];return void 0===n&&(n="*"),e+" eremuak zenbakizkoa izan behar du eta "+(n&&"*"!==n?n:"")+" dezimal izan ditzake."},digits:function(e,a){return e+" eremuak zenbakizkoa izan behar du eta zehazki "+a[0]+" digitu izan behar ditu."},dimensions:function(e,a){return e+" eremuak "+a[0]+" pixel bider "+a[1]+" pixel izan behar du."},email:function(e){return e+" eremuak baliozko helbide elektroniko bat izan behar du."},excluded:function(e){return e+" eremuak baliozko balio bat izan behar du."},ext:function(e){return e+" eremuak baliozko fitxategi bat izan behar du."},image:function(e){return e+" eremuak irudi bat izan behar du."},included:function(e){return e+" eremuak baliozko balio bat izan behar du."},integer:function(e){return e+" eremuak zenbaki oso bat izan behar du."},ip:function(e){return e+" eremuak baliozko IP helbide bat izan behar du."},length:function(e,a){var n=a[0],r=a[1];return r?e+"(r)en luzerak "+n+" eta "+r+" artean egon behar du.":e+"(r)en luzerak "+n+" izan behar du."},max:function(e,a){return e+" eremuak ezin ditu "+a[0]+" karaktere baino gehiago izan."},max_value:function(e,a){return e+" eremuak "+a[0]+" edo gutxiago izan behar du."},mimes:function(e){return e+" eremuak baliozko fitxategi-mota bat izan behar du."},min:function(e,a){return e+" eremuak gutxienez "+a[0]+" karaktere izan behar ditu."},min_value:function(e,a){return e+" eremuak "+a[0]+" edo gehiago izan behar du."},numeric:function(e){return e+" eremuak zenbakizko karaktereak soilik izan ditzake."},regex:function(e){return e+" eremuaren formatua baliogabea da."},required:function(e){return e+" eremua derrigorrezkoa da."},size:function(e,a){return e+"(e)n tamainak "+function(e){var a=1024,n=0===(e=Number(e)*a)?0:Math.floor(Math.log(e)/Math.log(a));return 1*(e/Math.pow(a,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(a[0])+" baino txikiagoa izan behar du."},url:function(e){return e+" eremua ez da baliozko URL bat."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[a.name]=a,e)),a});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/fa.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/fa.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";function r(n){var e={Byte:"بايت",KB:"كيلوبايت",GB:"گیگابايت",PB:"پتابايت"};return function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n).replace(/(Byte|KB|GB|PB)/,function(n){return e[n]})}var n,e={name:"fa",messages:{_default:function(n){return"مقدار "+n+" معتبر نیست."},after:function(n,e){return n+" باید بعد از تاریخ "+e[0]+" باشد."},alpha:function(n){return n+" فقط می تواند از حروف تشکیل شود."},alpha_dash:function(n){return n+" فقط می تواند از حروف، اعداد، خط فاصله و زیرخط تشکیل شود."},alpha_num:function(n){return n+" فقط میتواند از حروف و اعداد تشکیل شود."},alpha_spaces:function(n){return n+" فقط می تواند از حروف و فاصله تشکیل شود."},before:function(n,e){return n+" باید قبل از تاریخ "+e[0]+" باشد."},between:function(n,e){return n+" باید بین "+e[0]+" و "+e[1]+" کارکتر باشد."},confirmed:function(n){return n+" با تاییدیه اش مطابقت ندارد."},credit_card:function(n){return n+" غیر معتبر است."},date_between:function(n,e){return n+" باید بین تاریخ "+e[0]+" and "+e[1]+" باشد."},date_format:function(n,e){return n+" باید در قالب "+e[0]+" باشد."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" باید یک مقدار عددی "+("*"===t?"":" با حداکثر "+t+" اعشار")+" باشد."},digits:function(n,e){return n+" باید یک مقدار عددی و دقیقاً "+e[0]+" رقم باشد."},dimensions:function(n,e){return n+" باید در اندازه "+e[0]+" پیکسل عرض و "+e[1]+" پیکسل ارتفاع باشد."},email:function(n){return n+" باید یک پست الکترونیک معتبر باشد."},excluded:function(n){return n+"باید یک مقدار معتبر باشد."},ext:function(n){return n+" باید یک فایل معتبر باشد."},image:function(n){return n+" باید یک تصویر باشد."},included:function(n){return n+" باید یک مقدار معتبر باشد."},ip:function(n){return n+" باید یک آدرس آی پی معتبر باشد."},max:function(n,e){return n+" نباید بیشتر از "+e[0]+" کارکتر باشد."},max_value:function(n,e){return"مقدار "+n+" باید "+e[0]+" یا کمتر باشد."},mimes:function(n){return n+" باید از نوع معتبر باشد."},min:function(n,e){return n+" باید حداقل "+e[0]+" کارکتر باشد."},min_value:function(n,e){return"مقدار "+n+" باید "+e[0]+" یا بیشتر باشد."},numeric:function(n){return n+" فقط می تواند عددی باشد."},regex:function(n){return"قالب "+n+" قابل قبول نیست."},required:function(n){return n+" الزامی است."},size:function(n,e){var t=e[0];return"حجم "+n+" کمتر از "+r(t)+" باشد."},url:function(n){return n+" باید یک تارنمای معتبر باشد."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/fi.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/fi.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"fi",messages:{after:function(e,n){return e+" tulee olla jälkeen "+n[0]+"."},alpha:function(e){return e+" voi sisältää vain kirjaimia."},alpha_dash:function(e){return e+" voi sisältää vain kirajimia, numeroita, ja tavu-, tai alaviivoja."},alpha_num:function(e){return e+" voi sisältää vain kirjaimia ja numeroita."},before:function(e,n){return e+" tulee olla ennen "+n[0]+"."},between:function(e,n){return"Kentän "+e+" tulee olla "+n[0]+" ja "+n[1]+" väliltä."},confirmed:function(e,n){return e+" ei vastannut "+n[0]+"."},date_between:function(e,n){return e+" tulee olla "+n[0]+" ja "+n[1]+" väliltä."},date_format:function(e,n){return e+" tulee olla muodossa "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),e+" tulee olla numeerinen ja voi sisältää"+(t&&"*"!==t?" "+t:"")+" desimaalia."},digits:function(e,n){return e+" tulee olla numeerinen ja tarkalleen "+n[0]+" merkkiä."},dimensions:function(e,n){return e+" tulee olla "+n[0]+" pikseliä kertaa "+n[1]+" pikseliä."},email:function(e){return e+" tulee olla kelvollinen sähköpostiosoite."},excluded:function(e){return e+" tulee olla kelvollinen arvo."},ext:function(e){return e+" tulee olla kelvollinen tiedosto."},image:function(e){return e+" tulee olla kelvollinen kuva."},included:function(e){return e+" tulee olla kelvollinen arvo."},ip:function(e){return e+" tulee olla kelvollinen IP-osoite."},max:function(e,n){return e+" ei saa olla pidempi kuin "+n[0]+" merkkiä."},mimes:function(e){return e+" tulee olla kelvollinen tiedostotyyppi."},min:function(e,n){return e+" tulee olla vähintään "+n[0]+" merkkiä."},numeric:function(e){return e+" voi sisältää vain numeroita."},regex:function(e){return e+" tulee olla kelvollinen säännöllinen lauseke."},required:function(e){return e+" on pakollinen kenttä."},size:function(e,n){return e+" tulee olla vähemmän kuin "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return e+" tulee olla kelvollinen URL-osoite."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/fr.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/fr.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){"use strict";var e,t={name:"fr",messages:{_default:function(e){return"Le champ "+e+" n'est pas valide."},after:function(e,t){return"Le champ "+e+" doit être postérieur à "+t[0]+"."},alpha:function(e){return"Le champ "+e+" ne peut contenir que des lettres."},alpha_dash:function(e){return"Le champ "+e+" ne peut contenir que des caractères alpha-numériques, tirets ou soulignés."},alpha_num:function(e){return"Le champ "+e+" ne peut contenir que des caractères alpha-numériques."},alpha_spaces:function(e){return"Le champ "+e+" ne peut contenir que des lettres ou des espaces."},before:function(e,t){return"Le champ "+e+" doit être antérieur à "+t[0]+"."},between:function(e,t){return"Le champ "+e+" doit être compris entre "+t[0]+" et "+t[1]+"."},confirmed:function(e,t){return"Le champ "+e+" ne correspond pas à "+t[0]+"."},credit_card:function(e){return"Le champ "+e+" est invalide."},date_between:function(e,t){return"Le champ "+e+" doit être situé entre "+t[0]+" et "+t[1]+"."},date_format:function(e,t){return"Le champ "+e+" doit être au format "+t[0]+"."},decimal:function(e,t){void 0===t&&(t=[]);var n=t[0];return void 0===n&&(n="*"),"Le champ "+e+" doit être un nombre et peut contenir "+("*"===n?"des":n)+" décimales."},digits:function(e,t){return"Le champ "+e+" doit être un nombre entier de "+t[0]+" chiffres."},dimensions:function(e,t){return"Le champ "+e+" doit avoir une taille de "+t[0]+" pixels par "+t[1]+" pixels."},email:function(e){return"Le champ "+e+" doit être une adresse e-mail valide."},excluded:function(e){return"Le champ "+e+" doit être une valeur valide."},ext:function(e){return"Le champ "+e+" doit être un fichier valide."},image:function(e){return"Le champ "+e+" doit être une image."},included:function(e){return"Le champ "+e+" doit être une valeur valide."},integer:function(e){return"Le champ "+e+" doit être un entier."},ip:function(e){return"Le champ "+e+" doit être une adresse IP."},length:function(e,t){var n=t[0],r=t[1];return r?"Le champ "+e+" doit contenir entre "+n+" et "+r+" caractères.":"Le champ "+e+" doit contenir "+n+" caractères."},max:function(e,t){return"Le champ "+e+" ne peut pas contenir plus de "+t[0]+" caractères."},max_value:function(e,t){return"Le champ "+e+" doit avoir une valeur de "+t[0]+" ou moins."},mimes:function(e){return"Le champ "+e+" doit avoir un type MIME valide."},min:function(e,t){return"Le champ "+e+" doit contenir au minimum "+t[0]+" caractères."},min_value:function(e,t){return"Le champ "+e+" doit avoir une valeur de "+t[0]+" ou plus."},numeric:function(e){return"Le champ "+e+" ne peut contenir que des chiffres."},regex:function(e){return"Le champ "+e+" est invalide."},required:function(e){return"Le champ "+e+" est obligatoire."},required_if:function(e,t){return"Le champ "+e+" est obligatoire lorsque "+t[0]+" possède cette valeur."},size:function(e,t){return"Le champ "+e+" doit avoir un poids inférieur à "+function(e){var t=1024,n=0===(e=Number(e)*t)?0:Math.floor(Math.log(e)/Math.log(t));return 1*(e/Math.pow(t,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(t[0])+"."},url:function(e){return"Le champ "+e+" n'est pas une URL valide."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[t.name]=t,e)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/he.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/he.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"he",messages:{after:function(n,e){return"השדה "+n+" חייב להכיל תאריך לאחר "+e[0]+"."},alpha:function(n){return"השדה "+n+" יכול להכיל רק אותיות."},alpha_dash:function(n){return"השדה "+n+" יכול להכיל רק אותיות, מספרים ומקפים."},alpha_num:function(n){return"השדה "+n+" יכול להכיל רק אותיות ומספרים.."},alpha_spaces:function(n){return"השדה "+n+" יכול להכיל רק אותיות ורווחים."},before:function(n,e){return"השדה "+n+" חייב להכיל תאריך לפני "+e[0]+"."},between:function(n,e){return"הערך "+n+" חייב להיות בין "+e[0]+" ל- "+e[1]+"."},confirmed:function(n){return"הערכים של "+n+" חייבים להיות זהים."},date_between:function(n,e){return"השדה "+n+" חייב להיות בין התאריכים "+e[0]+" ו- "+e[1]+"."},date_format:function(n,e){return"השדה "+n+" חייב להיות בפורמט "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"השדה "+n+" חייב להיות מספרי ולהכיל"+(t&&"*"!==t?" "+t:"")+" נקודות עשרוניות."},digits:function(n,e){return"השדה "+n+" חייב להיות מספר ולהכיל "+e[0]+" ספרות בדיוק."},dimensions:function(n,e){return"השדה "+n+" חייב להיות "+e[0]+" פיקסלים על "+e[1]+" פיקסלים."},email:function(n){return"השדה "+n+" חייב להכיל כתובת אימייל תקינה."},excluded:function(n){return"השדה "+n+" חייב להכיל ערך תקין."},ext:function(n){return"השדה "+n+" חייב להכיל קובץ תקין."},image:function(n){return"השדה "+n+" חייב להכיל תמונה."},included:function(n){return"השדה "+n+" חייב להיות בעל ערך תקין."},ip:function(n){return"השדה "+n+" חייב להכיל כתובת IP תקינה."},max:function(n,e){return"השדה "+n+" לא יכול להכיל יותר מ- "+e[0]+" תווים."},max_value:function(n,e){return"השדה "+n+" יכול להיות "+e[0]+" לכל היותר."},mimes:function(){return"הקובץ חייב להיות מסוג תקין."},min:function(n,e){return"השדה "+n+" חייב להכיל "+e[0]+" תווים לפחות."},min_value:function(n,e){return"הערך של "+n+" חייב להיות לפחות "+e[0]+"."},numeric:function(n){return"השדה "+n+" יכול להכיל ספרות בלבד."},regex:function(n){return"הפורמט של "+n+" אינו תקין."},required:function(n){return"חובה למלא את השדה "+n+"."},size:function(n,e){return"השדה "+n+" חייב לשקול פחות מ "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return n+" אינו מכיל כתובת אינטרנט תקינה."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/hi.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/hi.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"hi",messages:{_default:function(n){return"यह "+n+" मान मान्य नहीं है।"},after:function(n,e){return"यह "+n+" का "+e[0]+" के बाद होना आवश्यक है । "},alpha:function(n){return"यह "+n+" फील्ड में केवल वर्णानुक्रमक वर्ण हो सकते हैं।"},alpha_dash:function(n){return"यह "+n+" फील्ड में अल्फ़ान्यूमेरिक वर्ण और साथ ही डैश और अंडरस्कोर हो सकते हैं।"},alpha_num:function(n){return"यह "+n+" फील्ड में केवल अल्फा-न्यूमेरिक वर्ण वर्ण शामिल हैं।"},alpha_spaces:function(n){return"यह "+n+" फील्ड में केवल अल्फा-न्यूमेरिक वर्ण वर्ण शामिल हैं।"},before:function(n,e){return"यह "+n+" का "+e[0]+" के पहले होना आवश्यक है ।"},between:function(n,e){return"यह "+n+" फील्ड का "+e[0]+" और "+e[1]+" के बीच होना आवश्यक है ।"},confirmed:function(n){return"यह "+n+" पुष्टि मेल नहीं खाती।"},credit_card:function(n){return"यह "+n+" फील्ड अमान्य है।"},date_between:function(n,e){return"यह "+n+" का "+e[0]+" और "+e[1]+" के बीच होना आवश्यक है ।"},date_format:function(n,e){return"यह "+n+" का प्रारूप "+e[0]+" में होना आवश्यक है ।"},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"यह "+n+" फ़ील्ड का संख्यात्मक होना आवश्यक है और इसमें "+(t&&"*"!==t?t:"")+" दशमलव बिंदु शामिल हो सकते हैं ।"},digits:function(n,e){return"यह "+n+" फ़ील्ड का संख्यात्मक होना आवश्यक है और इसे पूरी तरह से "+e[0]+" अंक का होना चाहिए।"},dimensions:function(n,e){return"यह "+n+" फ़ील्ड की "+e[0]+" पिक्सेल बाई "+e[1]+" पिक्सेल का होना आवश्यक है।"},email:function(n){return"यह  "+n+" फ़ील्ड एक मान्य ईमेल होना चाहिए।"},excluded:function(n){return"यह "+n+" फ़ील्ड का एक मान्य मूल्य होना चाहिए।"},ext:function(n){return"यह "+n+" फ़ील्ड एक मान्य फ़ाइल होनी चाहिए।"},image:function(n){return"यह "+n+" फ़ील्ड एक छवि होनी चाहिए।"},included:function(n){return"यह "+n+" फ़ील्ड एक मान्य मूल्य का होना चाहिए।"},integer:function(n){return"यह "+n+" फ़ील्ड एक पूर्णांकका होना चाहिए।"},ip:function(n){return"यह "+n+" फ़ील्ड  एक मान्य आईपी पते का होना चाहिए।"},ip_or_fqdn:function(n){return"यह "+n+" फ़ील्ड एक मान्य आईपी पते या FQDN होना चाहिए।"},length:function(n,e){var t=e[0],r=e[1];return r?"यह "+n+"  की लंबाई "+t+" और "+r+" के बीच होनी चाहिए।":"यह "+n+"  की लंबाई "+t+" की होनी चाहिए।"},max:function(n,e){return"यह "+n+" फ़ील्ड "+e[0]+" वर्णों से अधिक नहीं हो सकती है।"},max_value:function(n,e){return"यह "+n+" फ़ील्ड "+e[0]+" या उससे कम का होना चाहिए।"},mimes:function(n){return"यह "+n+" फ़ील्ड एक मान्य फ़ाइल प्रकार का होना चाहिए।"},min:function(n,e){return"यह "+n+" फ़ील्ड कम से कम "+e[0]+" वर्ण का होना चाहिए।"},min_value:function(n,e){return"यह "+n+" फ़ील्ड "+e[0]+" या अधिक का होना चाहिए।"},numeric:function(n){return"यह "+n+" फ़ील्ड में केवल संख्यात्मक वर्ण हो सकते हैं।"},regex:function(n){return"यह "+n+" फ़ील्ड प्रारूप अमान्य है।"},required:function(n){return"यह "+n+" फ़ील्ड की आवश्यकता है।"},required_if:function(n,e){return"यह "+n+" फ़ील्ड की आवश्यकता तब होती है जब "+e[0]+" फ़ील्ड का यह मान होता है।"},size:function(n,e){return"यह "+n+" फ़ील्ड का आकार "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+" से कम होना चाहिए।"},url:function(n){return"यह "+n+"फ़ील्ड एक मान्य URL नहीं है।."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/hr.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/hr.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,i){ true?module.exports=i():undefined}(this,function(){"use strict";var e,i={name:"hr",messages:{_default:function(e){return"Vrijednost "+e+" ne valja."},after:function(e,i){return e+" mora biti poslje "+i[0]+"."},alpha:function(e){return e+" može sadržavati samo abecedne znakove."},alpha_dash:function(e){return e+" može sadržavati alfanumeričke znakove kao i crtice i podvlake."},alpha_num:function(e){return e+" može sadržavati samo alfanumeričke znakove."},alpha_spaces:function(e){return e+" može sadržavati samo abecedne znakove kao i razmake."},before:function(e,i){return e+" mora biti prije "+i[0]+"."},between:function(e,i){return e+" mora biti između "+i[0]+" i "+i[1]+"."},confirmed:function(e){return"Potvrda "+e+" ne odgovara."},credit_card:function(e){return e+" nije valjan."},date_between:function(e,i){return e+" mora biti između "+i[0]+" i "+i[1]+"."},date_format:function(e,i){return"The "+e+" mora biti u formatu "+i[0]+"."},decimal:function(e,i){void 0===i&&(i=[]);var n=i[0];return void 0===n&&(n="*"),e+" mora biti numerički i može sadržavati"+(n&&"*"!==n?" "+n:"")+" decimalne bodove."},digits:function(e,i){return e+" mora biti numerički i točno sadrživati "+i[0]+" znamenke."},dimensions:function(e,i){return e+" mora biti "+i[0]+" piksela za "+i[1]+" piksela."},email:function(e){return e+" mora biti važeća e-pošta."},excluded:function(e){return"Vrijednost "+e+" mora biti važeća vrijednost."},ext:function(e){return e+" mora biti važeća datoteka."},image:function(e){return e+" mora biti slika."},included:function(e){return"Vrijednost "+e+" mora biti važeća vrijednost."},ip:function(e){return e+" mora biti važeća IP adresa."},max:function(e,i){return e+" ne smije biti veći od "+i[0]+" znakova."},max_value:function(e,i){return"Vrijednost "+e+" mora biti "+i[0]+" ili manje."},mimes:function(e){return e+" mora imati valjanu vrstu datoteke."},min:function(e,i){return e+" mora biti barem "+i[0]+" znakova."},min_value:function(e,i){return"Vrijednost "+e+" mora biti "+i[0]+" ili više."},numeric:function(e){return e+" može sadrživati samo numeričke znakove"},regex:function(e){return"Oblik "+e+" nije važeći."},required:function(e){return"Polje "+e+" je obavezno."},size:function(e,i){return e+" mora biti manje od "+function(e){var i=1024,n=0===(e=Number(e)*i)?0:Math.floor(Math.log(e)/Math.log(i));return 1*(e/Math.pow(i,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(i[0])+"."},url:function(e){return e+" nije važeći URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[i.name]=i,e)),i});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/hu.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/hu.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){"use strict";var e,t={name:"hu",messages:{_default:function(e){return"A(z) ${field} értéke nem megfelelő."},after:function(e,t){return"A(z) "+e+" legalább "+t[0]+" utáni dátum kell, hogy legyen."},alpha:function(e){return"A(z) "+e+" kizárólag betűket tartalmazhat."},alpha_dash:function(e){return"A(z) "+e+" kizárólag betűket, számokat, kötőjeleket és alulvonásokat tartalmazhat."},alpha_num:function(e){return"A(z) "+e+" kizárólag betűket és számokat tartalmazhat."},alpha_spaces:function(e){return"A(z) "+e+" kizárólag betűket és szóközöket tartalmazhat."},before:function(e,t){return"A(z) "+e+" legalább "+t[0]+" előtti dátum kell, hogy legyen."},between:function(e,t){return"A(z) "+e+" "+t[0]+" és "+t[1]+" között kell, hogy legyen."},confirmed:function(e){return"A(z) "+e+" nem egyezik a megerősítéssel."},credit_card:function(e){return"A(z) "+e+" nem érvényes."},date_between:function(e,t){return"A(z) "+e+" "+t[0]+" és "+t[1]+" közötti dátum kell, hogy legyen."},date_format:function(e,t){return"A(z) "+e+" nem egyezik az alábbi dátum formátummal "+t[0]+"."},decimal:function(e,t){void 0===t&&(t=[]);var n=t[0];return void 0===n&&(n="*"),"The "+e+" must be numeric and may contain"+(n&&"*"!==n?" "+n:"")+" decimal points."},digits:function(e,t){return"A(z) "+e+" "+t[0]+" számjegyű kell, hogy legyen."},dimensions:function(e,t){return"A(z) "+e+" felbontása "+t[0]+" és "+t[1]+" pixel között kell, hogy legyen."},email:function(e){return"A(z) "+e+" nem érvényes email formátum."},excluded:function(e){return"A(z) "+e+" értéke érvénytelen."},ext:function(e){return"A(z) "+e+" nem érvényes fájl."},image:function(e){return"A(z) "+e+" képfálj kell, hogy legyen."},included:function(e){return"A kiválaszott "+e+" érvénytelen."},ip:function(e){return"A(z) "+e+" érvényes IP cím kell, hogy legyen."},max:function(e,t){return"A(z) "+e+" értéke nem lehet hosszabb mint "+t[0]+"."},max_value:function(e,t){return"A(z) "+e+" értéke "+t[0]+" vagy kevesebb lehet."},mimes:function(e){return"A(z) "+e+" kizárólag érvényes fájlformátumok egyike lehet."},min:function(e,t){return"A(z) "+e+" értéke nem lehet rövidebb mint "+t[0]+"."},min_value:function(e,t){return"A(z) "+e+" értéke "+t[0]+" vagy több lehet."},numeric:function(e){return"A(z) "+e+" értéke szám kell, hogy legyen."},regex:function(e){return"A(z) "+e+" formátuma érvénytelen."},required:function(e){return"A(z) "+e+" megadása kötelező."},size:function(e,t){return"A(z) "+e+" méretének "+t[0]+" kilobájtnál kisebbnek kell lennie."},url:function(e){return"A(z) "+e+" érvénytelen link."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[t.name]=t,e)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/id.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/id.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(a,n){ true?module.exports=n():undefined}(this,function(){"use strict";var a,n={name:"id",messages:{_default:function(a){return"Nilai "+a+" tidak sah."},after:function(a,n){return a+" harus sebelum "+n[0]+"."},alpha:function(a){return a+" hanya boleh mengandung karakter alfabet."},alpha_dash:function(a){return a+" boleh mengandung karakter alfanumerik, tanda hubung, dan garis bawah."},alpha_num:function(a){return a+" hanya boleh mengandung karakter alfanumerik."},alpha_spaces:function(a){return a+" hanya boleh berisi karakter alfabet serta spasi."},before:function(a,n){return a+" harus setelah "+n[0]+"."},between:function(a,n){return a+" harus di antara "+n[0]+" dan "+n[1]+"."},confirmed:function(a,n){return a+" tidak cocok dengan "+n[0]+"."},credit_card:function(a){return a+" tidak sah."},date_between:function(a,n){return a+" harus di antara "+n[0]+" dan "+n[1]+"."},date_format:function(a,n){return a+" harus dalam format "+n[0]+"."},decimal:function(a,n){void 0===n&&(n=[]);var e=n[0];return void 0===e&&(e="*"),a+" harus berupa angka dan boleh mengandung"+(e&&"*"!==e?" "+e:"")+" titik desimal."},digits:function(a,n){return a+" harus berupa "+n[0]+" digit angka."},dimensions:function(a,n){return a+" harus berdimensi lebar "+n[0]+" pixel dan tinggi "+n[1]+" pixel."},email:function(a){return a+" harus berupa alamat surel yang benar."},excluded:function(a){return a+" harus berupa nilai yang sah."},ext:function(a){return a+" harus berupa berkas yang benar."},image:function(a){return a+" harus berupa gambar."},included:function(a){return a+" harus berupa nilai yang sah."},integer:function(a){return a+" harus berupa bilangan bulat."},ip:function(a){return a+" harus berupa alamat ip yang sah."},length:function(a,n){var e=n[0],r=n[1];return r?"Panjang "+a+" harus di antara "+e+" dan "+r+".":"Panjang "+a+" harus tepat "+e+"."},max:function(a,n){return a+" tidak boleh lebih dari "+n[0]+" karakter."},max_value:function(a,n){return"Nilai "+a+" tidak boleh lebih dari "+n[0]+"."},mimes:function(a){return"Tipe berkas "+a+" harus benar."},min:function(a,n){return a+" minimal mengandung "+n[0]+" karakter."},min_value:function(a,n){return"Nilai "+a+" tidak boleh kurang dari "+n[0]+"."},numeric:function(a){return a+" harus berupa angka."},regex:function(a){return"Format "+a+" salah."},required:function(a){return a+" harus diisi."},size:function(a,n){return a+" harus lebih kecil dari "+function(a){var n=1024,e=0===(a=Number(a)*n)?0:Math.floor(Math.log(a)/Math.log(n));return 1*(a/Math.pow(n,e)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][e]}(n[0])+"."},url:function(a){return a+" harus berupa tautan yang benar."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((a={})[n.name]=n,a)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/it.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/it.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"it",messages:{_default:function(e){return"Il valore del campo "+e+" non è valido."},after:function(e,n){return"Il "+e+" deve essere dopo "+n[0]+"."},alpha:function(e){return"Il campo "+e+" può contenere solo caratteri alfabetici."},alpha_dash:function(e){return"Il campo "+e+" può contenere caratteri alfa-numerici così come lineette e trattini di sottolineatura."},alpha_num:function(e){return"Il campo "+e+" può contenere solo caratteri alfanumerici."},alpha_spaces:function(e){return"Il campo "+e+" può contenere solo caratteri alfanumerici così come spazi."},before:function(e,n){return"Il campo "+e+" deve essere prima di "+n[0]+"."},between:function(e,n){return"Il campo "+e+" deve essere compreso tra "+n[0]+" e "+n[1]+"."},confirmed:function(e,n){return"Il campo "+e+" non corrisponde con "+n[0]+"."},credit_card:function(e){return"Il campo "+e+" non è valido."},date_between:function(e,n){return"La "+e+" deve essere compresa tra "+n[0]+" e "+n[1]+"."},date_format:function(e,n){return"La "+e+" deve essere nel formato "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var r=n[0];return void 0===r&&(r="*"),"Il campo "+e+" deve essere numerico e può contenere  "+("*"===r?"cm":r)+" punti decimali."},digits:function(e,n){return"Il campo "+e+" deve essere numerico e contenere esattamente "+n[0]+" cifre."},dimensions:function(e,n){return"Il campo "+e+" deve essere "+n[0]+" x "+n[1]+"."},email:function(e){return"Il campo "+e+" deve essere un indirizzo email valido."},excluded:function(e){return"Il campo "+e+" deve avere un valore valido."},ext:function(e){return"Il campo "+e+" deve essere un file valido."},image:function(e){return"Il campo "+e+" deve essere un'immagine."},included:function(e){return"Il campo "+e+" deve avere un valore valido."},ip:function(e){return"Il campo "+e+" deve essere un indirizzo IP valido."},length:function(e,n){var r=n[0],o=n[1];return o?"La lunghezza del campo "+e+" deve essere compreso tra "+r+" e "+o+".":"La lunghezza del campo "+e+" deve essere "+r+"."},max:function(e,n){return"Il campo "+e+" non può essere più lungo di "+n[0]+" caratteri."},max_value:function(e,n){return"Il campo "+e+" deve essere minore o uguale a "+n[0]},mimes:function(e){return"Il campo "+e+" deve avere un tipo di file valido."},min:function(e,n){return"Il campo "+e+" deve avere almeno "+n[0]+" caratteri."},min_value:function(e,n){return"Il campo "+e+" deve essere maggiore o uguale a "+n[0]},numeric:function(e){return"Il campo "+e+" può contenere solo caratteri numerici."},regex:function(e){return"Il campo "+e+" non ha un formato valido."},required:function(e){return"Il campo "+e+" è richiesto."},size:function(e,n){return"Il campo "+e+" deve essere inferiore a "+function(e){var n=1024,r=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,r)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][r]}(n[0])+"."},url:function(e){return"Il campo "+e+" non è un URL valido."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ja.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ja.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"ja",messages:{_default:function(n){return n+"の値が不正です"},after:function(n,e){return n+"は"+e[0]+"の後でなければなりません"},alpha:function(n){return n+"はアルファベットのみ使用できます"},alpha_dash:function(n){return n+"は英数字とハイフン、アンダースコアのみ使用できます"},alpha_num:function(n){return n+"は英数字のみ使用できます"},alpha_spaces:function(n){return n+"はアルファベットと空白のみ使用できます"},before:function(n,e){return n+"は"+e[0]+"よりも前でなければなりません"},between:function(n,e){return n+"は"+e[0]+"から"+e[1]+"の間でなければなりません"},confirmed:function(n){return n+"が一致しません"},credit_card:function(n){return n+"が正しくありません"},date_between:function(n,e){return n+"は"+e[0]+"から"+e[1]+"の間でなければなりません"},date_format:function(n,e){return n+"は"+e[0]+"形式でなければなりません"},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+"は整数及び小数点以下"+("*"===t?"":t)+"桁までの数字にしてください"},digits:function(n,e){return n+"は"+e[0]+"桁の数字でなければなりません"},dimensions:function(n,e){return n+"は幅"+e[0]+"px、高さ"+e[1]+"px以内でなければなりません"},email:function(n){return n+"は有効なメールアドレスではありません"},excluded:function(n){return n+"は不正な値です"},ext:function(n){return n+"は有効なファイル形式ではありません"},image:function(n){return n+"は有効な画像形式ではありません"},included:function(n){return n+"は有効な値ではありません"},ip:function(n){return n+"は有効なIPアドレスではありません"},is:function(n){return n+"が一致しません"},is_not:function(n){return n+"が一致しています"},length:function(n,e){var t=e[0],r=e[1];return r?n+"は"+t+"文字以上"+r+"文字以下でなければなりません":n+"は"+t+"文字でなければなりません"},max:function(n,e){return n+"は"+e[0]+"文字以内にしてください"},max_value:function(n,e){return n+"は"+e[0]+"以下でなければなりません"},mimes:function(n){return n+"は有効なファイル形式ではありません"},min:function(n,e){return n+"は"+e[0]+"文字以上でなければなりません"},min_value:function(n,e){return n+"は"+e[0]+"以上でなければなりません"},numeric:function(n){return n+"は数字のみ使用できます"},regex:function(n){return n+"のフォーマットが正しくありません"},required:function(n){return n+"は必須項目です"},size:function(n,e){return n+"は"+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"以内でなければなりません"},url:function(n){return n+"は有効なURLではありません"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ka.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ka.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"ka",messages:{after:function(n,e){return n+" უნდა იყოს "+e[0]+"(ი)ს შემდეგ."},alpha:function(n){return n+" უნდა შეიცავდეს მხოლოდ ასოებს."},alpha_dash:function(n){return n+" უნდა შესაძლებელია შეიცავდეს ციფრებს, ასოებს და პუნქტუაციის ნიშნებს."},alpha_num:function(n){return n+" უნდა შეიცავდეს მხოლოდ ციფრებს."},alpha_spaces:function(n){return n+" უნდა შეიცავდეს მხოლოდ ასოებსა და ცარიელ სივრცეებს."},before:function(n,e){return n+" უნდა იყოს "+e[0]+"მდე."},between:function(n,e){return n+" უნდა იყოს "+e[0]+" და "+e[1]+"ს შორის."},confirmed:function(n,e){return n+" არ ემთხვევა "+e[0]+"(ი)ს."},date_between:function(n,e){return n+" უნდა უნდა იყოს "+e[0]+" და "+e[1]+"-ს შორის."},date_format:function(n,e){return n+" უნდა იყოს "+e[0]+" ფორმატში."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" უნდა შეიცავდეს ციფრებსა და"+(t&&"*"!==t?" "+t:"")+" მთელ რიცხვებს."},digits:function(n,e){return n+" უნდა შეიცავდეს ციფრებს და უნდა იყოს ზუსტად "+e[0]+"-ნიშნა."},dimensions:function(n,e){return n+" უნდა იყოს "+e[0]+"x"+e[1]+" ზომის (pixel)."},email:function(n){return n+"-ს უნდა ჰქონდეს ელ-ფოსტის სწორი ფორმატი."},excluded:function(n){return n+" უნდა იყოს სწორი მნიშვნელობა."},ext:function(n){return n+" უნდა იყოს ფაილი."},image:function(n){return n+" უნდა იყოს სურათი."},included:function(n){return n+" უნდა იყოს სწორი მნიშვნელობა."},ip:function(n){return n+" უნდა იყოს სწორი ip მისამართი."},max:function(n,e){return n+" არ უნდა იყოს "+e[0]+" სიმბოლოზე მეტი."},max_value:function(n,e){return n+" უნდა შეიცავდეს "+e[0]+" სიმბოლოს ან ნაკლებს."},mimes:function(n){return n+"ს უნდა ჰქონდეს სწორი ფაილის ფორმატი."},min:function(n,e){return n+" უნდა შეიცავდეს მინიმუმ "+e[0]+" სიმბოლოს."},min_value:function(n,e){return n+" უნდა შეიცავდეს "+e[0]+" ან მეტ სიმბოლოს."},numeric:function(n){return n+" უნდა შეიცავდეს ციფრებს."},regex:function(n){return n+"-(ი)ს ფორმატი არასწორია."},required:function(n){return n+" აუცილებელია."},size:function(n,e){return n+" უნდა იყოს "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"-ზე ნაკლები."},url:function(n){return n+"-(ი)ს არ აქვს სწორი მისამართის ფორმატი"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ko.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ko.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"ko",messages:{_default:function(n){return n+"항목의 값이 유효하지 않습니다."},after:function(n,e){return n+"항목의 값은 "+e[0]+"항목의 값 이후"+(e[1]?"거나 같은 날이어야":"여야")+" 합니다."},alpha:function(n){return n+"항목에는 영문자만 사용 가능합니다."},alpha_dash:function(n){return n+"항목에는 영문자, 숫자와 특수기호(-),(_)만 사용 가능합니다."},alpha_num:function(n){return n+"항목에는 영문자와 숫자만 사용 가능합니다."},alpha_spaces:function(n){return n+"항목에는 영문자와 공백만 사용 가능합니다."},before:function(n,e){return n+"항목의 값은 "+e[0]+"항목의 값 이전"+(e[1]?"이거나 같은 날":"")+"이어야 합니다."},between:function(n,e){return n+"항목의 값은 "+e[0]+"에서 "+e[1]+" 사이여야 합니다."},confirmed:function(n){return n+"항목의 값이 일치하지 않습니다."},credit_card:function(n){return n+"항목의 값이 유효하지 않습니다."},date_between:function(n,e){return n+"항목의 값은 "+e[0]+"과 "+e[1]+" 사이의 날짜이어야 합니다."},date_format:function(n,e){return n+"항목의 값은 "+e[0]+"형식이어야 합니다."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+"항목의 값은 숫자이어야 하며, 소수점 이하 "+(t&&"*"!==t?t:"")+"자리까지 사용 가능합니다."},digits:function(n,e){return n+"항목의 값은 "+e[0]+"자리의 숫자이어야 합니다."},dimensions:function(n,e){return n+"항목의 크기는 가로 "+e[0]+"픽셀, 세로 "+e[1]+"픽셀이어야 합니다."},email:function(n){return n+"항목의 값은 유효한 이메일 형식이어야 합니다."},excluded:function(n){return n+"항목은 유효한 값이어야 합니다."},ext:function(n){return n+"항목은 유효한 파일이어야 합니다."},image:function(n){return n+"항목은 이미지 파일이어야 합니다."},included:function(n){return n+"항목의 값은 유효한 값이어야 합니다."},integer:function(n){return n+"항목의 값은 정수이어야 합니다."},ip:function(n){return n+"항목의 값은 유효한 IP(ipv4) 주소이어야 합니다."},length:function(n,e){var t=e[0],r=e[1];return r?n+"항목의 값은 "+t+"자에서 "+r+"자이어야 합니다.":n+"항목의 값은 "+t+"자이어야 합니다."},max:function(n,e){return n+"항목의 값은 최대 "+e[0]+"글자이어야 합니다."},max_value:function(n,e){return n+"항목의 값은 "+e[0]+" 이하이어야 합니다."},mimes:function(n){return n+"는 유효한 파일 형식의 파일이어야 합니다."},min:function(n,e){return n+"항목의 값은 최소 "+e[0]+"글자이어야 합니다."},min_value:function(n,e){return n+"항목의 값은 "+e[0]+" 이상이어야 합니다."},numeric:function(n){return n+"항목에는 숫자만 사용 가능합니다."},regex:function(n){return n+"항목은 형식에 맞지 않습니다."},required:function(n){return n+"항목은 필수 정보입니다."},size:function(n,e){return n+"항목의 크기는 "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"보다 작아야 합니다."},url:function(n){return n+"항목의 값은 유효한 주소(URL)가 아닙니다."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/lt.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/lt.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(i,t){ true?module.exports=t():undefined}(this,function(){"use strict";var i,t={name:"lt",messages:{_default:function(i){return i+" reikšmė netinkama."},after:function(i,t){return"Laukelyje "+i+" turi būti po "+t[0]+"."},alpha:function(i){return"Laukelyje "+i+" leidžiamos tik raidės."},alpha_dash:function(i){return"Laukelyje "+i+" leidžiamos tik raidės, skaičiai bei brūkšneliai."},alpha_num:function(i){return"Laukelyje "+i+" leidžiamos tik raidės ir skaičiai."},alpha_spaces:function(i){return"Laukelyje "+i+" leidžiamos tik raidės ir tarpai."},before:function(i,t){return i+" turi būti prieš "+t[0]+"."},between:function(i,t){return"Laukelio "+i+" reikšmė turi būti tarp "+t[0]+" ir "+t[1]+"."},confirmed:function(i){return"Laukelio "+i+" patvirtinimas nesutampa."},credit_card:function(i){return"Laukelis "+i+" neteisingas."},date_between:function(i,t){return"Laukelio "+i+" reikšmė turi būti tarp "+t[0]+" ir "+t[1]+"."},date_format:function(i,t){return"Laukelio "+i+" formatas privalo būti toks - "+t[0]+"."},decimal:function(i,t){void 0===t&&(t=[]);var e=t[0];return void 0===e&&(e="*"),"Laukelis "+i+" turi būti skaitmuo su"+(e&&"*"!==e?" "+e:"")+" skaičium(-ias) po kablelio."},digits:function(i,t){return"Lauklio "+i+" reikšmė turi buti "+t[0]+" ženklų(-o) skaitmuo."},dimensions:function(i,t){return i+" turi būti "+t[0]+" px x "+t[1]+" px."},email:function(i){return"Laukelis "+i+" turi būti teisinga el. pašto adresas."},excluded:function(i){return i+" reikšmė nėra leidžiama."},ext:function(i){return i+" turi būti tinkamas failas."},image:function(i){return i+" turi būti paveikslėlis."},included:function(i){return i+" reikšmė nėra leidžiama."},ip:function(i){return i+" turi būti ip adresas."},max:function(i,t){return i+" negali būti ilgesnis nei "+t[0]+"."},max_value:function(i,t){return i+" turi būti "+t[0]+" arba mažiau."},mimes:function(i){return i+" privalo turėti tinkmą failo tipą."},min:function(i,t){return i+" ilgis privalo būti bent "+t[0]+"."},min_value:function(i,t){return i+" turi būti "+t[0]+" arba daugiau."},numeric:function(i){return i+" turi būti tik skaitmenys."},regex:function(i){return"Laukelio "+i+" formatas netinkamas."},required:function(i){return"Laukelis "+i+" privalomas."},size:function(i,t){return i+" turi būti mažesnis nei "+function(i){var t=1024,e=0===(i=Number(i)*t)?0:Math.floor(Math.log(i)/Math.log(t));return 1*(i/Math.pow(t,e)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][e]}(t[0])+"."},url:function(i){return i+" turi būti internetinis adresas."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((i={})[t.name]=t,i)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/lv.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/lv.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(a,t){ true?module.exports=t():undefined}(this,function(){"use strict";var a,t={name:"lv",messages:{_default:function(a){return"Laukā "+a+" ievadītā vērtība nav korekta."},after:function(a,t){var e=t[0];return"Lauka "+a+" vērtībai jābūt lielākai par "+(t[1]?"vai vienādai ar ":"")+e+"."},alpha:function(a){return" Laukā "+a+" var ievadīt tikai burtus."},alpha_dash:function(a){return"Laukā "+a+" var ievadīt tikai burtus, ciparus, domuzīmes un pasvītras."},alpha_num:function(a){return"Laukā "+a+" var ievadīt tikai burtus un ciparus."},alpha_spaces:function(a){return"Laukā "+a+" var ievadīt tikai burtus un atstarpes."},before:function(a,t){var e=t[0];return"Lauka "+a+" vērtībai jābūt mazākai par "+(t[1]?"vai vienādai ar ":"")+e+"."},between:function(a,t){return"Lauka "+a+" vērtībai jābūt intervālā starp "+t[0]+" un "+t[1]+"."},confirmed:function(a){return"Apstiprinājuma lauka "+a+" vērtība nav korekta."},credit_card:function(a){return"Laukā "+a+" ievadīta nekorekta vērtība."},date_between:function(a,t){return"Lauka "+a+" vērtībai jābut intervālā starp "+t[0]+" un "+t[1]+"."},date_format:function(a,t){return"Laukam "+a+" vērtībai jābūt formātā "+t[0]+"."},decimal:function(a,t){void 0===t&&(t=[]);var e=t[0];return void 0===e&&(e="*"),"Laukā "+a+" var ievadīt ciparus un drīkst izmantot "+(e&&"*"!==e?e:"")+" decimālpunktus."},digits:function(a,t){return"Lauka "+a+" vērtību veido precīzs "+t[0]+" ciparu skaits"},dimensions:function(a,t){return"Lauka  "+a+" izmērs ir "+t[0]+" pikseļu  platumā un "+t[1]+" pikseļu augstumā."},email:function(a){return"Lauka "+a+" vērtībai jābūt derīgai e-pasta adresei."},excluded:function(a){return"Laukā "+a+" jāievada derīga vērtība."},ext:function(a){return"Lauka "+a+" vērtībai jābūt failam."},image:function(a){return"Lauka "+a+" vērtībai jābūt attēlam."},included:function(a){return"Lauka "+a+" vērtībai jābūt derīgai."},integer:function(a){return"Lauka "+a+" vērtībai jābūt veselam skaitlim."},ip:function(a){return"Kā "+a+" vērtībai jābūt IP adresei."},length:function(a,t){var e=t[0],r=t[1];return r?"Lauka "+a+" garumam jābūt intervālā starp "+e+" un "+r+".":"Lauka "+a+" garumam jābūt "+e+"."},max:function(a,t){return"Laukā "+a+" nevar ievadīt vairāk nekā "+t[0]+" rakstzīmes."},max_value:function(a,t){return"Lauka "+a+" vērtībai jābūt "+t[0]+" vai mazākai."},mimes:function(a){return"Lauka "+a+" vērtībai jābūt failam."},min:function(a,t){return"Laukā "+a+" jāievada vismaz "+t[0]+" rakstzīmes."},min_value:function(a,t){return"Laukā "+a+" izmanto minimālo vērtību "+t[0]+" vai lielāku."},numeric:function(a){return"Laukā "+a+" var ievadīt tikai ciparus."},regex:function(a){return"Lauka "+a+" formāts nav korekts."},required:function(a){return"Lauks "+a+" ir obligāti aizpildāms."},size:function(a,t){return"Lauka "+a+" lielumam jābut mazākam nekā "+function(a){var t=1024,e=0===(a=Number(a)*t)?0:Math.floor(Math.log(a)/Math.log(t));return 1*(a/Math.pow(t,e)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][e]}(t[0])+"."},url:function(a){return"Laukā "+a+" ievadītā URL vērtība nav korekta."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((a={})[t.name]=t,a)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/mn.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/mn.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"mn",messages:{_default:function(n){return n+"-н утга буруу байна."},after:function(n,e){return n+"-н утга "+e[0]+"-с бага "+(e[1]?"эсвэл тэнцүү ":"")+"байх ёстой."},alpha:function(n){return n+"-н утга зөвхөн үсэг агуулах боломжтой."},alpha_dash:function(n){return n+"-н утга зөвхөн үсэг, дундуур зураас, доогуур зураас агуулах боломжтой."},alpha_num:function(n){return n+"-н утга зөвхөн тоо болон үсэг агуулах боломжтой."},alpha_spaces:function(n){return n+"-н утга зөвхөн үсэг болон зай агуулах боломжтой."},before:function(n,e){return n+"-н утга "+e[0]+"-с өмнө "+(e[1]?"эсвэл тэнцүү ":"")+"байх ёстой."},between:function(n,e){return n+"-н утга зөвхөн "+e[0]+"-с "+e[1]+" -ны хооронд байх ёстой."},confirmed:function(n){return n+"-н утга буруу байна."},credit_card:function(n){return n+"-н утга зөв картын дугаар байх ёстой."},date_between:function(n,e){return n+"-н утга "+e[0]+" болон "+e[1]+"-ы хооронд байх шаардлагатай."},date_format:function(n,e){return n+"-н утга "+e[0]+" форматтай байна."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+"-н утга зөвхөн тоо байх ба "+(t&&"*"!==t?t:"")+" бутархай тоо агуулах боломжтой."},digits:function(n,e){return n+"-н утга зөвхөн тоо байх ба яг  "+e[0]+" оронтой байна."},dimensions:function(n,e){return n+"-н хэмжээ "+e[0]+"x"+e[1]+" пикселээс хэтрэх байх шаардлагатай."},email:function(n){return n+"-н утга бодит майл байх ёстой."},excluded:function(n,e){return n+"-н утга "+e[0]+" байж болохгүй."},ext:function(n,e){return n+" заавал файл заавал "+e[0]+" форматтай байх ёстой."},image:function(n){return n+" заавал зураг байх ёстой."},included:function(n,e){return n+"-н утга заавал дараахын нэг нь байна. ("+e[0]+")"},integer:function(n){return n+"-н утга тоо байх ёстой."},ip:function(n){return n+"-н утга зөвхөн IP хаяг байна"},length:function(n,e){var t=e[0],r=e[1];return r?n+"-н урт нь "+t+" болон "+r+"-ны хооронд байна.":n+"-н урт нь "+t+" байна."},max:function(n,e){return n+"-н урт нь хамгийн ихдээ "+e[0]+" байна."},max_value:function(n,e){return n+"-н утга "+e[0]+"-с хэтрэхгүй байна."},mimes:function(n){return n+" зөвшөөрөгдөөгүй файл форматтай байна."},min:function(n,e){return n+"-н урт нь хамгийн багадаа "+e[0]+" байна."},min_value:function(n,e){return n+"-н утга "+e[0]+"-с багагүй байна."},numeric:function(n){return n+"-н утга зөвхөн тоо байна."},regex:function(n){return n+"-н утга буруу форматтай байна."},required:function(n){return n+"-н утга заавал байх ёстой."},required_if:function(n){return n+"-н утга заавал байх ёстой."},size:function(n,e){return n+" хэмжээ "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"-с хэтрэхгүй байна."},url:function(n){return n+" зөв URL хаяг биш байна."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ms_MY.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ms_MY.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(a,e){ true?module.exports=e():undefined}(this,function(){"use strict";var a,e={name:"ms_MY",messages:{_default:function(a){return a+" tidak sah."},after:function(a,e){var n=e[0];return a+" perlulah selepas "+(e[1]?"atau sama dengan ":"")+n+"."},alpha:function(a){return a+" hanya boleh mempunyai karakter abjad sahaja."},alpha_dash:function(a){return a+" boleh mempunyai karakter angka-abjad, sengkang dan garis bawah."},alpha_num:function(a){return a+" hanya boleh mempunyai karakter angka-abjad."},alpha_spaces:function(a){return a+" hanya boleh mempunyai karakter abjad termasuklah aksara ruang."},before:function(a,e){var n=e[0];return a+" perlulah sebelum "+(e[1]?"atau sama dengan ":"")+n+"."},between:function(a,e){return a+" perlulah di antara "+e[0]+" dan "+e[1]+"."},confirmed:function(a){return a+" pengesahan tidak sepadan."},credit_card:function(a){return a+" tidak sah."},date_between:function(a,e){return a+" perlulah di antara "+e[0]+" dan "+e[1]+"."},date_format:function(a,e){return a+" perlulah dalam format "+e[0]+"."},decimal:function(a,e){void 0===e&&(e=[]);var n=e[0];return void 0===n&&(n="*"),a+" perlulah dalam bentuk angka dan boleh mempunyai "+(n&&"*"!==n?n:"")+" titik perpuluhan."},digits:function(a,e){return a+" perlulah dalam bentuk angka dan mempunyai "+e[0]+" digit."},dimensions:function(a,e){return a+" perlulah berdimensi "+e[0]+" pixel darab "+e[1]+" pixels."},email:function(a){return a+" perlulah dalam format emel yang sah."},excluded:function(a){return a+" perlulah sah."},ext:function(a){return a+" perlulah dalam format fail yang sah."},image:function(a){return a+" perlulah dalam bentuk imej."},included:function(a){return a+" perlulah dalam nilai yang sah."},integer:function(a){return a+" perlulah dalam bentuk integer."},ip:function(a){return a+" perlulah dalam format alamat ip yang sah."},length:function(a,e){var n=e[0],r=e[1];return r?"Panjang "+a+" perlulah bernilai di antara "+n+" dan "+r+".":"Panjang "+a+" perlulah bernilai "+n+"."},max:function(a,e){return a+" perlulah tidak melebihi "+e[0]+" karakter."},max_value:function(a,e){return a+" perlulah bernilai "+e[0]+" atau kurang."},mimes:function(a){return a+" perlulah mempunyai jenis fail yang sah."},min:function(a,e){return a+" perlulah sekurang-kurangnya mempunyai "+e[0]+" karakter."},min_value:function(a,e){return a+" perlulah bernilai "+e[0]+" atau lebih."},numeric:function(a){return a+" perlulah mempunyai hanya karakter angka sahaja."},regex:function(a){return"Format "+a+" tidak sah."},required:function(a){return a+" adalah wajib."},size:function(a,e){return"Saiz "+a+" perlulah kurang daripada "+function(a){var e=1024,n=0===(a=Number(a)*e)?0:Math.floor(Math.log(a)/Math.log(e));return 1*(a/Math.pow(e,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(e[0])+"."},url:function(a){return a+" bukan URL yang sah."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((a={})[e.name]=e,a)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/nb_NO.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/nb_NO.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){"use strict";var e,t={name:"nb_NO",messages:{after:function(e,t){return e+"-feltet må være etter "+t[0]+"."},alpha:function(e){return e+"-feltet kan bare inneholde bokstaver."},alpha_dash:function(e){return e+"-feltet kan bare inneholde alfanumeriske tegn, samt bindestrek og understrek."},alpha_num:function(e){return e+" kan bare inneholde alfanumeriske tegn."},alpha_spaces:function(e){return e+"-feltet kan bare inneholde alfanumeriske tegn og mellomrom."},before:function(e,t){return e+"-feltet må være før "+t[0]+"."},between:function(e,t){return e+"-feltet må være imellom "+t[0]+" og "+t[1]+"."},confirmed:function(e){return e+"-feltet kan ikke bekreftes."},credit_card:function(e){return e+"-feltet er ugyldig."},date_between:function(e,t){return e+"-feltet må være imellom "+t[0]+" og "+t[1]+"."},date_format:function(e,t){return e+"-feltet må være i følgende format: "+t[0]+"."},decimal:function(e,t){void 0===t&&(t=[]);var n=t[0];return void 0===n&&(n="*"),e+"-feltet må være numerisk samt kan inneholde"+(n&&"*"!==n?" "+n:"")+" desimaler."},digits:function(e,t){return e+"-feltet må være numerisk og inneholde nøyaktig "+t[0]+" siffer."},dimensions:function(e,t){return e+"-feltet må være "+t[0]+" ganger "+t[1]+" piksler."},email:function(e){return e+"-feltet må være en gyldig e-postadresse."},excluded:function(e){return e+"-feltet må være en gyldig verdi."},ext:function(e){return e+"-feltet må være en gyldig fil."},image:function(e){return e+"-feltet må være et bilde."},included:function(e){return e+"-feltet må være en gyldig verdi."},ip:function(e){return e+"-feltet må være en gyldig IP-adresse."},max:function(e,t){return e+"-feltet kan ikke være lengre enn "+t[0]+" tegn."},max_value:function(e,t){return e+"-feltet må være "+t[0]+" eller mindre."},mimes:function(e){return e+"-feltet må ha en gyldig filtype."},min:function(e,t){return e+"-feltet må være minst "+t[0]+" tegn."},min_value:function(e,t){return e+"-feltet må være "+t[0]+" eller mer."},numeric:function(e){return e+"-feltet kan bare inneholde nummer."},regex:function(e){return e+"-feltet sin formatering er ugyldig."},required:function(e){return e+"-feltet er obligatorisk."},size:function(e,t){return e+"-feltet må være mindre enn "+function(e){var t=1024,n=0===(e=Number(e)*t)?0:Math.floor(Math.log(e)/Math.log(t));return 1*(e/Math.pow(t,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(t[0])+"."},url:function(e){return e+"-feltet er ikke en gyldig URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[t.name]=t,e)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ne.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ne.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"ne",messages:{_default:function(n){return"यो "+n+" फिल्ड मान्य छैन।"},after:function(n,e){return n+" "+e[0]+" भन्दा पछि  "+(e[1]?"वा बराबर":"")+" हुनु पर्छ।"},alpha:function(n){return n+" फिल्डले वर्णमाला अक्षरहरू मात्र समावेश गर्न सक्छ।"},alpha_dash:function(n){return n+" फील्डलमा वर्ण-संख्या अक्षरहरू साथै ड्याश र अन्डरसेर्सहरू समावेश गर्न सक्छ।"},alpha_num:function(n){return n+" फील्डमा वर्ण-संख्या अक्षरहरू मात्र समावेश गर्न सक्छ।"},alpha_spaces:function(n){return n+" फिल्डमा वर्णमाला अक्षरहरू र स्पेसहरूमा मात्र समावेश गर्न सक्छ।"},before:function(n,e){return n+" "+e[0]+" भन्दा अघि  "+(e[1]?"वा बराबर":"")+" हुनु पर्छ।"},between:function(n,e){return n+" फिल्ड "+e[0]+" र "+e[1]+" को बीच हुनुपर्दछ।"},confirmed:function(n){return n+" पुष्टिकरण मेल खाँदैन।"},credit_card:function(n){return n+" फिल्ड मान्य छैन।"},date_between:function(n,e){return n+" "+e[0]+" र "+e[1]+" को बीच हुनुपर्दछ।"},date_format:function(n,e){return n+" ढाँचा "+e[0]+" मा हुनुपर्दछ।"},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" फिल्ड संख्यात्मक हुनुपर्छ र "+(t&&"*"!==t?t:"")+" दशमलव अंक हुन सक्छ।"},digits:function(n,e){return n+" फिल्ड संख्यात्मक हुनुपर्छ र "+e[0]+" अङ्क समावेश गर्दछ।"},dimensions:function(n,e){return n+" फिल्ड "+e[0]+" पिक्सेलमा "+e[1]+" पिक्सेल हुनु पर्दछ।"},email:function(n){return n+" फिल्ड मान्य ईमेल हुनु पर्छ।"},excluded:function(n){return n+" फिल्ड मान्य मान हुनुपर्छ।"},ext:function(n){return n+" फिल्ड मान्य फाइल हुनु पर्छ।"},image:function(n){return n+" फिल्ड मान्य फोटो हुनु पर्छ।"},included:function(n){return n+" फिल्ड मान्य परिमाण हुनु पर्छ।"},integer:function(n){return n+" फिल्ड मान्य पूर्णांक हुनु पर्छ।"},ip:function(n){return n+" फिल्ड मान्य आईपी ठेगाना हुनु पर्छ।"},length:function(n,e){var t=e[0],r=e[1];return r?n+" लम्बाई "+t+" र "+r+" बीचमा हुनुपर्दछ।":n+" लम्बाई "+t+" हुनुपर्दछ।"},max:function(n,e){return n+" फिल्ड "+e[0]+" अक्षरहरू भन्दा ठूलो हुन सक्छ।"},max_value:function(n,e){return n+" फिल्ड "+e[0]+" वा कम हुनुपर्दछ।"},mimes:function(n){return n+" फिल्ड मान्य फाइल प्रकार हुनु पर्दछ।"},min:function(n,e){return n+" फिल्ड कम्तिमा "+e[0]+" अक्षरहरू हुनुपर्दछ।"},min_value:function(n,e){return n+" इमेल फिल्ड "+e[0]+" वा बढी हुनुपर्दछ।"},numeric:function(n){return n+" फिल्डले संख्यात्मक अक्षरहरूमा मात्र समावेश गर्न सक्छ।"},regex:function(n){return n+" फिल्ड ढाँचा अमान्य छ।"},required:function(n){return n+" फिल्ड आवश्यक छ।"},size:function(n,e){return n+" परिणाम "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+" भन्दा कम हुनुपर्दछ।"},url:function(n){return n+" फिल्ड मान्य यूआरएल होइन।"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/nl.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/nl.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"nl",messages:{_default:function(e){return e+" waarde is ongeldig."},after:function(e,n){var t=n[0];return e+" moet later zijn dan "+(n[1]?"of gelijk aan ":"")+t+"."},alpha:function(e){return e+" mag alleen letters bevatten."},alpha_dash:function(e){return e+" mag alleen letters, nummers, en streepjes bevatten."},alpha_num:function(e){return e+" mag alleen letters en nummers bevatten."},alpha_spaces:function(e){return e+" mag alleen letters en spaties bevatten."},before:function(e,n){var t=n[0];return e+" moet eerder zijn dan "+(n[1]?"of gelijk aan ":"")+t+"."},between:function(e,n){return e+" moet tussen "+n[0]+" en "+n[1]+" liggen."},confirmed:function(e){return e+" bevestiging komt niet overeen."},credit_card:function(e){return e+" is ongeldig."},date_between:function(e,n){return e+" moet tussen "+n[0]+" en "+n[1]+" liggen."},date_format:function(e,n){return e+" moet in het volgende formaat zijn: "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),e+" moet een nummer zijn en mag"+(t&&"*"!==t?" "+t:"")+" decimalen bevatten."},digits:function(e,n){return e+" moet een nummer zijn en exact "+n[0]+" tekens bevatten."},dimensions:function(e,n){return e+" moet "+n[0]+" pixels breed zijn en "+n[1]+" pixels hoog."},email:function(e){return e+" moet een geldig e-mailadres zijn."},excluded:function(e){return e+" is ongeldig."},ext:function(e){return e+" moet een geldig bestand zijn."},image:function(e){return e+" moet een afbeelding zijn."},included:function(e){return e+" moet een geldige waarde zijn."},ip:function(e){return e+" moet een geldig IP-adres zijn."},max:function(e,n){return e+" mag niet groter zijn dan "+n[0]+" karakters."},max_value:function(e,n){return e+" mag maximaal "+n[0]+" zijn."},mimes:function(e){return e+" moet een geldig bestandstype hebben."},min:function(e,n){return e+" moet minimaal "+n[0]+" karakters zijn."},min_value:function(e,n){return e+" moet minimaal "+n[0]+" zijn."},numeric:function(e){return e+" mag alleen nummers bevatten"},regex:function(e){return e+" formaat is ongeldig."},required:function(e){return e+" is verplicht."},size:function(e,n){return e+" mag niet groter zijn dan "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return e+" is geen geldige URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/nn_NO.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/nn_NO.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"nn_NO",messages:{after:function(e,n){return e+"-feltet må vere etter "+n[0]+"."},alpha:function(e){return e+"-feltet kan berre innehalde bokstaver."},alpha_dash:function(e){return e+"-feltet kan berre innehalde alfa-numeriske tegn, samt bindestrek og understrek."},alpha_num:function(e){return e+" kan berre innehalde alfanumeriske tegn."},alpha_spaces:function(e){return e+"-feltet kan berre innehalde alfanumeriske tegn og mellomrom."},before:function(e,n){return e+"-feltet må vere før "+n[0]+"."},between:function(e,n){return e+"-feltet må vere mellom verdiane "+n[0]+" og "+n[1]+"."},confirmed:function(e){return e+"-feltet samsvarer ikkje."},credit_card:function(e){return e+"-feltet er ugyldig."},date_between:function(e,n){return e+"-feltet må vere imellom "+n[0]+" og "+n[1]+"."},date_format:function(e,n){return e+"-feltet må vere i følgende format: "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),e+"-feltet må vere numerisk, og kan innehalde"+(t&&"*"!==t?" "+t:"")+" desimaler."},digits:function(e,n){return e+"-feltet må vere numerisk og innehalde nøyaktig "+n[0]+" siffer."},dimensions:function(e,n){return e+"-feltet må vere "+n[0]+" gonger "+n[1]+" piksler."},email:function(e){return e+"-feltet må innehalde ein gyldig E-post adresse."},excluded:function(e){return e+"-feltet må ha ein gyldig verdi."},ext:function(e){return e+"-feltet må innehalde ei gyldig fil."},image:function(e){return e+"-feltet må vere eit bilete."},included:function(e){return e+"-feltet må vere ein gyldig verdi."},ip:function(e){return e+"-feltet må vere ei gyldig IP-adresse."},max:function(e,n){return e+"-feltet kan ikkje vere lengre enn "+n[0]+" tegn."},max_value:function(e,n){return e+" kan ikkje vere lengre enn "+n[0]+" tegn."},mimes:function(e){return e+"-feltet må ha ein gyldig filtype."},min:function(e,n){return e+"-feltet må innehalde minst "+n[0]+" tegn."},min_value:function(e,n){return e+"-feltet må vere "+n[0]+" eller mer."},numeric:function(e){return e+"-feltet kan berre innehalde nummer."},regex:function(e){return e+" har ugyldig formatering."},required:function(e){return e+" er eit obligatorisk felt."},size:function(e,n){return e+"-feltet må vere mindre enn "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return e+" er ikkje ein gyldig URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/pl.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/pl.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e;var r=function(e,n,i,o){return 1===(o=Math.abs(o))?e:2<=o%10&&o%10<=4&&(o%100<10||20<=o%100)?n:i}.bind(null,"znak","znaki","znaków"),n={name:"pl",messages:{_default:function(e){return"Pole "+e+" jest nieprawidłowe."},after:function(e,n){return"Pole "+e+" musi być po polu "+n[0]+"."},alpha:function(e){return"Pole "+e+" może zawierać tylko litery."},alpha_dash:function(e){return"Pole "+e+" może zawierać litery, cyfry oraz myślnik lub podkreślnik."},alpha_num:function(e){return"Pole "+e+" może zawierać tylko litery i cyfry."},alpha_spaces:function(e){return"Pole "+e+" może zawierać tylko litery oraz spacje."},before:function(e,n){return"Pole "+e+" musi być przed "+n[0]+"."},between:function(e,n){return"Pole "+e+" musi być pomiędzy "+n[0]+" oraz "+n[1]+"."},confirmed:function(e,n){return"Pole "+e+" nie zgadza się z polem potwierdzającym "+n[0]+"."},credit_card:function(e){return"Pole "+e+" musi być poprawnym numerem karty kredytowej."},date_between:function(e,n){return"Pole "+e+" musi zawierać się między "+n[0]+" a "+n[1]+"."},date_format:function(e,n){return"Pole "+e+" musi pasować do formatu "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var i=n[0];return void 0===i&&(i="*"),"Pole "+e+" musi być liczbą i może zawierać"+(i&&"*"!==i?" "+i:"")+" miejsca po przecinku."},digits:function(e,n){return"Pole "+e+" musi być liczbą i dokładnie "+n[0]+" cyfr."},dimensions:function(e,n){return"Obraz "+e+" musi być szeroki na "+n[0]+" pikseli i wysoki na "+n[1]+" pikseli."},email:function(e){return"Pole "+e+" musi być poprawnym adresem email."},excluded:function(e){return"Pole "+e+" musi być poprawną wartością."},ext:function(e){return"Plik "+e+" musi być poprawnym plikiem."},image:function(e){return"Pole "+e+" musi być obrazem."},included:function(e){return"Pole "+e+" musi być poprawną wartością."},integer:function(e){return"Pole "+e+" musi być liczbą całkowitą."},ip:function(e){return"Pole "+e+" musi być poprawnym adresem IP."},length:function(e,n){var i=n[0],o=n[1];return o?"Pole "+e+" musi mieć długość od "+i+" do "+o+" znaków.":"Pole "+e+" musi mieć długość "+i+" "+r(i)+"."},max:function(e,n){var i=n[0];return"Pole "+e+" nie może być dłuższe niż "+i+" "+r(i)+"."},max_value:function(e,n){return"Pole "+e+" musi mieć maksymalną wartość "+n[0]+"."},mimes:function(e){return"Plik "+e+" musi posiadać poprawne rozszerzenie."},min:function(e,n){var i=n[0];return"Pole "+e+" musi być długie na co najmniej "+i+" "+r(i)+"."},min_value:function(e,n){return"Pole "+e+" musi mieć minimalną wartość "+n[0]+"."},numeric:function(e){return"Pole "+e+" może zawierać tylko cyfry."},regex:function(e){return"Format pola "+e+" jest nieodpowiedni."},required:function(e){return"Pole "+e+" jest wymagane."},size:function(e,n){return"Plik "+e+" musi być mniejszy niż "+function(e){var n=1024,i=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,i)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][i]}(n[0])+"."},url:function(e){return"Pole "+e+" nie jest poprawnym URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/pt_BR.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/pt_BR.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"pt_BR",messages:{_default:function(e){return"O valor do campo "+e+" não é válido."},after:function(e,n){return"O campo "+e+" deve estar depois do campo "+n[0]+"."},alpha:function(e){return"O campo "+e+" deve conter somente letras."},alpha_dash:function(e){return"O campo "+e+" deve conter letras, números e traços."},alpha_num:function(e){return"O campo "+e+" deve conter somente letras e números."},alpha_spaces:function(e){return"O campo "+e+" só pode conter caracteres alfabéticos e espaços."},before:function(e,n){return"O campo "+e+" deve estar antes do campo "+n[0]+"."},between:function(e,n){return"O campo "+e+" deve estar entre "+n[0]+" e "+n[1]+"."},confirmed:function(e,n){return"Os campos "+e+" e "+n[0]+" devem ser iguais."},credit_card:function(e){return"O campo "+e+" é inválido."},date_between:function(e,n){return"O campo "+e+" deve estar entre "+n[0]+" e "+n[1]+"."},date_format:function(e,n){return"O campo "+e+" deve estar no formato "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var o=n[0];return void 0===o&&(o="*"),"O campo "+e+" deve ser numérico e deve conter "+(o&&"*"!==o?o:"")+" casas decimais."},digits:function(e,n){return"O campo "+e+" deve ser numérico e ter exatamente "+n[0]+" dígitos."},dimensions:function(e,n){return"O campo "+e+" deve ter "+n[0]+" pixels de largura por "+n[1]+" pixels de altura."},email:function(e){return"O campo "+e+" deve ser um email válido."},excluded:function(e){return"O campo "+e+" deve ser um valor válido."},ext:function(e){return"O campo "+e+" deve ser um arquivo válido."},image:function(e){return"O campo "+e+" deve ser uma imagem."},included:function(e){return"O campo "+e+" deve ter um valor válido."},integer:function(e){return"O campo "+e+" deve ser um número inteiro."},ip:function(e){return"O campo "+e+" deve ser um endereço IP válido."},is:function(e){return"O valor inserido no campo "+e+" não é válido."},length:function(e,n){var o=n[0],r=n[1];return r?"O tamanho do campo "+e+" está entre "+o+" e "+r+".":"O tamanho do campo "+e+" deve ser "+o+"."},max:function(e,n){return"O campo "+e+" não deve ter mais que "+n[0]+" caracteres."},max_value:function(e,n){return"O campo "+e+" precisa ser "+n[0]+" ou menor."},mimes:function(e){return"O campo "+e+" deve ser um tipo de arquivo válido."},min:function(e,n){return"O campo "+e+" deve conter pelo menos "+n[0]+" caracteres."},min_value:function(e,n){return"O campo "+e+" precisa ser "+n[0]+" ou maior."},numeric:function(e){return"O campo "+e+" deve conter apenas números"},regex:function(e){return"O campo "+e+" possui um formato inválido."},required:function(e){return"O campo "+e+" é obrigatório."},size:function(e,n){return"O campo "+e+" deve ser menor que "+function(e){var n=1024,o=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,o)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][o]}(n[0])+"."},url:function(e){return"O campo "+e+" não é uma URL válida."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/pt_PT.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/pt_PT.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,o){ true?module.exports=o():undefined}(this,function(){"use strict";var e,o={name:"pt_PT",messages:{after:function(e,o){return"O campo "+e+" deve estar depois do campo "+o[0]+"."},alpha:function(e){return"O campo "+e+" deve conter somente letras."},alpha_dash:function(e){return"O campo "+e+" deve conter letras, números e traços."},alpha_num:function(e){return"O campo "+e+" deve conter somente letras e números."},alpha_spaces:function(e){return"O "+e+" só pode conter caracteres alfabéticos e espaços."},before:function(e,o){return"O campo "+e+" deve estar antes do campo "+o[0]+"."},between:function(e,o){return"O campo "+e+" deve estar entre "+o[0]+" e "+o[1]+"."},confirmed:function(e,o){return"Os campos "+e+" e "+o[0]+" devem ser iguais."},credit_card:function(e){return"O campo "+e+" é inválido."},date_between:function(e,o){return"O campo "+e+" deve estar entre "+o[0]+" e "+o[1]+"."},date_format:function(e,o){return"O campo "+e+" deve estar no formato "+o[0]+"."},decimal:function(e,o){void 0===o&&(o=[]);var n=o[0];return void 0===n&&(n="*"),"O campo "+e+" deve ser numérico e deve conter"+(n&&"*"!==n?" "+n:"")+" casas decimais."},digits:function(e,o){return"O campo "+e+" deve ser numérico e ter "+o[0]+" dígitos."},dimensions:function(e,o){return"O campo "+e+" deve ter "+o[0]+" pixels de largura por "+o[1]+" pixels de altura."},email:function(e){return"O campo "+e+" deve ser um email válido."},excluded:function(e){return"O campo "+e+" deve ser um valor válido."},ext:function(e){return"O campo "+e+" deve ser um ficheiro válido."},image:function(e){return"O campo "+e+" deve ser uma imagem."},included:function(e){return"O campo "+e+" deve ter um valor válido."},ip:function(e){return"O campo "+e+" deve ser um endereço IP válido."},is:function(e){return"O valor inserido no campo "+e+" não é válido."},max:function(e,o){return"O campo "+e+" não deve ter mais que "+o[0]+" caracteres."},max_value:function(e,o){return"O campo "+e+" precisa ser "+o[0]+" ou menor."},mimes:function(e){return"O campo "+e+" deve ser um tipo de ficheiro válido."},min:function(e,o){return"O campo "+e+" deve conter pelo menos "+o[0]+" caracteres."},min_value:function(e,o){return"O campo "+e+" precisa ser "+o[0]+" ou maior."},numeric:function(e){return"O campo "+e+" deve conter apenas números"},regex:function(e){return"O campo "+e+" possui um formato inválido."},required:function(e){return"O campo "+e+" é obrigatório."},size:function(e,o){return"O campo "+e+" deve ser menor que "+function(e){var o=1024,n=0===(e=Number(e)*o)?0:Math.floor(Math.log(e)/Math.log(o));return 1*(e/Math.pow(o,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(o[0])+"."},url:function(e){return"O campo "+e+" não é um URL válido."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[o.name]=o,e)),o});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ro.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ro.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"ro",messages:{after:function(e,n){return"Câmpul "+e+" trebuie să fie după "+n[0]+"."},alpha:function(e){return"Câmpul "+e+" poate conține doar literele alfabetului."},alpha_dash:function(e){return"Câmpul "+e+' poate conține litere și caracterele "-" sau "_".'},alpha_num:function(e){return"Câmpul "+e+" poate conține doar caractere alfanumerice."},alpha_spaces:function(e){return"Câmpul "+e+" poate conține literele și spații."},before:function(e,n){return"Câmpul "+e+" trebuie să fie după "+n[0]+"."},between:function(e,n){return"Valoare câmpului "+e+" trebuie să fie între "+n[0]+" și "+n[1]+"."},confirmed:function(e){return"Câmpul "+e+" nu coincide."},credit_card:function(e){return"Valoarea câmpului "+e+" nu este un număr de card valid."},date_between:function(e,n){return"Data introdusă în "+e+" trebuie să fie între "+n[0]+" și "+n[1]+"."},date_format:function(e,n){return"Respectați următorul format: "+n[0]+" în câmpul "+e+"."},decimal:function(e,n){void 0===n&&(n=[]);var i=n[0];return void 0===i&&(i="*"),"Câmpul "+e+" trebuie să fie numberic și poate conține "+(i&&"*"!==i?" "+i:"")+" zecimale."},digits:function(e,n){return"Câmpul "+e+" trebuie să fie numeric și să conțină exact "+n[0]+" caractere."},dimensions:function(e,n){return"Câmpul "+e+" trebuie să fie "+n[0]+" pixeli lungime și "+n[1]+" pixeli înălțime."},email:function(e){return"Câmpul "+e+" trebuie să conțină un email valid."},excluded:function(e){return"Câmpul "+e+" trebuie să conțină o valoare validă."},ext:function(e){return"Câmpul "+e+" trebuie să fie un nume de fișier valid."},image:function(e){return"Câmpul "+e+" trebuie să fie o imagine."},included:function(e){return"Câmpul "+e+" trebuie să conțină o valoare validă."},ip:function(e){return"Câmpul "+e+" trebuie să conțină o adresă IP validă."},max:function(e,n){return"Câmpul "+e+" nu poate conține mai mult de "+n[0]+" caractere."},max_value:function(e,n){return"Valoarea câmpului "+e+" trebuie să fie maxim "+n[0]+"."},mimes:function(e){return"Câmpul "+e+" trebuie să conțină un fișier cu extensie validă."},min:function(e,n){return"Câmpul "+e+" trebuie să conțină cel puțin "+n[0]+" caractere."},min_value:function(e,n){return"Valoarea câmpului "+e+" trebuie să fie mai mare de "+n[0]+"."},numeric:function(e){return"Câmpul "+e+" poate conține doar valori numerice."},regex:function(e){return"Formatul câmpului "+e+" este invalid."},required:function(e){return"Câmpul "+e+" este obligatoriu."},size:function(e,n){return"Câmpul "+e+" nu trebuie să depășească "+function(e){var n=1024,i=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,i)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][i]}(n[0])+"."},url:function(e){return"Câmpul "+e+" nu este o adresă URL validă."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/ru.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/ru.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"ru",messages:{_default:function(n){return"Значение поля "+n+" недопустимо."},after:function(n,e){var t=e[0];return"В поле "+n+" должна быть дата после "+(e[1]?"или равная ":"")+t+"."},alpha:function(n){return"Поле "+n+" может содержать только буквы."},alpha_dash:function(n){return"Поле "+n+" может содержать только буквы, цифры и дефис."},alpha_num:function(n){return"Поле "+n+" может содержать только буквы и цифры."},alpha_spaces:function(n){return"Поле "+n+" может содержать только буквы и пробелы."},before:function(n,e){var t=e[0];return"В поле "+n+" должна быть дата до "+(e[1]?"или равная ":"")+t+"."},between:function(n,e){return"Поле "+n+" должно быть между "+e[0]+" и "+e[1]+"."},confirmed:function(n,e){return"Поле "+n+" не совпадает с "+e[0]+"."},credit_card:function(n){return"Поле "+n+" должно быть действительным номером карты"},date_between:function(n,e){return"Поле "+n+" должно быть между "+e[0]+" и "+e[1]+"."},date_format:function(n,e){return"Поле "+n+" должно быть в формате "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"Поле "+n+" должно быть числовым и может содержать"+("*"===t?" десятичные числа":" "+t+" десятичных чисел")+"."},digits:function(n,e){return"Поле "+n+" должно быть числовым и точно содержать "+e[0]+" цифры."},dimensions:function(n,e){return"Поле "+n+" должно быть "+e[0]+" пикселей на "+e[1]+" пикселей."},email:function(n){return"Поле "+n+" должно быть действительным электронным адресом."},excluded:function(n){return"Поле "+n+" должно быть допустимым значением."},ext:function(n,e){return"Поле "+n+" должно быть действительным файлом. ("+e.slice(0)+")"},image:function(n){return"Поле "+n+" должно быть изображением."},included:function(n){return"Поле "+n+" должно быть допустимым значением."},integer:function(n){return"Поле "+n+" должно быть целым числом."},ip:function(n){return"Поле "+n+" должно быть действительным IP-адресом."},length:function(n,e){var t=e[0],r=e[1];return r?"Длина поля "+n+" должна быть между "+t+" и "+r+".":"Длина поля "+n+" должна быть "+t+"."},max:function(n,e){return"Поле "+n+" не может быть более "+e[0]+" символов."},max_value:function(n,e){return"Поле "+n+" должно быть "+e[0]+" или менее."},mimes:function(n,e){return"Поле "+n+" должно иметь допустимый тип файла. ("+e.slice(0)+")"},min:function(n,e){return"Поле "+n+" должно быть не менее "+e[0]+" символов."},min_value:function(n,e){return"Поле "+n+" должно быть "+e[0]+" или больше."},numeric:function(n){return"Поле "+n+" должно быть числом."},regex:function(n){return"Поле "+n+" имеет ошибочный формат."},required:function(n){return"Поле "+n+" обязательно для заполнения."},size:function(n,e){return"Поле "+n+" должно быть меньше, чем "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return"Поле "+n+" имеет ошибочный формат URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sk.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sk.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"sk",messages:{after:function(e,n){var o=n[0];return"Položka "+e+" musí byť vačšia "+(n[1]?"alebo rovná ":"")+" ako položka "+o+"."},alpha:function(e){return e+" môže obsahovať len písmená."},alpha_dash:function(e){return e+" môže obsahovať len písmená, číslice, bodky a podčiarknutie."},alpha_num:function(e){return e+" môže obsahovať len písmená a číslice."},alpha_spaces:function(e){return e+" môže obsahovať len písmená, číslice a medzery."},before:function(e,n){var o=n[0];return"Položka "+e+" musí byť menšia "+(n[1]?"alebo rovná ":"")+" ako položka "+o+"."},between:function(e,n){return"Položka "+e+" musí byť medzi "+n[0]+" a "+n[1]+"."},confirmed:function(e){return"Hodnota položky "+e+" nie je rovnaká."},credit_card:function(e){return"Položka "+e+" je neplatná."},date_between:function(e,n){return e+" musí byť medzi "+n[0]+" a "+n[1]+"."},date_format:function(e,n){return e+" musí byť vo formáte "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var o=n[0];return void 0===o&&(o="*"),"Položka "+e+" musí byť číselná a smie obsahovať"+(o&&"*"!==o?" "+o:"")+" desatinné miesta."},digits:function(e,n){var o=n[0];return"Položka "+e+" musí obsahovať "+o+" "+(o<5?"čísla":"čísiel")+"."},dimensions:function(e,n){return"Položka "+e+" musí mať "+n[0]+" x "+n[1]+" pixlov."},email:function(e){return"Položka "+e+" musí obsahovať správnu emailovú adresu."},excluded:function(e){return"Položka "+e+" má nesprávnu hodnotu."},ext:function(e){return e+" nie je platný súbor."},image:function(e){return e+" nie je obrázok."},included:function(e){return"Položka "+e+" má nesprávnu hodnotu."},ip:function(e){return"Položka "+e+" nie je platná IP adresa."},max:function(e,n){return"Položka "+e+" môže obsahovať najviac "+n[0]+" znakov."},max_value:function(e,n){return"Položka "+e+" musí byť maximálne "+n[0]+"."},mimes:function(e){return"Položka "+e+" obsahuje nesprávny typ súboru."},min:function(e,n){var o=n[0];return"Položka "+e+" musí obsahovať minimálne "+o+" "+(o<4?"znaky":"znakov")+"."},min_value:function(e,n){return"Položka "+e+" musí byť minimálne "+n[0]+"."},numeric:function(e){return"Položka "+e+" môže obsahovať len číslice."},regex:function(e){return"Formát položky "+e+" je nesprávny."},required:function(e){return"Položka "+e+" je povinná."},size:function(e,n){return"Položka "+e+" musí byť menej ako "+function(e){var n=1024,o=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,o)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][o]}(n[0])+"."},url:function(e){return"Položka "+e+" neobsahuje platnú URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sl.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sl.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){"use strict";var e,n={name:"sl",messages:{_default:function(e){return"Vrednost polja "+e+" ni veljavna."},after:function(e,n){return"Polje "+e+" mora biti za "+n[0]+"."},alpha:function(e){return"Polje "+e+" lahko vsebuje le črkovne znake."},alpha_dash:function(e){return"Polje "+e+" lahko vsebuje le alfanumerične znake kot tudi vezaje in podčrtaje."},alpha_num:function(e){return"Polje "+e+" lahko vsebuje le alfanumerične znake."},alpha_spaces:function(e){return"Polje "+e+" lahko vsebuje le črkovne znake in presledke."},before:function(e,n){return"Polje "+e+" mora biti pred "+n[0]+"."},between:function(e,n){return"Polje "+e+" mora biti med "+n[0]+" in "+n[1]+"."},confirmed:function(e){return"Polje "+e+" se ne ujema."},credit_card:function(e){return"Polje "+e+" ni veljavno."},date_between:function(e,n){return"Datum v polju "+e+" mora biti med "+n[0]+" in "+n[1]+"."},date_format:function(e,n){return"Datum v polju "+e+" mora biti sledečega formata: "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=[]);var t=n[0];return void 0===t&&(t="*"),"Polje "+e+" mora biti numerično in lahko vsebuje"+(t&&"*"!==t?" "+t:"")+" decimalnih mest."},digits:function(e,n){return"Vrednost polja "+e+" mora biti numerična in vsebovati natančno "+n[0]+" številk."},dimensions:function(e,n){return"Slika "+e+" mora biti široka "+n[0]+" slikovnih točk in visoka "+n[1]+" slikovnih točk."},email:function(e){return"Vrednost polja "+e+" mora biti ustrezen e-naslov."},excluded:function(e){return"Polje "+e+" mora biti ustrezne vrednosti."},ext:function(e){return"Datoteka polja "+e+" mora biti ustrezna."},image:function(e){return"Datoteka polja "+e+" mora biti slika."},included:function(e){return"Polje "+e+" mora biti ustrezne vrednosti."},ip:function(e){return"Vrednost polja "+e+" mora biti ustrezen IP naslov."},max:function(e,n){return"Dolžina polja "+e+" ne sme biti večja od "+n[0]+" znakov."},max_value:function(e,n){return"Vrednost polja "+e+" mora biti "+n[0]+" ali manj."},mimes:function(e){return"Datoteka polja "+e+" mora biti ustreznega tipa."},min:function(e,n){return"Dolžina polja "+e+" mora biti vsaj "+n[0]+" znakov."},min_value:function(e,n){return"Vrednost polja "+e+" mora biti "+n[0]+" ali več."},numeric:function(e){return"Polje "+e+" lahko vsebuje le numerične znake."},regex:function(e){return"Vrednost polja "+e+" ni v ustreznem formatu."},required:function(e){return"Polje "+e+" je obvezno."},size:function(e,n){return"Velikost datoteke "+e+" mora biti manjša kot "+function(e){var n=1024,t=0===(e=Number(e)*n)?0:Math.floor(Math.log(e)/Math.log(n));return 1*(e/Math.pow(n,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(n[0])+"."},url:function(e){return"Vrednost polja "+e+" ni veljavni URL naslov."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[n.name]=n,e)),n});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sq.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sq.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){"use strict";var e,t={name:"sq",messages:{_default:function(e){return"Fusha "+e+" nuk është valide."},after:function(e,t){return e+" duhet të jetë pas "+t[0]+"."},alpha:function(e){return e+" mund të përmbaj vetëm shkronja."},alpha_dash:function(e){return e+" mund të përmbaj karaktere alfanumerike, shenja si viza dhe shenja të pikësimit."},alpha_num:function(e){return e+" mund të përmbaj vetëm shenja alfanumerike."},alpha_spaces:function(e){return e+" mund të përmbaj vetëm shkronja dhe hapësira."},before:function(e,t){return e+" duhet të jetë para "+t[0]+"."},between:function(e,t){return e+" duhet të jetë në mes "+t[0]+" dhe "+t[1]+"."},confirmed:function(e){return e+" e konfirmimit nuk përputhet."},credit_card:function(e){return e+" nuk është valide."},date_between:function(e,t){return e+" duhet të jetë në mes "+t[0]+" dhe "+t[1]+"."},date_format:function(e,t){return e+" duhet të jetë në formatin "+t[0]+"."},decimal:function(e,t){void 0===t&&(t=[]);var n=t[0];return void 0===n&&(n="*"),e+" duhet të jetë numerike dhe të përmbaj"+(n&&"*"!==n?" "+n:"")+" presje dhjetore."},digits:function(e,t){return e+" duhet të jetë numerike dhe të përmbaj saktësisht "+t[0]+" shifra."},dimensions:function(e,t){return e+" duhet të jetë "+t[0]+" piksela me "+t[1]+" piksela."},email:function(e){return e+" duhet të jetë e-mail valid."},excluded:function(e){return"Vlera "+e+" duhet të jetë vlerë valide."},ext:function(e){return e+" duhet të jetë fajll valid."},image:function(e){return e+" duhet të jetë fotografi."},included:function(e){return"Vlera "+e+" duhet të jetë vlerë valide."},ip:function(e){return e+" duhet të jetë IP adresë valide."},max:function(e,t){return e+" nuk duhet të jetë më i gjatë se "+t[0]+" karaktere."},max_value:function(e,t){return"Vlera "+e+" duhet të jetë "+t[0]+" ose më e vogël."},mimes:function(e){return e+" duhet të përmbaj llojin e fajllit valid."},min:function(e,t){return e+" duhet të jetë së paku "+t[0]+" karakter."},min_value:function(e,t){return"Vlera "+e+" duhet të jetë së paku "+t[0]+" ose më shume."},numeric:function(e){return e+" mund të përmbaj vetëm numra."},regex:function(e){return"Formati "+e+" nuk është valid."},required:function(e){return"Fusha "+e+" nuk duhet të jetë e zbrazët."},size:function(e,t){return e+" duhet të jetë më e vogël se "+function(e){var t=1024,n=0===(e=Number(e)*t)?0:Math.floor(Math.log(e)/Math.log(t));return 1*(e/Math.pow(t,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(t[0])+"."},url:function(e){return e+" nuk është URL valid."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[t.name]=t,e)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sr.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sr.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"sr",messages:{_default:function(n){return"Поље "+n+" није валидно."},after:function(n,e){return"Поље "+n+" мора бити после "+e[0]+"."},alpha:function(n){return"Поље "+n+" може садржати само слова."},alpha_dash:function(n){return"Поље "+n+" може садржати алфанумеричке карактере и повлаке."},alpha_num:function(n){return"Поље "+n+" може садржати само алфанумеричке карактере."},alpha_spaces:function(n){return"Поље "+n+" може садржати само алфанумеричке карактере и размаке."},before:function(n,e){return"Поље "+n+" мора бити пре "+e[0]+"."},between:function(n,e){return"Поље "+n+" мора бити између "+e[0]+" и "+e[1]+"."},confirmed:function(n){return"Потврда поља "+n+" се не поклапа."},credit_card:function(n){return"Поље "+n+" није валидно."},date_between:function(n,e){return"Поље "+n+" мора бити између "+e[0]+" и "+e[1]+"."},date_format:function(n,e){return"Поље "+n+" мора бити у формату "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"Поље "+n+" мора бити број и може садржати"+(t&&"*"!==t?" "+t:"")+" децималних места."},digits:function(n,e){return"Поље "+n+" мора бити број и садржати тачно "+e[0]+" цифара."},dimensions:function(n,e){return"Поље "+n+" мора бити "+e[0]+" x "+e[1]+" пиксела."},email:function(n){return"Поље "+n+" мора бити валидан имејл."},excluded:function(n){return"Поље "+n+" мора имати валидну вредност."},ext:function(n){return"Поље "+n+" мора бити валидан фајл."},image:function(n){return"Поље "+n+" мора бити слика."},included:function(n){return"Поље "+n+" мора бити валидна вредност."},ip:function(n){return"Поље "+n+' мора бити валидна "ај пи" адреса.'},max:function(n,e){return"Поље "+n+" не сме бити дуже од "+e[0]+" карактера."},max_value:function(n,e){return"Поље "+n+" не сме бити веће од "+e[0]+"."},mimes:function(n){return"Поље "+n+" мора бити валидан тип фајла."},min:function(n,e){return"Поље "+n+" мора садржати најмање "+e[0]+" карактера."},min_value:function(n,e){return"Поље "+n+" не сме бити мање од "+e[0]+"."},numeric:function(n){return"Поље "+n+" мора бити број."},regex:function(n){return"Формат поља "+n+" није валидан."},required:function(n){return"Поље "+n+" је обавезно."},size:function(n,e){return"Поље "+n+" мора бити мање од "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return"Поље "+n+" није валидна веб адреса."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sr_Latin.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sr_Latin.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,a){ true?module.exports=a():undefined}(this,function(){"use strict";var e,a={name:"sr_Latin",messages:{_default:function(e){return"Polje "+e+" nije validno."},after:function(e,a){return"Polje "+e+" mora biti posle "+a[0]+"."},alpha:function(e){return"Polje "+e+" može sadržati samo slova."},alpha_dash:function(e){return"Polje "+e+" može sadržati alfanumeričke karaktere i povlake."},alpha_num:function(e){return"Polje "+e+" može sadržati samo alfanumeričke karaktere."},alpha_spaces:function(e){return"Polje "+e+" može sadržati samo alfanumeričke karaktere i razmake."},before:function(e,a){return"Polje "+e+" mora biti pre "+a[0]+"."},between:function(e,a){return"Polje "+e+" mora biti između "+a[0]+" i "+a[1]+"."},confirmed:function(e){return"Potvrda polja "+e+" se ne poklapa."},credit_card:function(e){return"Polje "+e+" nije validno."},date_between:function(e,a){return"Polje "+e+" mora biti između "+a[0]+" i "+a[1]+"."},date_format:function(e,a){return"Polje "+e+" mora biti u formatu "+a[0]+"."},decimal:function(e,a){void 0===a&&(a=[]);var n=a[0];return void 0===n&&(n="*"),"Polje "+e+" mora biti broj i može sadržati"+(n&&"*"!==n?" "+n:"")+" decimalnih mesta."},digits:function(e,a){return"Polje "+e+" mora biti broj i sadržati tačno "+a[0]+" cifara."},dimensions:function(e,a){return"Polje "+e+" mora biti "+a[0]+" x "+a[1]+" piksela."},email:function(e){return"Polje "+e+" mora biti validan imejl."},excluded:function(e){return"Polje "+e+" mora imati validnu vrednost."},ext:function(e){return"Polje "+e+" mora biti validan fajl."},image:function(e){return"Polje "+e+" mora biti slika."},included:function(e){return"Polje "+e+" mora biti validna vrednost."},ip:function(e){return"Polje "+e+' mora biti validna "IP" adresa.'},max:function(e,a){return"Polje "+e+" ne sme biti duže od "+a[0]+" karaktera."},max_value:function(e,a){return"Polje "+e+" ne sme biti veće od "+a[0]+"."},mimes:function(e){return"Polje "+e+" mora biti validan tip fajla."},min:function(e,a){return"Polje "+e+" mora sadržati najmanje "+a[0]+" karaktera."},min_value:function(e,a){return"Polje "+e+" ne sme biti manje od "+a[0]+"."},numeric:function(e){return"Polje "+e+" mora biti broj."},regex:function(e){return"Format polja "+e+" nije validan."},required:function(e){return"Polje "+e+" je obavezno."},size:function(e,a){return"Polje "+e+" mora biti manje od "+function(e){var a=1024,n=0===(e=Number(e)*a)?0:Math.floor(Math.log(e)/Math.log(a));return 1*(e/Math.pow(a,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(a[0])+"."},url:function(e){return"Polje "+e+" nije validna veb adresa."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[a.name]=a,e)),a});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/sv.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/sv.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){"use strict";var e,t={name:"sv",messages:{_default:function(e){return e+" värde är inte giltigt."},after:function(e,t){return"Fältet "+e+" måste vara efter "+t[0]+"."},alpha:function(e){return"Fältet "+e+" får bara innehålla alfabetiska tecken."},alpha_dash:function(e){return"Fältet "+e+" får bara innehålla alfanumeriska tecken såväl som snedstreck och understreck."},alpha_num:function(e){return"Fältet "+e+" får bara innehålla alfanumeriska tecken."},alpha_spaces:function(e){return"Fältet "+e+" får bara innehålla alfabetiska tecken och mellanslag."},before:function(e,t){return"Fältet "+e+" måste vara tidigare än "+t[0]+"."},between:function(e,t){return"Fältet "+e+" måste vara mellan "+t[0]+" och "+t[1]+"."},confirmed:function(e,t){return"Fältet "+e+" matchar inte "+t[0]+"."},date_between:function(e,t){return"Fältet "+e+" måste vara mellan "+t[0]+" och "+t[1]+"."},date_format:function(e,t){return"Fältet "+e+" måste ha formatet "+t[0]+"."},decimal:function(e,t){void 0===t&&(t=[]);var n=t[0];return void 0===n&&(n="*"),"Fältet "+e+" måste vara numeriskt och får innehålla "+("*"===n?"":n)+" decimaltecken."},digits:function(e,t){return"Fältet "+e+" måste vara numeriskt och innehålla exakt "+t[0]+" siffor."},dimensions:function(e,t){return"Fältet "+e+" måste vara "+t[0]+" pixlar bred och "+t[1]+" pixlar hög."},email:function(e){return"Fältet "+e+" måste vara en giltig e-postadress."},excluded:function(e){return"Fältet "+e+" måste vara ett godkänt alternativ."},ext:function(e){return"Fältet "+e+" måste vara en godkänd fil."},image:function(e){return"Fältet "+e+" måste vara en bildfil."},included:function(e){return"Fältet "+e+" måste vara ett godkänt alternativ."},ip:function(e){return"Fältet "+e+" måste vara en godkänd ip-adress."},max:function(e,t){return"Fältet "+e+" får inte vara längre än "+t[0]+" tecken."},mimes:function(e){return"Fältet "+e+" måste ha en filändelse."},min:function(e,t){return"Fältet "+e+" måste minst vara "+t[0]+" tecken."},numeric:function(e){return"Fältet "+e+" får bara innehålla numeriska tecken."},regex:function(e){return"Fältet "+e+" har en felaktig formatering."},required:function(e){return"Fältet "+e+" är obligatoriskt."},size:function(e,t){return"Fältet "+e+" måste vara mindre än "+function(e){var t=1024,n=0===(e=Number(e)*t)?0:Math.floor(Math.log(e)/Math.log(t));return 1*(e/Math.pow(t,n)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][n]}(t[0])+"."},url:function(e){return"Fältet "+e+" är inte en godkänd URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((e={})[t.name]=t,e)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/th.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/th.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"th",messages:{_default:function(n){return"ข้อมูล "+n+" ไม่ถูกต้อง"},after:function(n,e){return n+" ต้องเป็นวันที่หลังจาก "+e[0]},alpha:function(n){return n+" ต้องเป็นตัวอักษรเท่านั้น"},alpha_dash:function(n){return n+" สามารถมีตัวอักษร ตัวเลข เครื่องหมายขีดกลาง (-) และเครื่องหมายขีดล่าง (_)"},alpha_num:function(n){return n+" ต้องเป็นตัวอักษร และตัวเลขเท่านั้น"},alpha_spaces:function(n){return n+" ต้องเป็นตัวอักษร และช่องว่างเท่านั้น"},before:function(n,e){return n+" ต้องเป็นวันที่ก่อน "+e[0]},between:function(n,e){return n+" ต้องเป็นค่าระหว่าง "+e[0]+" และ "+e[1]},confirmed:function(n){return"การยืนยันข้อมูลของ "+n+" ไม่ตรงกัน"},credit_card:function(n){return"หมายเลขบัตรเครดิตของ "+n+" ไม่ถูกต้อง"},date_between:function(n,e){return"วันที่ "+n+" ต้องอยู่ระหว่าง "+e[0]+" และ "+e[1]},date_format:function(n,e){return"วันที่ "+n+" ต้องเป็นรูปแบบ "+e[0]},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" ต้องเป็นตัวเลข และสามารถมีจุดทศนิยม "+("*"===t?"":t+" จุด")},digits:function(n,e){return n+" ต้องเป็นตัวเลขจำนวน "+e[0]+" หลักเท่านั้น"},dimensions:function(n,e){return n+" ต้องมีขนาด "+e[0]+"x"+e[1]+" px"},email:function(n){return n+" ต้องเป็นรูปแบบอีเมล"},excluded:function(n){return n+" ต้องเป็นค่าที่กำหนดเท่านั้น"},ext:function(n){return n+" สกุลไฟล์ไม่ถูกต้อง"},image:function(n){return n+" ต้องเป็นรูปภาพเท่านั้น"},included:function(n){return n+" ต้องเป็นค่าที่กำหนดเท่านั้น"},integer:function(n){return n+" ต้องเป็นเลขจำนวนเต็ม"},ip:function(n){return n+" ไม่ถูกต้องตามรูปแบบ IP address"},length:function(n,e){var t=e[0],r=e[1];return r?n+" ต้องมีความยาวระหว่าง "+t+" และ "+r:n+" ต้องมีความยาว "+t},max:function(n,e){return n+" ต้องมีความยาวไม่เกิน "+e[0]+" ตัวอักษร"},max_value:function(n,e){return n+" ต้องมีค่าไม่เกิน "+e[0]},mimes:function(n){return n+" ประเภทไฟล์ไม่ถูกต้อง"},min:function(n,e){return n+" ต้องมีความยาวอย่างน้อย "+e[0]+" ตัวอักษร"},min_value:function(n,e){return n+" ต้องมีค่าตั้งแต่ "+e[0]+" ขึ้นไป"},numeric:function(n){return n+" ต้องเป็นตัวเลขเท่านั้น"},regex:function(n){return"รูปแบบ "+n+" ไม่ถูกต้อง"},required:function(n){return"กรุณากรอก "+n},size:function(n,e){return n+" ต้องมีขนาดไฟล์ไม่เกิน "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])},url:function(n){return n+" ไม่ใช่รูปแบบของ URL ที่ถูกต้อง"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/tr.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/tr.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(a,e){ true?module.exports=e():undefined}(this,function(){"use strict";var a,e={name:"tr",messages:{after:function(a,e){return a+" "+e[0]+" alanından ileri bir tarih olmalıdır."},alpha:function(a){return a+" yalnızca harf içerebilir."},alpha_dash:function(a){return a+" alanı harf ve tire (-) ya da alttan tire (_) içerebilir."},alpha_num:function(a){return a+" yalnızca harf ve rakam içerebilir."},alpha_spaces:function(a){return a+" yalnızca harf boşluk (space) içerebilir."},before:function(a,e){return a+" "+e[0]+" alanından önce bir tarih olmalıdır."},between:function(a,e){return a+" "+e[0]+" ile "+e[1]+" aralığında olmalıdır."},confirmed:function(a){return a+" doğrulaması hatalı."},credit_card:function(a){return a+" numarası hatalı."},date_between:function(a,e){return a+" "+e[0]+" ile "+e[1]+" tarihleri arasında olmalıdır."},date_format:function(a,e){return a+" "+e[0]+" formatında olmalıdır."},decimal:function(a,e){void 0===e&&(e=[]);var r=e[0];return void 0===r&&(r="*"),a+" sayısal"+("*"!==r?" ve noktadan sonra "+r+" basamaklı":"")+" olmalıdır."},digits:function(a,e){return a+" sayısal ve "+e[0]+" basamaklı olmalıdır."},dimensions:function(a,e){return a+" alanı "+e[0]+" piksel ile "+e[1]+" piksel arasında olmalıdır."},email:function(a){return a+" alanının geçerli bir e-posta olması gerekir."},excluded:function(a){return a+" alanına geçerli bir değer giriniz."},ext:function(a){return a+" alanı geçerli bir dosya olmalıdır."},image:function(a){return a+" alanı resim dosyası olmalıdır."},included:function(a){return a+" alanına geçerli bir değer giriniz."},ip:function(a){return a+" alanı geçerli bir ip adresi olmalıdır."},max:function(a,e){return a+" alanı "+e[0]+" karakterden fazla olmamalıdır."},max_value:function(a,e){return a+" alanı "+e[0]+" ya da daha az bir değer olmalıdır."},mimes:function(a){return a+" geçerli bir dosya olmalıdır."},min:function(a,e){return a+" alanına en az "+e[0]+" karakter girilmelidir."},min_value:function(a,e){return a+" alanı "+e[0]+" ya da daha fazla bir değer olmalıdır."},numeric:function(a){return a+" alanına sayısal bir değer giriniz."},regex:function(a){return a+" formatı geçersiz."},required:function(a){return a+" alanı gereklidir."},size:function(a,e){return a+" alanı "+function(a){var e=1024,r=0===(a=Number(a)*e)?0:Math.floor(Math.log(a)/Math.log(e));return 1*(a/Math.pow(e,r)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][r]}(e[0])+"'dan daha az olmalıdır."},url:function(a){return a+" geçersiz URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((a={})[e.name]=e,a)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/uk.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/uk.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"uk",messages:{after:function(n,e){return"В полі "+n+" повинна бути дата після "+e[0]+"."},alpha:function(n){return"Поле "+n+" може містити тільки літери."},alpha_dash:function(n){return"Поле "+n+" може містити буквено-цифрові символи, а також тире та підкреслення."},alpha_num:function(n){return"Поле "+n+" може містити тільки літери та цифри."},alpha_spaces:function(n){return"Поле "+n+" може містити тільки літери та пробіли."},before:function(n,e){return"В полі "+n+" повинна бути дата до "+e[0]+"."},between:function(n,e){return"Поле "+n+" повинно бути між "+e[0]+" та "+e[1]+"."},confirmed:function(n){return"Поле "+n+" не співпадає з підтвердженням."},credit_card:function(n){return"Поле "+n+" не вірне."},date_between:function(n,e){return"В полі "+n+" повинна бути дата між "+e[0]+" та "+e[1]+"."},date_format:function(n,e){return"В полі "+n+" повинна бути дата в форматі "+e[0]+"."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),"Поле "+n+" повинно бути числовим та може містити "+("*"===t?"знакі":t+" знаків")+" після коми."},digits:function(n,e){return"Поле "+n+" повинно бути числовим та точно містити "+e[0]+" цифри."},dimensions:function(n,e){return"Поле "+n+" повинно бути "+e[0]+" пікселів на "+e[1]+" пікселів."},email:function(n){return"В полі "+n+" повинна бути адреса електронної пошти."},excluded:function(n){return"Поле "+n+" повинно мати допустиме значення."},ext:function(n){return"Поле "+n+" повинно бути дійсним файлом."},image:function(n){return"В полі "+n+" має бути зображення."},included:function(n){return"Поле "+n+" повинно бути допустимим значенням."},ip:function(n){return"Поле "+n+" повинно бути IP адресою."},length:function(n,e){var t=e[0],r=e[1];return r?"Довжина поля "+n+" повинна бути між "+t+" та "+r+".":"Довжина поля "+n+" повинна бути "+t+"."},max:function(n,e){return"Поле "+n+" не може бути більше, ніж "+e[0]+" символів."},max_value:function(n,e){return"Поле "+n+" повинно бути "+e[0]+" або менше."},mimes:function(n){return"Поле "+n+" повиннно мати дійсний тип файлу."},min:function(n,e){return"Поле "+n+" має бути принаймні "+e[0]+" символів."},min_value:function(n,e){return"Поле "+n+" повинно бути "+e[0]+" або більше."},numeric:function(n){return"Поле "+n+" може містить лише цифри."},regex:function(n){return"Поле "+n+" має невірний формат."},required:function(n){return"Поле "+n+" повинно мати значення."},size:function(n,e){return"Поле "+n+" повинно бути менше "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return"В полі "+n+" повиннен бути URL."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/vi.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/vi.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,t){ true?module.exports=t():undefined}(this,function(){"use strict";var n,t={name:"vi",messages:{_default:function(n){return"Giá trị của "+n+" không đúng."},after:function(n,t){return n+" phải xuất hiện sau "+t[0]+"."},alpha:function(n){return n+" chỉ có thể chứa các kí tự chữ."},alpha_dash:function(n){return n+" có thể chứa các kí tự chữ (A-Z a-z), số (0-9), gạch ngang (-) và gạch dưới (_)."},alpha_num:function(n){return n+" chỉ có thể chứa các kí tự chữ và số."},alpha_spaces:function(n){return n+" chỉ có thế chứa các kí tự và khoảng trắng"},before:function(n,t){return n+" phải xuất hiện trước "+t[0]+"."},between:function(n,t){return n+" phải có giá trị nằm trong khoảng giữa "+t[0]+" và "+t[1]+"."},confirmed:function(n,t){return n+" khác với "+t[0]+"."},credit_card:function(n){return"Đã điền "+n+" không chính xác."},date_between:function(n,t){return n+" phải có giá trị nằm trong khoảng giữa  "+t[0]+" và "+t[1]+"."},date_format:function(n,t){return n+" phải có giá trị dưới định dạng "+t[0]+"."},decimal:function(n,t){void 0===t&&(t=[]);var c=t[0];return void 0===c&&(c="*"),n+" chỉ có thể chứa các kí tự số và dấu thập phân"+(c&&"*"!==c?" "+c:"")+"."},digits:function(n,t){return"Trường "+n+" chỉ có thể chứa các kí tự số và bắt buộc phải có độ dài là "+t[0]+"."},dimensions:function(n,t){return n+" phải có chiều rộng "+t[0]+" pixels và chiều cao "+t[1]+" pixels."},email:function(n){return n+" phải là một địa chỉ email hợp lệ."},excluded:function(n){return n+" phải chứa một giá trị hợp lệ."},ext:function(n){return n+" phải là một tệp."},image:function(n){return"Trường "+n+" phải là một ảnh."},included:function(n){return n+" phải là một giá trị."},ip:function(n){return n+" phải là một địa chỉ ip hợp lệ."},max:function(n,t){return n+" không thể có nhiều hơn "+t[0]+" kí tự."},max_value:function(n,t){return n+" phải nhỏ hơn hoặc bằng "+t[0]+"."},mimes:function(n){return n+" phải chứa kiểu tệp phù hợp."},min:function(n,t){return n+" phải chứa ít nhất "+t[0]+" kí tự."},min_value:function(n,t){return n+" phải lớn hơn hoặc bằng "+t[0]+"."},numeric:function(n){return n+" chỉ có thể có các kí tự số."},regex:function(n){return n+" có định dạng không đúng."},required:function(n){return n+" là bắt buộc."},size:function(n,t){return n+" chỉ có thể chứa tệp nhỏ hơn "+function(n){var t=1024,c=0===(n=Number(n)*t)?0:Math.floor(Math.log(n)/Math.log(t));return 1*(n/Math.pow(t,c)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][c]}(t[0])+"."},url:function(n){return n+" không phải là một địa chỉ URL hợp lệ."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[t.name]=t,n)),t});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/zh_CN.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/zh_CN.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"zh_CN",messages:{_default:function(n){return n+"的值无效"},after:function(n,e){var t=e[0];return n+"必须在"+t+"之后"+(e[1]?"或等于"+t:"")},alpha:function(n){return n+"只能包含字母字符"},alpha_dash:function(n){return n+"能够包含字母数字字符、破折号和下划线"},alpha_num:function(n){return n+"只能包含字母数字字符"},alpha_spaces:function(n){return n+"只能包含字母字符和空格"},before:function(n,e){var t=e[0];return n+"必须在"+t+"之前"+(e[1]?"或等于"+t:"")},between:function(n,e){return n+"必须在"+e[0]+"与"+e[1]+"之间"},confirmed:function(n,e){return n+"不能和"+e[0]+"匹配"},credit_card:function(n){return n+"的格式错误"},date_between:function(n,e){return n+"必须在"+e[0]+"和"+e[1]+"之间"},date_format:function(n,e){return n+"必须符合"+e[0]+"格式"},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+"必须是数字，且能够保留"+("*"===t?"":t)+"位小数"},digits:function(n,e){return n+"必须是数字，且精确到"+e[0]+"位数"},dimensions:function(n,e){return n+"必须在"+e[0]+"像素与"+e[1]+"像素之间"},email:function(n){return n+"不是一个有效的邮箱"},excluded:function(n){return n+"不是一个有效值"},ext:function(n){return n+"不是一个有效的文件"},image:function(n){return n+"不是一张有效的图片"},included:function(n){return n+"不是一个有效值"},integer:function(n){return n+"必须是整数"},ip:function(n){return n+"不是一个有效的地址"},length:function(n,e){var t=e[0],r=e[1];return r?n+"长度必须在"+t+"到"+r+"之间":n+"长度必须为"+t},max:function(n,e){return n+"不能超过"+e[0]+"个字符"},max_value:function(n,e){return n+"必须小于或等于"+e[0]},mimes:function(n){return n+"不是一个有效的文件类型"},min:function(n,e){return n+"必须至少有"+e[0]+"个字符"},min_value:function(n,e){return n+"必须大于或等于"+e[0]},numeric:function(n){return n+"只能包含数字字符"},regex:function(n){return n+"格式无效"},required:function(n){return n+"是必须的"},size:function(n,e){return n+"必须小于"+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])},url:function(n){return n+"不是一个有效的url"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
+
+/***/ }),
+
+/***/ "./node_modules/vee-validate/dist/locale/zh_TW.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vee-validate/dist/locale/zh_TW.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():undefined}(this,function(){"use strict";var n,e={name:"zh_TW",messages:{_default:function(n){return n+" 無效。"},after:function(n,e){return n+" 必須要晚於 "+e[0]+"。"},alpha:function(n){return n+" 只能以字母組成。"},alpha_dash:function(n){return n+" 只能以字母、數字及斜線組成。"},alpha_num:function(n){return n+" 只能以字母及數字組成。"},alpha_spaces:function(n){return n+" 只能以字母及空格組成。"},before:function(n,e){return n+" 必須要早於 "+e[0]+"。"},between:function(n,e){return n+" 必須介於 "+e[0]+" 至 "+e[1]+"之間。"},confirmed:function(n,e){return n+" 與 "+e[0]+" 輸入的不一致。"},credit_card:function(n){return n+" 的格式錯誤。"},date_between:function(n,e){return n+" 必須在 "+e[0]+" 和 "+e[1]+" 之間。"},date_format:function(n,e){return n+" 不符合 "+e[0]+" 的格式。"},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*"),n+" 必須是數字，而且能夠保留"+(t&&"*"!==t?" "+t:"")+" 位小數。"},digits:function(n,e){return n+" 必須是 "+e[0]+" 位數字。"},dimensions:function(n,e){return n+" 圖片尺寸不正確。必須是 "+e[0]+" 像素到 "+e[1]+" 像素。"},email:function(n){return n+" 必須是有效的電子郵件地址。"},excluded:function(n){return"所選擇的 "+n+" 選項無效。"},ext:function(n){return n+" 必須是有效的檔案。"},image:function(n){return n+" 必須是一張圖片。"},included:function(n){return"所選擇的 "+n+" 選項無效。"},integer:function(n){return n+" 必須是整數。"},ip:function(n){return n+" 必須是一個有效的 IP 位址。"},length:function(n,e){var t=e[0],r=e[1];return r?n+" 的長度必須在 "+t+" 到 "+r+" 之間。":n+" 的長度必須為 "+t+"。"},max:function(n,e){return n+" 不能大於 "+e[0]+" 個字元。"},max_value:function(n,e){return n+" 不得大於 "+e[0]+"。"},mimes:function(n){return n+" 必須是有效的檔案類型."},min:function(n,e){return n+" 不能小於 "+e[0]+" 個字元。"},min_value:function(n,e){return n+" 不得小於 "+e[0]+"。"},numeric:function(n){return n+" 必須為一個數字。"},regex:function(n){return n+" 的格式錯誤。"},required:function(n){return n+" 不能留空。"},size:function(n,e){return n+" 的大小必須小於 "+function(n){var e=1024,t=0===(n=Number(n)*e)?0:Math.floor(Math.log(n)/Math.log(e));return 1*(n/Math.pow(e,t)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}(e[0])+"."},url:function(n){return n+" 的格式錯誤。"}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.localize(((n={})[e.name]=e,n)),e});
 
 /***/ }),
 
@@ -50738,8 +54132,8 @@ var render = function() {
                     {
                       name: "validate",
                       rawName: "v-validate",
-                      value: "required|alpha",
-                      expression: "'required|alpha'"
+                      value: "required|alpha_spaces",
+                      expression: "'required|alpha_spaces'"
                     },
                     {
                       name: "model",
@@ -50767,7 +54161,9 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("span", [_vm._v(_vm._s(_vm.errors.first("name")))]),
+              _c("span", { staticClass: "input-err" }, [
+                _vm._v(_vm._s(_vm.errors.first("name")))
+              ]),
               _vm._v(" "),
               _c("has-error", { attrs: { form: _vm.form, field: "name" } })
             ],
@@ -50785,6 +54181,12 @@ var render = function() {
                 _vm._v(" "),
                 _c("input", {
                   directives: [
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|email",
+                      expression: "'required|email'"
+                    },
                     {
                       name: "model",
                       rawName: "v-model",
@@ -50811,6 +54213,10 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
+              _c("span", { staticClass: "input-err" }, [
+                _vm._v(_vm._s(_vm.errors.first("email")))
+              ]),
+              _vm._v(" "),
               _c("has-error", { attrs: { form: _vm.form, field: "email" } })
             ],
             1
@@ -50829,6 +54235,12 @@ var render = function() {
                 _vm._v(" "),
                 _c("input", {
                   directives: [
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required|min:8",
+                      expression: "'required|min:8'"
+                    },
                     {
                       name: "model",
                       rawName: "v-model",
@@ -50855,6 +54267,10 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
+              _c("span", { staticClass: "input-err" }, [
+                _vm._v(_vm._s(_vm.errors.first("password")))
+              ]),
+              _vm._v(" "),
               _c("has-error", { attrs: { form: _vm.form, field: "password" } })
             ],
             1
@@ -50871,6 +54287,12 @@ var render = function() {
                 _vm._v(" "),
                 _c("input", {
                   directives: [
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    },
                     {
                       name: "model",
                       rawName: "v-model",
@@ -50903,6 +54325,10 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
+              _c("span", { staticClass: "input-err" }, [
+                _vm._v(_vm._s(_vm.errors.first("password_confirmation")))
+              ]),
+              _vm._v(" "),
               _c("has-error", {
                 attrs: { form: _vm.form, field: "password_confirmation" }
               })
@@ -50925,6 +54351,12 @@ var render = function() {
                   "select",
                   {
                     directives: [
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|numeric",
+                        expression: "'required|numeric'"
+                      },
                       {
                         name: "model",
                         rawName: "v-model",
@@ -50995,6 +54427,12 @@ var render = function() {
                     _c("input", {
                       directives: [
                         {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        },
+                        {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.form.gender,
@@ -51029,6 +54467,12 @@ var render = function() {
                     _c("input", {
                       directives: [
                         {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        },
+                        {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.form.gender,
@@ -51062,16 +54506,21 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "col-md-12" }, [
           _c(
             "button",
             {
-              staticClass: "btn btn-primary btn-block",
-              attrs: { disabled: !_vm.isValidForm, type: "submit" }
+              staticClass: "btn btn-outline-success btn-block",
+              attrs: {
+                disabled: !_vm.isValidForm || _vm.loading,
+                type: "submit"
+              }
             },
             [
-              _c("i", { staticClass: "fa fa-user-plus" }),
-              _vm._v(" " + _vm._s(_vm.trans("register")) + "\n            ")
+              _vm._v(
+                "\n                " + _vm._s(_vm.trans("register")) + " "
+              ),
+              _c("i", { staticClass: "fa fa-user-plus" })
             ]
           )
         ])
@@ -63763,7 +67212,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.common.js");
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vform__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-/* harmony import */ var vue_sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-sweetalert2 */ "../node_modules/vue-sweetalert2/dist/index.js");
 var _ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
@@ -63782,13 +67230,21 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.trans = function (string, a
 
 window.Form = vform__WEBPACK_IMPORTED_MODULE_1__["Form"];
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_2__["default"]);
-
-var options = {
-  confirmButtonColor: '#41b882',
-  cancelButtonColor: '#ff7674'
-};
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_sweetalert2__WEBPACK_IMPORTED_MODULE_3__["default"], options);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  classes: true,
+  classNames: {
+    valid: 'is-valid',
+    invalid: 'is-invalid'
+  },
+  validity: true
+});
+window.Swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+window.Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+});
 /** Global Components **/
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
@@ -63936,6 +67392,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_2d3a92fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/mixins/Alert.vue":
+/*!***************************************!*\
+  !*** ./resources/js/mixins/Alert.vue ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Alert_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert.vue?vue&type=script&lang=js& */ "./resources/js/mixins/Alert.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _Alert_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/mixins/Alert.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/mixins/Alert.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./resources/js/mixins/Alert.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Alert_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Alert.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/mixins/Alert.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Alert_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

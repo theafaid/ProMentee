@@ -12,3 +12,9 @@
 .page-brief p{
     text-transform: capitalize;
 }
+
+.input-err{
+    color: #ff3c3c;
+    font-weight: lighter;
+    text-decoration: overline;
+}

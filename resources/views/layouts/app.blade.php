@@ -3,6 +3,7 @@
 <div class="page" id="promentee">
     <div class="flex-fill">
         @include('layouts._nav')
+        @include('layouts._message')
         <div class="my-3 my-md-5">
             @yield('content')
         </div>

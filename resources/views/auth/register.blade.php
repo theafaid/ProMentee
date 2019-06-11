@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    {{__('site.join_to_site')}} - {{__('site.site_motto')}}
+     {{__('site.join_to_site')}} - {{__('site.site_motto')}}
 @endsection
 
 @section('content')
@@ -17,14 +17,12 @@
 
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Create your personal account</div>
-
+                <div class="card-header">{{__('site.create_your_acc')}}</div>
                 <div class="card-body">
 {{--                    <h4>Register with social providers</h4>--}}
 {{--                    <a href="{{route('auth.social', 'github')}}" class="btn btn-dark">--}}
 {{--                        <i class="fa fa-github"></i>--}}
 {{--                    </a>--}}
-
                     <registration-form></registration-form>
                 </div>
             </div>

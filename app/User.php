@@ -16,10 +16,6 @@ class User extends Authenticatable implements MustVerifyEmail
         parent::boot();
 
         static::created(function($user){
-            // Update Username after register a new user
-            // because we want a new instance from the user to use his id
-            $user->update(['username' => ucfirst(Str::camel($user->name))]);
-
             // Create a profile for registered user
             $user->profile()->create([
                 'yob'    => request('yob') ?: date('Y') - 10, // 10 years is default for unit testing
@@ -61,7 +57,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function setUsernameAttribute($value){
 
-        $value = $this->usernameExists($value) ? "{$value}{$this->id}" : $value;
+        $value = $this->usernameExists($value) ? $value . substr(time(), 6, 4) : $value;
 
         $this->attributes['username'] = $value;
     }

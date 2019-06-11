@@ -3,7 +3,6 @@
 namespace Tests\Feature\Auth;
 
 use App\User;
-use Illuminate\Support\Str;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -15,42 +14,50 @@ class RegistrationTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = create('App\User', ['name' => 'John Doe']);
-    }
-
-    /** @test */
-    function a_user_must_have_a_username(){
-        $this->assertEquals
-        (
-            ucfirst(Str::camel('JohnDoe')),
-            $this->user->username
+        $this->user = create('App\User',
+            [
+                'name' => 'John Doe',
+                'username' => 'JohnDoe'
+            ]
         );
     }
 
     /** @test */
     function a_user_must_have_a_unique_username(){
-        $user2 = create('App\User', ['name' => 'John Doe']);
+        $user2 = create('App\User', ['name' => 'John Doe', 'username' => 'JohnDoe']);
 
-        $this->assertEquals("JohnDoe{$user2->id}", $user2->username);
+        $this->assertEquals(
+            "JohnDoe" . substr(time(), 6, 4),
+            $user2->username
+        );
     }
 
     /** @test */
     function a_user_must_have_a_profile_after_registration(){
-        $this->post(route('register'), $this->makeUser()->toArray());
+        $user = User::first();
 
-        $this->assertNotNull(User::first()->fresh()->profile);
+        $this->assertNotNull($user->profile);
+
+        $date = date('Y') - 10 ;
+
+        $this->assertEquals(
+            $date,
+            $user->profile->yob
+        );
+
+        $this->assertEquals('male', $user->profile->gender);
+
     }
 
     /** @test */
-    function a_user_must_be_redirect_to_select_fields_page_after_registration(){
-        $this->post(route('register'), $this->makeUser()->toArray())
+    function a_user_can_register(){
+        $user = $this->makeUser();
+        $this->post(route('register'), $user->toArray())
             ->assertStatus(200)
-            ->assertJson(['status' => true]);
-    }
+            ->assertJson(['redirectTo' => route('setFields')])
+            ->assertSessionHas('success', __('site.registered_successfully', ['name' => $user->name]));
 
-    /** @test */
-    function a_user_must_have_a_profile_after_create_new_one_using_factory(){
-        $this->assertNotNull($this->user->profile);
+        $this->assertNotNull(auth()->user()->profile);
     }
 
     function makeUser(){

@@ -19,7 +19,8 @@ return [
     'male'     => 'Male',
     'female' => 'Female',
     'register' => 'Register',
-
+    'registering' => 'Registering your membership ..',
+    'registration_wait_msg' => 'Please wait until we registering you :)',
     // set fields
     'set_fields_done' => 'You have set your favourite fields successfully',
 ];

@@ -12,6 +12,9 @@ return [
     'welcome_title' => 'The Community of Specialists people',
     'join_to_site' => 'Join ProMentee',
 
+    // registeration
+    'create_your_acc' => 'Create your personal account now',
+    'registered_successfully' => 'Welcome :name, You have registered successfully',
     // Set Fields
     'invalid_field_inserted' => 'One of selected fields is invalid !',
 

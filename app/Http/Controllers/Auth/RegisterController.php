@@ -49,15 +49,14 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-
         $currentYear = date('Y');
 
-        $allowYearFrom = $currentYear - 6; // 6 years minimum
-        $allowYearTo   = $currentYear - 96; // 90 years maximum
+        $allowYearFrom = $currentYear - 6; // minimum 6 years from now
+        $allowYearTo   = $currentYear - 96; // maximum 90 years from now
 
         return Validator::make($data, [
-            'name'     => ['required', 'string', 'max:255'],
-            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'max:25'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'gender'   => ['required', 'string', 'in:male,female'],
             'yob'      => ['required', 'numeric', "min:{$allowYearTo}", "max:{$allowYearFrom}"]
@@ -76,6 +75,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'username' => ucfirst(\Str::camel($data['name'])),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
@@ -89,6 +89,8 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        return response(['status' => true], 200);
+        session()->flash('success', __('site.registered_successfully', ['name' => $user->name]));
+
+        return response(['redirectTo' => route('setFields')], 200);
     }
 }
