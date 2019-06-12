@@ -14,6 +14,8 @@ class SetFieldsTest extends TestCase
    {
        parent::setUp();
 
+       $this->flushall();
+
        $this->signIn();
    }
 
@@ -40,24 +42,18 @@ class SetFieldsTest extends TestCase
 
     /** @test */
     function fields_are_loading_from_caching(){
-        $this->flushall();
-
-        $this->assertFalse(Cache::has('mainEduFields.all_testing'));
-        $this->assertFalse(Cache::has('mainEntmtFields.all_testing'));
-
         $fields = $this->eeFields();
 
-        $this->endpoint(true, false)
-            ->assertSee($fields[array_rand($fields)]->name);
+        $this->assertFalse(Cache::has('mainFields_testing'));
 
-        $this->assertTrue(Cache::has('mainEduFields.all_testing'));
-        $this->assertTrue(Cache::has('mainEntmtFields.all_testing'));
+        $this->endpoint(true, false)
+            ->assertSee($fields[array_rand($fields)]['name']);
+
+        $this->assertTrue(Cache::has('mainFields_testing'));
     }
 
     /** @test */
    function registered_user_can_set_his_education_and_entertainments_fields(){
-       $this->flushall();
-       
        $user = auth()->user();
 
        $this->assertFalse($user->fresh()->hasSetFields());

@@ -21,11 +21,9 @@ class CacheableFields implements Fields
      */
     public function mainFields(){
 
-        $key = "mainFields";
+        $key = app()->runningUnitTests() ? "mainFields_testing" : 'mainFields';
 
-        $key = app()->runningUnitTests() ? "{$key}_testing" : $key;
-
-        return Cache::driver('redis')->rememberForever($key, function(){
+        return Cache::rememberForever($key, function(){
             return $this->fields->mainFields();
         });
     }

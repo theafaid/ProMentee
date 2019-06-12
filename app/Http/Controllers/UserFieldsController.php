@@ -87,6 +87,10 @@ class UserFieldsController extends Controller
         //
     }
 
+    /**
+     * Show set field page with all education, entertainment fields
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showSetFieldsPage(){
         return view('user.fields.set_fields', [
             'mainEduFields'   => resolve('Fields')->mainFields()['edu'],
