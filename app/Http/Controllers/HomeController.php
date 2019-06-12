@@ -7,7 +7,7 @@ class HomeController extends Controller
 
     public function __construct()
     {
-        $this->middleware("fieldsSet:persist");
+        $this->middleware("requiresFieldsSet:persist");
     }
 
     /**
