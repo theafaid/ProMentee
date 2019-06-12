@@ -36,7 +36,12 @@
 
     <script>
         window.Promentee = {!! json_encode([
-            'locale' => app()->getLocale()
+            'user' => [
+                'name' => auth()->user() ? auth()->user()->name : null,
+                'username' => auth()->user() ? auth()->user()->username : null,
+                'locale' => app()->getLocale()
+            ],
+            'dir' => app()->getLocale() == 'ar' ? 'rtl': 'ltr'
         ]) !!}
     </script>
     @routes

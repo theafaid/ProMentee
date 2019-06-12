@@ -92,9 +92,12 @@ class UserFieldsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showSetFieldsPage(){
-        return view('user.fields.set_fields', [
+
+        $data = [
             'mainEduFields'   => resolve('Fields')->mainFields()['edu'],
             'mainEntmtFields' => resolve('Fields')->mainFields()['entmt'],
-        ]);
+        ];
+
+        return request()->wantsJson() ? $data : view('user.fields.set_fields', $data);
     }
 }

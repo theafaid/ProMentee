@@ -152,11 +152,11 @@
         },
 
         created(){
-            this.$validator.localize(Promentee.locale, {
+            this.$validator.localize(Promentee.user.locale, {
                 messages: require(`vee-validate/dist/locale/${window.Promentee.locale}`).messages,
 
             });
-            this.$validator.localize(Promentee.locale);
+            this.$validator.localize(Promentee.user.locale);
         },
 
         computed: {
