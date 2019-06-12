@@ -88,9 +88,9 @@ class UserFieldsController extends Controller
     }
 
     public function showSetFieldsPage(){
-        return view('set_fields', [
-            'mainEduFields'   => resolve('Fields')->mainFields('edu'),
-            'mainEntmtFields' => resolve('Fields')->mainFields('entmt'),
+        return view('user.fields.set_fields', [
+            'mainEduFields'   => resolve('Fields')->mainFields()['edu'],
+            'mainEntmtFields' => resolve('Fields')->mainFields()['entmt'],
         ]);
     }
 }

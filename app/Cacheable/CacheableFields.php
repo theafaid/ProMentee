@@ -19,14 +19,14 @@ class CacheableFields implements Fields
      * @param $type
      * @return mixed
      */
-    public function mainFields($type){
+    public function mainFields(){
 
-        $key = "main" . ucfirst($type) . "Fields.all";
+        $key = "mainFields";
 
         $key = app()->runningUnitTests() ? "{$key}_testing" : $key;
 
-        return Cache::rememberForever($key, function() use ($type){
-            return $this->fields->mainFields($type);
+        return Cache::driver('redis')->rememberForever($key, function(){
+            return $this->fields->mainFields();
         });
     }
 }

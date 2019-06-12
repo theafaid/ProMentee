@@ -5,6 +5,6 @@ namespace App\Libs;
 
 interface Fields {
 
-    public function mainFields($type);
+    public function mainFields();
 
 }

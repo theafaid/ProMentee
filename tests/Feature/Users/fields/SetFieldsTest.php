@@ -30,7 +30,7 @@ class SetFieldsTest extends TestCase
     function user_whose_fields_have_not_been_set_can_see_set_fields_page(){
         $this->endpoint(true, false)
             ->assertStatus(200)
-            ->assertViewIs('set_fields');
+            ->assertViewIs('user.fields.set_fields');
     }
 
     /** @test */
