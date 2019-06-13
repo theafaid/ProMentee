@@ -20,10 +20,8 @@ class CacheableFields implements Fields
      * @return mixed
      */
     public function mainFields(){
-        return Cache::get('mainFields');
-//
-//        return Cache::rememberForever('mainFields', function(){
-//            return $this->fields->mainFields();
-//        });
+        return Cache::rememberForever('mainFields', function(){
+            return $this->fields->mainFields();
+        });
     }
 }
