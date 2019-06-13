@@ -35,5 +35,8 @@ return [
     'select_entmt_fields_title' => 'As you like to spend your free time, what is your favorite hobby ? <br> Choose at least one.',
     'your_selected_edu_fields' => 'Your Selected Education Fields',
     'your_selected_entmt_fields' => 'Your Selected Entertainment Fields',
+    'added_successfully' => ':name Added Successfully',
+    'removed_successfully' => ':name Removed Successfully',
+    'setup_your_fields' => 'Setup your fields ...',
 
 ];

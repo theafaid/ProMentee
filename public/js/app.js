@@ -2233,6 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_form_wizard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-form-wizard */ "./node_modules/vue-form-wizard/dist/vue-form-wizard.js");
 /* harmony import */ var vue_form_wizard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_form_wizard__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../mixins/Alert */ "./resources/js/mixins/Alert.vue");
 //
 //
 //
@@ -2342,6 +2343,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 if (Promentee.dir == 'ltr') {
@@ -2356,6 +2358,7 @@ if (Promentee.dir == 'ltr') {
     FormWizard: vue_form_wizard__WEBPACK_IMPORTED_MODULE_0__["FormWizard"],
     TabContent: vue_form_wizard__WEBPACK_IMPORTED_MODULE_0__["TabContent"]
   },
+  mixins: [_mixins_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]],
   data: function data() {
     return {
       eduFields: [],
@@ -2377,27 +2380,36 @@ if (Promentee.dir == 'ltr') {
     });
   },
   methods: {
-    addField: function addField(field, type) {
+    submitField: function submitField(field, type) {
       var selected = this[this.getKey(type)]; // get selected (edu, entmt) fields
 
-      if (this.pluck(selected, 'id').includes(field.id)) {
-        // remove from selected
-        for (var i = 0; i < selected.length; i++) {
-          if (selected[i].id === field.id) {
-            selected.splice(i, 1);
-          }
+      this.pluck(selected, 'id').includes(field.id) ? this.remove(selected, field) : this.add(selected, field);
+    },
+    // remove specific field from selected fields
+    remove: function remove(selected, field) {
+      for (var i = 0; i < selected.length; i++) {
+        if (selected[i].id === field.id) {
+          selected.splice(i, 1);
+          this.toast('success', this.trans('removed_successfully', {
+            name: field.name[this.locale]
+          }));
         }
-      } else {
-        // push to selected
-        selected.push({
-          name: field.name[this.locale],
-          id: field.id
-        });
       }
     },
-    setFields: function setFields() {
+    // push a new field to selected fields
+    add: function add(selected, field) {
+      selected.push({
+        name: field.name[this.locale],
+        id: field.id
+      });
+      this.toast('success', this.trans('added_successfully', {
+        name: field.name[this.locale]
+      }));
+    },
+    persist: function persist() {
       var _this2 = this;
 
+      this.startLoading(this.trans('setup_your_fields'));
       axios.post(route('user.fields.store'), {
         eduFields: this.pluck(this.selectedEduFields, 'id'),
         // selected edu fields
@@ -2407,8 +2419,11 @@ if (Promentee.dir == 'ltr') {
         var data = _ref2.data;
         window.location = route('home');
       })["catch"](function (error) {
-        return _this2.error();
-      }); // User has change something
+        // User has change something
+        _this2.stopLoading();
+
+        _this2.dialog('error');
+      });
     },
     // check if user has selected edu fields (min: 1, max: 3)
     hasSelectedEduFields: function hasSelectedEduFields() {
@@ -2423,17 +2438,10 @@ if (Promentee.dir == 'ltr') {
       // selectedEduFields || selectedEntmtFields
       return "selected".concat(type.charAt(0).toUpperCase() + type.slice(1), "Fields");
     },
-    pluck: function pluck(array, key) {
-      return array.map(function (o) {
-        return o[key];
-      });
-    },
-    error: function error() {
-      Swal.fire({
-        type: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!, Please try again later'
-      });
+    // check if the edu inputs must be disabled
+    // it will be disabled if user has selected 3 field also the selected fields cannot be disabled
+    shouldDisable: function shouldDisable(field) {
+      return this.selectedEduFields.length == 3 && !this.pluck(this.selectedEduFields, 'id').includes(field.id);
     }
   }
 });
@@ -2449,6 +2457,13 @@ if (Promentee.dir == 'ltr') {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+window.Swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+window.Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Alert",
   data: function data() {
@@ -2471,6 +2486,24 @@ __webpack_require__.r(__webpack_exports__);
     stopLoading: function stopLoading() {
       this.loading = false;
       Swal.close();
+    },
+    toast: function toast() {
+      var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';
+      var text = arguments.length > 1 ? arguments[1] : undefined;
+      Toast.fire({
+        type: type,
+        title: text
+      });
+    },
+    dialog: function dialog() {
+      var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'error';
+      var title = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Oops...';
+      var text = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'Something went wrong';
+      Swal.fire({
+        type: type,
+        title: title,
+        text: text
+      });
     }
   }
 });
@@ -55075,7 +55108,7 @@ var render = function() {
       },
       on: {
         "on-complete": function($event) {
-          return _vm.setFields()
+          return _vm.persist()
         }
       }
     },
@@ -55150,11 +55183,12 @@ var render = function() {
                                   attrs: {
                                     type: "checkbox",
                                     name: "example-inline-checkbox1",
-                                    value: "option1"
+                                    value: "option1",
+                                    disabled: _vm.shouldDisable(subfield)
                                   },
                                   on: {
                                     click: function($event) {
-                                      return _vm.addField(subfield, "edu")
+                                      return _vm.submitField(subfield, "edu")
                                     }
                                   }
                                 }),
@@ -55254,7 +55288,7 @@ var render = function() {
                                   },
                                   on: {
                                     click: function($event) {
-                                      return _vm.addField(subfield, "entmt")
+                                      return _vm.submitField(subfield, "entmt")
                                     }
                                   }
                                 }),
@@ -55298,7 +55332,7 @@ var render = function() {
                 _c("div", { staticClass: "card shadowing" }, [
                   _c("div", { staticClass: "card-header" }, [
                     _c("h2", { staticClass: "card-title" }, [
-                      _vm._v(_vm._s("your_selected_edu_fields"))
+                      _vm._v(_vm._s(_vm.trans("your_selected_edu_fields")))
                     ])
                   ]),
                   _vm._v(" "),
@@ -67746,6 +67780,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.trans = function (string, a
   return value;
 };
 
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.pluck = function (array, key) {
+  return array.map(function (o) {
+    return o[key];
+  });
+};
+
 
 window.Form = vform__WEBPACK_IMPORTED_MODULE_1__["Form"];
 
@@ -67756,13 +67796,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MO
     invalid: 'is-invalid'
   },
   validity: true
-});
-window.Swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-window.Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000
 });
 /** Global Components **/
 // const files = require.context('./', true, /\.vue$/i);

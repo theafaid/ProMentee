@@ -14,6 +14,10 @@ Vue.prototype.trans = (string, args) => {
     return value;
 };
 
+Vue.prototype.pluck = (array, key) => {
+    return array.map(o => o[key]);
+}
+
 import { Form, HasError, AlertError } from 'vform'
 window.Form = Form;
 
@@ -26,15 +30,6 @@ Vue.use(VeeValidate, {
         invalid: 'is-invalid'
     },
     validity: true
-});
-
-window.Swal = require('sweetalert2');
-
-window.Toast = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000
 });
 
 /** Global Components **/

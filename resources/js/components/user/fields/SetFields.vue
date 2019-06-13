@@ -8,7 +8,7 @@
         :finishButtonText="trans('confirm_set_fields_button')"
         shape="circle"
         color="#20a0ff"
-        @on-complete="setFields()">
+        @on-complete="persist()">
         <tab-content
             :title="trans('edu_fields')"
             icon="fa fa-graduation-cap"
@@ -26,7 +26,7 @@
                             <div :id="'collapse-'+index" class="collapse" :aria-labelledby="'heading-'+index+'edu'" data-parent="#accordion">
                                 <div class="card-body">
                                     <label class="custom-control custom-checkbox" v-for="subfield in field.children">
-                                        <input type="checkbox" class="custom-control-input" name="example-inline-checkbox1" value="option1" @click="addField(subfield, 'edu')">
+                                        <input type="checkbox" class="custom-control-input" name="example-inline-checkbox1" value="option1" @click="submitField(subfield, 'edu')" :disabled="shouldDisable(subfield)">
                                         <span class="custom-control-label">{{subfield.name[locale]}}</span>
                                     </label>
                                 </div>
@@ -54,7 +54,7 @@
                             <div :id="'collapse-'+index" class="collapse" :aria-labelledby="'heading-'+index+'entmt'" data-parent="#accordion">
                                 <div class="card-body">
                                     <label class="custom-control custom-checkbox" v-for="subfield in field.children">
-                                        <input type="checkbox" class="custom-control-input" name="example-inline-checkbox1" value="option1" @click="addField(subfield, 'entmt')">
+                                        <input type="checkbox" class="custom-control-input" name="example-inline-checkbox1" value="option1" @click="submitField(subfield, 'entmt')">
                                         <span class="custom-control-label">{{subfield.name[locale]}}</span>
                                     </label>
                                 </div>
@@ -75,7 +75,7 @@
                    <div id="accordion">
                        <div class="card shadowing">
                            <div class="card-header">
-                               <h2 class="card-title">{{('your_selected_edu_fields')}}</h2>
+                               <h2 class="card-title">{{trans('your_selected_edu_fields')}}</h2>
                            </div>
                            <table class="table card-table">
                                <tbody>
@@ -109,6 +109,8 @@
 </template>
 <script>
     import {FormWizard, TabContent} from 'vue-form-wizard'
+    import Alert from '../../../mixins/Alert'
+
     if(Promentee.dir == 'ltr'){
         require('vue-form-wizard/dist/vue-form-wizard.min.css')
     }else{
@@ -122,6 +124,8 @@
             FormWizard,
             TabContent
         },
+
+        mixins: [Alert],
 
         data(){
             return {
@@ -144,29 +148,40 @@
         },
 
         methods: {
-            addField(field, type){
+            submitField(field, type){
                 let selected = this[this.getKey(type)]; // get selected (edu, entmt) fields
 
-                if(this.pluck(selected, 'id').includes(field.id)){
-                    // remove from selected
-                    for (var i =0; i < selected.length; i++) {
-                        if (selected[i].id === field.id) {
-                            selected.splice(i, 1);
-                        }
+                this.pluck(selected, 'id').includes(field.id) ? this.remove(selected, field) : this.add(selected, field);
+            },
+
+            // remove specific field from selected fields
+            remove(selected, field){
+                for (var i =0; i < selected.length; i++) {
+                    if (selected[i].id === field.id) {
+                        selected.splice(i, 1);
+                        this.toast('success', this.trans('removed_successfully', {name: field.name[this.locale]}));
                     }
-                }else{
-                    // push to selected
-                    selected.push({name: field.name[this.locale], id: field.id})
                 }
             },
 
-            setFields(){
+            // push a new field to selected fields
+            add(selected, field){
+                selected.push({name: field.name[this.locale], id: field.id})
+                this.toast('success', this.trans('added_successfully', {name: field.name[this.locale]}));
+            },
+
+            persist(){
+                this.startLoading(this.trans('setup_your_fields'));
+
                 axios.post(route('user.fields.store'), {
                     eduFields: this.pluck(this.selectedEduFields, 'id'), // selected edu fields
                     entmtFields: this.pluck(this.selectedEntmtFields, 'id') // selected entmt fields
                 }).then(({data}) => {
                     window.location = route('home');
-                }).catch(error => this.error()); // User has change something
+                }).catch(error => { // User has change something
+                    this.stopLoading();
+                    this.dialog('error');
+                });
             },
 
             // check if user has selected edu fields (min: 1, max: 3)
@@ -186,16 +201,10 @@
                 return `selected${type.charAt(0).toUpperCase() + type.slice(1)}Fields`;
             },
 
-            pluck(array, key){
-                return array.map(o => o[key]);
-            },
-
-            error(){
-                Swal.fire({
-                    type: 'error',
-                    title: 'Oops...',
-                    text: 'Something went wrong!, Please try again later',
-                })
+            // check if the edu inputs must be disabled
+            // it will be disabled if user has selected 3 field also the selected fields cannot be disabled
+            shouldDisable(field){
+                return (this.selectedEduFields.length == 3) && ! (this.pluck(this.selectedEduFields, 'id').includes(field.id))
             }
         }
     }

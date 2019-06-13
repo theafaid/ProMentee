@@ -17,5 +17,7 @@ return [
     'registered_successfully' => 'Welcome :name, You have registered successfully',
     // Set Fields
     'invalid_field_inserted' => 'One of selected fields is invalid !',
+    'fields_set_successfully' => 'Your fields has set successfully',
+
 
 ];
