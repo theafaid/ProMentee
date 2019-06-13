@@ -20,11 +20,10 @@ class CacheableFields implements Fields
      * @return mixed
      */
     public function mainFields(){
-
-        $key = app()->runningUnitTests() ? "mainFields_testing" : 'mainFields';
-
-        return Cache::rememberForever($key, function(){
-            return $this->fields->mainFields();
-        });
+        return Cache::get('mainFields');
+//
+//        return Cache::rememberForever('mainFields', function(){
+//            return $this->fields->mainFields();
+//        });
     }
 }

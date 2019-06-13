@@ -14,8 +14,6 @@ class SetFieldsTest extends TestCase
    {
        parent::setUp();
 
-       $this->flushall();
-
        $this->signIn();
    }
 
@@ -38,18 +36,6 @@ class SetFieldsTest extends TestCase
     /** @test */
     function user_whose_fields_have_been_set_cannot_see_set_fields_page(){
        $this->endpoint(true, true)->assertStatus(403);
-    }
-
-    /** @test */
-    function fields_are_loading_from_caching(){
-        $fields = $this->eeFields();
-
-        $this->assertFalse(Cache::has('mainFields_testing'));
-
-        $this->endpoint(true, false)
-            ->assertSee($fields[array_rand($fields)]['name']);
-
-        $this->assertTrue(Cache::has('mainFields_testing'));
     }
 
     /** @test */

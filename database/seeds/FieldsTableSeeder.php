@@ -228,5 +228,8 @@ class FieldsTableSeeder extends Seeder
                 $subField->save();
             }
         }
+
+        \Artisan::call('cache:clear');
+        \Cache::forever('mainFields', (new \App\Eloquent\EloquentFields)->mainFields());
     }
 }

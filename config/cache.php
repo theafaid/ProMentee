@@ -97,6 +97,6 @@ return [
     |
     */
 
-    'prefix' => 'promentee_',
+    'prefix' => '',
 
 ];
