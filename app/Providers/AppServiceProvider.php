@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Cacheable\CacheableFields;
+use App\Cacheable\CacheableUsersRelations;
+use App\Eloquent\EloquentFields;
+use App\Eloquent\EloquentUserRelations;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +17,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('Fields', function(){
+            return new CacheableFields(new EloquentFields);
+        });
+        $this->app->bind('User', function(){
+            return new CacheableUsersRelations;
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Schema::defaultStringLength(191);
     }
 }
