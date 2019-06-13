@@ -18,8 +18,9 @@
     <title> @yield('title')</title>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Dashboard Core -->
     @if(app()->getLocale() == 'ar')
         <link href="{{asset('design')}}/assets/css/dashboard.rtl.css" rel="stylesheet" />
@@ -27,7 +28,7 @@
         <link href="{{asset('design')}}/assets/css/dashboard.css" rel="stylesheet" />
         <style>
             *, body{
-                font-family: 'Kanit', sans-serif;
+                font-family: 'Karla', sans-serif;
             }
         </style>
     @endif
