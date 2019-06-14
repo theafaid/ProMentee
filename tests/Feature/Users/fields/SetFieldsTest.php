@@ -14,6 +14,8 @@ class SetFieldsTest extends TestCase
    {
        parent::setUp();
 
+       $this->flushall();
+
        $this->signIn();
    }
 
