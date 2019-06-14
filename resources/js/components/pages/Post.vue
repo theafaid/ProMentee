@@ -8,12 +8,6 @@
                         <p v-text="post.body"></p>
                     </div>
                 </div>
-                <div class="card-footer">
-
-                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
-                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
-                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
-                </div>
             </div>
             <hr>
             <div class="card">
@@ -131,6 +125,11 @@
                         <td class="text-right"><span class="text-muted">15%</span></td>
                     </tr>
                     <tr>
+                        <td><i class="fa fa-list text-muted"></i></td>
+                        <td v-text=""><a href="/field" v-text="post.type"></a></td>
+                        <td class="text-right"><span class="text-muted">15%</span></td>
+                    </tr>
+                    <tr>
                         <td><i class="fa fa-eye text-muted"></i></td>
                         <td v-text="">100</td>
                         <td class="text-right"><span class="text-muted">15%</span></td>
@@ -159,28 +158,10 @@
                 </table>
             </div>
             <div class="card">
+                <div class="card-header">Actions</div>
                 <div class="card-body">
-                    <div class="media">
-                        <span class="avatar avatar-xxl mr-5" style="background-image: url(demo/faces/male/21.jpg)"></span>
-                        <div class="media-body">
-                            <h4 class="m-0">Juan Hernandez</h4>
-                            <p class="text-muted mb-0">Webdeveloper</p>
-                            <ul class="social-links list-inline mb-0 mt-2">
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="1234567890"><i class="fa fa-phone"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="@skypename"><i class="fa fa-skype"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <favorite></favorite>
+                    <subscribe></subscribe>
                 </div>
             </div>
             <div class="card">
@@ -238,8 +219,16 @@
 </template>
 
 <script>
+    import Favorite from '../Favorite'
+    import Subscription from '../Subscription'
+
     export default {
         name: 'Post',
+
+        components: {
+            favorite: Favorite,
+            subscribe: Subscription
+        },
 
         props: ['data'],
 

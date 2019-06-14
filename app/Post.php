@@ -12,6 +12,8 @@ class Post extends Model
 
     protected $with = ['field', 'favorites', 'user'];
 
+    protected $appends = ['isFavorited'];
+
     public function getRouteKeyName()
     {
         return "slug";
@@ -47,5 +49,9 @@ class Post extends Model
 
     public function favorites(){
         return $this->morphMany('App\Favorite', 'favorited');
+    }
+
+    public function getIsFavoritedAttribute(){
+        return $this->favorites()->where('user_id', auth()->id())->exists();
     }
 }
