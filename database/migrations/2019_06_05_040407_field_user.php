@@ -20,7 +20,6 @@ class FieldUser extends Migration
                 ->onDelete('cascade');
             $table->unique(['field_id', 'user_id']);
         });
-        Schema::enableForeignKeyConstraints();
     }
     /**
      * Reverse the migrations.
