@@ -43,3 +43,4 @@ Vue.component('login-form', require('./auth/LoginForm').default);
 Vue.component('registration-form', require('./auth/RegistrationForm').default);
 Vue.component('set-fields', require('./user/fields/SetFields').default);
 Vue.component('create-post', require('./posts/create').default);
+Vue.component('post', require('./pages/Post').default);

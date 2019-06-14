@@ -11,7 +11,7 @@ $factory->define(App\Post::class, function (Faker $faker){
         'title' => $title,
         'body' => $faker->paragraph(20),
         'slug' => \Str::slug($title),
-        'type' => $faker->randomElement(['advice', 'information', 'request', 'idea', 'other']),
+        'type' => $faker->randomElement(['advice', 'information', 'question', 'idea', 'other']),
         'user_id' => function(){
             if(app()->runningUnitTests()) return factory('App\User')->create()->id;
 

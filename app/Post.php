@@ -10,6 +10,8 @@ class Post extends Model
         'field_id', 'user_id', 'title', 'slug' , 'body', 'type'
     ];
 
+    protected $with = ['field', 'favorites'];
+
     public function getRouteKeyName()
     {
         return "slug";
@@ -33,5 +35,13 @@ class Post extends Model
         }
 
         return static::whereIn('field_id', $userFields)->latest()->get();
+    }
+
+    public function field(){
+        return $this->belongsTo('App\Field');
+    }
+
+    public function favorites(){
+        return $this->morphMany('App\Favorite', 'favorited');
     }
 }
