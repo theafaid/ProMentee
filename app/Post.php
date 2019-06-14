@@ -10,6 +10,11 @@ class Post extends Model
         'field_id', 'user_id', 'title', 'slug' , 'body', 'type'
     ];
 
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
     /**
      * Get posts for current user
      * @param $type

@@ -17,7 +17,7 @@
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body d-flex flex-column">
-                            <h4><a href="#">{{\Str::limit($post->body, 20)}}</a></h4>
+                            <h4><a href="{{route('posts.show', $post->slug)}}">{{\Str::limit($post->body, 20)}}</a></h4>
                             <div class="text-muted">{{\Str::limit($post->body, 45)}}</div>
                             <div class="d-flex align-items-center pt-5 mt-auto">
                                 <div class="avatar avatar-md mr-3" style="background-image: url(./demo/faces/female/29.jpg)"></div>
