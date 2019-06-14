@@ -4,14 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <div class="text-wrap p-lg-6">
-                        <h2 class="mt-0 mb-4">{{$post->title}}</h2>
-                        <p>{{$post->body}}</p>
-                    </div>
-                </div>
-            </div>
+            <post :data="{{$post}}"></post>
         </div>
         <!-- comments -->
         <div class="col-md-4">
