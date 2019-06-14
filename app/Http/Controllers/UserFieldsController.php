@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class UserFieldsController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth');
         $this->middleware('requiresFieldsNotSet');
     }
     /**
@@ -92,12 +91,6 @@ class UserFieldsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showSetFieldsPage(){
-
-        $data = [
-            'mainEduFields'   => resolve('Fields')->mainFields()['edu'],
-            'mainEntmtFields' => resolve('Fields')->mainFields()['entmt'],
-        ];
-
-        return request()->wantsJson() ? $data : view('user.fields.set_fields', $data);
+        return view('user.fields.set_fields');
     }
 }

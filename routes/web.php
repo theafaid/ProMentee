@@ -12,12 +12,16 @@ Route::group([
 
     // welcome page
     Route::get('/', 'HomeController@home')->name('home');
-    // Select fields
-    Route::get('/set-fields', 'UserFieldsController@showSetFieldsPage')->name('setFields');
     // User fields
     Route::resource('/user/fields', 'UserFieldsController', [
         'as' => 'user'
     ]);
+
+    Route::group(['middleware' => 'auth'], function(){
+        Route::resource('fields', 'Api\V1\FieldsController', ['except' => 'create', 'edit']);
+        Route::get('set-fields', 'UserFieldsController@showSetFieldsPage')->name('setFields');
+    });
+
     Route::resource('posts', 'PostsController');
 
     Auth::routes(['verify' => true]);

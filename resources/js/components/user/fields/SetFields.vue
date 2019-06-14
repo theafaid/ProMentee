@@ -140,10 +140,10 @@
 
         created(){
             // Fetch all main fields
-            axios.get(route('setFields'))
+            axios.get(route('fields.index'))
                 .then(({data}) => {
-                    this.eduFields   = data.mainEduFields;
-                    this.entmtFields = data.mainEntmtFields;
+                    this.eduFields   = data.data.edu;
+                    this.entmtFields = data.data.entmt;
                 })
         },
 

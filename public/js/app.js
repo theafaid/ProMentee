@@ -2373,10 +2373,10 @@ if (Promentee.dir == 'ltr') {
     var _this = this;
 
     // Fetch all main fields
-    axios.get(route('setFields')).then(function (_ref) {
+    axios.get(route('fields.index')).then(function (_ref) {
       var data = _ref.data;
-      _this.eduFields = data.mainEduFields;
-      _this.entmtFields = data.mainEntmtFields;
+      _this.eduFields = data.data.edu;
+      _this.entmtFields = data.data.entmt;
     });
   },
   methods: {
