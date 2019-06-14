@@ -2273,6 +2273,124 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Post',
   props: ['data'],
@@ -54988,13 +55106,110 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
-          _vm._v("\n                this is footer\n            ")
-        ])
-      ])
+        _vm._m(0)
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _vm._m(1)
     ]),
     _vm._v(" "),
-    _vm._m(0)
+    _c("div", { staticClass: "col-md-4" }, [
+      _c("div", { staticClass: "card" }, [
+        _vm._m(2),
+        _vm._v(" "),
+        _c("table", { staticClass: "table card-table" }, [
+          _c("tbody", [
+            _c("tr", [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("td", {}, [
+                _c("a", {
+                  attrs: { href: "/profile" },
+                  domProps: { textContent: _vm._s(_vm.post.user.name) }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(4)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(5),
+              _vm._v(" "),
+              _c("td", {}, [
+                _c("a", {
+                  attrs: { href: "/field" },
+                  domProps: {
+                    textContent: _vm._s(_vm.post.field.name[_vm.locale])
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(6)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(7),
+              _vm._v(" "),
+              _c("td", {}, [
+                _c("a", {
+                  attrs: { href: "/field" },
+                  domProps: { textContent: _vm._s(_vm.post.created_at) }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(8)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(9),
+              _vm._v(" "),
+              _c("td", {}, [_vm._v("100")]),
+              _vm._v(" "),
+              _vm._m(10)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(11),
+              _vm._v(" "),
+              _c("td", {}, [_vm._v("100")]),
+              _vm._v(" "),
+              _vm._m(12)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(13),
+              _vm._v(" "),
+              _c("td", {}, [_vm._v("100")]),
+              _vm._v(" "),
+              _vm._m(14)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(15),
+              _vm._v(" "),
+              _c("td", {}, [_vm._v("100")]),
+              _vm._v(" "),
+              _vm._m(16)
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _vm._m(17),
+              _vm._v(" "),
+              _c("td", {}, [_vm._v("100")]),
+              _vm._v(" "),
+              _vm._m(18)
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(19),
+      _vm._v(" "),
+      _vm._m(20),
+      _vm._v(" "),
+      _vm._m(21)
+    ])
   ])
 }
 var staticRenderFns = [
@@ -55002,81 +55217,170 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "media" }, [
-            _c("span", {
-              staticClass: "avatar avatar-xxl mr-5",
-              staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "media-body" }, [
-              _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
+    return _c("div", { staticClass: "card-footer" }, [
+      _c(
+        "a",
+        {
+          staticClass: "icon d-none d-md-inline-block ml-3",
+          attrs: { href: "javascript:void(0)" }
+        },
+        [_c("i", { staticClass: "fe fe-heart mr-1" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon d-none d-md-inline-block ml-3",
+          attrs: { href: "javascript:void(0)" }
+        },
+        [_c("i", { staticClass: "fe fe-heart mr-1" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon d-none d-md-inline-block ml-3",
+          attrs: { href: "javascript:void(0)" }
+        },
+        [_c("i", { staticClass: "fe fe-heart mr-1" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("ul", { staticClass: "list-group card-list-group" }, [
+          _c("li", { staticClass: "list-group-item py-5" }, [
+            _c("div", { staticClass: "media" }, [
+              _c("div", {
+                staticClass: "media-object avatar avatar-md mr-4",
+                staticStyle: {
+                  "background-image": "url(demo/faces/male/16.jpg)"
+                }
+              }),
               _vm._v(" "),
-              _c("p", { staticClass: "text-muted mb-0" }, [
-                _vm._v("Webdeveloper")
-              ]),
+              _c("div", { staticClass: "media-body" }, [
+                _c("div", { staticClass: "media-heading" }, [
+                  _c("small", { staticClass: "float-right text-muted" }, [
+                    _vm._v("4 min")
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v("Peter Richards")])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "\n                                    Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras\n                                    justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes,\n                                    nascetur ridiculus mus.\n                                "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "media-list" }, [
+                  _c("li", { staticClass: "media mt-4" }, [
+                    _c("div", {
+                      staticClass: "media-object avatar mr-4",
+                      staticStyle: {
+                        "background-image": "url(demo/faces/female/17.jpg)"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body" }, [
+                      _c("strong", [_vm._v("Debra Beck: ")]),
+                      _vm._v(
+                        "\n                                            Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus\n                                            auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.\n                                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "media mt-4" }, [
+                    _c("div", {
+                      staticClass: "media-object avatar mr-4",
+                      staticStyle: {
+                        "background-image": "url(demo/faces/male/32.jpg)"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body" }, [
+                      _c("strong", [_vm._v("Jack Ruiz: ")]),
+                      _vm._v(
+                        "\n                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit\n                                            amet risus.\n                                        "
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-group-item py-5" }, [
+            _c("div", { staticClass: "media" }, [
+              _c("div", {
+                staticClass: "media-object avatar avatar-md mr-4",
+                staticStyle: {
+                  "background-image": "url(demo/faces/male/16.jpg)"
+                }
+              }),
               _vm._v(" "),
-              _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Facebook"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
+              _c("div", { staticClass: "media-body" }, [
+                _c("div", { staticClass: "media-heading" }, [
+                  _c("small", { staticClass: "float-right text-muted" }, [
+                    _vm._v("12 min")
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v("Peter Richards")])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "\n                                    Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis\n                                    parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                                "
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-group-item py-5" }, [
+            _c("div", { staticClass: "media" }, [
+              _c("div", {
+                staticClass: "media-object avatar avatar-md mr-4",
+                staticStyle: {
+                  "background-image": "url(demo/faces/male/16.jpg)"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "media-body" }, [
+                _c("div", { staticClass: "media-heading" }, [
+                  _c("small", { staticClass: "float-right text-muted" }, [
+                    _vm._v("34 min")
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [_vm._v("Peter Richards")])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "\n                                    Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam\n                                    venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.\n                                "
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Twitter"
+                _c("ul", { staticClass: "media-list" }, [
+                  _c("li", { staticClass: "media mt-4" }, [
+                    _c("div", {
+                      staticClass: "media-object avatar mr-4",
+                      staticStyle: {
+                        "background-image": "url(demo/faces/male/26.jpg)"
                       }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "1234567890"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-phone" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "@skypename"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-skype" })]
-                  )
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body" }, [
+                      _c("strong", [_vm._v("Wayne Holland: ")]),
+                      _vm._v(
+                        "\n                                            Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus\n                                            auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.\n                                        "
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -55084,243 +55388,388 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "media" }, [
-            _c("span", {
-              staticClass: "avatar avatar-xxl mr-5",
-              staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
-            }),
+      _c("div", { staticClass: "card-footer" }, [
+        _c("div", { staticClass: "input-group" }, [
+          _c("textarea", {
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              rows: "6",
+              placeholder: "Write your comment"
+            }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h4", { staticClass: "card-title" }, [_vm._v("Post Details")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-user text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-list-alt text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-clock-o text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-eye text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-bell text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-trophy text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-heart text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("i", { staticClass: "fa fa-comment text-muted" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("span", { staticClass: "text-muted" }, [_vm._v("15%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "media" }, [
+          _c("span", {
+            staticClass: "avatar avatar-xxl mr-5",
+            staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "media-body" }, [
+            _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
             _vm._v(" "),
-            _c("div", { staticClass: "media-body" }, [
-              _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "text-muted mb-0" }, [
-                _vm._v("Webdeveloper")
+            _c("p", { staticClass: "text-muted mb-0" }, [
+              _vm._v("Webdeveloper")
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Facebook"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-facebook" })]
+                )
               ]),
               _vm._v(" "),
-              _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Facebook"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Twitter"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "1234567890"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-phone" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "@skypename"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-skype" })]
-                  )
-                ])
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Twitter"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-twitter" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "1234567890"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-phone" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "@skypename"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-skype" })]
+                )
               ])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "media" }, [
-            _c("span", {
-              staticClass: "avatar avatar-xxl mr-5",
-              staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
-            }),
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "media" }, [
+          _c("span", {
+            staticClass: "avatar avatar-xxl mr-5",
+            staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "media-body" }, [
+            _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
             _vm._v(" "),
-            _c("div", { staticClass: "media-body" }, [
-              _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "text-muted mb-0" }, [
-                _vm._v("Webdeveloper")
+            _c("p", { staticClass: "text-muted mb-0" }, [
+              _vm._v("Webdeveloper")
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Facebook"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-facebook" })]
+                )
               ]),
               _vm._v(" "),
-              _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Facebook"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Twitter"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "1234567890"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-phone" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "@skypename"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-skype" })]
-                  )
-                ])
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Twitter"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-twitter" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "1234567890"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-phone" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "@skypename"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-skype" })]
+                )
               ])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "media" }, [
-            _c("span", {
-              staticClass: "avatar avatar-xxl mr-5",
-              staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
-            }),
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "media" }, [
+          _c("span", {
+            staticClass: "avatar avatar-xxl mr-5",
+            staticStyle: { "background-image": "url(demo/faces/male/21.jpg)" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "media-body" }, [
+            _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
             _vm._v(" "),
-            _c("div", { staticClass: "media-body" }, [
-              _c("h4", { staticClass: "m-0" }, [_vm._v("Juan Hernandez")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "text-muted mb-0" }, [
-                _vm._v("Webdeveloper")
+            _c("p", { staticClass: "text-muted mb-0" }, [
+              _vm._v("Webdeveloper")
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Facebook"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-facebook" })]
+                )
               ]),
               _vm._v(" "),
-              _c("ul", { staticClass: "social-links list-inline mb-0 mt-2" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Facebook"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-facebook" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "Twitter"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-twitter" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "1234567890"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-phone" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "javascript:void(0)",
-                        title: "",
-                        "data-toggle": "tooltip",
-                        "data-original-title": "@skypename"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-skype" })]
-                  )
-                ])
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "Twitter"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-twitter" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "1234567890"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-phone" })]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "javascript:void(0)",
+                      title: "",
+                      "data-toggle": "tooltip",
+                      "data-original-title": "@skypename"
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-skype" })]
+                )
               ])
             ])
           ])

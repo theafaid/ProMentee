@@ -10,7 +10,7 @@ class Post extends Model
         'field_id', 'user_id', 'title', 'slug' , 'body', 'type'
     ];
 
-    protected $with = ['field', 'favorites'];
+    protected $with = ['field', 'favorites', 'user'];
 
     public function getRouteKeyName()
     {
@@ -35,6 +35,10 @@ class Post extends Model
         }
 
         return static::whereIn('field_id', $userFields)->latest()->get();
+    }
+
+    public function user(){
+        return $this->belongsTo('App\User');
     }
 
     public function field(){
