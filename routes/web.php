@@ -21,6 +21,7 @@ Route::group([
         Route::resource('fields', 'Api\V1\FieldsController', ['except' => 'create', 'edit']);
         Route::get('set-fields', 'UserFieldsController@showSetFieldsPage')->name('setFields');
         Route::resource('{slug}/comments', 'CommentsController');
+        Route::resource('{slug}/favorites', 'FavoritesController');
     });
 
     Route::resource('posts', 'PostsController');
