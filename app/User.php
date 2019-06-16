@@ -33,7 +33,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'username', 'email', 'password', 'provider', 'provider_id'
     ];
 
-    protected $with = ['profile'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -112,8 +111,8 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function hasSetFields($user = null){
         $user = $user ?: auth()->user() ?: $this;
-
-        return auth()->check() || app()->runningUnitTests() ? !! $user->fields()->count() : false;
+        // if cache have eduFields it's means that it also have entmtFields
+        return \Cache::has("user.{$user->id}.eduFields");
     }
 
 }
