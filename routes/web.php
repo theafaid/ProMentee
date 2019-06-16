@@ -20,6 +20,7 @@ Route::group([
     Route::group(['middleware' => 'auth'], function(){
         Route::resource('fields', 'Api\V1\FieldsController', ['except' => 'create', 'edit']);
         Route::get('set-fields', 'UserFieldsController@showSetFieldsPage')->name('setFields');
+        Route::resource('{slug}/comments', 'CommentsController');
     });
 
     Route::resource('posts', 'PostsController');

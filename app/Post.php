@@ -54,4 +54,15 @@ class Post extends Model
     public function getIsFavoritedAttribute(){
         return $this->favorites()->where('user_id', auth()->id())->exists();
     }
+
+    public function comments(){
+        return $this->morphMany('App\Comment', 'commentable');
+    }
+
+    public function createComment($body, $userId = null){
+        $this->comments()->create([
+            'user_id' => $userId ?: auth()->id(),
+            'body'    => $body
+        ]);
+    }
 }

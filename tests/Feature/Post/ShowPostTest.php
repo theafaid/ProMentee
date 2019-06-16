@@ -25,7 +25,6 @@ class ShowPostTest extends TestCase
 
        $post = create('App\Post');
 
-       $this->withoutExceptionHandling();
        $this->get(route('posts.show', $post->slug))
            ->assertStatus(200);
    }
