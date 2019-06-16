@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td><i class="fa fa-eye text-muted"></i></td>
-                        <td v-text="">100</td>
+                        <td v-text="post.viewsCount"></td>
                         <td class="text-right"><span class="text-muted">15%</span></td>
                     </tr>
                     <tr>
@@ -57,12 +57,12 @@
                     </tr>
                     <tr>
                         <td><i class="fa fa-heart text-muted"></i></td>
-                        <td v-text="">100</td>
+                        <td v-text="post.favoritesCount"></td>
                         <td class="text-right"><span class="text-muted">15%</span></td>
                     </tr>
                     <tr>
                         <td><i class="fa fa-comment text-muted"></i></td>
-                        <td v-text="">100</td>
+                        <td v-text="post.commentsCount">100</td>
                         <td class="text-right"><span class="text-muted">15%</span></td>
                     </tr>
                     </tbody>

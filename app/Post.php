@@ -12,7 +12,7 @@ class Post extends Model
 
     protected $with = ['field', 'favorites', 'user'];
 
-    protected $appends = ['isFavorited'];
+    protected $appends = ['isFavorited', 'viewsCount', 'favoritesCount', 'commentsCount'];
 
     public function getRouteKeyName()
     {
@@ -64,5 +64,17 @@ class Post extends Model
             'user_id' => $userId ?: auth()->id(),
             'body'    => $body
         ]);
+    }
+
+    protected function getViewsCountAttribute(){
+        return \Cache::get("post.{$this->id}.views", 0);
+    }
+
+    protected function getFavoritesCountAttribute(){
+        return \Cache::get("post.{$this->id}.favorites", 0);
+    }
+
+    protected function getCommentsCountAttribute(){
+        return \Cache::get("post.{$this->id}.comments", 0);
     }
 }

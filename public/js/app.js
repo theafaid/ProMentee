@@ -55581,7 +55581,9 @@ var render = function() {
             _c("tr", [
               _vm._m(9),
               _vm._v(" "),
-              _c("td", {}, [_vm._v("100")]),
+              _c("td", {
+                domProps: { textContent: _vm._s(_vm.post.viewsCount) }
+              }),
               _vm._v(" "),
               _vm._m(10)
             ]),
@@ -55605,7 +55607,9 @@ var render = function() {
             _c("tr", [
               _vm._m(15),
               _vm._v(" "),
-              _c("td", {}, [_vm._v("100")]),
+              _c("td", {
+                domProps: { textContent: _vm._s(_vm.post.favoritesCount) }
+              }),
               _vm._v(" "),
               _vm._m(16)
             ]),
@@ -55613,7 +55617,11 @@ var render = function() {
             _c("tr", [
               _vm._m(17),
               _vm._v(" "),
-              _c("td", {}, [_vm._v("100")]),
+              _c(
+                "td",
+                { domProps: { textContent: _vm._s(_vm.post.commentsCount) } },
+                [_vm._v("100")]
+              ),
               _vm._v(" "),
               _vm._m(18)
             ])

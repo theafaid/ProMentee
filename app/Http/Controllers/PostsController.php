@@ -59,6 +59,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
+        \Cache::increment("post.{$post->id}.views");
         return view('posts.show', compact('post'));
     }
 
