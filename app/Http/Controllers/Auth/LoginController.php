@@ -147,6 +147,8 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
+        session()->flash('success', __('site.welcome_back', ['name' => $user->name]));
+
         return response(['redirectTo' => route('home')], 200);
     }
 }

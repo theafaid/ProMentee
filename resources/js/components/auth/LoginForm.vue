@@ -67,7 +67,7 @@
 
         computed: {
             isValidForm(){
-                return !! (this.form.loginName && this.form.password.length == 8);
+                return !! (this.form.loginName && this.form.password.length >= 8);
             }
         },
 
