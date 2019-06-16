@@ -10,98 +10,9 @@
                 </div>
             </div>
             <hr>
-            <div class="card">
-                <div class="card-body">
-                    <ul class="list-group card-list-group">
-                        <li class="list-group-item py-5">
-                            <div class="media">
-                                <div class="media-object avatar avatar-md mr-4" style="background-image: url(demo/faces/male/16.jpg)"></div>
-                                <div class="media-body">
-                                    <div class="media-heading">
-                                        <small class="float-right text-muted">4 min</small>
-                                        <h5>Peter Richards</h5>
-                                    </div>
-                                    <div>
-                                        Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras
-                                        justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                        nascetur ridiculus mus.
-                                    </div>
-                                    <ul class="media-list">
-                                        <li class="media mt-4">
-                                            <div class="media-object avatar mr-4" style="background-image: url(demo/faces/female/17.jpg)"></div>
-                                            <div class="media-body">
-                                                <strong>Debra Beck: </strong>
-                                                Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus
-                                                auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                                            </div>
-                                        </li>
-                                        <li class="media mt-4">
-                                            <div class="media-object avatar mr-4" style="background-image: url(demo/faces/male/32.jpg)"></div>
-                                            <div class="media-body">
-                                                <strong>Jack Ruiz: </strong>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-                                                amet risus.
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item py-5">
-                            <div class="media">
-                                <div class="media-object avatar avatar-md mr-4" style="background-image: url(demo/faces/male/16.jpg)"></div>
-                                <div class="media-body">
-                                    <div class="media-heading">
-                                        <small class="float-right text-muted">12 min</small>
-                                        <h5>Peter Richards</h5>
-                                    </div>
-                                    <div>
-                                        Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis
-                                        parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item py-5">
-                            <div class="media">
-                                <div class="media-object avatar avatar-md mr-4" style="background-image: url(demo/faces/male/16.jpg)"></div>
-                                <div class="media-body">
-                                    <div class="media-heading">
-                                        <small class="float-right text-muted">34 min</small>
-                                        <h5>Peter Richards</h5>
-                                    </div>
-                                    <div>
-                                        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                                        venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                                    </div>
-                                    <ul class="media-list">
-                                        <li class="media mt-4">
-                                            <div class="media-object avatar mr-4" style="background-image: url(demo/faces/male/26.jpg)"></div>
-                                            <div class="media-body">
-                                                <strong>Wayne Holland: </strong>
-                                                Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus
-                                                auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <div class="input-group">
-                        <textarea type="text" class="form-control" rows="6" placeholder="Write your comment"></textarea>
-                        <!--                        <div class="input-group-append">-->
-                        <!--                            <button type="button" class="btn btn-secondary">-->
-                        <!--                                <i class="fe fe-camera"></i>-->
-                        <!--                            </button>-->
-                        <!--                        </div>-->
-                    </div>
-                </div>
-            </div>
+            <comments :slug="post.slug"></comments>
         </div>
-        <!-- comments -->
+
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -219,6 +130,7 @@
 </template>
 
 <script>
+    import Comments from '../Comments'
     import Favorite from '../Favorite'
     import Subscription from '../Subscription'
 
@@ -226,6 +138,7 @@
         name: 'Post',
 
         components: {
+            comments: Comments,
             favorite: Favorite,
             subscribe: Subscription
         },

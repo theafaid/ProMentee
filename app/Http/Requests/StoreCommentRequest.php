@@ -35,10 +35,10 @@ class StoreCommentRequest extends FormRequest
 
         $model = $this['type'] == 'post' ? Post::whereSlug($slug)->firstOrFail() : Event::whereSlug($slug)->firstOrFail();
 
-        $model->createComment($this['body']);
+        $comment = $model->createComment($this['body']);
 
         \Cache::increment("{$this['type']}.{$model->id}.comments");
 
-        return response([], 201);
+        return response($comment->load('creator'), 201);
     }
 }

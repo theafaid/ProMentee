@@ -14,9 +14,9 @@ class CommentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($slug)
     {
-        //
+        return \App\Post::whereSlug($slug)->first()->comments;
     }
 
     /**
