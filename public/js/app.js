@@ -2063,6 +2063,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     favorite: function favorite() {
       this.isFavorited = !this.isFavorited;
+      axios.post(route('favorites.store', {
+        slug: 'sit',
+        'type': 'post'
+      }));
     }
   }
 });

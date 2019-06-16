@@ -15,6 +15,8 @@
         methods: {
             favorite(){
                 this.isFavorited = ! this.isFavorited;
+
+                axios.post(route('favorites.store', {slug: 'sit', 'type': 'post'}));
             }
         }
     }
