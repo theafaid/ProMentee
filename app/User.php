@@ -16,6 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
         parent::boot();
 
         static::created(function($user){
+            \Cache::forever("user.{$user->id}.points", 0);
             // Create a profile for registered user
             $user->profile()->create([
                 'yob'    => request('yob') ?: date('Y') - 10, // 10 years is default for unit testing
@@ -113,6 +114,19 @@ class User extends Authenticatable implements MustVerifyEmail
         $user = $user ?: auth()->user() ?: $this;
         // if cache have eduFields it's means that it also have entmtFields
         return \Cache::has("user.{$user->id}.eduFields");
+    }
+
+    public function getLevel(){
+        $points = \Cache::get("user.{$this->id}.points");
+
+        if($points <= 0) return level('zero');
+        elseif ($points > 0   && $points <= 50)   return level('one');
+        elseif ($points > 50  && $points <= 150)  return level('two');
+        elseif ($points > 150 && $points <= 300)  return level('three');
+        elseif ($points > 300 && $points <= 450)  return level('four');
+        elseif ($points > 450 && $points <= 700)  return level('five');
+        elseif ($points > 700 && $points <= 1000) return level('sex');
+        elseif ($points > 1000) return level('seven');
     }
 
 }

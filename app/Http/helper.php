@@ -19,3 +19,62 @@ if(! function_exists('userCountry')){
         ];
     }
 }
+
+if(! function_exists('level')){
+    function level($number){
+        return levels()[$number];
+    }
+}
+
+function levels(){
+
+    return [
+        'zero' => [
+            'name'            => __('site.level_0'),
+            'required_points' => 0,
+            'icon' => '//'
+        ],
+
+        'one' => [
+            'name'            => __('site.level_1'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'two' => [
+            'name'            => __('site.level_2'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'three' => [
+            'name'            => __('site.level_3'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'four' => [
+            'name'            => __('site.level_4'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'five' => [
+            'name'            => __('site.level_5'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'sex' => [
+            'name'            => __('site.level_6'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+
+        'seven' => [
+            'name'            => __('site.level_7'),
+            'required_points' => 1,
+            'icon' => '//'
+        ],
+    ];
+}

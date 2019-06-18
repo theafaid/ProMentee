@@ -40,5 +40,7 @@ Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider')->name('
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('testo', function(){
-   return userCountry();
+    $userId = auth()->id();
+
+   return auth()->user()->getLevel();
 });
