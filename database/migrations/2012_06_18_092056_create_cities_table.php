@@ -19,7 +19,7 @@ class CreateCitiesTable extends Migration
             $table->string('name', 35);
             $table->string('country_code', 3);
             $table->string('district', 20);
-            $table->integer('population', 11)->unsigned();
+            $table->integer('population')->unsigned();
         });
     }
 
