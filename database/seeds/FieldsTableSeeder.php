@@ -229,7 +229,7 @@ class FieldsTableSeeder extends Seeder
             }
         }
 
-        \Artisan::call('cache:clear');
+        \Cache::pull('mainFields');
         \Cache::forever('mainFields', (new \App\Eloquent\EloquentFields)->mainFields());
     }
 }

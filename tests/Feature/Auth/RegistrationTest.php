@@ -46,7 +46,6 @@ class RegistrationTest extends TestCase
         );
 
         $this->assertEquals('male', $user->profile->gender);
-
     }
 
     /** @test */

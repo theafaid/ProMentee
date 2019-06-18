@@ -19,11 +19,15 @@
             <div class="card">
                 <div class="card-header">{{__('site.create_your_acc')}}</div>
                 <div class="card-body">
-{{--                    <h4>Register with social providers</h4>--}}
-{{--                    <a href="{{route('auth.social', 'github')}}" class="btn btn-dark">--}}
-{{--                        <i class="fa fa-github"></i>--}}
-{{--                    </a>--}}
-                    <registration-form></registration-form>
+                    @if($supportedCountry)
+                        {{--                    <h4>Register with social providers</h4>--}}
+                        {{--                    <a href="{{route('auth.social', 'github')}}" class="btn btn-dark">--}}
+                        {{--                        <i class="fa fa-github"></i>--}}
+                        {{--                    </a>--}}
+                        <registration-form></registration-form>
+                    @else
+                        <div class="alert alert-danger">Your country is not supported in {{env('APP_NAME')}} Right Now. Hope soon it become supported.</div>
+                    @endif
                 </div>
             </div>
         </div>

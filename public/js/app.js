@@ -2340,6 +2340,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RegistrationForm",
+  props: ['country'],
   mixins: [_mixins_Alert__WEBPACK_IMPORTED_MODULE_0__["default"]],
   data: function data() {
     return {
@@ -2380,8 +2381,12 @@ __webpack_require__.r(__webpack_exports__);
       this.form.post(route('register')).then(function (_ref) {
         var data = _ref.data;
         window.location = data.redirectTo;
-      })["catch"](function (error) {
-        return _this.stopLoading();
+      })["catch"](function (_ref2) {
+        var response = _ref2.response;
+
+        _this.stopLoading();
+
+        if (response.status == 403) _this.dialog('error', null, response.data);
       });
     },
     getYears: function getYears(start, stop) {

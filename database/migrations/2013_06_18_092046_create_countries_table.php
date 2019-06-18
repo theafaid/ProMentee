@@ -29,6 +29,7 @@ class CreateCountriesTable extends Migration
             $table->integer('capital')->length(11)->unsigned()->nullable();;
             $table->string('code2', 2);
             $table->foreign('capital', 11)->references('id')->on('cities');
+            $table->boolean('supported')->default(true);
         });
     }
 

@@ -41,6 +41,7 @@
     },
     "autoload": {
         "files": [
+            "app/Http/helper.php",
             "tests/utilities/functions.php"
         ],
         "psr-4": {

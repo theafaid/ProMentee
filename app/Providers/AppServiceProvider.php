@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Cacheable\CacheableCountries;
 use App\Cacheable\CacheableFields;
 use App\Cacheable\CacheableUsersRelations;
+use App\Eloquent\EloquentCountries;
 use App\Eloquent\EloquentFields;
 use App\Eloquent\EloquentUserRelations;
 use Illuminate\Support\ServiceProvider;
@@ -22,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind('User', function(){
             return new CacheableUsersRelations;
+        });
+        $this->app->bind('Countries', function(){
+            return new CacheableCountries(new EloquentCountries);
         });
     }
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Country;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
@@ -41,6 +43,39 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+    /**
+     * Show the application registration form.
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Exception
+     */
+    public function showRegistrationForm()
+    {
+        return view('auth.register', ['supportedCountry' => $this->isSupportedCountry()]);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     * @param Request $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
+     * @throws \Exception
+     */
+    public function register(Request $request)
+    {
+        if(! $this->isSupportedCountry()){
+            return response("Country not supported", 403);
+        }
+
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user);
+
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -67,9 +102,9 @@ class RegisterController extends Controller
 
     /**
      * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
+     * @param array $data
+     * @return mixed
+     * @throws \Exception
      */
     protected function create(array $data)
     {
@@ -78,6 +113,7 @@ class RegisterController extends Controller
             'username' => ucfirst(\Str::camel($data['name'])),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'country_id' => $this->supportedCountries()->pluck('id', 'code2')[userCountry()['code']]
         ]);
     }
     /**
@@ -92,5 +128,25 @@ class RegisterController extends Controller
         session()->flash('success', __('site.registered_successfully', ['name' => $user->name]));
 
         return response(['redirectTo' => route('setFields')], 200);
+    }
+
+    /**
+     * Check if the user country who wants to register is in our supported countries
+     * @return bool
+     * @throws \Exception
+     */
+    protected function isSupportedCountry(){
+        return in_array(
+            userCountry()['code'],
+            $this->supportedCountries()->pluck('code2')->toArray()
+        );
+    }
+
+    /**
+     * Get all supported countries
+     * @return mixed
+     */
+    protected function supportedCountries(){
+        return resolve('Countries')->supported();
     }
 }

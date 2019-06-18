@@ -136,6 +136,8 @@
     export default {
         name: "RegistrationForm",
 
+        props: ['country'],
+
         mixins: [Alert],
 
         data(){
@@ -185,7 +187,10 @@
                     .then(({data}) => {
                         window.location = data.redirectTo;
                     }).
-                    catch(error => this.stopLoading());
+                    catch(({response}) => {
+                    this.stopLoading();
+                    if(response.status == 403) this.dialog('error', null, response.data);
+                });
             },
 
             getYears(start,stop){
