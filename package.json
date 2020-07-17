@@ -23,7 +23,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.19",
         "sweetalert2": "^8.12.1",
         "vee-validate": "^2.2.10",
         "vform": "^1.0.1",
